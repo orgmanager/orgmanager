@@ -38,10 +38,11 @@ class LoginController extends Controller
 
     // Current user is now available via Auth facade
     $user = Auth::user();
-    $notification = array(
-    	'message' => 'Sucessfully logged in!',
-    	'alert-type' => 'success'
-    );
+        $notification = [
+        'message'    => 'Sucessfully logged in!',
+        'alert-type' => 'success',
+    ];
+
         return redirect('dashboard')->with($notification);
     }
 
