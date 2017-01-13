@@ -11,7 +11,15 @@
     <title>{{ config('app.name', 'Laravel') }}</title>
 
     <!-- Styles -->
-    <link href="/css/app.css" rel="stylesheet">
+    <link href="/css/flatty.min.css" rel="stylesheet">
+    <link href="/css/bootstrap-responsive.min.css" rel="stylesheet">
+    <link href="/css/bootstrap-social.css" rel="stylesheet">
+    <link href="/css/alerts.css" rel="stylesheet">
+    <link href="/css/avatars.css" rel="stylesheet">
+    <link href="/css/blankstate.css" rel="stylesheet">
+    <link href="/css/states.css" rel="stylesheet">
+    <link href="/css/tooltips.css" rel="stylesheet">
+    <link href="/css/toastr.min.css" rel="stylesheet">
 
     <!-- Scripts -->
     <script>
@@ -83,5 +91,29 @@
 
     <!-- Scripts -->
     <script src="/js/app.js"></script>
+    <script src="/js/blankstate.js" async></script>
+    <script src="/js/toastr.min.js"></script>
+    <script>
+  @if(Session::has('message'))
+    var type = "{{ Session::get('alert-type', 'info') }}";
+    switch(type){
+        case 'info':
+            toastr.info("{{ Session::get('message') }}");
+            break;
+
+        case 'warning':
+            toastr.warning("{{ Session::get('message') }}");
+            break;
+
+        case 'success':
+            toastr.success("{{ Session::get('message') }}");
+            break;
+
+        case 'error':
+            toastr.error("{{ Session::get('message') }}");
+            break;
+    }
+  @endif
+</script>
 </body>
 </html>
