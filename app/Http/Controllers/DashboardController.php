@@ -11,6 +11,6 @@ class DashboardController extends Controller
 
     public function showDashboard()
     {
-        return redirect('notifications');
+        return view('dashboard');
     }
 }
