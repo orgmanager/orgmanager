@@ -1,5 +1,6 @@
 <?php
-use App\Org;
+
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -11,8 +12,8 @@ use App\Org;
 |
 */
 
-Route::get('/', function(){
-  echo "WIP";
+Route::get('/', function () {
+    echo 'WIP';
 });
 Route::get('login', 'LoginController@showLogin');
 Route::post('login', 'LoginController@authorizeUser');
