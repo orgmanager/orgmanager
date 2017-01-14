@@ -1,5 +1,5 @@
 <?php
-
+use App\Org;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -11,11 +11,12 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
+Route::get('/', function(){
+  echo "WIP";
 });
 Route::get('login', 'LoginController@showLogin');
 Route::post('login', 'LoginController@authorizeUser');
 Route::get('callback', 'LoginController@loginUser');
 Route::post('logout', 'LoginController@logoutUser');
 Route::get('dashboard', 'DashboardController@showDashboard');
+Route::get('sync', 'GithubController@syncOrgs');

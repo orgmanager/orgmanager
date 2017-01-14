@@ -15,7 +15,7 @@ class User extends Authenticatable
      * @var array
      */
     protected $fillable = [
-        'name', 'email', 'password',
+        'name', 'email', 'token', 'github_username', 'id',
     ];
 
     /**
@@ -24,6 +24,9 @@ class User extends Authenticatable
      * @var array
      */
     protected $hidden = [
-        'password', 'remember_token',
+        'remember_token',
     ];
+    public function orgs(){
+      return $this->hasMany('App\Org', 'userid');
+    }
 }
