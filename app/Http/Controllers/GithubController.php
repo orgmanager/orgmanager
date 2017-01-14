@@ -18,6 +18,7 @@ class GithubController extends Controller
     {
         $this->listOrgs();
         $this->checkPerm();
+
         return redirect('dashboard');
     }
 
@@ -53,11 +54,11 @@ class GithubController extends Controller
         $orgs = Org::where('userid', '=', Auth::id())->get();
         foreach ($orgs as $organization) {
             if ($organization->role != 'admin') {
-        $membership = GitHub::api('organizations')->members()->member($organization->name, $organization->username);
-        $organization->role = $membership['role'];
-        $organization->save();
-                }
+                $membership = GitHub::api('organizations')->members()->member($organization->name, $organization->username);
+                $organization->role = $membership['role'];
+                $organization->save();
             }
+        }
     }
 
     public function getReferers($id)
