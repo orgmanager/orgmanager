@@ -11,16 +11,15 @@
     <title>{{ config('app.name', 'Laravel') }}</title>
 
     <!-- Styles -->
-    <link href="/css/flatty.min.css" rel="stylesheet">
-    <link href="/css/bootstrap-responsive.min.css" rel="stylesheet">
-    <link href="/css/bootstrap-social.css" rel="stylesheet">
-    <link href="/css/alerts.css" rel="stylesheet">
-    <link href="/css/avatars.css" rel="stylesheet">
-    <link href="/css/blankstate.css" rel="stylesheet">
-    <link href="/css/states.css" rel="stylesheet">
-    <link href="/css/tooltips.css" rel="stylesheet">
-    <link href="/css/toastr.min.css" rel="stylesheet">
-
+    <link href="{{ url('/css/flatty.min.css') }}" rel="stylesheet">
+    <link href="{{ url('/css/bootstrap-responsive.min.css') }}" rel="stylesheet">
+    <link href="{{ url('/css/bootstrap-social.css') }}" rel="stylesheet">
+    <link href="{{ url('/css/alerts.css') }}" rel="stylesheet">
+    <link href="{{ url('/css/avatars.css') }}" rel="stylesheet">
+    <link href="{{ url('/css/blankstate.css') }}" rel="stylesheet">
+    <link href="{{ url('/css/states.css') }}" rel="stylesheet">
+    <link href="{{ url('/css/tooltips.css') }}" rel="stylesheet">
+    <link href="{{ url('css/toastr.min.css') }}" rel="stylesheet">
     <!-- Scripts -->
     <script>
         window.Laravel = <?php echo json_encode([
@@ -89,30 +88,10 @@
     </div>
 
     <!-- Scripts -->
-    <script src="/js/app.js"></script>
-    <script src="/js/blankstate.js" async></script>
-    <script src="/js/toastr.min.js"></script>
-    <script>
-  @if(Session::has('message'))
-    var type = "{{ Session::get('alert-type', 'info') }}";
-    switch(type){
-        case 'info':
-            toastr.info("{{ Session::get('message') }}");
-            break;
-
-        case 'warning':
-            toastr.warning("{{ Session::get('message') }}");
-            break;
-
-        case 'success':
-            toastr.success("{{ Session::get('message') }}");
-            break;
-
-        case 'error':
-            toastr.error("{{ Session::get('message') }}");
-            break;
-    }
-  @endif
-</script>
+    <script src="{{ url('/js/app.js') }}"></script>
+    <script src="{{ url('/js/blankstate.js') }}" async></script>
+    <script src="{{ url('js/jquery.min.js') }}"></script>
+    <script src="{{ url('js/toastr.min.js') }}"></script>
+    {!! Toastr::render() !!}
 </body>
 </html>

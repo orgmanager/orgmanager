@@ -21,10 +21,10 @@ html, body {
         position: relative;
     }
 
-    .top-right {
+    .using-github {
         position: absolute;
-        right: 10px;
-        top: 18px;
+        right: 0px;
+        bottom: 0px;
     }
 
     .content {
@@ -71,7 +71,6 @@ background: rgba(0,0,0,0);
 -o-transition: background-color 0.3s cubic-bezier(0, 0, 0, 0), color 0.3s cubic-bezier(0, 0, 0, 0), width 0.3s cubic-bezier(0, 0, 0, 0), border-width 0.3s cubic-bezier(0, 0, 0, 0), border-color 0.3s cubic-bezier(0, 0, 0, 0);
 transition: background-color 0.3s cubic-bezier(0, 0, 0, 0), color 0.3s cubic-bezier(0, 0, 0, 0), width 0.3s cubic-bezier(0, 0, 0, 0), border-width 0.3s cubic-bezier(0, 0, 0, 0), border-color 0.3s cubic-bezier(0, 0, 0, 0);
 }
-
 .submit-button:hover {
 color: rgba(255,255,255,1);
 background: rgb(30, 205, 151);

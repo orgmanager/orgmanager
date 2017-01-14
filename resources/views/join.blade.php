@@ -10,18 +10,12 @@
         <!-- Fonts -->
         <link href="https://fonts.googleapis.com/css?family=Raleway:100,600" rel="stylesheet" type="text/css">
         <!-- Styles -->
-    <link href="/css/join.css" rel="stylesheet">
-    <link href="/css/flatty.min.css" rel="stylesheet">
+    <link href="{{ url('/css/join.css') }}" rel="stylesheet">
+    <link href="{{ url('/css/flatty.min.css') }}" rel="stylesheet">
+    <link href="{{ url('/css/toastr.min.css') }}" rel="stylesheet">
     </head>
     <body>
         <div class="flex-center position-ref full-height">
-                <div class="top-right links">
-                  @if (Auth::check())
-                      <a href="{{ url('/dashboard') }}">Dashboard</a>
-                  @else
-                      <a href="{{ url('/login') }}">Login</a>
-              </div>
-          @endif
 
             <div class="content">
                 <div class="title m-b-md">
@@ -37,5 +31,8 @@
                 </div>
             </div>
         </div>
+        <script src="{{ url('js/jquery.min.js') }}"></script>
+        <script src="{{ url('js/toastr.min.js') }}"></script>
+        {!! Toastr::render() !!}
     </body>
 </html>

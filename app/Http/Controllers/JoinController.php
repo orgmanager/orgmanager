@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Org;
-
+use Toastr;
 class JoinController extends Controller
 {
   public function showPage($id)
@@ -15,8 +15,9 @@ class JoinController extends Controller
       'message'    => 'Error! That organization is not in our database!',
       'alert-type' => 'error',
   ];
-      return redirect('')->with('notification', $notification);
+      return redirect('')->with($notification);
     }
-      return view('join')->with('org', $org);
+    Toastr::info('Test', 'Test Title');
+    return view('join')->with('org', $org);
     }
   }

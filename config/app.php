@@ -169,6 +169,7 @@ return [
 
         AdamWathan\EloquentOAuthL5\EloquentOAuthServiceProvider::class,
         GrahamCampbell\GitHub\GitHubServiceProvider::class,
+        Kamaln7\Toastr\ToastrServiceProvider::class,
 
         /*
          * Application Service Providers...
@@ -228,6 +229,7 @@ return [
         'View'         => Illuminate\Support\Facades\View::class,
         'SocialAuth'   => AdamWathan\EloquentOAuth\Facades\OAuth::class,
         'GitHub'       => GrahamCampbell\GitHub\Facades\GitHub::class,
+        'Toastr'       => Kamaln7\Toastr\Facades\Toastr::class,
 
     ],
 
