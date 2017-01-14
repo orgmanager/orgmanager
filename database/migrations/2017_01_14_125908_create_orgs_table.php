@@ -22,6 +22,7 @@ class CreateOrgsTable extends Migration
             $table->integer('userid');
             $table->string('username');
             $table->string('role')->default('undefined');
+            $table->string('password')->nullable();
         });
     }
 

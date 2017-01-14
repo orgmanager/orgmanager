@@ -16,12 +16,12 @@
     <body>
         <div class="flex-center position-ref full-height">
                 <div class="top-right links">
-                    @if (Auth::check())
-                        <a href="{{ url('/dashboard') }}">Dashboard</a>
-                    @else
-                        <a href="{{ url('/login') }}">Login</a>
-                </div>
-            @endif
+                  @if (Auth::check())
+                      <a href="{{ url('/dashboard') }}">Dashboard</a>
+                  @else
+                      <a href="{{ url('/login') }}">Login</a>
+              </div>
+          @endif
 
             <div class="content">
                 <div class="title m-b-md">

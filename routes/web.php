@@ -21,3 +21,4 @@ Route::get('callback', 'LoginController@loginUser');
 Route::post('logout', 'LoginController@logoutUser');
 Route::get('dashboard', 'DashboardController@showDashboard');
 Route::get('sync', 'GithubController@syncOrgs');
+Route::get('test/{id}', 'JoinController@showPage');
