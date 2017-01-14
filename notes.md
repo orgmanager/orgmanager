@@ -3,10 +3,20 @@
 ## Toast Notification
 
 ```php
-$notification = array(
-	'message' => 'I am a successful message!', 
-	'alert-type' => 'success'
-);
-
-return Redirect::to('/')->with($notification);
+Toastr::warning($message, $title = null, $options = [])
+```
+```php
+Toastr::error($message, $title = null, $options = [])
+```
+```php
+Toastr::info($message, $title = null, $options = [])
+```
+```php
+Toastr::success($message, $title = null, $options = [])
+```
+```php
+Toastr::add($type: warning|error|info|success, $message, $title = null, $options = [])
+```
+```php
+Toastr::clear()
 ```

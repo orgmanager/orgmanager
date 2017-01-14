@@ -12,13 +12,17 @@
 |
 */
 
+// Pages
 Route::get('/', function () {
     echo 'WIP';
 });
+Route::get('dashboard', 'DashboardController@showDashboard');
+Route::get('sync', 'GithubController@syncOrgs');
+Route::get('join/{id}', 'JoinController@showPage');
+Route::post('join/{id}', 'JoinController@inviteUser');
+
+// Auth routes
 Route::get('login', 'LoginController@showLogin');
 Route::post('login', 'LoginController@authorizeUser');
 Route::get('callback', 'LoginController@loginUser');
 Route::post('logout', 'LoginController@logoutUser');
-Route::get('dashboard', 'DashboardController@showDashboard');
-Route::get('sync', 'GithubController@syncOrgs');
-Route::get('test/{id}', 'JoinController@showPage');

@@ -22,10 +22,13 @@
                     Join {{ $org->name }}
                 </div>
                 <div class="join">
-                  Enter your email adress to join {{ $org->name }}:<br><br>
-                    <form id="join" type="POST" href="{{ url('join/'.$org->id) }}">
+                  Enter your email adress @if ($org->password != null && trim($org->password) != "")and the password @endif to join {{ $org->name }}:<br><br>
+                    <form id="join" method="POST" href="{{ url('join/'.$org->id) }}">
                       {{ csrf_field() }}
-                      <input type="email" name="email" class="email" placeholder="mail@example.com"><br><br>
+                      <input type="email" name="email" class="textbox" placeholder="mail@example.com"><br><br>
+                      @if ($org->password != null && trim($org->password) != "")
+                      <input type="password" name="password" class="textbox" placeholder="password"><br><br>
+                      @endif
                       <button type="submit" class="submit-button" name="submit">Join!</button>
                     </form>
                 </div>
