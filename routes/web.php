@@ -14,7 +14,7 @@
 
 // Pages
 Route::get('/', function () {
-    echo 'WIP';
+    return view('home');
 });
 Route::get('dashboard', 'DashboardController@showDashboard');
 Route::get('sync', 'GithubController@syncOrgs');

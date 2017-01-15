@@ -20,6 +20,7 @@
     <link href="{{ url('/css/states.css') }}" rel="stylesheet">
     <link href="{{ url('/css/tooltips.css') }}" rel="stylesheet">
     <link href="{{ url('css/toastr.min.css') }}" rel="stylesheet">
+    <link href="{{ url('css/custom.css') }}" rel="stylesheet">
     <!-- Scripts -->
     <script>
         window.Laravel = <?php echo json_encode([
@@ -86,7 +87,9 @@
 
         @yield('content')
     </div>
-
+    <div class="using-github">
+      Using <span class="octicon octicon-logo-github"></span>
+    </div>
     <!-- Scripts -->
     <script src="{{ url('/js/app.js') }}"></script>
     <script src="{{ url('/js/blankstate.js') }}" async></script>

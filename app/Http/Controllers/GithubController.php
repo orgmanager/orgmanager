@@ -39,7 +39,7 @@ class GithubController extends Controller
                     $org->name = $organization['login'];
                     $org->url = $organization['url'];
                     $org->description = $organization['description'];
-                    $org->avatar = $organization['avatar_url'];
+                    $org->avatar = 'https://avatars.githubusercontent.com/u/'.$organization['id'];
                     $org->userid = Auth::id();
                     $org->username = Auth::user()->github_username;
                     $org->save();
@@ -56,7 +56,12 @@ class GithubController extends Controller
             if ($organization->role != 'admin') {
                 $membership = GitHub::api('organizations')->members()->member($organization->name, $organization->username);
                 $organization->role = $membership['role'];
-                $organization->save();
+                if ($membership['role'] == 'admin'){
+                  $organization->token = Auth::user()->token;
+                  $organization->save();
+                } else {
+                  $organization->delete();
+                }
             }
         }
     }

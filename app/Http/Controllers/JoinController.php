@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Org;
 use Illuminate\Http\Request;
 use Toastr;
+use GitHub;
 
 class JoinController extends Controller
 {
@@ -28,6 +29,11 @@ class JoinController extends Controller
 
             return redirect('');
         }
+        if (!$request->has('username')){
+          Toastr::error('You need to submit an username!', 'Username required');
+
+          return redirect('join/'.$id);
+        }
         if ($org->password && trim($org->password) != '') {
             if (!$request->has('password')) {
                 Toastr::error('You need a password!', 'Password required');
@@ -40,14 +46,17 @@ class JoinController extends Controller
                 return redirect('join/'.$id);
             }
         }
-        $email = $request->email;
-        $this->sendInvite($email, $id);
-        Toastr::success('We have sent an invite to '.$email.'. Check your inbox!', 'Invite sent!', ['positionClass' => 'toast-top-full-width']);
+        $username = $request->username;
+        $this->sendInvite($username, $id);
+        Toastr::success('We have sent an invite for '.$username.'. Check your inbox!', 'Invite sent!', ['positionClass' => 'toast-top-full-width']);
 
         return redirect('join/'.$id);
     }
 
-    public function sendInvite($email, $id)
+    public function sendInvite($username, $id)
     {
+      $org = Org::find($id);
+      Github::authenticate($org->token, null, 'http_token');
+      Github::api('organization')->members()->add($org->name, $username);
     }
 }

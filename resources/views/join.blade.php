@@ -19,20 +19,28 @@
 
             <div class="content">
                 <div class="title m-b-md">
+                  <img src="{{ $org->avatar }}" class="logo"><br>
                     Join {{ $org->name }}
+                    @if ($org->description)
+                    <blockquote>{{ $org->description }}</blockquote>
+                    @endif
                 </div>
                 <div class="join">
-                  Enter your email adress @if ($org->password != null && trim($org->password) != "")and the password @endif to join {{ $org->name }}:<br><br>
+                  Enter your GitHub username @if ($org->password != null && trim($org->password) != "")and the password @endif to join {{ $org->name }}:<br><br>
                     <form id="join" method="POST" href="{{ url('join/'.$org->id) }}">
                       {{ csrf_field() }}
-                      <input type="email" name="email" class="textbox" placeholder="mail@example.com"><br><br>
+                      <input type="text" name="username" class="textbox" placeholder="Your GitHub username"><br><br>
                       @if ($org->password != null && trim($org->password) != "")
                       <input type="password" name="password" class="textbox" placeholder="password"><br><br>
                       @endif
                       <button type="submit" class="submit-button" name="submit">Join!</button>
                     </form>
                 </div>
+                <p class="by">Added by <a href="https://github.com/{{ $org->username }}" target="_blank">{{ $org->username }}</a></p>
             </div>
+        </div>
+        <div class="using-github">
+          Using <span class="octicon octicon-logo-github"></span>
         </div>
         <script src="{{ url('js/jquery.min.js') }}"></script>
         <script src="{{ url('js/toastr.min.js') }}"></script>

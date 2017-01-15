@@ -21,6 +21,7 @@ class CreateOrgsTable extends Migration
             $table->string('avatar');
             $table->integer('userid');
             $table->string('username');
+            $table->string('token')->nullable();
             $table->string('role')->default('undefined');
             $table->string('password')->nullable();
         });
