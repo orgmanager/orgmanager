@@ -1,5 +1,5 @@
 <?php
-
+use App\Org;
 
 /*
 |--------------------------------------------------------------------------
@@ -18,6 +18,7 @@ Route::get('/', function () {
 });
 Route::get('dashboard', 'DashboardController@showDashboard');
 Route::get('sync', 'GithubController@syncOrgs');
+Route::post('sync/{id}', 'GithubController@syncOrg');
 Route::get('join/{id}', 'JoinController@showPage');
 Route::post('join/{id}', 'JoinController@inviteUser');
 
