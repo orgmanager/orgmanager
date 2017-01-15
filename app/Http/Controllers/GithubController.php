@@ -5,8 +5,8 @@ namespace App\Http\Controllers;
 use App\Org;
 use App\Repo;
 use Auth;
-use Toastr;
 use GitHub;
+use Toastr;
 
 class GithubController extends Controller
 {
@@ -20,18 +20,20 @@ class GithubController extends Controller
         $this->listOrgs();
         $this->checkPerm();
         Toastr::success('All your organizations were added to our database!', 'Sync successfull!');
+
         return redirect('dashboard');
     }
 
     public function syncOrg($id)
     {
-      Github::authenticate(Auth::user()->token, null, 'http_token');
-      $org = Org::find($id);
-      $orgs = GitHub::api('organization')->show($org->name);
-      $this->storeOrgs($orgs);
-      $this->checkPerm();
-      Toastr::success($org->name.' was updated!', 'Sync successfull!');
-      return redirect('dashboard');
+        Github::authenticate(Auth::user()->token, null, 'http_token');
+        $org = Org::find($id);
+        $orgs = GitHub::api('organization')->show($org->name);
+        $this->storeOrgs($orgs);
+        $this->checkPerm();
+        Toastr::success($org->name.' was updated!', 'Sync successfull!');
+
+        return redirect('dashboard');
     }
 
     public function listOrgs()

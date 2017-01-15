@@ -14,6 +14,7 @@ class JoinController extends Controller
         $org = Org::find($id);
         if (!$org) {
             Toastr::error("We couldn't find that organization!", 'Error');
+
             return redirect('');
         }
 
