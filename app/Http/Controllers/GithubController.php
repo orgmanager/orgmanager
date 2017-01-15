@@ -5,8 +5,8 @@ namespace App\Http\Controllers;
 use App\Org;
 use App\Repo;
 use Auth;
-use Toastr;
 use GitHub;
+use Toastr;
 
 class GithubController extends Controller
 {
@@ -20,6 +20,7 @@ class GithubController extends Controller
         $this->listOrgs();
         $this->checkPerm();
         Toastr::success('All your organizations were added to our database!', 'Sync successfull!');
+
         return redirect('dashboard');
     }
 

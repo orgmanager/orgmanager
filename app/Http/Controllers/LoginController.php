@@ -6,7 +6,6 @@ use Auth;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Redirect;
 use SocialAuth;
-use App\Org;
 use SocialNorm\Exceptions\ApplicationRejectedException;
 use SocialNorm\Exceptions\InvalidAuthorizationCodeException;
 
