@@ -19,4 +19,8 @@ class DashboardController extends Controller
         }
         return view('orgs')->with('orgs', $orgs);
     }
+
+    public function changePassword(Request $request, $id){
+      
+    }
 }

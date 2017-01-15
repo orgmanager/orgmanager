@@ -21,6 +21,7 @@ Route::get('sync', 'GithubController@syncOrgs');
 Route::post('sync/{id}', 'GithubController@syncOrg');
 Route::get('join/{id}', 'JoinController@showPage');
 Route::post('join/{id}', 'JoinController@inviteUser');
+Route::post('password/{id}', 'DashboardController@changePassword');
 
 // Auth routes
 Route::get('login', 'LoginController@showLogin');

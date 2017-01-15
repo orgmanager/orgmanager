@@ -22,6 +22,8 @@
     <link href="{{ url('css/toastr.min.css') }}" rel="stylesheet">
     <link href="{{ url('css/custom.css') }}" rel="stylesheet">
     @yield('css')
+    <script src="{{ url('js/jquery.min.js') }}"></script>
+    <script src="{{ url('js/toastr.min.js') }}"></script>
     <!-- Scripts -->
     <script>
         window.Laravel = <?php echo json_encode([
@@ -92,11 +94,9 @@
       Using <span class="octicon octicon-logo-github"></span>
     </div>
     <!-- Scripts -->
+    {!! Toastr::render() !!}
     <script src="{{ url('/js/app.js') }}"></script>
     <script src="{{ url('/js/blankstate.js') }}" async></script>
-    <script src="{{ url('js/jquery.min.js') }}"></script>
-    <script src="{{ url('js/toastr.min.js') }}"></script>
     @yield('scripts')
-    {!! Toastr::render() !!}
 </body>
 </html>
