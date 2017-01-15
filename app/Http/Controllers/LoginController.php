@@ -36,7 +36,7 @@ class LoginController extends Controller
         } catch (InvalidAuthorizationCodeException $e) {
             return redirect('login');
         }
-
+$request->session()->regenerate();
     // Current user is now available via Auth facade
     $user = Auth::user();
         $notification = [
