@@ -29,14 +29,14 @@
                   Enter your GitHub username @if ($org->password != null && trim($org->password) != "")and the password @endif to join {{ $org->name }}:<br><br>
                     <form id="join" method="POST" href="{{ url('join/'.$org->id) }}">
                       {{ csrf_field() }}
-                      <input type="text" name="username" class="textbox" placeholder="Your GitHub username"><br><br>
+                      <input type="text" name="github_username" class="textbox" placeholder="Your GitHub username"><br><br>
                       @if ($org->password != null && trim($org->password) != "")
-                      <input type="password" name="password" class="textbox" placeholder="password"><br><br>
+                      <input type="password" name="org_password" class="textbox" placeholder="password"><br><br>
                       @endif
                       <button type="submit" class="submit-button" name="submit">Join!</button>
                     </form>
                 </div>
-                <p class="by">Added by <a href="https://github.com/{{ $org->username }}" target="_blank">{{ $org->username }}</a></p>
+                <p class="by">Added by <a href="https://github.com/{{ $org->user->github_username }}" target="_blank">{{ $org->username }}</a></p>
             </div>
         </div>
         <div class="using-github">

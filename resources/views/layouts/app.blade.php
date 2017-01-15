@@ -9,7 +9,7 @@
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
     <title>{{ config('app.name', 'Laravel') }}</title>
-
+    <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <!-- Styles -->
     <link href="{{ url('/css/flatty.min.css') }}" rel="stylesheet">
     <link href="{{ url('/css/bootstrap-responsive.min.css') }}" rel="stylesheet">
@@ -21,6 +21,9 @@
     <link href="{{ url('/css/tooltips.css') }}" rel="stylesheet">
     <link href="{{ url('css/toastr.min.css') }}" rel="stylesheet">
     <link href="{{ url('css/custom.css') }}" rel="stylesheet">
+    @yield('css')
+    <script src="{{ url('js/jquery.min.js') }}"></script>
+    <script src="{{ url('js/toastr.min.js') }}"></script>
     <!-- Scripts -->
     <script>
         window.Laravel = <?php echo json_encode([
@@ -91,10 +94,9 @@
       Using <span class="octicon octicon-logo-github"></span>
     </div>
     <!-- Scripts -->
+    {!! Toastr::render() !!}
     <script src="{{ url('/js/app.js') }}"></script>
     <script src="{{ url('/js/blankstate.js') }}" async></script>
-    <script src="{{ url('js/jquery.min.js') }}"></script>
-    <script src="{{ url('js/toastr.min.js') }}"></script>
-    {!! Toastr::render() !!}
+    @yield('scripts')
 </body>
 </html>

@@ -6,6 +6,7 @@ use App\Org;
 use App\Repo;
 use Auth;
 use GitHub;
+use Toastr;
 
 class GithubController extends Controller
 {
@@ -18,6 +19,20 @@ class GithubController extends Controller
     {
         $this->listOrgs();
         $this->checkPerm();
+        Toastr::success('All your organizations were added to our database!', 'Sync successfull!');
+
+        return redirect('dashboard');
+    }
+
+    public function syncOrg($id)
+    {
+        Github::authenticate(Auth::user()->token, null, 'http_token');
+        $org = Org::find($id);
+        $orgdata = GitHub::api('organization')->show($org->name);
+        $org->name = $orgdata['login'];
+        $org->description = $orgdata['description'];
+        $this->checkPerm();
+        Toastr::success($org->name.' was updated!', 'Sync successfull!', ['positionClass' => 'toast-top-full-width']);
 
         return redirect('dashboard');
     }
@@ -41,7 +56,6 @@ class GithubController extends Controller
                     $org->description = $organization['description'];
                     $org->avatar = 'https://avatars.githubusercontent.com/u/'.$organization['id'];
                     $org->userid = Auth::id();
-                    $org->username = Auth::user()->github_username;
                     $org->save();
                 }
             }
@@ -54,10 +68,9 @@ class GithubController extends Controller
         $orgs = Org::where('userid', '=', Auth::id())->get();
         foreach ($orgs as $organization) {
             if ($organization->role != 'admin') {
-                $membership = GitHub::api('organizations')->members()->member($organization->name, $organization->username);
+                $membership = GitHub::api('organizations')->members()->member($organization->name, $organization->user->github_username);
                 $organization->role = $membership['role'];
                 if ($membership['role'] == 'admin') {
-                    $organization->token = Auth::user()->token;
                     $organization->save();
                 } else {
                     $organization->delete();
