@@ -1,5 +1,5 @@
 <?php
 
 return [
-    'options' => [],
+    'options' => ['positionClass' => 'toast-top-full-width'],
 ];
