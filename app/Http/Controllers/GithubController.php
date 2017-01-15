@@ -26,14 +26,15 @@ class GithubController extends Controller
 
     public function syncOrg($id)
     {
-      Github::authenticate(Auth::user()->token, null, 'http_token');
-      $org = Org::find($id);
-      $orgdata = GitHub::api('organization')->show($org->name);
-      $org->name = $orgdata['login'];
-      $org->description = $orgdata['description'];
-      $this->checkPerm();
-      Toastr::success($org->name.' was updated!', 'Sync successfull!', ['positionClass' => 'toast-top-full-width']);
-      return redirect('dashboard');
+        Github::authenticate(Auth::user()->token, null, 'http_token');
+        $org = Org::find($id);
+        $orgdata = GitHub::api('organization')->show($org->name);
+        $org->name = $orgdata['login'];
+        $org->description = $orgdata['description'];
+        $this->checkPerm();
+        Toastr::success($org->name.' was updated!', 'Sync successfull!', ['positionClass' => 'toast-top-full-width']);
+
+        return redirect('dashboard');
     }
 
     public function listOrgs()
