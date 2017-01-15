@@ -56,11 +56,11 @@ class GithubController extends Controller
             if ($organization->role != 'admin') {
                 $membership = GitHub::api('organizations')->members()->member($organization->name, $organization->username);
                 $organization->role = $membership['role'];
-                if ($membership['role'] == 'admin'){
-                  $organization->token = Auth::user()->token;
-                  $organization->save();
+                if ($membership['role'] == 'admin') {
+                    $organization->token = Auth::user()->token;
+                    $organization->save();
                 } else {
-                  $organization->delete();
+                    $organization->delete();
                 }
             }
         }
