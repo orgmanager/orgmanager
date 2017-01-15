@@ -29,7 +29,7 @@ class JoinController extends Controller
             return redirect('');
         }
         if ($org->password && trim($org->password) != '') {
-            if (!$request->password) {
+            if (!$request->has('password')) {
                 Toastr::error('You need a password!', 'Password required');
 
                 return redirect('join/'.$id);
