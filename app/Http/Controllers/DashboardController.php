@@ -16,7 +16,7 @@ class DashboardController extends Controller
 
     public function showDashboard()
     {
-        $orgs = Org::where('userid', '=', Auth::id())->get();
+        $orgs = Org::where('userid', '=', Auth::id())->paginate(15);
         if (count($orgs) == 0) {
             return view('empty');
         }
