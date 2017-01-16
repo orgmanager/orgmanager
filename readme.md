@@ -5,7 +5,7 @@ OrgManager allows Github Organizations to share link invites.
 
 ## Introduction:
 
-OrgManager was created as a personal project for learning Laravel, PHP and the Github API. This means, I am still learning Laravel, so they're probably lot's of things to improve. If you find one, please [open an issue](https://github.com/m1guelpf/github/issues/new) or better, [make a pull request](https://github.com/m1guelpf/github/pulls/compare).
+OrgManager was created as a personal project for learning Laravel, PHP and the Github API. This means, I am still learning Laravel, so they're probably lot's of things to improve. If you find one, please [open an issue](https://github.com/m1guelpf/orgmanager/issues/new) or better, [make a pull request](https://github.com/m1guelpf/orgmanager/pulls/compare).
 
 ## Features:
 
@@ -36,14 +36,14 @@ OrgManager was created as a personal project for learning Laravel, PHP and the G
 
 ## Status:
 
-Actual version: [```v1.0```](https://github.com/m1guelpf/laragit/releases/v1.0)
-Remember that you can always download the latest version using [this link](https://github.com/m1guelpf/laragit/releases/latest).
+Actual version: [```v1.0```](https://github.com/m1guelpf/orgmanager/releases/v1.0)
+Remember that you can always download the latest version using [this link](https://github.com/m1guelpf/orgmanager/releases/latest).
 
 ## TO DO:
 
-You can check the [```v2.0``` milestone](https://github.com/m1guelpf/laragit/milestone/1) to get info about the status of the ```v2.0``` development.
+You can check the [```v2.0``` milestone](https://github.com/m1guelpf/orgmanager/milestone/1) to get info about the status of the ```v2.0``` development.
 
-Found an issue? Something to improve? [Open an issue](https://github.com/m1guelpf/laragit/issues/new)!
+Found an issue? Something to improve? [Open an issue](https://github.com/m1guelpf/orgmanager/issues/new)!
 
 ## Credits:
 
