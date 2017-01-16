@@ -31,8 +31,9 @@
                 </div>
 
                 <div class="links">
-                    <p>OrgManager allows Github Organizations to share invite links</p>
-                    <a href="https://github.com/m1guelpf/orgmanager">GitHub</a>
+                    <p>OrgManager allows Github Organizations to share invite links for free!</p>
+                    <p>To start, please <a href="{{ url('login') }}">login</a>.</p>
+                    <a href="https://github.com/m1guelpf/orgmanager">Help on GitHub</a>
                 </div>
                 <div class="using-github">
                   Using <span class="octicon octicon-logo-github"></span>
