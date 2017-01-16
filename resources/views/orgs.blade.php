@@ -40,6 +40,7 @@
                       @endforeach
                       </tbody>
                       </table>
+                      {{ $orgs->links() }}
                 </div>
             </div>
         </div>
