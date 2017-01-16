@@ -8,7 +8,7 @@
         "php": ">=5.6.4",
         "adamwathan/eloquent-oauth-l5": "^0.5.1",
         "m1guelpf/github-api": "dev-packagist",
-        "graham-campbell/github": "^5.1",
+        "m1guelpf/github": "dev-master",
         "oriceon/toastr-5-laravel": "dev-master",
         "laravel/framework": "5.3.*",
         "php-http/guzzle6-adapter": "^1.1"
