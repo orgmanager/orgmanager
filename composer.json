@@ -7,10 +7,11 @@
     "require": {
         "php": ">=5.6.4",
         "adamwathan/eloquent-oauth-l5": "^0.5.1",
-        "m1guelpf/github-api": "dev-packagist",
-        "m1guelpf/github": "dev-master",
-        "oriceon/toastr-5-laravel": "dev-master",
+        "google/recaptcha": "~1.1",
         "laravel/framework": "5.3.*",
+        "m1guelpf/github": "dev-master",
+        "m1guelpf/github-api": "dev-packagist",
+        "oriceon/toastr-5-laravel": "dev-master",
         "php-http/guzzle6-adapter": "^1.1"
     },
     "require-dev": {

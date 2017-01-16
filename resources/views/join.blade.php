@@ -33,10 +33,20 @@
                       @if ($org->password != null && trim($org->password) != "")
                       <input type="password" name="org_password" class="textbox" placeholder="password"><br><br>
                       @endif
+                      <center><div class="g-recaptcha" data-sitekey="{{ env('RECAPTCHA_PUBLIC_KEY') }}"></div></center><br><br>
                       <button type="submit" class="submit-button" name="submit">Join!</button>
-                    </form>
+                    </form><br>
+                    @if (count($errors) > 0)
+                    <div class="alert alert-danger">
+                      <ul>
+                        @foreach ($errors->all() as $error)
+                          <li>{{ $error }}</li>
+                        @endforeach
+                      </ul>
+                    </div>
+                    @endif
                 </div>
-                <p class="by">Added by <a href="https://github.com/{{ $org->user->github_username }}" target="_blank">{{ $org->username }}</a></p>
+                <p class="by">Added by <a href="https://github.com/{{ $org->user->github_username }}" target="_blank">{{ $org->user->github_username }}</a></p>
             </div>
         </div>
         <div class="using-github">
@@ -44,6 +54,7 @@
         </div>
         <script src="{{ url('js/jquery.min.js') }}"></script>
         <script src="{{ url('js/toastr.min.js') }}"></script>
+        <script src="https://www.google.com/recaptcha/api.js"></script>
         {!! Toastr::render() !!}
     </body>
 </html>

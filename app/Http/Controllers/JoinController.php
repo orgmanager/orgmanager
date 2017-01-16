@@ -3,12 +3,15 @@
 namespace App\Http\Controllers;
 
 use App\Org;
+use App\Traits\CaptchaTrait;
 use GitHub;
 use Illuminate\Http\Request;
 use Toastr;
 
 class JoinController extends Controller
 {
+    use CaptchaTrait;
+
     public function showPage($id)
     {
         $org = Org::find($id);
@@ -23,6 +26,11 @@ class JoinController extends Controller
 
     public function inviteUser(Request $request, $id)
     {
+        if (!$this->captchaCheck()) {
+          Toastr::error("You need to prove you aren\'t a robot!", 'ReCaptcha required');
+
+          return redirect('join/'.$id);
+        }
         $org = Org::find($id);
         if (!$org) {
             Toastr::error("We couldn't find that organization!", 'Error');
