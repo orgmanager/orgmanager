@@ -35,16 +35,7 @@
                       @endif
                       <center><div class="g-recaptcha" data-sitekey="{{ env('RECAPTCHA_PUBLIC_KEY') }}"></div></center><br><br>
                       <button type="submit" class="submit-button" name="submit">Join!</button>
-                    </form><br>
-                    @if (count($errors) > 0)
-                    <div class="alert alert-danger">
-                      <ul>
-                        @foreach ($errors->all() as $error)
-                          <li>{{ $error }}</li>
-                        @endforeach
-                      </ul>
-                    </div>
-                    @endif
+                    </form>
                 </div>
                 <p class="by">Added by <a href="https://github.com/{{ $org->user->github_username }}" target="_blank">{{ $org->user->github_username }}</a></p>
             </div>
