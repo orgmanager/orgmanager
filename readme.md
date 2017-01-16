@@ -1,42 +1,57 @@
-<p align="center"><img src="https://laravel.com/assets/img/components/logo-laravel.svg"></p>
+# OrgManager
+OrgManager allows Github Organizations to share link invites.
 
-<p align="center">
-<a href="https://travis-ci.org/laravel/framework"><img src="https://travis-ci.org/laravel/framework.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://poser.pugx.org/laravel/framework/d/total.svg" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://poser.pugx.org/laravel/framework/v/stable.svg" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://poser.pugx.org/laravel/framework/license.svg" alt="License"></a>
-</p>
+## You can access the hosted version at https://orgmanager.miguelpiedrafita.com.
 
-## About Laravel
+## Introduction:
 
-[![Codacy Badge](https://api.codacy.com/project/badge/Grade/844aaede8660402f9fee197b971b7a33)](https://www.codacy.com/app/m1guelpiedrafita/orgmanager?utm_source=github.com&utm_medium=referral&utm_content=m1guelpf/orgmanager&utm_campaign=badger)
+OrgManager was created as a personal project for learning Laravel, PHP and the Github API. This means, I am still learning Laravel, so they're probably lot's of things to improve. If you find one, please [open an issue](https://github.com/m1guelpf/github/issues/new) or better, [make a pull request](https://github.com/m1guelpf/github/pulls/compare).
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable, creative experience to be truly fulfilling. Laravel attempts to take the pain out of development by easing common tasks used in the majority of web projects, such as:
+## Features:
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+- Multi-user support: You can add all the organizations/users you want securely. In fact, anyone with a Github organization can use it if you expose it on the internet!
+- Uses Github Style: OrgManager uses [PrimeCSS](http://primercss.io/) and [Octicons](https://octicons.github.com) for having a github-like style!
+- Caching: OrgManager uses notification caching to reduce load time and provide you an awesome experience!
+- More coming soon: OrgManager is under active developement so, if you want to help or have ideas, go ahead and Contribute!
 
-Laravel is accessible, yet powerful, providing tools needed for large, robust applications. A superb combination of simplicity, elegance, and innovation give you tools you need to build any application with which you are tasked.
+## Requirements:
 
-## Learning Laravel
+- PHP >= 5.6.4
+- Composer
+- MySQL
+- MySQL PHP Extension
+- OpenSSL PHP Extension
+- PDO PHP Extension
+- Mbstring PHP Extension
+- Tokenizer PHP Extension
+- XML PHP Extension
 
-Laravel has the most extensive and thorough documentation and video tutorial library of any modern web application framework. The [Laravel documentation](https://laravel.com/docs) is thorough, complete, and makes it a breeze to get started learning the framework.
+## Installation:
 
-If you're not in the mood to read, [Laracasts](https://laracasts.com) contains over 900 video tutorials on a range of topics including Laravel, modern PHP, unit testing, JavaScript, and more. Boost the skill level of yourself and your entire team by digging into our comprehensive video library.
+1. Clone or download this repo to somewhere on your server.
+2. Rename .env.example to .env and fill the database settings.
+3. Run ```composer update```, ```php artisan key:generate``` and ```php artisan migrate```.
+4. [Create a Github OAuth app](https://github.com/settings/applications/new) using ```[YOUR_URL]/callback``` as the **Authorization callback URL** and add them to ```config/eloquent-oauth.php```. As this is complex, you can use the hosted version.
+5. Enjoy!
 
-## Contributing
+## Status:
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](http://laravel.com/docs/contributions).
+Actual version: [```v1.0```](https://github.com/m1guelpf/laragit/releases/v1.0)
+Remember that you can always download the latest version using [this link](https://github.com/m1guelpf/laragit/releases/latest).
 
-## Security Vulnerabilities
+## TO DO:
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell at taylor@laravel.com. All security vulnerabilities will be promptly addressed.
+You can check the [```v2.0``` milestone](https://github.com/m1guelpf/laragit/milestone/1) to get info about the status of the ```v2.0``` development.
 
-## License
+Found an issue? Something to improve? [Open an issue](https://github.com/m1guelpf/laragit/issues/new)!
 
-The Laravel framework is open-sourced software licensed under the [MIT license](http://opensource.org/licenses/MIT).
+## Credits:
+
+- [PHP](https://php.net) - For his awesome work on developing PHP.
+- [MySQL](https://mysql.com) - For that awesome DB software.
+- [Laravel](https://laravel.com) - For this awesome framework.
+- [Github](https://github.com) - For his [API](https://developers.github.com/v3) and the awesome people at [Github Support](https://github.com/contact).
+- [Adam Wathan](https://github.com/adamwathan) - For his [eloquent OAuth library](https://github.com/adamwathan/eloquent-oauth-l5).
+- [KNP Labs](https://knplabs.com) - For his awesome [php-github-api](https://github.com/KnpLabs/php-github-api).
+- [Graham Campbell](https://gjcampbell.co.uk/) - For his awesome [Laravel Github](https://github.com/GrahamCampbell/Laravel-GitHub).
+- [Google](https://hithub.com/google) - For the [php ReCaptcha library](https://github.com/google/recaptcha).
