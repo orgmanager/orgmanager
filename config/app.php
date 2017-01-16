@@ -230,7 +230,7 @@ return [
         'SocialAuth'   => AdamWathan\EloquentOAuth\Facades\OAuth::class,
         'GitHub'       => GrahamCampbell\GitHub\Facades\GitHub::class,
         'Toastr'       => Kamaln7\Toastr\Facades\Toastr::class,
-        'Input'     => Illuminate\Support\Facades\Input::class,
+        'Input'        => Illuminate\Support\Facades\Input::class,
 
     ],
 
