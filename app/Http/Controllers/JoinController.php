@@ -27,9 +27,9 @@ class JoinController extends Controller
     public function inviteUser(Request $request, $id)
     {
         if (!$this->captchaCheck()) {
-          Toastr::error("You need to prove you aren\'t a robot!", 'ReCaptcha required');
+            Toastr::error("You need to prove you aren\'t a robot!", 'ReCaptcha required');
 
-          return redirect('join/'.$id);
+            return redirect('join/'.$id);
         }
         $org = Org::find($id);
         if (!$org) {
