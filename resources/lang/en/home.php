@@ -12,9 +12,9 @@ return [
     |
     */
 
-    'description' => 'OrgManager allows Github Organizations to share invite links for free!',
+    'description'   => 'OrgManager allows Github Organizations to share invite links for free!',
     'logintext'     => 'To start, please ',
-    'login'       => 'login',
-    'help'    => 'HELP ON GITHUB',
+    'login'         => 'login',
+    'help'          => 'HELP ON GITHUB',
 
 ];
