@@ -13,6 +13,6 @@ return [
     */
 
     'description' => 'Please login with your Github account to continue:',
-    'signin'     => 'Sign in with Github',
+    'signin'      => 'Sign in with Github',
 
 ];

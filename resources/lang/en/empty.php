@@ -12,12 +12,12 @@ return [
     |
     */
 
-    'heading' => "Looks like there's nothing here...",
-    'sync1'     => 'You can try to',
-    'sync2'     => 'sync',
-    'sync3'     => 'the data from GitHub.',
-    'makesure'  => 'Make sure you authorized OrgManager to access your organization data.',
+    'heading'     => "Looks like there's nothing here...",
+    'sync1'       => 'You can try to',
+    'sync2'       => 'sync',
+    'sync3'       => 'the data from GitHub.',
+    'makesure'    => 'Make sure you authorized OrgManager to access your organization data.',
     'problems'    => 'Having problems?',
-    'issue'     => 'Open an issue',
+    'issue'       => 'Open an issue',
 
 ];
