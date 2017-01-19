@@ -28,12 +28,12 @@ class DashboardController extends Controller
     {
         $org = Org::find($id);
         if (!$org) {
-            Toastr::error("We couldn\'t find that organization!", 'Error');
+            Toastr::error(trans('alerts.orgnotfound'), trans('alerts.error'));
 
             return redirect('dashboard');
         }
         if ($org->userid != Auth::id()) {
-            Toastr::error("You tried to edit an organization you don\'t have access to!", 'Auth Error');
+            Toastr::error(trans('alerts.notauth'), trans('alerts.authfail'));
 
             return redirect('dashboard');
         }
@@ -41,17 +41,17 @@ class DashboardController extends Controller
             if ($org->password != '' && $request->password != $org->password) {
                 $org->password = null;
                 $org->save();
-                Toastr::success($org->name."\'s password was changed", 'Password Changed');
+                Toastr::success($org->name.trans('alerts.passwdchange'), trans('alerts.changed'));
 
                 return redirect('dashboard');
             }
-            Toastr::error("You didn\'t change anything!", 'Error');
+            Toastr::error(trans('alerts.notchanged'), trans('alerts.error'));
 
             return redirect('dashboard');
         }
         $org->password = $request->password;
         $org->save();
-        Toastr::success($org->name."\'s password was changed", 'Password Changed');
+        Toastr::success($org->name.trans('alerts.passwdchange'), trans('alerts.changed'));
 
         return redirect('dashboard');
     }
