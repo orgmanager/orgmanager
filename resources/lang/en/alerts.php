@@ -30,5 +30,10 @@ return [
     'passwdchange'      => "\'s password was changed",
     'changed'           => 'Password Changed',
     'notchanged'        => "You didn\'t change anything!",
+    'alldb'             => 'All your organizations were added to our database!',
+    'sync'              => 'Sync successfull!',
+    'updated'           => ' was updated!',
+    'loggedin'          => 'Sucessfully logged in!',
+    'success'           => 'Success!'
 
 ];

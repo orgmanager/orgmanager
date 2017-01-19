@@ -19,7 +19,7 @@ class GithubController extends Controller
     {
         $this->listOrgs();
         $this->checkPerm();
-        Toastr::success('All your organizations were added to our database!', 'Sync successfull!');
+        Toastr::success(trans('alerts.alldb'), trans('alerts.sync'));
 
         return redirect('dashboard');
     }
@@ -32,7 +32,7 @@ class GithubController extends Controller
         $org->name = $orgdata['login'];
         $org->description = $orgdata['description'];
         $this->checkPerm();
-        Toastr::success($org->name.' was updated!', 'Sync successfull!', ['positionClass' => 'toast-top-full-width']);
+        Toastr::success($org->name.trans('alerts.updated'), trans('alerts.sync'));
 
         return redirect('dashboard');
     }
