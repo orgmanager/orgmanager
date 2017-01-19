@@ -12,12 +12,12 @@ return [
     |
     */
 
-    'heading'     => "Organizations",
-    'name'       => 'Name',
-    'link'       => 'Link',
-    'password'       => 'Password',
-    'submit'    => 'Submit',
-    'sync'    => 'Sync',
+    'heading'          => 'Organizations',
+    'name'             => 'Name',
+    'link'             => 'Link',
+    'password'         => 'Password',
+    'submit'           => 'Submit',
+    'sync'             => 'Sync',
     'passwdtext'       => 'Protect the invites!',
 
 ];
