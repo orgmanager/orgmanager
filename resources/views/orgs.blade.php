@@ -9,17 +9,17 @@
     <div class="row">
         <div class="col-md-8 col-md-offset-2">
             <div class="panel panel-default">
-                <div class="panel-heading">Organizations</div>
+                <div class="panel-heading">@lang('organizations.heading')</div>
                 <div class="panel-body">
                       <table id="paths" class="highlight centered responsive-table">
                         <thead>
                             <tr>
                               <th data-field="icon"></th>
-                              <th data-field="id">Name</th>
-                              <th data-field="id">Link</th>
-                              <th data-field="name">Password</th>
-                              <th data-field="button">Submit</th>
-                              <th data-field="button">Sync</th>
+                              <th data-field="id">@lang('organizations.name')</th>
+                              <th data-field="id">@lang('organizations.link')</th>
+                              <th data-field="name">@lang('organizations.password')</th>
+                              <th data-field="button">@lang('organizations.submit')</th>
+                              <th data-field="button">@lang('organizations.sync')</th>
                             </tr>
                         </thead>
                         <tbody>
@@ -30,7 +30,7 @@
                       <td><a href="{{ url('join/'.$org->id) }}" target="_blank">{{ url('join/'.$org->id) }}</td>
                       <form id="password" method="POST" action="{{ url('password/'.$org->id) }}">
                       {{ csrf_field() }}
-                      <td><span class="octicon octicon-lock"@if($org->password) onclick="toggle_visibility('passwordview');" @endif ></span><div id="passwordview" style="display: none">{{ $org->password }}</div><input type="text" name="password" class="password" value="{{ $org->password }}" placeholder="Protect the invites!"></td>
+                      <td><span class="octicon octicon-lock"@if($org->password) onclick="toggle_visibility('passwordview');" @endif ></span><div id="passwordview" style="display: none">{{ $org->password }}</div><input type="text" name="password" class="password" value="{{ $org->password }}" placeholder="@lang('organizations.passwdtext')"></td>
                       <td><button class="btn waves-effect waves-light" type="submit" name="action"><i class="material-icons center">send</i></button></td>
                       </form>
                       <form id="sync" method="POST" action="{{ url('sync/'.$org->id) }}">
