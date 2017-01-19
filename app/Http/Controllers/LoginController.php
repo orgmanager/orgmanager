@@ -6,9 +6,9 @@ use Auth;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Redirect;
 use SocialAuth;
-use Toastr;
 use SocialNorm\Exceptions\ApplicationRejectedException;
 use SocialNorm\Exceptions\InvalidAuthorizationCodeException;
+use Toastr;
 
 class LoginController extends Controller
 {
@@ -40,7 +40,7 @@ class LoginController extends Controller
         $request->session()->regenerate();
     // Current user is now available via Auth facade
     $user = Auth::user();
-    Toastr::success(trans('alerts.loggedin'), trans('alerts.success'));
+        Toastr::success(trans('alerts.loggedin'), trans('alerts.success'));
 
         return redirect('dashboard');
     }

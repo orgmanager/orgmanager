@@ -34,6 +34,6 @@ return [
     'sync'              => 'Sync successfull!',
     'updated'           => ' was updated!',
     'loggedin'          => 'Sucessfully logged in!',
-    'success'           => 'Success!'
+    'success'           => 'Success!',
 
 ];
