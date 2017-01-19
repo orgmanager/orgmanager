@@ -16,7 +16,7 @@ class JoinController extends Controller
     {
         $org = Org::find($id);
         if (!$org) {
-            Toastr::error("We couldn't find that organization!", 'Error');
+            Toastr::error(trans('alerts.orgnotfound'), trans('alerts.error'));
 
             return redirect('');
         }
@@ -27,36 +27,36 @@ class JoinController extends Controller
     public function inviteUser(Request $request, $id)
     {
         if (!$this->captchaCheck()) {
-            Toastr::error("You need to prove you aren\'t a robot!", 'ReCaptcha required');
+            Toastr::error(trans('alerts.captcha'), trans('alerts.captchat'));
 
             return redirect('join/'.$id);
         }
         $org = Org::find($id);
         if (!$org) {
-            Toastr::error("We couldn't find that organization!", 'Error');
+            Toastr::error(trans('alerts.orgnotfound'), trans('alerts.error'));
 
             return redirect('');
         }
         if (!$request->has('github_username')) {
-            Toastr::error('You need to submit an username!', 'Username required');
+            Toastr::error(trans('alerts.username'), trans('alerts.usernamet'));
 
             return redirect('join/'.$id);
         }
         if ($org->password && trim($org->password) != '') {
             if (!$request->has('org_password')) {
-                Toastr::error('You need a password!', 'Password required');
+                Toastr::error(trans('alerts.passwd1'), trans('alerts.passwdt1'));
 
                 return redirect('join/'.$id);
             }
             if ($request->org_password != $org->password) {
-                Toastr::error('Wrong Password!', 'Wrong Password');
+                Toastr::error(trans('alerts.passwd2'), trans('alerts.passwdt2'));
 
                 return redirect('join/'.$id);
             }
         }
         $username = $request->github_username;
         $this->sendInvite($username, $id);
-        Toastr::success('We have sent an invite for '.$username.'. Check your inbox!', 'Invite sent!', ['positionClass' => 'toast-top-full-width']);
+        Toastr::success(trans('alerts.invite').$username.trans('alerts.inbox'), trans('alerts.sent'));
 
         return redirect('join/'.$id);
     }
