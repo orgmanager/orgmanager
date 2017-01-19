@@ -12,10 +12,10 @@
                     <tbody>
                       <div class="blankslate">
                         <span class="mega-octicon octicon-telescope blankslate-icon"></span>
-                        <h3>Looks like there's nothing here...</h3>
-                        <p>You can try to <a href="{{ url('/sync') }}">sync</a> the data from GitHub.
-                        <p>Make sure you authorized OrgManager to access your organization data.</p>
-                        <p>Having problems? <a href="https://github.com/m1guelpf/orgmanager/issues/new?labels=bug" target="_blank">Open an issue</a>.</p>
+                        <h3>@lang('empty.heading')</h3>
+                        <p>@lang('empty.sync1') <a href="{{ url('sync') }}">@lang('empty.sync2')</a> @lang('empty.sync3')
+                        <p>@lang('empty.makesure')</p>
+                        <p>@lang('empty.problems') <a href="https://github.com/m1guelpf/orgmanager/issues/new?labels=bug" target="_blank">@lang('empty.issue')</a>.</p>
   </div>
                 </div>
             </div>
