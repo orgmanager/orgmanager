@@ -78,36 +78,4 @@ class GithubController extends Controller
             }
         }
     }
-
-    public function getReferers($id)
-    {
-        Github::authenticate(Auth::user()->token, null, 'http_token');
-        $repo = Repo::find($id);
-
-        return Github::api('repo')->traffic()->referers($repo->owner, $repo->name);
-    }
-
-    public function getPaths($id)
-    {
-        Github::authenticate(Auth::user()->token, null, 'http_token');
-        $repo = Repo::find($id);
-
-        return Github::api('repo')->traffic()->paths($repo->owner, $repo->name);
-    }
-
-    public function getViews($id)
-    {
-        Github::authenticate(Auth::user()->token, null, 'http_token');
-        $repo = Repo::find($id);
-
-        return Github::api('repo')->traffic()->views($repo->owner, $repo->name);
-    }
-
-    public function getClones($id)
-    {
-        Github::authenticate(Auth::user()->token, null, 'http_token');
-        $repo = Repo::find($id);
-
-        return Github::api('repo')->traffic()->clones($repo->owner, $repo->name);
-    }
 }
