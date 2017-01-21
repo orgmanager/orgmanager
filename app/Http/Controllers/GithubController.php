@@ -3,7 +3,6 @@
 namespace App\Http\Controllers;
 
 use App\Org;
-use App\Repo;
 use Auth;
 use GitHub;
 use Toastr;
