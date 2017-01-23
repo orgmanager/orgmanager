@@ -35,7 +35,7 @@
                 <div class="links">
                     <p>@lang('home.description')</p>
                     <p>@lang('home.logintext')<a href="{{ url('login') }}">@lang('home.login')</a>.</p>
-                    <p>Used by {{ $users::count() }} users & {{ $orgs::count() }} orgs.</p>
+                    <p>Used by {{ $users::count() }} users &amp; {{ $orgs::count() }} orgs.</p>
                     <a href="https://github.com/m1guelpf/orgmanager">@lang('home.help')</a>
                 </div>
                 <div class="using-github">
