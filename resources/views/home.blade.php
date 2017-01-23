@@ -1,4 +1,5 @@
 @inject('users', 'App\User')
+@inject('orgs', 'App\Org')
 <!DOCTYPE html>
 <html lang="en">
     <head>
