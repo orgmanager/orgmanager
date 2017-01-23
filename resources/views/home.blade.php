@@ -33,6 +33,7 @@
                 <div class="links">
                     <p>@lang('home.description')</p>
                     <p>@lang('home.logintext')<a href="{{ url('login') }}">@lang('home.login')</a>.</p>
+                    <p>Used by {{ User::count() }} users & {{ Org::count() }} orgs.</p>
                     <a href="https://github.com/m1guelpf/orgmanager">@lang('home.help')</a>
                 </div>
                 <div class="using-github">
