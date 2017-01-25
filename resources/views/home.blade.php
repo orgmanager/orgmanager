@@ -28,10 +28,10 @@
                 </div>
 
             <div class="content">
+            <img src="{{ url('img/orgmanager.png') }}">
                 <div class="title m-b-md">
                     {{ config('app.name', 'OrgManager') }}
                 </div>
-
                 <div class="links">
                     <p>@lang('home.description')</p>
                     <p>@lang('home.logintext')<a href="{{ url('login') }}">@lang('home.login')</a>.</p>
