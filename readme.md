@@ -1,4 +1,9 @@
 # OrgManager
+<p align="center">
+
+  <img src="http://i.imgur.com/KwXdDeX.png" alt="OrgManager">
+</p>
+
 OrgManager allows Github Organizations to share link invites.
 
 ## You can access the hosted version at https://orgmanager.miguelpiedrafita.com.
