@@ -14,7 +14,7 @@
                         <span class="mega-octicon octicon-telescope blankslate-icon"></span>
                         <h3>@lang('empty.heading')</h3>
                         <p>@lang('empty.sync1') <a href="{{ url('sync') }}">@lang('empty.sync2')</a> @lang('empty.sync3')
-                        <p>@lang('empty.makesure')</p>
+                        <p>If your app isn't showing here after sync, <a href="https://github.com/settings/connections/applications/10b01d866046f040c9f1">check we've been given access to it</a>.</p>
                         <p>@lang('empty.problems') <a href="https://github.com/m1guelpf/orgmanager/issues/new?labels=bug" target="_blank">@lang('empty.issue')</a>.</p>
   </div>
                 </div>
