@@ -12,6 +12,7 @@
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <!-- Styles -->
     <link href="{{ url('/css/flatty.min.css') }}" rel="stylesheet">
+    <link href="{{ url('css/octicons.css') }}" rel="stylesheet">
     <link href="{{ url('/css/bootstrap-responsive.min.css') }}" rel="stylesheet">
     <link href="{{ url('/css/bootstrap-social.css') }}" rel="stylesheet">
     <link href="{{ url('/css/alerts.css') }}" rel="stylesheet">
