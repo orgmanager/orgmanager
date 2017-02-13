@@ -1,6 +1,5 @@
 <?php
 
-use Illuminate\Http\Request;
 
 /*
 |--------------------------------------------------------------------------
@@ -13,10 +12,10 @@ use Illuminate\Http\Request;
 |
 */
 
-Route::group(['middleware' => 'auth:api', 'namespace' => 'Api'], function(){
-  Route::any('', 'HomeController@index');
-  Route::get('user', 'UserController@index');
-  Route::get('user/orgs', 'UserController@orgs');
-  Route::get('org', 'HomeController@org');
-  Route::get('org/{id?}', 'OrgController@index');
+Route::group(['middleware' => 'auth:api', 'namespace' => 'Api'], function () {
+    Route::any('', 'HomeController@index');
+    Route::get('user', 'UserController@index');
+    Route::get('user/orgs', 'UserController@orgs');
+    Route::get('org', 'HomeController@org');
+    Route::get('org/{id?}', 'OrgController@index');
 });
