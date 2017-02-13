@@ -2,8 +2,8 @@
 
 namespace App\Console\Commands;
 
-use Illuminate\Console\Command;
 use App\User;
+use Illuminate\Console\Command;
 
 class AddToken extends Command
 {
@@ -39,17 +39,16 @@ class AddToken extends Command
     public function handle()
     {
         $users = User::where('api_token', '')->get();
-        $total	=	User::where('api_token', '')->count();
-        if	($this->confirm('Do you want to add tokens for '.$total.' users?')){
-        $this->output->progressStart($total);
-        foreach ($users as $user)
-        {
-          $user->api_token = str_random(60);
-          $user->save();
-          $this->output->progressAdvance();
+        $total = User::where('api_token', '')->count();
+        if ($this->confirm('Do you want to add tokens for '.$total.' users?')) {
+            $this->output->progressStart($total);
+            foreach ($users as $user) {
+                $user->api_token = str_random(60);
+                $user->save();
+                $this->output->progressAdvance();
+            }
+            $this->output->progressFinish();
+            $this->info('Successfully generated tokens for '.$total.' users.');
         }
-        $this->output->progressFinish();
-        $this->info('Successfully generated tokens for '.$total.' users.');
-      }
     }
 }
