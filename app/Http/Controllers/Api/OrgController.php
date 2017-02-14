@@ -9,6 +9,6 @@ class OrgController extends Controller
 {
     public function index($id)
     {
-      return Org::findOrFail($id);
+        return Org::findOrFail($id);
     }
 }
