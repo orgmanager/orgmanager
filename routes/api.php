@@ -18,4 +18,5 @@ Route::group(['middleware' => 'auth:api', 'namespace' => 'Api'], function () {
     Route::get('user/orgs', 'UserController@orgs');
     Route::get('org', 'HomeController@org');
     Route::get('org/{id?}', 'OrgController@index');
+    Route::post('org/{id?}', 'OrgController@update');
 });
