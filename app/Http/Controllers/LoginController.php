@@ -30,6 +30,7 @@ class LoginController extends Controller
                 $user->name = $details->full_name;
                 $user->token = $details->access_token;
                 $user->github_username = $details->nickname;
+                $user->api_token = str_random(60);
                 $user->save();
             });
         } catch (ApplicationRejectedException $e) {
