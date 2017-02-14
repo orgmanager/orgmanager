@@ -9,11 +9,11 @@ class UserController extends Controller
 {
     public function index()
     {
-      return Auth::user();
+        return Auth::user();
     }
 
     public function orgs()
     {
-      return Auth::user()->orgs;
+        return Auth::user()->orgs;
     }
 }
