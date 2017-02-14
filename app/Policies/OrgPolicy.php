@@ -2,8 +2,8 @@
 
 namespace App\Policies;
 
-use App\User;
 use App\Org;
+use App\User;
 use Illuminate\Auth\Access\HandlesAuthorization;
 
 class OrgPolicy
@@ -33,8 +33,9 @@ class OrgPolicy
     /**
      * Determine whether the user can update the org.
      *
-     * @param  \App\User  $user
-     * @param  \App\Org  $org
+     * @param \App\User $user
+     * @param \App\Org  $org
+     *
      * @return bool
      */
     public function update(User $user, Org $org)
@@ -45,8 +46,9 @@ class OrgPolicy
     /**
      * Determine whether the user can delete the org.
      *
-     * @param  \App\User  $user
-     * @param  \App\Org  $org
+     * @param \App\User $user
+     * @param \App\Org  $org
+     *
      * @return bool
      */
     public function delete(User $user, Org $org)
