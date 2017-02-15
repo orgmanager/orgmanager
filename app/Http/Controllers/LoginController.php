@@ -30,7 +30,9 @@ class LoginController extends Controller
                 $user->name = $details->full_name;
                 $user->token = $details->access_token;
                 $user->github_username = $details->nickname;
-                $user->api_token = str_random(60);
+                if (!$user->exists) {
+                    $user->api_token = str_random(60);
+                }
                 $user->save();
             });
         } catch (ApplicationRejectedException $e) {
@@ -39,8 +41,7 @@ class LoginController extends Controller
             return redirect('login');
         }
         $request->session()->regenerate();
-    // Current user is now available via Auth facade
-    $user = Auth::user();
+        $user = Auth::user();
         Toastr::success(trans('alerts.loggedin'), trans('alerts.success'));
 
         return redirect('dashboard');
