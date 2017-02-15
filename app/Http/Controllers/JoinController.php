@@ -54,19 +54,12 @@ class JoinController extends Controller
                 return redirect('join/'.$id);
             }
         }
-        $username = $request->github_username;
-        $this->sendInvite($username, $id);
+        Artisan::call('orgmanager:joinorg', [
+        'org' => $org->id,
+        'username' => $request->github_username,
+        ]);
         Toastr::success(trans('alerts.invite').$username.trans('alerts.inbox'), trans('alerts.sent'));
 
         return redirect('join/'.$id);
-    }
-
-    public function sendInvite($username, $id)
-    {
-        $org = Org::find($id);
-        Github::authenticate($org->user->token, null, 'http_token');
-        Github::api('organization')->members()->add($org->name, $username);
-        $org->invitecount++;
-        $org->save();
     }
 }

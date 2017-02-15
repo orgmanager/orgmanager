@@ -15,6 +15,7 @@ class Kernel extends ConsoleKernel
     protected $commands = [
         \App\Console\Commands\AddToken::class,
         \App\Console\Commands\UpdateOrg::class,
+        \App\Console\Commands\JoinOrg::class,
     ];
 
     /**

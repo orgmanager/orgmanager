@@ -20,4 +20,5 @@ Route::group(['middleware' => 'auth:api', 'namespace' => 'Api'], function () {
     Route::get('org/{id?}', 'OrgController@index');
     Route::post('org/{id?}', 'OrgController@password');
     Route::put('org/{id?}', 'OrgController@update');
+    Route::post('join/{id?}', 'OrgController@join');
 });

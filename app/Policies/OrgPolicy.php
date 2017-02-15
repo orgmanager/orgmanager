@@ -55,4 +55,17 @@ class OrgPolicy
     {
         return $user->id === $org->user->id;
     }
+
+    /**
+     * Determine whether the user can join the org.
+     *
+     * @param \App\User $user
+     * @param \App\Org  $org
+     *
+     * @return bool
+     */
+    public function join(User $user, Org $org)
+    {
+        return $user->id === $org->user->id;
+    }
 }
