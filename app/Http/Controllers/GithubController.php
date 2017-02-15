@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use Illuminate\Support\Facades\Artisan;
 use App\Org;
 use Auth;
 use GitHub;
@@ -25,11 +26,10 @@ class GithubController extends Controller
 
     public function syncOrg($id)
     {
-        Github::authenticate(Auth::user()->token, null, 'http_token');
-        $org = Org::find($id);
-        $orgdata = GitHub::api('organization')->show($org->name);
-        $org->name = $orgdata['login'];
-        $org->description = $orgdata['description'];
+        $org = Org::findOrFail($id);
+        Artisan::call('orgmanager:updateorg', [
+          'org' => $org->id
+        ]);
         $this->checkPerm();
         Toastr::success($org->name.trans('alerts.updated'), trans('alerts.sync'));
 
