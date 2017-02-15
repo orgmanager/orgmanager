@@ -20,6 +20,7 @@ class OrgController extends Controller
         if ($request->has('password')) {
             $org->password = $request->input('password');
             $org->save();
+
             return $org->makeVisible('password')->makeHidden('user')->toArray();
         }
         abort(400);
