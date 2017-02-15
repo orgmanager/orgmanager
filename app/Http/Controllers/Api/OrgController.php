@@ -30,7 +30,7 @@ class OrgController extends Controller
     {
       $org = Org::findOrFail($id);
       $this->authorize('update', $org);
-      $exitCode = Artisan::call('orgmanager:updateorg', [
+      Artisan::call('orgmanager:updateorg', [
         'org' => $org->id
       ]);
       return response(null, 204);
