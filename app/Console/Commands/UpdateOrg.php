@@ -2,9 +2,9 @@
 
 namespace App\Console\Commands;
 
-use Illuminate\Console\Command;
 use App\Org;
 use GitHub;
+use Illuminate\Console\Command;
 
 class UpdateOrg extends Command
 {
