@@ -2,10 +2,10 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Support\Facades\Artisan;
 use App\Org;
 use Auth;
 use GitHub;
+use Illuminate\Support\Facades\Artisan;
 use Toastr;
 
 class GithubController extends Controller
@@ -28,7 +28,7 @@ class GithubController extends Controller
     {
         $org = Org::findOrFail($id);
         Artisan::call('orgmanager:updateorg', [
-          'org' => $org->id
+          'org' => $org->id,
         ]);
         $this->checkPerm();
         Toastr::success($org->name.trans('alerts.updated'), trans('alerts.sync'));
