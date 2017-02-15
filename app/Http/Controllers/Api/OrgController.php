@@ -21,6 +21,7 @@ class OrgController extends Controller
         if ($request->has('password')) {
             $org->password = $request->input('password');
             $org->save();
+
             return $org->makeVisible('password')->makeHidden('user')->toArray();
         }
         abort(400);
@@ -28,11 +29,12 @@ class OrgController extends Controller
 
     public function update($id)
     {
-      $org = Org::findOrFail($id);
-      $this->authorize('update', $org);
-      $exitCode = Artisan::call('orgmanager:updateorg', [
-        'org' => $org->id
+        $org = Org::findOrFail($id);
+        $this->authorize('update', $org);
+        $exitCode = Artisan::call('orgmanager:updateorg', [
+        'org' => $org->id,
       ]);
-      return response(null, 204);
+
+        return response(null, 204);
     }
 }
