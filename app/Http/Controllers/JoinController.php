@@ -4,7 +4,6 @@ namespace App\Http\Controllers;
 
 use App\Org;
 use App\Traits\CaptchaTrait;
-use GitHub;
 use Illuminate\Http\Request;
 use Toastr;
 
@@ -55,7 +54,7 @@ class JoinController extends Controller
             }
         }
         Artisan::call('orgmanager:joinorg', [
-        'org' => $org->id,
+        'org'      => $org->id,
         'username' => $request->github_username,
         ]);
         Toastr::success(trans('alerts.invite').$username.trans('alerts.inbox'), trans('alerts.sent'));

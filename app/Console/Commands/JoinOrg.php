@@ -2,9 +2,9 @@
 
 namespace App\Console\Commands;
 
-use Illuminate\Console\Command;
-use GitHub;
 use App\Org;
+use GitHub;
+use Illuminate\Console\Command;
 
 class JoinOrg extends Command
 {
@@ -32,11 +32,11 @@ class JoinOrg extends Command
         parent::__construct();
     }
 
-    /**
-     * Execute the console command.
-     *
-     * @return mixed
-     */
+     /**
+      * Execute the console command.
+      *
+      * @return mixed
+      */
      public function handle()
      {
          $org = Org::findOrFail($this->argument('org'));
