@@ -29,10 +29,10 @@ class OrgController extends Controller
 
     public function update($id)
     {
-      $org = Org::findOrFail($id);
-      $this->authorize('update', $org);
-      Artisan::call('orgmanager:updateorg', [
-        'org' => $org->id
+        $org = Org::findOrFail($id);
+        $this->authorize('update', $org);
+        Artisan::call('orgmanager:updateorg', [
+        'org' => $org->id,
       ]);
 
         return response(null, 204);
