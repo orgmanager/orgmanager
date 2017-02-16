@@ -3,8 +3,8 @@
 namespace App\Http\Controllers\Api;
 
 use App\Http\Controllers\Controller;
-use App\User;
 use App\Org;
+use App\User;
 
 class HomeController extends Controller
 {
@@ -30,11 +30,11 @@ class HomeController extends Controller
 
     public function stats()
     {
-      $stats = (object) [];
-      $stats->users = User::count();
-      $stats->orgs = Org::count();
-      $stats->invites = Org::sum('invitecount');
+        $stats = (object) [];
+        $stats->users = User::count();
+        $stats->orgs = Org::count();
+        $stats->invites = Org::sum('invitecount');
 
-      return response()->json($stats);
+        return response()->json($stats);
     }
 }
