@@ -1,14 +1,13 @@
 <?php
 
 use Illuminate\Foundation\Testing\WithoutMiddleware;
-use Illuminate\Foundation\Testing\DatabaseMigrations;
-use Illuminate\Foundation\Testing\DatabaseTransactions;
 
 class ApiHomeTest extends TestCase
 {
     use WithoutMiddleware;
+
     /**
-     * Test the API home page status
+     * Test the API home page status.
      *
      * @return void
      */
@@ -20,9 +19,9 @@ class ApiHomeTest extends TestCase
 
     public function testendpointsdisplayed()
     {
-      $this->get('api')
+        $this->get('api')
       ->seeJson([
-        'docs' => "https://github.com/m1guelpf/orgmanager/wiki (TODO)",
+        'docs' => 'https://github.com/m1guelpf/orgmanager/wiki (TODO)',
       ]);
     }
 }
