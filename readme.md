@@ -52,19 +52,29 @@ OrgManager was created as a personal project for learning Laravel, PHP and the G
 ## Installation:
 
 1. Clone or download this repo to somewhere on your server.
-2. Rename .env.example to .env and fill the database settings.
+2. Rename .env.example to .env and fill the required settings.
 3. Run ```composer update```, ```php artisan key:generate``` and ```php artisan migrate```.
 4. [Create a Github OAuth app](https://github.com/settings/applications/new) using ```[YOUR_URL]/callback``` as the **Authorization callback URL** and add them to ```config/eloquent-oauth.php```. As this is complex, you can use the hosted version.
 5. Enjoy!
 
+### Updating from 1.x
+
+Orgmanager v2.0 introduced some breaking changes, so be sure to follow this steps when updating from v1.x
+
+1. Clone or download the new version of Orgmanager and replace the old version (Don't worry, you shouldn't lose any data!).
+2. Double-check the ```.env``` file is still there. If it isn't, you may have to check Step 2 of the installation process.
+3. Run ```composer update ``` and ```php artisan migrate```.
+4. In you had users registered before upgrading, run ```php artisan orgmanager:tokens```.
+5. Enjoy!
+
 ## Status:
 
-Actual version: [```v1.0```](https://github.com/m1guelpf/orgmanager/releases/v1.0)
+Actual version: [```v2.0```](https://github.com/m1guelpf/orgmanager/releases/v2.0)
 Remember that you can always download the latest version using [this link](https://github.com/m1guelpf/orgmanager/releases/latest).
 
 ## TO DO:
 
-You can check the [```v2.0``` milestone](https://github.com/m1guelpf/orgmanager/milestone/1) to get info about the status of the ```v2.0``` development.
+You can check the [```v3.0``` milestone](https://github.com/m1guelpf/orgmanager/milestone/2) to get info about the status of the ```v3.0``` development.
 
 Found an issue? Something to improve? [Open an issue](https://github.com/m1guelpf/orgmanager/issues/new)!
 
