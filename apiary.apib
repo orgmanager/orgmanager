@@ -5,76 +5,32 @@ HOST: https://orgmanager.miguelpiedrafita.com/api
 
 The Orgmanager API allows you to integrate Orgmanager with other applications and projects.
 
-## Questions Collection [/questions]
+## User Data [/user]
 
-### List All Questions [GET]
+### Get user info [GET]
 
 + Response 200 (application/json)
 
-        [
-            {
-                "question": "Favourite programming language?",
-                "published_at": "2015-08-05T08:40:51.620Z",
-                "choices": [
-                    {
-                        "choice": "Swift",
-                        "votes": 2048
-                    }, {
-                        "choice": "Python",
-                        "votes": 1024
-                    }, {
-                        "choice": "Objective-C",
-                        "votes": 512
-                    }, {
-                        "choice": "Ruby",
-                        "votes": 256
-                    }
-                ]
-            }
-        ]
-
-### Create a New Question [POST]
-
-You may create your own question using this action. It takes a JSON
-object containing a question and a collection of answers in the
-form of choices.
-
-+ Request (application/json)
-
         {
-            "question": "Favourite programming language?",
-            "choices": [
-                "Swift",
-                "Python",
-                "Objective-C",
-                "Ruby"
-            ]
+            "id":1,
+            "name":"Miguel Piedrafita",
+            "email":"soy@miguelpiedrafita.com",
+            "github_username":"m1guelpf",
+            "created_at":"2017-01-25 18:44:32",
+            "updated_at":"2017-02-16 19:40:50"
         }
 
-+ Response 201 (application/json)
+## User Organizations [/user/orgs]
 
-    + Headers
+### Get user organizations [GET]
 
-            Location: /questions/2
++ Response 200 (application/json)
 
-    + Body
-
-            {
-                "question": "Favourite programming language?",
-                "published_at": "2015-08-05T08:40:51.620Z",
-                "choices": [
-                    {
-                        "choice": "Swift",
-                        "votes": 0
-                    }, {
-                        "choice": "Python",
-                        "votes": 0
-                    }, {
-                        "choice": "Objective-C",
-                        "votes": 0
-                    }, {
-                        "choice": "Ruby",
-                        "votes": 0
-                    }
-                ]
-            }
+        {
+            "id":1,
+            "name":"Test Organization",
+            "url":"https:\/\/api.github.com\/orgs\/test-org",
+            "description":null,
+            "avatar":"https:\/\/miguelpiedrafita.com\/logo.png",
+            "invitecount":100
+        }
