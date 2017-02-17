@@ -17,6 +17,10 @@ Route::get('/', function () {
     return view('home');
 });
 Route::get('dashboard', 'DashboardController@showDashboard');
+Route::get('org/{org}', 'OrgController@showPage');
+Route::post('org/{org}', 'OrgController@changePassword');
+Route::put('org/{org}', 'OrgController@updateOrg');
+Route::delete('org/{org}', 'OrgController@deleteOrg');
 Route::get('sync', 'GithubController@syncOrgs');
 Route::post('sync/{id}', 'GithubController@syncOrg');
 Route::get('join/{id}', 'JoinController@showPage');

@@ -16,6 +16,7 @@ return [
     'name'             => 'Name',
     'link'             => 'Link',
     'options'          => 'Settings',
-    'passwdtext'       => 'Protect the invites!',
-    'haspasswdtext'    => 'Change Organization\'s password',
+    'passwdtext'       => 'Protect invites!',
+    'haspasswdtext'    => 'Change password',
+    'changepasswd'     => 'Change password',
 ];

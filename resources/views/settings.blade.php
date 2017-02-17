@@ -1,0 +1,50 @@
+@extends('layouts.app')
+
+@section('content')
+<div class="container">
+    <div class="row">
+        <div class="col-md-8 col-md-offset-2">
+            <div class="panel panel-default">
+                <div class="panel-heading">{{ $org->name }}</div>
+
+                <div class="panel-body">
+                  <h4 class="text-center">{{ $org->name}} settings</h4>
+                  <div name="password" class="col-md-4 text-center">
+                      <form id="password" method="POST">
+                        {{ csrf_field() }}
+                        <div class="form-group">
+                          <label for="org_passwd">Organization password</label>
+                          <input type="password" class="form-control" id="org_passwd" name="org_passwd" placeholder="@if(isset($org->password)) @lang('organizations.haspasswdtext') @else @lang('organizations.passwdtext') @endif">
+                          <br>
+                          <button type="submit" class="btn btn-primary">@lang('organizations.changepasswd')</button>
+                        </div>
+                      </form>
+                  </div>
+                  <div name="sync" class="col-md-4">
+                    <div id="title" class="text-center">Sync organization</div>
+                    <div id="body" class="text-center">
+                      <br>
+                      <form id="sync" method="POST">
+                        {{ csrf_field() }}
+                        {{ method_field('PUT') }}
+                        <button type="submit" class="btn btn-primary"><i class="octicon octicon-sync"></i> Sync</button>
+                      </form>
+                    </div>
+                  </div>
+                  <div name="delete" class="col-md-4">
+                    <div id="title" class="text-center">Delete organization</div>
+                    <div id="body" class="text-center">
+                      <br>
+                      <form id="delete" method="POST">
+                        {{ csrf_field() }}
+                        {{ method_field('DELETE') }}
+                        <button type="submit" class="btn btn-primary"><i class="octicon octicon-trashcan"></i> Delete</button>
+                      </form>
+                    </div>
+                  </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+@endsection

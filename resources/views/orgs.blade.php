@@ -26,7 +26,7 @@
                       <td><span class="octicon octicon-organization"></span></td>
                       <td>{{ $org->name }}</td>
                       <td><a href="{{ url('join/'.$org->id) }}" target="_blank">{{ url('join/'.$org->id) }}</td>
-                      <td><a class="btn waves-effect waves-light" name="options" href="{{ url('org/'.$org->id)}}"><span class="octicon octicon-settings"></span></a></td>
+                      <td><a class="btn waves-effect waves-light" role="button" name="options" href="{{ url('org/'.$org->id)}}"><span class="octicon octicon-settings"></span></a></td>
                       </tr>
                       @endforeach
                       </tbody>
@@ -41,13 +41,4 @@
 
 @section('scripts')
 <script src="{{ url('js/materialize.min.js') }}"></script>
-<script type="text/javascript">
-    function toggle_visibility(id) {
-       var e = document.getElementById(id);
-       if(e.style.display == 'block')
-          e.style.display = 'none';
-       else
-          e.style.display = 'block';
-    }
-</script>
 @endsection
