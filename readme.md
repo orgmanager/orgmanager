@@ -65,7 +65,8 @@ Orgmanager v2.0 introduced some breaking changes, so be sure to follow this step
 2. Double-check the ```.env``` file is still there. If it isn't, you may have to check Step 2 of the installation process.
 3. Run ```composer update ``` and ```php artisan migrate```.
 4. In you had users registered before upgrading, run ```php artisan orgmanager:tokens```.
-5. Enjoy!
+5. If any of your user's organizations had a password before upgrading, run ```php artisan orgmanager:orgmanager:orgpwdcrypt``` *IMPORTANT: You should only run this command ONCE!*.
+6. Enjoy!
 
 ## Status:
 
