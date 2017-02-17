@@ -37,19 +37,12 @@ class DashboardController extends Controller
 
             return redirect('dashboard');
         }
-        if (!$request->has('password') || trim($request->password) == '' || $request->password == $org->password) {
-            if ($org->password != '' && $request->password != $org->password) {
-                $org->password = null;
-                $org->save();
-                Toastr::success($org->name.trans('alerts.passwdchange'), trans('alerts.changed'));
-
-                return redirect('dashboard');
-            }
+        if (!$request->has('password') || trim($request->password) == '') {
             Toastr::error(trans('alerts.notchanged'), trans('alerts.error'));
 
             return redirect('dashboard');
         }
-        $org->password = $request->password;
+        $org->password = bcrypt($request->password);
         $org->save();
         Toastr::success($org->name.trans('alerts.passwdchange'), trans('alerts.changed'));
 

@@ -30,7 +30,7 @@
                       <td><a href="{{ url('join/'.$org->id) }}" target="_blank">{{ url('join/'.$org->id) }}</td>
                       <form id="password" method="POST" action="{{ url('password/'.$org->id) }}">
                       {{ csrf_field() }}
-                      <td><span class="octicon octicon-lock"@if($org->password) onclick="toggle_visibility('passwordview');" @endif ></span><div id="passwordview" style="display: none">{{ $org->password }}</div><input type="text" name="password" class="password" value="{{ $org->password }}" placeholder="@lang('organizations.passwdtext')"></td>
+                      <td><i class="octicon octicon-lock"></i><input type="text" name="password" class="password" value="{{ old('password') }}" placeholder="@lang('organizations.passwdtext')"></td>
                       <td><button class="btn waves-effect waves-light" type="submit" name="action"><i class="material-icons center">send</i></button></td>
                       </form>
                       <form id="sync" method="POST" action="{{ url('sync/'.$org->id) }}">

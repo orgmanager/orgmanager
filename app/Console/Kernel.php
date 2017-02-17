@@ -16,6 +16,7 @@ class Kernel extends ConsoleKernel
         \App\Console\Commands\AddToken::class,
         \App\Console\Commands\UpdateOrg::class,
         \App\Console\Commands\JoinOrg::class,
+        \App\Console\Commands\EncryptOrgPasswords::class,
     ];
 
     /**
