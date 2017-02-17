@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Org;
 use App\Traits\CaptchaTrait;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Artisan;
 use Toastr;
 
 class JoinController extends Controller
@@ -47,7 +48,7 @@ class JoinController extends Controller
 
                 return redirect('join/'.$id);
             }
-            if ($request->org_password != $org->password) {
+            if (!password_verify($request->org_password, $org->password)) {
                 Toastr::error(trans('alerts.passwd2'), trans('alerts.passwdt2'));
 
                 return redirect('join/'.$id);
