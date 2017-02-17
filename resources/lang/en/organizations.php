@@ -19,5 +19,5 @@ return [
     'submit'           => 'Submit',
     'sync'             => 'Sync',
     'passwdtext'       => 'Protect the invites!',
-
+    'haspasswdtext'    => 'Change Organization\'s password',
 ];
