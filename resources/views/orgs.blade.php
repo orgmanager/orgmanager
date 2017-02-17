@@ -17,9 +17,7 @@
                               <th data-field="icon"></th>
                               <th data-field="id">@lang('organizations.name')</th>
                               <th data-field="id">@lang('organizations.link')</th>
-                              <th data-field="name">@lang('organizations.password')</th>
-                              <th data-field="button">@lang('organizations.submit')</th>
-                              <th data-field="button">@lang('organizations.sync')</th>
+                              <th data-field="name">@lang('organizations.options')</th>
                             </tr>
                         </thead>
                         <tbody>
@@ -28,14 +26,7 @@
                       <td><span class="octicon octicon-organization"></span></td>
                       <td>{{ $org->name }}</td>
                       <td><a href="{{ url('join/'.$org->id) }}" target="_blank">{{ url('join/'.$org->id) }}</td>
-                      <form id="password" method="POST" action="{{ url('password/'.$org->id) }}">
-                      {{ csrf_field() }}
-                      <td><i class="octicon octicon-lock"></i><input type="text" name="password" class="password" value="{{ old('password') }}" placeholder="@if (isset($org->password)) @lang('organizations.haspasswdtext') @else @lang('organizations.passwdtext')@endif"></td>
-                      <td><button class="btn waves-effect waves-light" type="submit" name="action"><i class="material-icons center">send</i></button></td>
-                      </form>
-                      <form id="sync" method="POST" action="{{ url('sync/'.$org->id) }}">
-                      {{ csrf_field() }}
-                      <td><button class="btn waves-effect waves-light" type="submit" name="sync"><span class="octicon octicon-sync"></span></button></td>
+                      <td><a class="btn waves-effect waves-light" name="options" href="{{ url('org/'.$org->id)}}"><span class="octicon octicon-settings"></span></a></td>
                       </tr>
                       @endforeach
                       </tbody>
