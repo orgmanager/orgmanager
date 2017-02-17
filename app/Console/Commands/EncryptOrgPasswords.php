@@ -2,8 +2,8 @@
 
 namespace App\Console\Commands;
 
-use Illuminate\Console\Command;
 use App\Org;
+use Illuminate\Console\Command;
 
 class EncryptOrgPasswords extends Command
 {
@@ -40,19 +40,19 @@ class EncryptOrgPasswords extends Command
      {
          $orgs = Org::whereNotNull('password')->get();
          $total = Org::whereNotNull('password')->count();
-         if ($total == 0){
-           $this->error('There aren\'t any password-protected organizations.');
+         if ($total == 0) {
+             $this->error('There aren\'t any password-protected organizations.');
          } else {
-         if ($this->confirm('Do you want to add encrypt '.$total.' passwords?')) {
-             $this->output->progressStart($total);
-             foreach ($orgs as $org) {
-                 $org->password = bcrypt($org->password);
-                 $org->save();
-                 $this->output->progressAdvance();
+             if ($this->confirm('Do you want to add encrypt '.$total.' passwords?')) {
+                 $this->output->progressStart($total);
+                 foreach ($orgs as $org) {
+                     $org->password = bcrypt($org->password);
+                     $org->save();
+                     $this->output->progressAdvance();
+                 }
+                 $this->output->progressFinish();
+                 $this->info('Successfully encrypted '.$total.' passwords.');
              }
-             $this->output->progressFinish();
-             $this->info('Successfully encrypted '.$total.' passwords.');
          }
-       }
      }
 }
