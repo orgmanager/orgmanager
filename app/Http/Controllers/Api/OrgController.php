@@ -38,6 +38,14 @@ class OrgController extends Controller
         return response(null, 204);
     }
 
+    public function delete($id)
+    {
+      $org = Org::findOrFail($id);
+      $this->authorize('delete', $org);
+      $org->delete();
+      return response(null, 204);
+    }
+
     public function join(Request $request, $id)
     {
         $org = Org::findOrFail($id);
