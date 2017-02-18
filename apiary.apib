@@ -111,3 +111,37 @@ The Orgmanager API allows you to integrate Orgmanager with other applications an
             Authorization: bearer {token}
 
 + Response 204 (text/html; charset=UTF-8)
+
+## Join [/join/{id}]
+
+### Join organization [POST]
+
++ Request
+    {
+        "username": "{github_username}"
+    }
+
+    + Headers
+            Content-Type: application/json
+            Accept: application/json
+            Authorization: bearer {token}
+
++ Response 204 (text/html; charset=UTF-8)
+
+## Stats [/stats]
+
+### Get application stats [GET]
+
++ Request
+    + Headers
+            Content-Type: application/json
+            Accept: application/json
+            Authorization: bearer {token}
+
++ Response 200 (application/json)
+
+        {
+            "users": 10,
+            "orgs": 4,
+            "invites": 445
+        }
