@@ -46,3 +46,68 @@ The Orgmanager API allows you to integrate Orgmanager with other applications an
             "avatar":"https:\/\/miguelpiedrafita.com\/logo.png",
             "invitecount":100
         }
+
+## Organizations [/org/{id}]
+
+### Get organization info [GET]
+
++ Request
+    + Headers
+            Content-Type: application/json
+            Accept: application/json
+            Authorization: bearer {token}
+
++ Response 200 (application/json)
+
+        {
+            "id": 1,
+            "name": "Test Org",
+            "url": "https://api.github.com/orgs/test-org",
+            "description": null,
+            "avatar": "https://avatars.githubusercontent.com/1",
+            "invitecount": 0
+        }
+
+### Change organization password [POST]
+
++ Request
+    {
+        "password": "{newpassword}"
+    }
+
+    + Headers
+            Content-Type: application/json
+            Accept: application/json
+            Authorization: bearer {token}
+
++ Response 200 (application/json)
+
+        {
+            "id": 1,
+            "name": "Test Org",
+            "url": "https://api.github.com/orgs/test-org",
+            "description": null,
+            "avatar": "https://avatars.githubusercontent.com/1",
+            "invitecount": 0,
+            "password": "{newpassword}"
+        }
+
+### Update organization [PUT]
+
++ Request
+    + Headers
+            Content-Type: application/json
+            Accept: application/json
+            Authorization: bearer {token}
+
++ Response 204 (text/html; charset=UTF-8)
+
+### Delete organization [DELETE]
+
++ Request
+    + Headers
+            Content-Type: application/json
+            Accept: application/json
+            Authorization: bearer {token}
+
++ Response 204 (text/html; charset=UTF-8)
