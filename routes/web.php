@@ -26,6 +26,9 @@ Route::post('sync/{id}', 'GithubController@syncOrg');
 Route::get('join/{id}', 'JoinController@showPage');
 Route::post('join/{id}', 'JoinController@inviteUser');
 Route::post('password/{id}', 'DashboardController@changePassword');
+Route::get('developer', 'DeveloperController@index');
+Route::get('token', 'DeveloperController@token');
+Route::delete('token', 'DeveloperController@deleteToken');
 
 // Auth routes
 Route::get('login', 'LoginController@showLogin');

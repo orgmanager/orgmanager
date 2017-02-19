@@ -97,7 +97,6 @@
     <!-- Scripts -->
     {!! Toastr::render() !!}
     <script src="{{ url('/js/app.js') }}"></script>
-    <script src="{{ url('/js/blankstate.js') }}" async></script>
     @yield('scripts')
 </body>
 </html>
