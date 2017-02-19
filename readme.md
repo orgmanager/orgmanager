@@ -76,7 +76,7 @@ Remember that you can always download the latest version using [this link](https
 
 ## API:
 
-You can access the Orgmanager API documentation [here](http://docs.orgmanager.apiary.io).
+You can access the Orgmanager API documentation [here](http://docs.orgmanager.miguelpiedrafita.com).
 
 ## Roadmap:
 

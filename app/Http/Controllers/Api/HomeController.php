@@ -18,7 +18,7 @@ class HomeController extends Controller
         $endpoints->update_org = url('api/org/{id}');
         $endpoints->join = url('api/join/{id}');
         $endpoints->stats = url('api/stats');
-        $endpoints->docs = url('http://docs.orgmanager.apiary.io');
+        $endpoints->docs = url('http://docs.orgmanager.miguelpiedrafita.com');
 
         return response()->json($endpoints);
     }
@@ -27,7 +27,7 @@ class HomeController extends Controller
     {
         $endpoints = (object) [];
         $endpoints->org = url('api/org/{id}');
-        $endpoints->docs = url('http://docs.orgmanager.apiary.io');
+        $endpoints->docs = url('http://docs.orgmanager.miguelpiedrafita.com');
 
         return response()->json($endpoints);
     }

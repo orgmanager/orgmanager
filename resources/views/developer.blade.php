@@ -14,7 +14,7 @@
                   @else
                   <p>You need a Orgmanager account, so <a href="{{ url('login') }}">register</a> or <a href="{{ url('login') }}">login</a> and come back!</p>
                  @endif
-                 <p>Also, you may want to <a href="{{ url('http://docs.orgmanager.apiary.io') }}" target="_blank">access the API documentation</a>!</p>
+                 <p>Also, you may want to <a href="{{ url('http://docs.orgmanager.miguelpiedrafita.com') }}" target="_blank">access the API documentation</a>!</p>
                  <p>Good luck!</p>
                 </div>
             </div>
