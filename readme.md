@@ -36,6 +36,7 @@ OrgManager was created as a personal project for learning Laravel, PHP and the G
 - Uses Github Style: OrgManager uses [PrimeCSS](http://primercss.io/) and [Octicons](https://octicons.github.com) for having a github-like style!
 - Caching: OrgManager uses notification caching to reduce load time and provide you an awesome experience!
 - More coming soon: OrgManager is under active developement so, if you want to help or have ideas, go ahead and Contribute!
+- OrgManager API: Orgmanager provides an awesome API that allows you to integrate it with your application.
 
 ## Requirements:
 
@@ -62,8 +63,8 @@ OrgManager was created as a personal project for learning Laravel, PHP and the G
 Orgmanager v2.0 introduced some breaking changes, so be sure to follow this steps when updating from v1.x
 
 1. Clone or download the new version of Orgmanager and replace the old version (Don't worry, you shouldn't lose any data!).
-2. Double-check the ```.env``` file is still there. If it isn't, you may have to check Step 2 of the installation process.
-3. Run ```composer update ``` and ```php artisan migrate```.
+2. Double-check the ```.env``` file is still there. If it isn't, you may have to repeat Step 2 of the installation process.
+3. Run ```composer update``` and ```php artisan migrate```.
 4. In you had users registered before upgrading, run ```php artisan orgmanager:tokens```.
 5. If any of your user's organizations had a password before upgrading, run ```php artisan orgmanager:orgmanager:orgpwdcrypt``` *IMPORTANT: You should only run this command ONCE!*.
 6. Enjoy!
@@ -73,7 +74,11 @@ Orgmanager v2.0 introduced some breaking changes, so be sure to follow this step
 Actual version: [```v2.0```](https://github.com/m1guelpf/orgmanager/releases/v2.0)
 Remember that you can always download the latest version using [this link](https://github.com/m1guelpf/orgmanager/releases/latest).
 
-## TO DO:
+## API:
+
+You can access the Orgmanager API documentation [here](http://docs.orgmanager.apiary.io).
+
+## Roadmap:
 
 You can check the [```v3.0``` milestone](https://github.com/m1guelpf/orgmanager/milestone/2) to get info about the status of the ```v3.0``` development.
 
