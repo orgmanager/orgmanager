@@ -58,7 +58,7 @@ class JoinController extends Controller
         'org'      => $org->id,
         'username' => $request->github_username,
         ]);
-        Toastr::success(trans('alerts.invite').$username.trans('alerts.inbox'), trans('alerts.sent'));
+        Toastr::success(trans('alerts.invite').$request->github_username.trans('alerts.inbox'), trans('alerts.sent'));
 
         return redirect('join/'.$id);
     }
