@@ -58,8 +58,9 @@ class JoinController extends Controller
 
     public function redirect($name)
     {
-      $org = Org::where('name', $name)->firstOrFail();
-      return redirect('join/'.$org->id);
+        $org = Org::where('name', $name)->firstOrFail();
+
+        return redirect('join/'.$org->id);
     }
 
     protected function checkMembership(Org $org, $username)
