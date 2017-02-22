@@ -20,7 +20,7 @@
             <div class="content">
                 <div class="title m-b-md">
                   <img src="{{ $org->avatar }}" class="logo"><br>
-                    @lang('join.join') {{ $org->name }}
+                    @lang('join.join') <a href="https://github.com/{{ $org->name }}" target="_blank">{{ $org->name }}</a>
                     @if ($org->description)
                     <blockquote>{{ $org->description }}</blockquote>
                     @endif
