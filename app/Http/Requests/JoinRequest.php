@@ -23,7 +23,7 @@ class JoinRequest extends FormRequest
      */
     public function rules()
     {
-      return [
+        return [
       'github_username' => 'required',
       ];
     }

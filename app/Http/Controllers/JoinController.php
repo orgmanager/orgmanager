@@ -2,11 +2,10 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Requests\JoinRequest;
 use App\Org;
 use App\Traits\CaptchaTrait;
 use GitHub;
-use Illuminate\Http\Request;
-use App\Http\Requests\JoinRequest;
 use Illuminate\Support\Facades\Artisan;
 use Toastr;
 
