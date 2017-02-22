@@ -23,7 +23,7 @@ class DeveloperController extends Controller
         return view('token');
     }
 
-    public function deleteToken(Request $request)
+    public function deleteToken()
     {
         $user = Auth::user();
         $user->api_token = str_random(60);
