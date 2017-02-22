@@ -45,6 +45,9 @@
         <script src="{{ url('js/jquery.min.js') }}"></script>
         <script src="{{ url('js/toastr.min.js') }}"></script>
         <script src="https://www.google.com/recaptcha/api.js"></script>
+        @if (count($errors) > 0)
+        {!! Toastr::error($errors->first(), 'Error') !!}
+        @endif
         {!! Toastr::render() !!}
     </body>
 </html>
