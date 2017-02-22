@@ -6,6 +6,7 @@ use App\Org;
 use App\Traits\CaptchaTrait;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Artisan;
+use GitHub;
 use Toastr;
 
 class JoinController extends Controller
@@ -54,6 +55,11 @@ class JoinController extends Controller
                 return redirect('join/'.$id);
             }
         }
+        if ($this->checkMembership($org, $request->github_username)){
+          Toastr::error('You are already a member of '.$org->name, 'Already a member!');
+
+          return redirect('join/'.$id);
+        }
         Artisan::call('orgmanager:joinorg', [
         'org'      => $org->id,
         'username' => $request->github_username,
@@ -61,5 +67,16 @@ class JoinController extends Controller
         Toastr::success(trans('alerts.invite').$request->github_username.trans('alerts.inbox'), trans('alerts.sent'));
 
         return redirect('join/'.$id);
+    }
+
+    protected function checkMembership(Org $org, $username)
+    {
+      Github::authenticate($org->user->token, null, 'http_token');
+      try {
+        Github::api('organization')->members()->show($org->name, $username);
+      } catch (Github\Exception\RuntimeException $e){
+        return false;
+      }
+      return true;
     }
 }
