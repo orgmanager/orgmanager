@@ -24,14 +24,8 @@ class DashboardController extends Controller
         return view('orgs')->with('orgs', $orgs);
     }
 
-    public function changePassword(Request $request, $id)
+    public function changePassword(Request $request, Org $org)
     {
-        $org = Org::find($id);
-        if (!$org) {
-            Toastr::error(trans('alerts.orgnotfound'), trans('alerts.error'));
-
-            return redirect('dashboard');
-        }
         if ($org->userid != Auth::id()) {
             Toastr::error(trans('alerts.notauth'), trans('alerts.authfail'));
 

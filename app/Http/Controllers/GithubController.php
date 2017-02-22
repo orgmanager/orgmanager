@@ -24,9 +24,8 @@ class GithubController extends Controller
         return redirect('dashboard');
     }
 
-    public function syncOrg($id)
+    public function syncOrg(Org $org)
     {
-        $org = Org::findOrFail($id);
         Artisan::call('orgmanager:updateorg', [
           'org' => $org->id,
         ]);
