@@ -1,8 +1,8 @@
 <?php
 
-use Illuminate\Support\Facades\Schema;
-use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
+use Illuminate\Database\Schema\Blueprint;
+use Illuminate\Support\Facades\Schema;
 
 class AddPrettyNameToOrgsTable extends Migration
 {
@@ -13,9 +13,9 @@ class AddPrettyNameToOrgsTable extends Migration
      */
     public function up()
     {
-      Schema::table('orgs', function (Blueprint $table) {
-          $table->string('pretty_name')->after('name')->nullable();
-      });
+        Schema::table('orgs', function (Blueprint $table) {
+            $table->string('pretty_name')->after('name')->nullable();
+        });
     }
 
     /**
@@ -25,8 +25,8 @@ class AddPrettyNameToOrgsTable extends Migration
      */
     public function down()
     {
-      Schema::table('orgs', function (Blueprint $table) {
-          $table->dropColumn('pretty_name');
-      });
+        Schema::table('orgs', function (Blueprint $table) {
+            $table->dropColumn('pretty_name');
+        });
     }
 }
