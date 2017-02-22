@@ -37,7 +37,6 @@
                       <button type="submit" class="submit-button" name="submit">@lang('join.join')!</button>
                     </form>
                 </div>
-                <p class="by">@lang('join.by') <a href="https://github.com/{{ $org->user->github_username }}" target="_blank">{{ $org->user->github_username }}</a></p>
             </div>
         </div>
         <div class="using-github">
