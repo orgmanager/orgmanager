@@ -14,7 +14,7 @@ class OrgController extends Controller
         $this->middleware('auth');
     }
 
-    public function showPage(Org $org)
+    public function index(Org $org)
     {
         $this->authorize('update', $org);
 
@@ -34,7 +34,7 @@ class OrgController extends Controller
         return redirect('org/'.$org->id);
     }
 
-    public function updateOrg(Request $request, Org $org)
+    public function update(Request $request, Org $org)
     {
         $this->authorize('update', $org);
         Artisan::call('orgmanager:updateorg', [
@@ -45,7 +45,7 @@ class OrgController extends Controller
         return redirect('org/'.$org->id);
     }
 
-    public function deleteOrg(Request $request, Org $org)
+    public function delete(Request $request, Org $org)
     {
         $this->authorize('delete', $org);
         $org->delete();

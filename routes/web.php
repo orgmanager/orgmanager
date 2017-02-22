@@ -16,16 +16,15 @@
 Route::get('/', function () {
     return view('home');
 });
-Route::get('dashboard', 'DashboardController@showDashboard');
-Route::get('org/{org}', 'OrgController@showPage');
+Route::get('dashboard', 'DashboardController@index');
+Route::get('org/{org}', 'OrgController@index');
 Route::post('org/{org}', 'OrgController@changePassword');
-Route::put('org/{org}', 'OrgController@updateOrg');
-Route::delete('org/{org}', 'OrgController@deleteOrg');
+Route::put('org/{org}', 'OrgController@update');
+Route::delete('org/{org}', 'OrgController@delete');
 Route::get('sync', 'GithubController@syncOrgs');
 Route::post('sync/{org}', 'GithubController@syncOrg');
-Route::get('join/{org}', 'JoinController@showPage');
+Route::get('join/{org}', 'JoinController@index');
 Route::post('join/{org}', 'JoinController@inviteUser');
-Route::post('password/{org}', 'DashboardController@changePassword');
 Route::get('developer', 'DeveloperController@index');
 Route::get('token', 'DeveloperController@token');
 Route::delete('token', 'DeveloperController@deleteToken');

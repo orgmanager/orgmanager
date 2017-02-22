@@ -13,7 +13,7 @@ class JoinController extends Controller
 {
     use CaptchaTrait;
 
-    public function showPage(Org $org)
+    public function index(Org $org)
     {
         return view('join')->with('org', $org);
     }
