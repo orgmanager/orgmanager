@@ -9,6 +9,7 @@
 
                 <div class="panel-body">
                   <h4 class="text-center">{{ $org->name}} settings</h4>
+                  <div class="row">
                   <div name="password" class="col-md-4 text-center">
                       <form id="password" method="POST">
                         {{ csrf_field() }}
@@ -41,6 +42,10 @@
                         <button type="submit" class="btn btn-primary"><i class="octicon octicon-trashcan"></i> Delete</button>
                       </form>
                     </div>
+                  </div>
+                  </div>
+                  <div class="flash">
+                  <p class="text-center">TIP: Want a pretty URL for your users? Share <a href="{{ url('o/'.$org->name) }}" target="_blank">{{ url('o/'.$org->name) }}</a> !</p>
                   </div>
                 </div>
             </div>
