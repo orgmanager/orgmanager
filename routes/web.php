@@ -25,6 +25,7 @@ Route::get('sync', 'GithubController@syncOrgs');
 Route::post('sync/{org}', 'GithubController@syncOrg');
 Route::get('join/{org}', 'JoinController@index');
 Route::post('join/{org}', 'JoinController@inviteUser');
+Route::get('o/{name}', 'JoinController@redirect');
 Route::get('developer', 'DeveloperController@index');
 Route::get('token', 'DeveloperController@token');
 Route::delete('token', 'DeveloperController@deleteToken');

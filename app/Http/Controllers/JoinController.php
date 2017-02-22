@@ -56,6 +56,12 @@ class JoinController extends Controller
         return redirect('join/'.$org->id);
     }
 
+    public function redirect($name)
+    {
+      $org = Org::where('name', $name)->firstOrFail();
+      return redirect('join/'.$org->id);
+    }
+
     protected function checkMembership(Org $org, $username)
     {
         Github::authenticate($org->user->token, null, 'http_token');
