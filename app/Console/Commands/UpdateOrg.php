@@ -43,6 +43,9 @@ class UpdateOrg extends Command
         Github::authenticate($org->user->token, null, 'http_token');
         $orgdata = GitHub::api('organization')->show($org->name);
         $org->name = $orgdata['login'];
+        if (isset($orgdata['name'])){
+          $org->pretty_name = $orgdata['name'];
+        }
         $org->description = $orgdata['description'];
         $org->save();
         $this->info($org->name.' updated successfully');
