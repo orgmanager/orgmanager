@@ -4,8 +4,6 @@ namespace App\Http\Controllers;
 
 use App\Org;
 use Auth;
-use Illuminate\Http\Request;
-use Toastr;
 
 class DashboardController extends Controller
 {
