@@ -6,6 +6,7 @@ use App\Org;
 use App\Traits\CaptchaTrait;
 use GitHub;
 use Illuminate\Http\Request;
+use App\Http\Requests\JoinRequest;
 use Illuminate\Support\Facades\Artisan;
 use Toastr;
 
@@ -18,7 +19,7 @@ class JoinController extends Controller
         return view('join')->with('org', $org);
     }
 
-    public function inviteUser(Request $request, Org $org)
+    public function inviteUser(JoinRequest $request, Org $org)
     {
         if (!$this->captchaCheck()) {
             Toastr::error(trans('alerts.captcha'), trans('alerts.captchat'));
