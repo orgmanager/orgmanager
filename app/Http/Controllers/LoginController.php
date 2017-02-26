@@ -44,10 +44,10 @@ class LoginController extends Controller
         $request->session()->regenerate();
         $user = Auth::user();
         Toastr::success(trans('alerts.loggedin'), trans('alerts.success'));
-        if ($newuser)
-        {
+        if ($newuser) {
             return redirect('sync');
         }
+
         return redirect('dashboard');
     }
 
