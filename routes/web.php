@@ -31,7 +31,6 @@ Route::get('token', 'DeveloperController@token');
 Route::delete('token', 'DeveloperController@deleteToken');
 
 // Auth routes
-Route::get('login', 'LoginController@showLogin');
-Route::post('login', 'LoginController@authorizeUser');
+Route::get('login', 'LoginController@authorizeUser');
 Route::get('callback', 'LoginController@loginUser');
 Route::post('logout', 'LoginController@logoutUser');
