@@ -31,6 +31,7 @@ class LoginController extends Controller
                 $user->token = $details->access_token;
                 $user->github_username = $details->nickname;
                 if (!$user->exists) {
+                    $newuser = true;
                     $user->api_token = str_random(60);
                 }
                 $user->save();
@@ -43,7 +44,10 @@ class LoginController extends Controller
         $request->session()->regenerate();
         $user = Auth::user();
         Toastr::success(trans('alerts.loggedin'), trans('alerts.success'));
-
+        if ($newuser)
+        {
+            return redirect('sync');
+        }
         return redirect('dashboard');
     }
 
