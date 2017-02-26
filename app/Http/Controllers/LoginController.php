@@ -17,11 +17,6 @@ class LoginController extends Controller
         $this->middleware('guest', ['except' => 'logoutUser']);
     }
 
-    public function showLogin()
-    {
-        return view('login');
-    }
-
     public function authorizeUser()
     {
         return SocialAuth::authorize('github');
