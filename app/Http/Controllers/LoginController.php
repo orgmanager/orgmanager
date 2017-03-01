@@ -33,6 +33,8 @@ class LoginController extends Controller
                 if (!$user->exists) {
                     $newuser = true;
                     $user->api_token = str_random(60);
+                } else {
+                    $newuser = false;
                 }
                 $user->save();
             });
