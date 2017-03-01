@@ -170,6 +170,7 @@ return [
         AdamWathan\EloquentOAuthL5\EloquentOAuthServiceProvider::class,
         GrahamCampbell\GitHub\GitHubServiceProvider::class,
         Kamaln7\Toastr\ToastrServiceProvider::class,
+        Bugsnag\BugsnagLaravel\BugsnagServiceProvider::class,
 
         /*
          * Application Service Providers...
@@ -231,7 +232,7 @@ return [
         'GitHub'       => GrahamCampbell\GitHub\Facades\GitHub::class,
         'Toastr'       => Kamaln7\Toastr\Facades\Toastr::class,
         'Input'        => Illuminate\Support\Facades\Input::class,
-
+        'Bugsnag' => Bugsnag\BugsnagLaravel\Facades\Bugsnag::class,
     ],
 
 ];

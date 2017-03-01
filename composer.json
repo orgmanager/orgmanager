@@ -7,6 +7,7 @@
     "require": {
         "php": ">=5.6.4",
         "adamwathan/eloquent-oauth-l5": "^0.5.1",
+        "bugsnag/bugsnag-laravel": "^2.0",
         "google/recaptcha": "~1.1",
         "laravel/framework": "5.3.*",
         "m1guelpf/github": "dev-master",
