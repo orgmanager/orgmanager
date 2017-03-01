@@ -24,7 +24,7 @@ class LoginController extends Controller
 
     public function loginUser(Request $request)
     {
-      $redirect = 'dashboard';
+        $redirect = 'dashboard';
         try {
             SocialAuth::login('github', function ($user, $details) {
                 $user->email = $details->email;
