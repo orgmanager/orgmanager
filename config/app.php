@@ -232,7 +232,7 @@ return [
         'GitHub'       => GrahamCampbell\GitHub\Facades\GitHub::class,
         'Toastr'       => Kamaln7\Toastr\Facades\Toastr::class,
         'Input'        => Illuminate\Support\Facades\Input::class,
-        'Bugsnag' => Bugsnag\BugsnagLaravel\Facades\Bugsnag::class,
+        'Bugsnag'      => Bugsnag\BugsnagLaravel\Facades\Bugsnag::class,
     ],
 
 ];
