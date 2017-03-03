@@ -36,7 +36,7 @@
                     <p>@lang('home.description')</p>
                     <p>@lang('home.logintext')<a href="{{ url('login') }}">@lang('home.login')</a>.</p>
                     <p>Used by {{ $users::count() }} users &amp; {{ $orgs::count() }} orgs, we have delivered {{ $orgs::sum('invitecount') }} invites</p>
-                    <a href="{{ url('https://github.com/orgmanager/orgmanager') }">@lang('home.help')</a>
+                    <a class="github-button" href="https://github.com/orgmanager/orgmanager" data-icon="octicon-star" data-style="mega" data-count-href="/orgmanager/orgmanager/stargazers" data-count-api="/repos/orgmanager/orgmanager#stargazers_count" data-count-aria-label="# stargazers on GitHub" aria-label="Star orgmanager/orgmanager on GitHub">Star</a>
                 </div>
                 <div class="using-github">
                   Using <span class="octicon octicon-logo-github"></span>
@@ -45,6 +45,7 @@
         </div>
       <script src="{{ url('js/jquery.min.js') }}"></script>
       <script src="{{ url('js/toastr.min.js') }}"></script>
+      <script async defer src="{{ url('https://buttons.github.io/buttons.js') }}"></script>
       {!! Toastr::render() !!}
     </body>
 </html>
