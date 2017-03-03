@@ -19,7 +19,7 @@ To install OrgManager you'll need:
 - Some PHP libraries - (OpenSSL, PDO, Mbstring, Tokenizer, XML) (Google is your friend :smile:)
 - Composer - ([Install Composer](https://getcomposer.org/download/))
 - MySQL database - ([You can get them online for free](https://www.google.com/search?q=free+mysql+database))
-- *Git* (optional, but makes things easier) - ([Install GIT](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git))
+- Git - ([Install GIT](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git))
 
 ### Installing
 
@@ -111,6 +111,33 @@ php artisan orgmanager:install
 
 You have now the lastest OrgManager stable version up an running in your server! (Note that OrgManager is not auto-updated, read the updating section for more info).
 
+## Updating
+
+OrgManager is under active development, and that means it gets lots of updates, bug fixes and new features. Follow the below guides to update OrgManager to the lastest version:
+
+### Updating a development enviroment
+
+This is the easiest one.
+
+1. Get lastest code
+
+If you used git to get OrgManager, you can open the orgmanager folder in the terminal/console and run
+```sh
+git pull origin master
+```
+and you're done.
+
+**FOR NEW RELEASES, REMEMBER TO CHECK THE UPGRADING GUIDE, IF ANY. YOU CAN FIND IT IN THE [RELEASES PAGE](https://github.com/orgmanager/orgmanager/releases).**
+
+### Updating a production enviroment
+
+New features deserve it, go ahead!
+
+1. Download lastest stable version
+
+Download the [lastest release](https://github.com/orgmanager/orgmanager/releases/latest) and unzip it on your server.
+
+**REMEMBER TO FOLLOW THE UPGRADING GUIDE, IF ANY. YOU CAN FIND IT IN THE [RELEASE PAGE](https://github.com/orgmanager/orgmanager/releases/latest).**
 
 ## Built With
 
@@ -135,7 +162,7 @@ We use [SemVer](http://semver.org/) for versioning. For the versions available, 
 
 ## Sponsors
 
-Does your organization use OrgManager?  Ask your manager or marketing team if you'd be interested in supporting our project.  Support will allow the maintainers to dedicate more time for maintenance and new features for everyone.  Also, your company's logo will show [on GitHub](https://github.com/orgmanager/orgmanager#readme) and on our site --who doesn't want a little extra exposure?.
+Does your organization use OrgManager?  Ask your manager or marketing team if you'd be interested in supporting our project.  Support will allow the maintainers to dedicate more time for maintenance and new features for everyone.  Also, your company's logo will show [on GitHub](https://github.com/orgmanager/orgmanager#readme) and on our site --who doesn't want a little extra exposure?
 
 ## Authors
 
