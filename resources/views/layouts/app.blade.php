@@ -70,6 +70,11 @@
                                 </a>
 
                                 <ul class="dropdown-menu" role="menu">
+                                    <li><a href="{{ url('dashboard') }}">Dashboard</a></li>
+                                    <li><a href="{{ url('sync') }}">Sync Organizations</a></li>
+                                    @foreach (Auth::user()->orgs as $org)
+                                    <li><a href="{{ url('org/'.$org->id)}}">{{ $org->name }}{{ "'" }}s settings</a>
+                                    @endforeach
                                     <li>
                                         <a href="{{ url('/logout') }}"
                                             onclick="event.preventDefault();
