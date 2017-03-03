@@ -103,7 +103,13 @@ Copy the `.env.example` file to a `.env` file. Open the .env file with your favo
 4. Finish the setup
 
 Open the OrgManager folder with the terminal/console and run
-```php
+
+```sh
+composer install
+```
+and
+
+```sh
 php artisan orgmanager:install
 ```
 
@@ -162,7 +168,7 @@ We use [SemVer](http://semver.org/) for versioning. For the versions available, 
 
 ## Sponsors
 
-Does your organization use OrgManager?  Ask your manager or marketing team if you'd be interested in supporting our project.  Support will allow the maintainers to dedicate more time for maintenance and new features for everyone.  Also, your company's logo will show [on GitHub](https://github.com/orgmanager/orgmanager#readme) and on our site --who doesn't want a little extra exposure?
+Does your organization use OrgManager?  Ask your manager or marketing team if you'd be interested in supporting our project.  Support will allow the maintainers to dedicate more time for maintenance and new features for everyone.  Also, your company's logo will show on GitHub and on our site --who doesn't want a little extra exposure?
 
 ## Authors
 
