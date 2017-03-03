@@ -34,8 +34,19 @@
                 </div>
                 <div class="links">
                     <p>@lang('home.description')</p>
+                    @if (!Auth::check())
                     <p>@lang('home.logintext')<a href="{{ url('login') }}">@lang('home.login')</a>.</p>
                     <p>Used by {{ $users::count() }} users &amp; {{ $orgs::count() }} orgs, we have delivered {{ $orgs::sum('invitecount') }} invites</p>
+                    @elseif (Auth::user()->orgs->count() == 0)
+                    <p>It looks like you haven't got organizations on OrgManager!</p>
+                    <p>@lang('empty.sync1') <a href="{{ url('sync') }}">@lang('empty.sync2')</a> @lang('empty.sync3')
+                    <p>If your app isn't showing here after sync, <a href="https://github.com/settings/connections/applications/10b01d866046f040c9f1">check we've been given access to it</a>.</p>
+                    <p>@lang('empty.problems') <a href="https://github.com/orgmanager/orgmanager/issues/new?labels=bug" target="_blank">@lang('empty.issue')</a>.</p>
+                    @else
+                    <p>Looks like you have organizations on OrgManager!</p>
+                    <p>You can manage them on your <a href="{{ url('dashboard') }}">dashboard</a>.</p>
+                    <p>@lang('empty.problems') <a href="https://github.com/orgmanager/orgmanager/issues/new?labels=bug" target="_blank">@lang('empty.issue')</a>.</p>
+                    @endif
                     <a class="github-button" href="https://github.com/orgmanager/orgmanager" data-icon="octicon-star" data-style="mega" data-count-href="/orgmanager/orgmanager/stargazers" data-count-api="/repos/orgmanager/orgmanager#stargazers_count" data-count-aria-label="# stargazers on GitHub" aria-label="Star orgmanager/orgmanager on GitHub">Star</a>
                 </div>
                 <div class="using-github">
