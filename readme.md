@@ -1,102 +1,87 @@
-# OrgManager
-<p align="center">
+# Project Title
 
-  <img src="http://i.imgur.com/KwXdDeX.png" alt="OrgManager">
-</p>
+One Paragraph of project description goes here
 
-OrgManager allows Github Organizations to share link invites.
+## Getting Started
 
-## You can access the hosted version at https://orgmanager.miguelpiedrafita.com.
+These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See deployment for notes on how to deploy the project on a live system.
 
-## [Join the OrgManager organization!](https://orgmanager.miguelpiedrafita.com/o/orgmanager)
+### Prerequisites
 
-## Screenshots:
+What things you need to install the software and how to install them
 
-![Home Page](http://i.imgur.com/6sgmk7I.png)
+```
+Give examples
+```
 
----
+### Installing
 
-![Login Page](http://i.imgur.com/A3yJoWE.png)
+A step by step series of examples that tell you have to get a development env running
 
----
+Say what the step will be
 
-![Dashboard Page](http://i.imgur.com/OoWM4p8.png)
+```
+Give the example
+```
 
----
+And repeat
 
-![Join Page](http://i.imgur.com/fzq4Kpg.png)
+```
+until finished
+```
 
----
+End with an example of getting some data out of the system or using it for a little demo
 
-## Introduction:
+## Running the tests
 
-OrgManager was created as a personal project for learning Laravel, PHP and the Github API. This means, I am still learning Laravel, so they're probably lot's of things to improve. If you find one, please [open an issue](https://github.com/orgmanager/orgmanager/issues/new) or better, [make a pull request](https://github.com/orgmanager/orgmanager/pulls/compare).
+Explain how to run the automated tests for this system
 
-## Features:
+### Break down into end to end tests
 
-- Multi-user support: You can add all the organizations/users you want securely. In fact, anyone with a Github organization can use it if you expose it on the internet!
-- Uses Github Style: OrgManager uses [PrimeCSS](http://primercss.io/) and [Octicons](https://octicons.github.com) for having a github-like style!
-- Caching: OrgManager uses notification caching to reduce load time and provide you an awesome experience!
-- More coming soon: OrgManager is under active developement so, if you want to help or have ideas, go ahead and Contribute!
-- OrgManager API: Orgmanager provides an awesome API that allows you to integrate it with your application.
+Explain what these tests test and why
 
-## Requirements:
+```
+Give an example
+```
 
-- PHP >= 5.6.4
-- Composer
-- MySQL
-- MySQL PHP Extension
-- OpenSSL PHP Extension
-- PDO PHP Extension
-- Mbstring PHP Extension
-- Tokenizer PHP Extension
-- XML PHP Extension
+### And coding style tests
 
-## Installation:
+Explain what these tests test and why
 
-1. Clone or download this repo to somewhere on your server.
-2. Rename .env.example to .env and fill the required settings.
-3. Run ```composer update```, ```php artisan key:generate``` and ```php artisan migrate```.
-4. [Create a Github OAuth app](https://github.com/settings/applications/new) using ```[YOUR_URL]/callback``` as the **Authorization callback URL** and add them to ```config/eloquent-oauth.php```. As this is complex, you can use the hosted version.
-5. Enjoy!
+```
+Give an example
+```
 
-### Updating from 1.x
+## Deployment
 
-Orgmanager v2.0 introduced some breaking changes, so be sure to follow this steps when updating from v1.x
+Add additional notes about how to deploy this on a live system
 
-1. Clone or download the new version of Orgmanager and replace the old version (Don't worry, you shouldn't lose any data!).
-2. Double-check the ```.env``` file is still there. If it isn't, you may have to repeat Step 2 of the installation process.
-3. Run ```composer update``` and ```php artisan migrate```.
-4. In you had users registered before upgrading, run ```php artisan orgmanager:tokens```.
-5. If any of your user's organizations had a password before upgrading, run ```php artisan orgmanager:orgmanager:orgpwdcrypt``` *IMPORTANT: You should only run this command ONCE!*.
-6. Enjoy!
+## Built With
 
-## Status:
+* [Dropwizard](http://www.dropwizard.io/1.0.2/docs/) - The web framework used
+* [Maven](https://maven.apache.org/) - Dependency Management
+* [ROME](https://rometools.github.io/rome/) - Used to generate RSS Feeds
 
-Actual version: [```v2.0```](https://github.com/orgmanager/orgmanager/releases/v2.0)
-Remember that you can always download the latest version using [this link](https://github.com/orgmanager/orgmanager/releases/latest).
+## Contributing
 
-## API:
+Please read [CONTRIBUTING.md](https://gist.github.com/PurpleBooth/b24679402957c63ec426) for details on our code of conduct, and the process for submitting pull requests to us.
 
-You can access the Orgmanager API documentation [here](http://docs.orgmanager.miguelpiedrafita.com).
+## Versioning
 
-## Roadmap:
+We use [SemVer](http://semver.org/) for versioning. For the versions available, see the [tags on this repository](https://github.com/your/project/tags). 
 
-You can check the [```v3.0``` milestone](https://github.com/orgmanager/orgmanager/milestone/2) to get info about the status of the ```v3.0``` development.
+## Authors
 
-Found an issue? Something to improve? [Open an issue](https://github.com/orgmanager/orgmanager/issues/new)!
+* **Billie Thompson** - *Initial work* - [PurpleBooth](https://github.com/PurpleBooth)
 
-## Sponsors
+See also the list of [contributors](https://github.com/your/project/contributors) who participated in this project.
 
-Does your organization use OrgManager?  Ask your manager or marketing team if you'd be interested in supporting our project.  Support will allow the maintainers to dedicate more time for maintenance and new features for everyone.  Also, your company's logo will show [on GitHub](https://github.com/orgmanager/orgmanager#readme) and on our site (WIP) --who doesn't want a little extra exposure?  [Here's the info (WIP)](https://opencollective.com/orgmanager#sponsor).
+## License
 
-## Credits:
+This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details
 
-- [PHP](https://php.net) - For his awesome work on developing PHP.
-- [MySQL](https://mysql.com) - For that awesome DB software.
-- [Laravel](https://laravel.com) - For this awesome framework.
-- [Github](https://github.com) - For his [API](https://developers.github.com/v3) and the awesome people at [Github Support](https://github.com/contact).
-- [Adam Wathan](https://github.com/adamwathan) - For his [eloquent OAuth library](https://github.com/adamwathan/eloquent-oauth-l5).
-- [KNP Labs](https://knplabs.com) - For his awesome [php-github-api](https://github.com/KnpLabs/php-github-api).
-- [Graham Campbell](https://gjcampbell.co.uk/) - For his awesome [Laravel Github](https://github.com/GrahamCampbell/Laravel-GitHub).
-- [Google](https://hithub.com/google) - For the [php ReCaptcha library](https://github.com/google/recaptcha).
+## Acknowledgments
+
+* Hat tip to anyone who's code was used
+* Inspiration
+* etc
