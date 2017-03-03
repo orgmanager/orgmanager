@@ -133,6 +133,10 @@ Please read [CONTRIBUTING.md](https://github.com/orgmanager/orgmanager/blob/mast
 
 We use [SemVer](http://semver.org/) for versioning. For the versions available, see the [releases page](https://github.com/orgmanager/orgmanager/releases).
 
+## Sponsors
+
+Does your organization use OrgManager?  Ask your manager or marketing team if you'd be interested in supporting our project.  Support will allow the maintainers to dedicate more time for maintenance and new features for everyone.  Also, your company's logo will show [on GitHub](https://github.com/orgmanager/orgmanager#readme) and on our site --who doesn't want a little extra exposure?.
+
 ## Authors
 
 * [**Miguel Piedrafita**](https://miguelpiedrafita.com) - *Idea, Code & Hosting*
