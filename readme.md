@@ -84,6 +84,10 @@ You can check the [```v3.0``` milestone](https://github.com/m1guelpf/orgmanager/
 
 Found an issue? Something to improve? [Open an issue](https://github.com/m1guelpf/orgmanager/issues/new)!
 
+## Sponsors
+
+Does your organization use OrgManager?  Ask your manager or marketing team if you'd be interested in supporting our project.  Support will allow the maintainers to dedicate more time for maintenance and new features for everyone.  Also, your company's logo will show [on GitHub](https://github.com/orgmanager/orgmanager#readme) and on [our site [WIP]]() --who doesn't want a little extra exposure?  [Here's the info](https://opencollective.com/orgmanager#sponsor).
+
 ## Credits:
 
 - [PHP](https://php.net) - For his awesome work on developing PHP.
