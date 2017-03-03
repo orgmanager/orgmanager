@@ -30,7 +30,7 @@ OrgManager allows Github Organizations to share link invites.
 
 ## Introduction:
 
-OrgManager was created as a personal project for learning Laravel, PHP and the Github API. This means, I am still learning Laravel, so they're probably lot's of things to improve. If you find one, please [open an issue](https://github.com/m1guelpf/orgmanager/issues/new) or better, [make a pull request](https://github.com/m1guelpf/orgmanager/pulls/compare).
+OrgManager was created as a personal project for learning Laravel, PHP and the Github API. This means, I am still learning Laravel, so they're probably lot's of things to improve. If you find one, please [open an issue](https://github.com/orgmanager/orgmanager/issues/new) or better, [make a pull request](https://github.com/orgmanager/orgmanager/pulls/compare).
 
 ## Features:
 
@@ -73,8 +73,8 @@ Orgmanager v2.0 introduced some breaking changes, so be sure to follow this step
 
 ## Status:
 
-Actual version: [```v2.0```](https://github.com/m1guelpf/orgmanager/releases/v2.0)
-Remember that you can always download the latest version using [this link](https://github.com/m1guelpf/orgmanager/releases/latest).
+Actual version: [```v2.0```](https://github.com/orgmanager/orgmanager/releases/v2.0)
+Remember that you can always download the latest version using [this link](https://github.com/orgmanager/orgmanager/releases/latest).
 
 ## API:
 
@@ -82,13 +82,13 @@ You can access the Orgmanager API documentation [here](http://docs.orgmanager.mi
 
 ## Roadmap:
 
-You can check the [```v3.0``` milestone](https://github.com/m1guelpf/orgmanager/milestone/2) to get info about the status of the ```v3.0``` development.
+You can check the [```v3.0``` milestone](https://github.com/orgmanager/orgmanager/milestone/2) to get info about the status of the ```v3.0``` development.
 
-Found an issue? Something to improve? [Open an issue](https://github.com/m1guelpf/orgmanager/issues/new)!
+Found an issue? Something to improve? [Open an issue](https://github.com/orgmanager/orgmanager/issues/new)!
 
 ## Sponsors
 
-Does your organization use OrgManager?  Ask your manager or marketing team if you'd be interested in supporting our project.  Support will allow the maintainers to dedicate more time for maintenance and new features for everyone.  Also, your company's logo will show [on GitHub](https://github.com/orgmanager/orgmanager#readme) and on [our site [WIP]]() --who doesn't want a little extra exposure?  [Here's the info](https://opencollective.com/orgmanager#sponsor).
+Does your organization use OrgManager?  Ask your manager or marketing team if you'd be interested in supporting our project.  Support will allow the maintainers to dedicate more time for maintenance and new features for everyone.  Also, your company's logo will show [on GitHub](https://github.com/orgmanager/orgmanager#readme) and on our site (WIP) --who doesn't want a little extra exposure?  [Here's the info (WIP)](https://opencollective.com/orgmanager#sponsor).
 
 ## Credits:
 
