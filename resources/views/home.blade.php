@@ -36,7 +36,7 @@
                     <p>@lang('home.description')</p>
                     <p>@lang('home.logintext')<a href="{{ url('login') }}">@lang('home.login')</a>.</p>
                     <p>Used by {{ $users::count() }} users &amp; {{ $orgs::count() }} orgs, we have delivered {{ $orgs::sum('invitecount') }} invites</p>
-                    <a href="https://github.com/m1guelpf/orgmanager">@lang('home.help')</a>
+                    <a href="{{ url('https://github.com/orgmanager/orgmanager') }">@lang('home.help')</a>
                 </div>
                 <div class="using-github">
                   Using <span class="octicon octicon-logo-github"></span>
