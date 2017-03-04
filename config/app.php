@@ -171,6 +171,7 @@ return [
         GrahamCampbell\GitHub\GitHubServiceProvider::class,
         Kamaln7\Toastr\ToastrServiceProvider::class,
         Bugsnag\BugsnagLaravel\BugsnagServiceProvider::class,
+        // OrgManager\OrgmanagerCustom\OrgmanagerCustomServiceProvider::class,
 
         /*
          * Application Service Providers...
