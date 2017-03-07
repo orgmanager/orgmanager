@@ -16,4 +16,9 @@ class Org extends Model
     {
         return $this->belongsTo('App\User', 'userid', 'id');
     }
+
+    public function team()
+    {
+      return $this->hasOne('App\Team');
+    }
 }
