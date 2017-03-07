@@ -19,6 +19,6 @@ class Org extends Model
 
     public function team()
     {
-      return $this->hasOne('App\Team');
+        return $this->hasOne('App\Team');
     }
 }
