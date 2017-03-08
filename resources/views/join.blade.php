@@ -21,6 +21,13 @@
                 <div class="title m-b-md">
                   <img src="{{ $org->avatar }}" class="logo"><br>
                     @lang('join.join') <a href="https://github.com/{{ $org->name }}" target="_blank">{{ $org->pretty_name or $org->name }}</a>
+                    @if (isset($org->team))
+                    @if($org->team->privacy == 'closed')
+                    <h6>You'll also join the <a href="{{ url('https://github.com/orgs/'.$org->name.'/teams/'.str_slug($org->team->name)) }}" target="_blank">{{ $org->team->name }}</a> team</h6>
+                    @else
+                    <h6>You'll also join the private "{{ $org->team->name }}" team</h6>
+                    @endif
+                    @endif
                     @if ($org->description)
                     <blockquote>{{ $org->description }}</blockquote>
                     @endif
