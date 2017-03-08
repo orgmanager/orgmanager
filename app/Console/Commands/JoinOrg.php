@@ -41,7 +41,13 @@ class JoinOrg extends Command
      {
          $org = Org::findOrFail($this->argument('org'));
          Github::authenticate($org->user->token, null, 'http_token');
+         if (isset($org->team))
+         {
+           Github::api('teams')->addMember($org->team->id, $this->argument('username'));
+         } else
+         {
          Github::api('organization')->members()->add($org->name, $this->argument('username'));
+         }
          $org->invitecount++;
          $org->save();
          $this->info($this->argument('username').' was invited to '.$org->name);
