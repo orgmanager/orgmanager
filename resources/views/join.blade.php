@@ -13,6 +13,7 @@
     <link href="{{ url('/css/join.css') }}" rel="stylesheet">
     <link href="{{ url('/css/flatty.min.css') }}" rel="stylesheet">
     <link href="{{ url('/css/toastr.min.css') }}" rel="stylesheet">
+    @include('layouts.code')
     </head>
     <body>
         <div class="flex-center position-ref full-height">
