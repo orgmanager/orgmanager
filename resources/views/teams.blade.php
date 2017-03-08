@@ -27,19 +27,29 @@
                           <select id="team_id" type="teams" class="form-control" name="team_id">
                             <option value="">Select a team</option>
                             @foreach ($org->teams as $team)
-                              <option value="{{ $team->id }}">{{ ucfirst($team->name) }}</option>
+                              <option value="{{ $team->id }}" @if ($org->team_id == $team->id || old('team_id') == $team->id) selected="selected" @endif>{{ ucfirst($team->name) }}</option>
                             @endforeach
                         </select>
+                        <br>
+                        <button type="submit" class="btn btn-primary">Select Team</button>
                         @else
                           <select id="team_id" type="teams" class="form-control" name="team_id" disabled="disabled">
                             <option value="">Select a team</option>
                           </select>
+                          <br>
+                          <button type="submit" class="btn btn-primary" disabled="disabled">Select Team</button>
                         @endif
                       </form>
+                      @if (count($errors) > 0)
+                      <br>
+                      <div class="flash flash-error">
+                        {{ $errors->first() }}
+                      </div>
+                      @endif
                     </div>
                     <div class="col-md-4 text-center">
                       <p>Status:</p>
-                      @if (!isset($org->team_id))
+                      @if (!isset($org->team))
                         <div class="flash">
                           <p>Your organization is not currently adding users to any team.</p>
                         </div>
@@ -50,6 +60,19 @@
                       @endif
                     </div>
                   </div>
+                  @if (isset($org->team))
+                  <br>
+                  <div class="row">
+                    <div class="col-md-12 text-center">
+                      <p>Don't like it?</p>
+                      <form method="POST" id="delete-teams">
+                        {{ csrf_field() }}
+                        {{ method_field('DELETE') }}
+                        <button type="submit" class="btn btn-danger">Delete Teams</button>
+                      </form>
+                    </div>
+                  </div>
+                  @endif
                   <br>
                   <div class="flash">
                   <p class="text-center">TIP: Want a pretty URL for your users? Share <a href="{{ url('o/'.$org->name) }}" target="_blank">{{ url('o/'.$org->name) }}</a> !</p>

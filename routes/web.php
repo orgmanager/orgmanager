@@ -23,6 +23,8 @@ Route::put('org/{org}', 'OrgController@update');
 Route::delete('org/{org}', 'OrgController@delete');
 Route::get('org/{org}/teams', 'TeamController@index');
 Route::post('org/{org}/teams', 'TeamController@syncTeams');
+Route::put('org/{org}/teams', 'TeamController@setTeam');
+Route::delete('org/{org}/teams', 'TeamController@deleteTeams');
 Route::get('sync', 'GithubController@syncOrgs');
 Route::post('sync/{org}', 'GithubController@syncOrg');
 Route::get('join/{org}', 'JoinController@index');
