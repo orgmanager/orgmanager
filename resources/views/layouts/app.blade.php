@@ -31,6 +31,7 @@
             'csrfToken' => csrf_token(),
         ]); ?>
     </script>
+    @include('layouts.code')
 </head>
 <body>
     <div id="app">
