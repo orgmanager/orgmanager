@@ -16,6 +16,7 @@
         <link href="{{ url('/css/home.css') }}" rel="stylesheet">
         <link href="{{ url('/css/flatty.min.css') }}" rel="stylesheet">
         <link href="{{ url('/css/toastr.min.css') }}" rel="stylesheet">
+        @includes('layouts.code')
     </head>
     <body>
         <div class="flex-center position-ref full-height">
