@@ -44,6 +44,15 @@
                     </div>
                   </div>
                   </div>
+                  <div class="row">
+                    <div class="col-md-12 text-center">
+                      <p>Want to add users to a team?</p>
+                      <form action="{{ url('org/'.$org->id.'/teams') }}" method="GET">
+                        <button type="submit" class="btn btn-primary"><i class="octicon octicon-organization"></i> Team settings</button>
+                      </form>
+                    </div>
+                  </div>
+                  <br>
                   <div class="flash">
                   <p class="text-center">TIP: Want a pretty URL for your users? Share <a href="{{ url('o/'.$org->name) }}" target="_blank">{{ url('o/'.$org->name) }}</a> !</p>
                   </div>
