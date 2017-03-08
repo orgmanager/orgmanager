@@ -13,7 +13,7 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-        //
+        define('ORGMANAGER_VERSION', 'v3.0 beta');
     }
 
     /**
