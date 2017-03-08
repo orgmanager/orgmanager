@@ -36,6 +36,7 @@
                 margin-bottom: 40px;
             }
         </style>
+        @include('layouts.code')
     </head>
     <body>
         <div class="container">
