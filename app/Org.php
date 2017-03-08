@@ -19,11 +19,11 @@ class Org extends Model
 
     public function teams()
     {
-      return $this->hasMany('App\Team');
+        return $this->hasMany('App\Team');
     }
 
     public function team()
     {
-      return $this->belongsTo('App\Team');
+        return $this->belongsTo('App\Team');
     }
 }
