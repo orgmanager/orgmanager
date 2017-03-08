@@ -23,10 +23,10 @@
                       <form id="select-team" method="POST">
                         {{ csrf_field() }}
                         {{ method_field('PUT') }}
-                        @if (isset($teams) && count($teams) > 0)
+                        @if (isset($org->teams) && count($org->teams) > 0)
                           <select id="team_id" type="teams" class="form-control" name="team_id">
                             <option value="">Select a team</option>
-                            @foreach ($teams as $team)
+                            @foreach ($org->teams as $team)
                               <option value="{{ $team->id }}">{{ ucfirst($team->name) }}</option>
                             @endforeach
                         </select>
