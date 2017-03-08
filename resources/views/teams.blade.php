@@ -9,41 +9,48 @@
 
                 <div class="panel-body">
                   <h4 class="text-center">{{ $org->name}}'s Teams</h4>
+                  <p class="text-center">OrgManager v3 introduces Teams, a new function that allows you to specify a team your invited users will go into. Please note that this feature is still in a beta version, so use the report widget if you find any bugs.</p>
                   <div class="row">
-                  <div name="password" class="col-md-4 text-center">
-                      <form id="password" method="POST">
+                    <div class="col-md-4 text-center">
+                      <p>Step 1:<br>Sync organization teams</p>
+                      <form id="sync-teams" method="POST">
                         {{ csrf_field() }}
-                        <div class="form-group">
-                          <label for="org_passwd">Organization password</label>
-                          <input type="password" class="form-control" id="org_passwd" name="org_passwd" placeholder="@if(isset($org->password)) @lang('organizations.haspasswdtext') @else @lang('organizations.passwdtext') @endif">
-                          <br>
-                          <button type="submit" class="btn btn-primary">@lang('organizations.changepasswd')</button>
-                        </div>
+                        <button type="submit" class="btn btn-primary"><i class="octicon octicon-sync"></i> Sync Teams</button>
                       </form>
-                  </div>
-                  <div name="sync" class="col-md-4">
-                    <div id="title" class="text-center">Sync organization</div>
-                    <div id="body" class="text-center">
-                      <br>
-                      <form id="sync" method="POST">
+                    </div>
+                    <div class="col-md-4 text-center">
+                      <p>Step 2:<br>Select the team users will go into</p>
+                      <form id="select-team" method="POST">
                         {{ csrf_field() }}
                         {{ method_field('PUT') }}
-                        <button type="submit" class="btn btn-primary"><i class="octicon octicon-sync"></i> Sync</button>
+                        @if (isset($teams) && count($teams) > 0)
+                          <select id="team_id" type="teams" class="form-control" name="team_id">
+                            <option value="">Select a team</option>
+                            @foreach ($teams as $team)
+                              <option value="{{ $team->id }}">{{ ucfirst($team->name) }}</option>
+                            @endforeach
+                        </select>
+                        @else
+                          <select id="team_id" type="teams" class="form-control" name="team_id" disabled="disabled">
+                            <option value="">Select a team</option>
+                          </select>
+                        @endif
                       </form>
                     </div>
-                  </div>
-                  <div name="delete" class="col-md-4">
-                    <div id="title" class="text-center">Delete organization</div>
-                    <div id="body" class="text-center">
-                      <br>
-                      <form id="delete" method="POST">
-                        {{ csrf_field() }}
-                        {{ method_field('DELETE') }}
-                        <button type="submit" class="btn btn-primary"><i class="octicon octicon-trashcan"></i> Delete</button>
-                      </form>
+                    <div class="col-md-4 text-center">
+                      <p>Status:</p>
+                      @if (!isset($org->team_id))
+                        <div class="flash">
+                          <p>Your organization is not currently adding users to any team.</p>
+                        </div>
+                      @else
+                        <div class="flash">
+                          <p>Your organization is adding users to the <b>{{ $org->team->name }}</b> team.</p>
+                        </div>
+                      @endif
                     </div>
                   </div>
-                  </div>
+                  <br>
                   <div class="flash">
                   <p class="text-center">TIP: Want a pretty URL for your users? Share <a href="{{ url('o/'.$org->name) }}" target="_blank">{{ url('o/'.$org->name) }}</a> !</p>
                   </div>
