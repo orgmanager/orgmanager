@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>Be right back.</title>
+        <title>Down for manteniance.</title>
 
         <link href="https://fonts.googleapis.com/css?family=Lato:100" rel="stylesheet" type="text/css">
 
@@ -37,11 +37,17 @@
             }
         </style>
         @include('layouts.code')
+        <script src="{{ url('https://libraries.hund.io/status-js/status-1.0.1.js') }}">var statusWidget = new Status.Widget({
+  status_page: "status.miguelpiedrafita.com",
+  selector: "#status",
+  component: "58c0fca18c48eb4923fc46bf"
+});</script>
     </head>
     <body>
         <div class="container">
             <div class="content">
-                <div class="title">Be right back.</div>
+                <div class="title">Down for manteniance.</div>
+                <div class="status"></div>
             </div>
         </div>
     </body>
