@@ -37,11 +37,7 @@
             }
         </style>
         @include('layouts.code')
-        <script src="{{ url('https://libraries.hund.io/status-js/status-1.0.1.js') }}">var statusWidget = new Status.Widget({
-  status_page: "status.miguelpiedrafita.com",
-  selector: "#status",
-  component: "58c0fca18c48eb4923fc46bf"
-});</script>
+        <script src="{{ url('https://libraries.hund.io/status-js/status-1.0.1.js') }}"></script>
     </head>
     <body>
         <div class="container">
@@ -50,5 +46,10 @@
                 <div class="status"></div>
             </div>
         </div>
+        <script type="text/javascript">var statusWidget = new Status.Widget({
+  status_page: "status.miguelpiedrafita.com",
+  selector: "#status",
+  component: "58c0fca18c48eb4923fc46bf"
+});</script>
     </body>
 </html>
