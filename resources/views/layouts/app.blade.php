@@ -97,9 +97,6 @@
 
         @yield('content')
     </div>
-    <div class="using-github">
-      Using <span class="octicon octicon-logo-github"></span>
-    </div>
     <!-- Scripts -->
     {!! Toastr::render() !!}
     <script src="{{ url('/js/app.js') }}"></script>

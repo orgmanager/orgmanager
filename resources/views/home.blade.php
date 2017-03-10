@@ -50,9 +50,6 @@
                     @endif
                     <a class="github-button" href="https://github.com/orgmanager/orgmanager" data-icon="octicon-star" data-style="mega" data-count-href="/orgmanager/orgmanager/stargazers" data-count-api="/repos/orgmanager/orgmanager#stargazers_count" data-count-aria-label="# stargazers on GitHub" aria-label="Star orgmanager/orgmanager on GitHub">Star</a>
                 </div>
-                <div class="using-github">
-                  Using <span class="octicon octicon-logo-github"></span>
-                </div>
             </div>
         </div>
       <script src="{{ url('js/jquery.min.js') }}"></script>
