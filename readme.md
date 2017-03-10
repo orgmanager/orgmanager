@@ -6,6 +6,9 @@ OrgManager takes Github Organization invites to a new level!
 
 Not everyone can afford a server, nor do they have the skills to set up a modern PHP application, so OrgManager provides a hosted version you can use **for FREE**. You can access the hosted version at [https://orgmanager.miguelpiedrafita.com](https://orgmanager.miguelpiedrafita.com). In exchange, please report any bugs you encounter, so we can continue inproving!
 
+### On joining the OrgManager Github organization
+As you may have guessed, you can use OrgManager to [join the OrgManager organization](https://orgmanager.miguelpiedrafita.com/o/orgmanager).
+
 ## Development version
 
 These instructions will get you the beta version of the project up and running on your local machine for **development and testing** purposes. See deployment for notes on how to deploy the project on a live system.
