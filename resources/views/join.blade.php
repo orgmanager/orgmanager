@@ -47,9 +47,6 @@
                 </div>
             </div>
         </div>
-        <div class="using-github">
-          Using <span class="octicon octicon-logo-github"></span>
-        </div>
         <script src="{{ url('js/jquery.min.js') }}"></script>
         <script src="{{ url('js/toastr.min.js') }}"></script>
         <script src="https://www.google.com/recaptcha/api.js"></script>
