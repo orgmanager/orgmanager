@@ -21,12 +21,6 @@ html, body {
         position: relative;
     }
 
-    .using-github {
-        position: absolute;
-        right: 0px;
-        bottom: 0px;
-    }
-
     .content {
         text-align: center;
     }
@@ -120,7 +114,4 @@ background: rgba(255,253,232,1);
   width: 100px;
   height: 100px;
   border-radius: 50%;
-}
-.by{
-  margin: 10px;
 }
