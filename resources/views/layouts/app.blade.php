@@ -20,11 +20,11 @@
     <link href="{{ url('/css/blankstate.css') }}" rel="stylesheet">
     <link href="{{ url('/css/states.css') }}" rel="stylesheet">
     <link href="{{ url('/css/tooltips.css') }}" rel="stylesheet">
-    <link href="{{ url('css/toastr.min.css') }}" rel="stylesheet">
+    <link href="{{ url('css/sweetalert.css') }}" rel="stylesheet">
     <link href="{{ url('css/custom.css') }}" rel="stylesheet">
     @yield('css')
     <script src="{{ url('js/jquery.min.js') }}"></script>
-    <script src="{{ url('js/toastr.min.js') }}"></script>
+    <script src="{{ url('js/sweetalert.min.js') }}"></script>
     <!-- Scripts -->
     <script>
         window.Laravel = <?php echo json_encode([
@@ -98,7 +98,16 @@
         @yield('content')
     </div>
     <!-- Scripts -->
-    {!! Toastr::render() !!}
+    @if (count($errors) > 0)
+    <script>
+    sweetAlert("Oops...", "{{ $errors->first() }}", "error");
+    </script>
+    @endif
+    @if (session('success'))
+    <script>
+    swal("Good job!", "{{ session('success') }}", "success")
+    </script>
+    @endif
     <script src="{{ url('/js/app.js') }}"></script>
     @yield('scripts')
 </body>

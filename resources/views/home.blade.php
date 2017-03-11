@@ -15,7 +15,7 @@
         <!-- Styles -->
         <link href="{{ url('/css/home.css') }}" rel="stylesheet">
         <link href="{{ url('/css/flatty.min.css') }}" rel="stylesheet">
-        <link href="{{ url('/css/toastr.min.css') }}" rel="stylesheet">
+        <link href="{{ url('/css/sweetalert.css') }}" rel="stylesheet">
         @include('layouts.code')
     </head>
     <body>
@@ -53,8 +53,17 @@
             </div>
         </div>
       <script src="{{ url('js/jquery.min.js') }}"></script>
-      <script src="{{ url('js/toastr.min.js') }}"></script>
+      <script src="{{ url('js/sweetalert.min.js') }}"></script>
       <script async defer src="{{ url('https://buttons.github.io/buttons.js') }}"></script>
-      {!! Toastr::render() !!}
+      @if (count($errors) > 0)
+      <script>
+      sweetAlert("Oops...", "{{ $errors->first() }}", "error");
+      </script>
+      @endif
+      @if (session('success'))
+      <script>
+      swal("Good job!", "{{ session('success') }}", "success")
+      </script>
+      @endif
     </body>
 </html>

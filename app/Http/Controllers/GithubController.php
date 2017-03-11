@@ -6,7 +6,6 @@ use App\Org;
 use Auth;
 use GitHub;
 use Illuminate\Support\Facades\Artisan;
-use Toastr;
 
 class GithubController extends Controller
 {
@@ -19,9 +18,8 @@ class GithubController extends Controller
     {
         $this->listOrgs();
         $this->checkPerm();
-        Toastr::success(trans('alerts.alldb'), trans('alerts.sync'));
 
-        return redirect('dashboard');
+        return redirect('dashboard')->withSuccess(trans('alerts.alldb'));
     }
 
     public function syncOrg(Org $org)

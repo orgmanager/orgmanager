@@ -3,7 +3,6 @@
 namespace App\Http\Controllers;
 
 use Auth;
-use Toastr;
 
 class DeveloperController extends Controller
 {
@@ -27,8 +26,7 @@ class DeveloperController extends Controller
         $user = Auth::user();
         $user->api_token = str_random(60);
         $user->save();
-        Toastr::success('Your token has been regenerated successfully', 'Token regenerated!');
 
-        return redirect()->back();
+        return redirect()->back()->withSuccess('Your token has been regenerated successfully.');
     }
 }
