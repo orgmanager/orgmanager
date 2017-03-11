@@ -12,7 +12,7 @@
         <!-- Styles -->
     <link href="{{ url('/css/join.css') }}" rel="stylesheet">
     <link href="{{ url('/css/flatty.min.css') }}" rel="stylesheet">
-    <link href="{{ url('/css/toastr.min.css') }}" rel="stylesheet">
+    <link href="{{ url('/css/sweetalert.css') }}" rel="stylesheet">
     @include('layouts.code')
     </head>
     <body>
@@ -37,7 +37,7 @@
                   @lang('join.username') @if ($org->password != null && trim($org->password) != "")@lang('join.passwd') @endif @lang('join.tojoin') {{ $org->name }}:<br><br>
                     <form id="join" method="POST" href="{{ url('join/'.$org->id) }}">
                       {{ csrf_field() }}
-                      <input type="text" name="github_username" class="textbox" placeholder="@lang('join.uplace')"><br><br>
+                      <input type="text" name="github_username" class="textbox" placeholder="@lang('join.uplace')" value="{{ old('github_username') }}"><br><br>
                       @if ($org->password != null && trim($org->password) != "")
                       <input type="password" name="org_password" class="textbox" placeholder="@lang('join.pplace')"><br><br>
                       @endif
@@ -48,8 +48,17 @@
             </div>
         </div>
         <script src="{{ url('js/jquery.min.js') }}"></script>
-        <script src="{{ url('js/toastr.min.js') }}"></script>
+        <script src="{{ url('js/sweetalert.min.js') }}"></script>
         <script src="https://www.google.com/recaptcha/api.js"></script>
-        {!! Toastr::render() !!}
+        @if (count($errors) > 0)
+        <script>
+        sweetAlert("Oops...", "{{ $errors->first() }}", "error");
+        </script>
+        @endif
+        @if (session('success'))
+        <script>
+        swal("Good job!", "{{ session('success') }}", "success")
+        </script>
+        @endif
     </body>
 </html>

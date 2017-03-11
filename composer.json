@@ -12,7 +12,6 @@
         "laravel/framework": "5.3.*",
         "m1guelpf/github": "dev-master",
         "m1guelpf/github-api": "dev-packagist",
-        "oriceon/toastr-5-laravel": "dev-master",
         "php-http/guzzle6-adapter": "^1.1"
     },
     "require-dev": {
