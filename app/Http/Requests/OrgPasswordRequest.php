@@ -30,7 +30,7 @@ class OrgPasswordRequest extends FormRequest
 
     public function messages()
     {
-      return [
+        return [
         'org_passwd.required' => 'You need to specify a password!',
       ];
     }

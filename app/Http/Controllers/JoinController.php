@@ -2,12 +2,12 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Requests\JoinOrgRequest;
 use App\Org;
 use App\Traits\CaptchaTrait;
 use GitHub;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Artisan;
-use App\Http\Requests\JoinOrgRequest;
 
 class JoinController extends Controller
 {
@@ -21,9 +21,8 @@ class JoinController extends Controller
     public function inviteUser(JoinOrgRequest $request, Org $org)
     {
         $validation = $this->validateRequest($request, $org);
-        if ($validation)
-        {
-          return $validation;
+        if ($validation) {
+            return $validation;
         }
         Artisan::call('orgmanager:joinorg', [
           'org'      => $org->id,
@@ -54,19 +53,19 @@ class JoinController extends Controller
 
     protected function validateRequest(Request $request, Org $org)
     {
-      if (!$this->captchaCheck($request)) {
-          return redirect('join/'.$org->id)->withErrors("You need to prove you are not a robot!");
-      }
-      if ($org->password && trim($org->password) != '') {
-          if (!$request->has('org_password')) {
-              return redirect('join/'.$org->id)->withErrors(trans('alerts.passwd1'));
-          }
-          if (!password_verify($request->org_password, $org->password)) {
-              return redirect('join/'.$org->id)->withErrors(trans('alerts.passwd2'));
-          }
-      }
-      if ($this->isMember($org, $request->github_username)) {
-          return redirect('join/'.$org->id)->withErrors('You are already a member of '.$org->name);
-      }
+        if (!$this->captchaCheck($request)) {
+            return redirect('join/'.$org->id)->withErrors('You need to prove you are not a robot!');
+        }
+        if ($org->password && trim($org->password) != '') {
+            if (!$request->has('org_password')) {
+                return redirect('join/'.$org->id)->withErrors(trans('alerts.passwd1'));
+            }
+            if (!password_verify($request->org_password, $org->password)) {
+                return redirect('join/'.$org->id)->withErrors(trans('alerts.passwd2'));
+            }
+        }
+        if ($this->isMember($org, $request->github_username)) {
+            return redirect('join/'.$org->id)->withErrors('You are already a member of '.$org->name);
+        }
     }
 }
