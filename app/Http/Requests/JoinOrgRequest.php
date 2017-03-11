@@ -24,15 +24,15 @@ class JoinOrgRequest extends FormRequest
     public function rules()
     {
         return [
-            'github_username' => 'required',
+            'github_username'      => 'required',
             'g-recaptcha-response' => 'required',
         ];
     }
 
     public function messages()
     {
-      return [
-        'github_username.required' => 'You need to specify an username.',
+        return [
+        'github_username.required'      => 'You need to specify an username.',
         'g-recaptcha-response.required' => 'You need to prove you are not a robot.',
       ];
     }
