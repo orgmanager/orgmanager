@@ -8,7 +8,6 @@ use Illuminate\Support\Facades\Redirect;
 use SocialAuth;
 use SocialNorm\Exceptions\ApplicationRejectedException;
 use SocialNorm\Exceptions\InvalidAuthorizationCodeException;
-use Toastr;
 
 class LoginController extends Controller
 {
@@ -44,15 +43,14 @@ class LoginController extends Controller
         }
         $request->session()->regenerate();
         $user = Auth::user();
-        Toastr::success(trans('alerts.loggedin'), trans('alerts.success'));
 
-        return redirect($redirect);
+        return redirect($redirect)->withSuccess(trans('alerts.loggedin'));
     }
 
     public function logoutUser()
     {
         Auth::logout();
 
-        return redirect('');
+        return redirect('')->withSuccess('Sucessfully logged out!');
     }
 }

@@ -5,7 +5,7 @@ namespace App\Http\Controllers;
 use App\Org;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Artisan;
-use Toastr;
+use App\Http\Requests\OrgPasswordRequest;
 
 class OrgController extends Controller
 {
@@ -21,36 +21,30 @@ class OrgController extends Controller
         return view('settings', compact('org'));
     }
 
-    public function changePassword(Request $request, Org $org)
+    public function changePassword(OrgPasswordRequest $request, Org $org)
     {
         $this->authorize('update', $org);
-        $this->validate($request, [
-        'org_passwd' => 'required',
-      ]);
         $org->password = bcrypt($request->input('org_passwd'));
         $org->save();
-        Toastr::success('The organization password was successfully updated.', 'Password updated!');
 
-        return redirect('org/'.$org->id);
+        return redirect('org/'.$org->id)->withSuccess('The organization password was successfully updated.');
     }
 
     public function update(Request $request, Org $org)
     {
         $this->authorize('update', $org);
         Artisan::call('orgmanager:updateorg', [
-        'org' => $org->id,
-      ]);
-        Toastr::success('The organization was successfully updated.', 'Organization updated!');
+          'org' => $org->id,
+        ]);
 
-        return redirect('org/'.$org->id);
+        return redirect('org/'.$org->id)->withSuccess('The organization was successfully updated.');
     }
 
     public function delete(Request $request, Org $org)
     {
         $this->authorize('delete', $org);
         $org->delete();
-        Toastr::success('The organization was successfully deleted.', 'Organization deleted');
 
-        return redirect('dashboard');
+        return redirect('dashboard')->withSuccess('The organization was successfully deleted.');
     }
 }
