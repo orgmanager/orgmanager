@@ -1,55 +1,40 @@
 <!DOCTYPE html>
-<html>
-    <head>
-        <title>Down for manteniance.</title>
-
-        <link href="https://fonts.googleapis.com/css?family=Lato:100" rel="stylesheet" type="text/css">
-
-        <style>
-            html, body {
-                height: 100%;
-            }
-
-            body {
-                margin: 0;
-                padding: 0;
-                width: 100%;
-                color: #B0BEC5;
-                display: table;
-                font-weight: 100;
-                font-family: 'Lato', sans-serif;
-            }
-
-            .container {
-                text-align: center;
-                display: table-cell;
-                vertical-align: middle;
-            }
-
-            .content {
-                text-align: center;
-                display: inline-block;
-            }
-
-            .title {
-                font-size: 72px;
-                margin-bottom: 40px;
-            }
-        </style>
-        @include('layouts.code')
-        <script src="{{ url('https://libraries.hund.io/status-js/status-1.0.1.js') }}"></script>
-    </head>
-    <body>
-        <div class="container">
-            <div class="content">
-                <div class="title">Down for manteniance.</div>
-                <div class="status"></div>
-            </div>
-        </div>
-        <script type="text/javascript">var statusWidget = new Status.Widget({
-  status_page: "status.miguelpiedrafita.com",
-  selector: "#status",
-  component: "58c0fca18c48eb4923fc46bf"
-});</script>
-    </body>
+<html lang="en-us" class="no-js">
+	<head>
+		<meta charset="utf-8">
+        <title>{{ config('app.name') }}</title>
+        <link rel="shortcut icon" href="{{ url('favicon.ico') }}">
+        <link rel="stylesheet" href="{{ url('css/503.min.css') }}" />
+	</head>
+	<body>
+		<div id="loading">
+			<div id="preloader">
+				<span></span>
+				<span></span>
+			</div>
+		</div>
+		<canvas id="dotty"></canvas>
+		<section id="left-side">
+			<img src="{{ url('img/orgmanager.png') }}" alt="" class="brand-logo" />
+			<div class="content">
+				<h1 class="text-intro opacity-0">Hey Guys!<br>
+					We're currently under manteniance</h1>
+				<h2 class="text-intro opacity-0">We enabled manteniance mode at {{ $exception->wentDownAt }} for {{ $exception->getMessage() }}</h2>
+				<nav>
+					<ul>
+						<li>
+							<a href="https://status.miguelpiedrafita.com/components/58c0fca18c48eb4923fc46bf" target="_blank" id="status-page" class="light-btn text-intro opacity-0">OrgManager Status Page</a>
+						</li>
+						<li>
+							<a href="https://github.com/orgmanager/orgmanager" target="_blank" class="action-btn trigger text-intro opacity-0">GitHub</a>
+						</li>
+					</ul>
+				</nav>
+			</div>
+		</section>
+	<script src="{{ url('https://code.jquery.com/jquery-1.11.3.min.js') }}"></script>
+	<script src="{{ url('https://cdnjs.cloudflare.com/ajax/libs/velocity/1.2.2/velocity.min.js') }}"></script>
+	<script src="{{ url('https://cdnjs.cloudflare.com/ajax/libs/velocity/1.2.2/velocity.ui.min.js') }}"></script>
+	<script src="{{ url('js/503.min.js') }}"></script>
+	</body>
 </html>
