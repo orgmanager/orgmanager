@@ -44,7 +44,7 @@ class LoginController extends Controller
         $request->session()->regenerate();
         $user = Auth::user();
 
-        return redirect($redirect)->withSuccess(trans('alerts.loggedin'));
+        return redirect()->intended($redirect)->withSuccess(trans('alerts.loggedin'));
     }
 
     public function logoutUser()
