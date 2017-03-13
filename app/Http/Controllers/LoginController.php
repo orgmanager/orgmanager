@@ -2,14 +2,14 @@
 
 namespace App\Http\Controllers;
 
+use App\Mail\WelcomeUser;
 use Auth;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Mail;
 use Illuminate\Support\Facades\Redirect;
 use SocialAuth;
 use SocialNorm\Exceptions\ApplicationRejectedException;
 use SocialNorm\Exceptions\InvalidAuthorizationCodeException;
-use Illuminate\Support\Facades\Mail;
-use App\Mail\WelcomeUser;
 
 class LoginController extends Controller
 {
@@ -35,7 +35,7 @@ class LoginController extends Controller
                 if (!$user->exists) {
                     $redirect = 'sync';
                     $user->api_token = str_random(60);
-                    Mail::to($user->email)->send(new WelcomeUser);
+                    Mail::to($user->email)->send(new WelcomeUser());
                 }
                 $user->save();
             });
