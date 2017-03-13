@@ -182,6 +182,7 @@ return [
         AdamWathan\EloquentOAuthL5\EloquentOAuthServiceProvider::class,
         GrahamCampbell\GitHub\GitHubServiceProvider::class,
         Bugsnag\BugsnagLaravel\BugsnagServiceProvider::class,
+        M1guelpf\DeployingMode\DeployingModeServiceProvider::class,
         // OrgManager\OrgmanagerCustom\OrgmanagerCustomServiceProvider::class,
 
         /*

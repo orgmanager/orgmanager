@@ -10,6 +10,7 @@
         "bugsnag/bugsnag-laravel": "^2.0",
         "google/recaptcha": "~1.1",
         "laravel/framework": "5.3.*",
+        "m1guelpf/deploying-mode": "^1.0",
         "m1guelpf/github": "dev-master",
         "m1guelpf/github-api": "dev-packagist",
         "php-http/guzzle6-adapter": "^1.1"
