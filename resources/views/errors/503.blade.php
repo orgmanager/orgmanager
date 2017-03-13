@@ -1,3 +1,4 @@
+@inject('deployutils', 'M1guelpf\DeployingMode\Utils')
 <!DOCTYPE html>
 <html lang="en-us" class="no-js">
 	<head>
@@ -18,9 +19,14 @@
 			<img src="{{ url('img/orgmanager.png') }}" alt="" class="brand-logo" />
 			<div class="content">
 				<h1 class="text-intro opacity-0">Hey Guys!<br>
+					@if($deployutils->isDeploying())
+						We're currently under deployment</h1>
+					<h2 class="text-intro opacity-0">We enabled deployment mode {{ $exception->wentDownAgo }} for deploying <a href="{{ url('https://github.com/orgmanager/orgmanager/commit/'.$exception->commit) }}" target="_blank">{{ $exception->prettyCommit }}</a>.</h2>
+					@else
 					We're currently under manteniance</h1>
-				<h2 class="text-intro opacity-0">We enabled manteniance mode at {{ $exception->wentDownAt }} for {{ $exception->getMessage() }}</h2>
-				<nav>
+					<h2 class="text-intro opacity-0">We enabled manteniance mode {{ $exception->wentDownAt }} for {{ $exception->getMessage() }}</h2>
+					@endif
+					<nav>
 					<ul>
 						<li>
 							<a href="https://status.miguelpiedrafita.com/components/58c0fca18c48eb4923fc46bf" target="_blank" id="status-page" class="light-btn text-intro opacity-0">OrgManager Status Page</a>
