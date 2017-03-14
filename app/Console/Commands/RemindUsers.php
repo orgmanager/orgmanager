@@ -2,10 +2,10 @@
 
 namespace App\Console\Commands;
 
-use Illuminate\Console\Command;
+use App\Mail\RemindUsers as Reminder;
 use App\User;
 use Carbon\Carbon;
-use App\Mail\RemindUsers as Reminder;
+use Illuminate\Console\Command;
 use Illuminate\Support\Facades\Mail;
 
 class RemindUsers extends Command
@@ -42,19 +42,16 @@ class RemindUsers extends Command
     public function handle()
     {
         $users = User::where('created_at', '>=', Carbon::now()->subWeek())->get();
-        if ($this->option('force') || $this->confirm('Do you want to send emails to '.$users->count().' users?'))
-        {
-          $this->output->progressStart($users->count());
-          foreach ($users as $user)
-          {
-            if (count($user->orgs) == 0)
-            {
-              Mail::to($user->email)->send(new Reminder($user));
+        if ($this->option('force') || $this->confirm('Do you want to send emails to '.$users->count().' users?')) {
+            $this->output->progressStart($users->count());
+            foreach ($users as $user) {
+                if (count($user->orgs) == 0) {
+                    Mail::to($user->email)->send(new Reminder($user));
+                }
+                $this->output->progressAdvance();
             }
-            $this->output->progressAdvance();
-          }
-          $this->output->progressFinish();
-          $this->info('Successfully sent emails for '.$users->count().' users.');
+            $this->output->progressFinish();
+            $this->info('Successfully sent emails for '.$users->count().' users.');
         }
     }
 }
