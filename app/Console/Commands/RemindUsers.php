@@ -42,7 +42,7 @@ class RemindUsers extends Command
     public function handle()
     {
         $users = User::where('created_at', '>=', Carbon::now()->subWeek())->get();
-        if ($this->option('force') || $this->confirm('Do you want to send emails to '.$users->count().' users?')) {
+        if ($this->option('force') || $this->confirm('Do you want to send emails to '.$users->count().' users?', true)) {
             $this->output->progressStart($users->count());
             foreach ($users as $user) {
                 if (count($user->orgs) == 0) {
