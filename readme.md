@@ -187,3 +187,4 @@ This project is licensed under the Mozilla Public License - see the [LICENSE.md]
 
 * [Laracasts](https://laracasts.com/) & The Laravel Community - You are fantastic!
 * [@simonv3](https://github.com/simonv3) and [@jancborchardt](https://github.com/jancborchardt) - Your issues have helped OrgManager improve lots of things!
+* [Elio Qoshi](https://github.com/elioqoshi) - You made the OrgManager branding great!
