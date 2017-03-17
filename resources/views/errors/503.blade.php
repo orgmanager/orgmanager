@@ -16,7 +16,7 @@
 		</div>
 		<canvas id="dotty"></canvas>
 		<section id="left-side">
-			<img src="{{ url('img/orgmanager.png') }}" alt="" class="brand-logo" />
+			<img src="{{ url('img/orgmanagerIcon.png') }}" alt="OrgManager" class="brand-logo" />
 			<div class="content">
 				<h1 class="text-intro opacity-0">Hey Guys!<br>
 					@if($deployutils->isDeploying())

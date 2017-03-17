@@ -10,7 +10,7 @@
 <body>
 <canvas id="dotty" width="1920" height="854"></canvas>
 <a href="{{ url('/') }}" class="logo-link">
-<img src="{{ url('img/orgmanager.png') }}" class="logo">
+@orgmanagerIcon
 </a>
 <div class="content">
 <div class="content-box">
