@@ -38,7 +38,7 @@ class HomeController extends Controller
         $stats->users = User::count();
         $stats->orgs = Org::count();
         $stats->invites = Org::sum('invitecount');
-        $stats->version = ORGMANAGER_VERSION;
+        $stats->version = config('app.orgmanager.version');
 
         return response()->json($stats);
     }
