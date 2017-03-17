@@ -183,6 +183,7 @@ return [
         GrahamCampbell\GitHub\GitHubServiceProvider::class,
         Bugsnag\BugsnagLaravel\BugsnagServiceProvider::class,
         M1guelpf\DeployingMode\DeployingModeServiceProvider::class,
+        OrgManager\Logos\OrgManagerLogosServiceProvider::class,
         // OrgManager\OrgmanagerCustom\OrgmanagerCustomServiceProvider::class,
 
         /*

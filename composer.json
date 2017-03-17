@@ -13,6 +13,7 @@
         "m1guelpf/deploying-mode": "^1.0",
         "m1guelpf/github": "dev-master",
         "m1guelpf/github-api": "dev-packagist",
+        "orgmanager/orgmanager-logos": "^1.0",
         "php-http/guzzle6-adapter": "^1.1"
     },
     "require-dev": {
