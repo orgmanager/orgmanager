@@ -13,9 +13,7 @@
 */
 
 // Pages
-Route::get('/', function () {
-    return view('home');
-});
+Route::get('/', 'HomeController@index');
 Route::get('dashboard', 'DashboardController@index');
 Route::get('org/{org}', 'OrgController@index');
 Route::post('org/{org}', 'OrgController@changePassword');
