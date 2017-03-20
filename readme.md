@@ -30,7 +30,7 @@ Now that you've verified that you have that, let's start...
 
 1. Download beta version (Just clone the master branch)
 
-If you have GIT, just open your terminal/console and run
+Just open your terminal/console and run
 ```
 git clone https://github.com/orgmanager/orgmanager
 ```
@@ -44,7 +44,7 @@ Just google instructions for your server. If you're using [hotel](https://github
 hotel add 'php artisan serve --port $PORT'
 ```
 
-Now, if you configured the .dev domains, you can now access `orgmanager.dev`. If you didn't, access `localhost:2000` and click OrgManager. Yeah, it should be showing that huge error, don't worry :smile:
+Now, if you configured custom domains, you can now access `orgmanager.{yourtld}`. If you didn't, access `localhost:2000` and click OrgManager. Yeah, it should be showing that huge error, don't worry :smile:
 
 3. Setup .env
 
@@ -130,7 +130,7 @@ This is the easiest one.
 
 1. Get lastest code
 
-If you used git to get OrgManager, you can open the orgmanager folder in the terminal/console and run
+Open the orgmanager folder in the terminal/console and run
 ```sh
 git pull origin master
 ```
@@ -168,6 +168,17 @@ Please read [CONTRIBUTING.md](https://github.com/orgmanager/orgmanager/blob/mast
 ## Versioning
 
 We use [SemVer](http://semver.org/) for versioning. For the versions available, see the [releases page](https://github.com/orgmanager/orgmanager/releases).
+
+## Support Channels
+
+Facing an issue? Want to meet other OrgManager users? Just want to say hello?
+
+Here are the official support channels we provide:
+
+* Github Issues - You can [open an issue](https://github.com/orgmanager/orgmanager/issues/new) for things like requesting new features or reporting bugs.
+* Hosted Version Chat - If you've used the hosted version, you migth have noticed that there is a chat icon on the bottom rigth corner. That chat is used for things related to the hosted version.
+* [Gittler chat](https://gitter.im/orgmanager/) - We have a little Gitter chatroom for discussing things about the project, meeting other users and anything else you think of. Don't be afraid to say hello!
+* Email - You can send a mail to [orgmanager@miguelpiedrafita.com](mailto:orgmanager@miguelpiedrafita.com) to discuss about anything with the main developer, [Miguel Piedrafita](https://miguelpiedrafita.com).
 
 ## Sponsors
 
