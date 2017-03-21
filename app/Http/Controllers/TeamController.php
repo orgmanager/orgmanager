@@ -2,10 +2,10 @@
 
 namespace App\Http\Controllers;
 
-use App\Http\Requests\SetTeamRequest;
+use GitHub;
 use App\Org;
 use App\Team;
-use GitHub;
+use App\Http\Requests\SetTeamRequest;
 
 class TeamController extends Controller
 {
@@ -22,7 +22,7 @@ class TeamController extends Controller
         Github::authenticate($org->user->token, null, 'http_token');
         $teams = Github::api('teams')->all($org->name);
         foreach ($teams as $data) {
-            if (!Team::where('id', '=', $data['id'])->exists()) {
+            if (! Team::where('id', '=', $data['id'])->exists()) {
                 $team = new Team();
                 $team->id = $data['id'];
                 $team->org_id = $org->id;

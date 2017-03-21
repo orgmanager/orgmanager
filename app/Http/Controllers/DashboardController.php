@@ -2,8 +2,8 @@
 
 namespace App\Http\Controllers;
 
-use App\Org;
 use Auth;
+use App\Org;
 
 class DashboardController extends Controller
 {

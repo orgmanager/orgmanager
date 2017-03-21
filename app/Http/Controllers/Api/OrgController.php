@@ -2,9 +2,9 @@
 
 namespace App\Http\Controllers\Api;
 
-use App\Http\Controllers\Controller;
 use App\Org;
 use Illuminate\Http\Request;
+use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Artisan;
 
 class OrgController extends Controller
@@ -18,7 +18,7 @@ class OrgController extends Controller
     {
         $org = Org::findOrFail($id);
         $this->authorize('update', $org);
-        if (!$request->has('password')) {
+        if (! $request->has('password')) {
             abort(400);
         }
         $org->password = $request->input('password');
@@ -53,7 +53,7 @@ class OrgController extends Controller
       // CONSIDER: Allow users to join other users organizations with their tokens?
       // (15/02/2017) Miguel Piedrafita
       $this->authorize('join', $org);
-        if (!$request->has('username')) {
+        if (! $request->has('username')) {
             abort(400);
         }
         Artisan::call('orgmanager:joinorg', [

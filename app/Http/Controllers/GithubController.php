@@ -2,9 +2,9 @@
 
 namespace App\Http\Controllers;
 
-use App\Org;
 use Auth;
 use GitHub;
+use App\Org;
 use Illuminate\Support\Facades\Artisan;
 
 class GithubController extends Controller
@@ -43,7 +43,7 @@ class GithubController extends Controller
     public function storeOrgs($orgs)
     {
         foreach ($orgs as $organization) {
-            if (!Org::where('id', '=', $organization['id'])->exists()) {
+            if (! Org::where('id', '=', $organization['id'])->exists()) {
                 if (Org::find($organization['id']) == null) {
                     $org = new Org();
                     $org->id = $organization['id'];

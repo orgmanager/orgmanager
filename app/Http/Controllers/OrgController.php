@@ -2,10 +2,10 @@
 
 namespace App\Http\Controllers;
 
-use App\Http\Requests\OrgPasswordRequest;
 use App\Org;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Artisan;
+use App\Http\Requests\OrgPasswordRequest;
 
 class OrgController extends Controller
 {
