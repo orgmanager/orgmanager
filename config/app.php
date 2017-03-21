@@ -23,7 +23,7 @@ return [
     */
 
     'orgmanager' => [
-      'version' => 'v3.0 beta',
+      'version' => 'v3.0',
     ],
 
     /*
