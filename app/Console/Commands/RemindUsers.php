@@ -2,11 +2,11 @@
 
 namespace App\Console\Commands;
 
-use App\Mail\RemindUsers as Reminder;
 use App\User;
 use Carbon\Carbon;
 use Illuminate\Console\Command;
 use Illuminate\Support\Facades\Mail;
+use App\Mail\RemindUsers as Reminder;
 
 class RemindUsers extends Command
 {
