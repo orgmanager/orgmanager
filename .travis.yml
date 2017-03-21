@@ -1,0 +1,20 @@
+language: php
+
+php:
+  - 7.0
+  - 7.1
+
+before_script:
+  - cp .env.testing .env
+  - mysql -e 'create database travis;'
+  - travis_retry composer self-update
+  - travis_retry composer update --no-interaction --prefer-source
+  - php artisan key:generate
+  - php artisan migrate
+
+script:
+  - phpunit --coverage-text --coverage-clover=coverage.clover
+
+after_script:
+  - wget https://scrutinizer-ci.com/ocular.phar
+  - php ocular.phar code-coverage:upload --format=php-clover coverage.clover
