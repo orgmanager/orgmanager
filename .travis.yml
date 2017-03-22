@@ -14,6 +14,7 @@ before_script:
   - mysql -e 'create database travis;'
   - travis_retry composer self-update
   - travis_retry composer update ${COMPOSER_FLAGS} --no-interaction --prefer-source
+  - php artisan key:generate
 
 script:
   - phpunit --coverage-text --coverage-clover=coverage.clover
