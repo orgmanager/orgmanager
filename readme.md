@@ -1,4 +1,5 @@
 # OrgManager
+[![Build Status](https://travis-ci.org/orgmanager/orgmanager.svg?branch=master)](https://travis-ci.org/orgmanager/orgmanager) [![Code Coverage](https://scrutinizer-ci.com/g/orgmanager/orgmanager/badges/coverage.png?b=master)](https://scrutinizer-ci.com/g/orgmanager/orgmanager/?branch=master) [![GitHub release](https://img.shields.io/github/release/orgmanager/orgmanager.svg)](https://github.com/orgmanager/orgmanager/releases) [![license](https://img.shields.io/github/license/orgmanager/orgmanager.svg)](LICENSE.md) [![Codacy grade](https://img.shields.io/codacy/grade/e27821fb6289410b8f58338c7e0bc686.svg)](https://www.codacy.com/app/m1guelpiedrafita/orgmanager/dashboard) [![Packagist](https://img.shields.io/packagist/v/orgmanager/orgmanager.svg)](https://packagist.org/packages/orgmanager/orgmanager)
 
 OrgManager takes Github Organization invites to a new level!
 
