@@ -53,7 +53,7 @@ return [
             'strict'    => true,
             'engine'    => null,
         ],
-        
+
         'travis' => [
             'driver'    => 'mysql',
             'host'      => env('DB_TEST_HOST', 'localhost'),
