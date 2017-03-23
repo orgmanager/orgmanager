@@ -9,14 +9,13 @@ use Illuminate\Support\Facades\Artisan;
 
 class OrgController extends Controller
 {
-    public function index($id)
+    public function index(Org $org)
     {
-        return Org::findOrFail($id);
+        return $org;
     }
 
-    public function password(Request $request, $id)
+    public function password(Request $request, Org $org)
     {
-        $org = Org::findOrFail($id);
         $this->authorize('update', $org);
         if (! $request->has('password')) {
             abort(400);
@@ -27,9 +26,8 @@ class OrgController extends Controller
         return $org->makeVisible('password')->makeHidden('user')->toArray();
     }
 
-    public function update($id)
+    public function update(Org $org)
     {
-        $org = Org::findOrFail($id);
         $this->authorize('update', $org);
         Artisan::call('orgmanager:updateorg', [
         'org' => $org->id,
@@ -38,18 +36,16 @@ class OrgController extends Controller
         return response(null, 204);
     }
 
-    public function delete($id)
+    public function delete(Org $org)
     {
-        $org = Org::findOrFail($id);
         $this->authorize('delete', $org);
         $org->delete();
 
         return response(null, 204);
     }
 
-    public function join(Request $request, $id)
+    public function join(Request $request, Org $org)
     {
-        $org = Org::findOrFail($id);
       // CONSIDER: Allow users to join other users organizations with their tokens?
       // (15/02/2017) Miguel Piedrafita
       $this->authorize('join', $org);
