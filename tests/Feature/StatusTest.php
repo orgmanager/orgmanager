@@ -3,6 +3,7 @@
 namespace Tests\Feature;
 
 use Tests\TestCase;
+use App\User;
 
 class StatusTest extends TestCase
 {
@@ -36,10 +37,24 @@ class StatusTest extends TestCase
      *
      * @return void
      */
-    public function testDashboard()
+    public function testDashboardAuth()
     {
         $response = $this->get('dashboard');
 
         $response->assertRedirect('login');
+    }
+
+    /**
+     * Test the dashboard returns a 200 status code when logged in (OK)
+     *
+     * @return void
+     */
+    public function testDashboard()
+    {
+        $user = factory(User::class)->create();
+        $response = $this->actingAs($user)
+                         ->get('dashboard');
+
+        $response->assertStatus(200);
     }
 }
