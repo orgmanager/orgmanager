@@ -56,5 +56,6 @@ class StatusTest extends TestCase
                          ->get('dashboard');
 
         $response->assertStatus(200);
+        $user->delete();
     }
 }
