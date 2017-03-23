@@ -6,6 +6,7 @@
 Homestead.json
 Homestead.yaml
 .env
+.env.testing
 .env.*
 !.env.example
 composer.lock
