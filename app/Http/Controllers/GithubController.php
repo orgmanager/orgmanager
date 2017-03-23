@@ -25,7 +25,7 @@ class GithubController extends Controller
     public function syncOrg(Org $org)
     {
         Artisan::call('orgmanager:updateorg', [
-          'org' => $org->id,
+            'org' => $org->id,
         ]);
         $this->checkPerm();
         Toastr::success($org->name.trans('alerts.updated'), trans('alerts.sync'));

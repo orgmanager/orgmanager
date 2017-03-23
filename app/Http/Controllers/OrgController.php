@@ -33,7 +33,7 @@ class OrgController extends Controller
     {
         $this->authorize('update', $org);
         Artisan::call('orgmanager:updateorg', [
-          'org' => $org->id,
+            'org' => $org->id,
         ]);
 
         return redirect('org/'.$org->id)->withSuccess('The organization was successfully updated.');

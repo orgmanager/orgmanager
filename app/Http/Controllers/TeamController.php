@@ -2,7 +2,6 @@
 
 namespace App\Http\Controllers;
 
-use GitHub;
 use App\Org;
 use App\Team;
 use App\Http\Requests\SetTeamRequest;

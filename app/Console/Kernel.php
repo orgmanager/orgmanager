@@ -31,8 +31,8 @@ class Kernel extends ConsoleKernel
     protected function schedule(Schedule $schedule)
     {
         $schedule->command('orgmanager:remind-users', ['--force'])
-                 ->weekly()
-                 ->evenInMaintenanceMode();
+                    ->weekly()
+                    ->evenInMaintenanceMode();
     }
 
     /**

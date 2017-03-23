@@ -34,6 +34,6 @@ class JoinOrgRequest extends FormRequest
         return [
         'github_username.required'      => 'You need to specify an username.',
         'g-recaptcha-response.required' => 'You need to prove you are not a robot.',
-      ];
+        ];
     }
 }

@@ -2,7 +2,6 @@
 
 namespace App\Http\Controllers;
 
-use GitHub;
 use App\Org;
 use App\Traits\CaptchaTrait;
 use Illuminate\Http\Request;
@@ -25,8 +24,8 @@ class JoinController extends Controller
             return $validation;
         }
         Artisan::call('orgmanager:joinorg', [
-          'org'      => $org->id,
-          'username' => $request->github_username,
+            'org'      => $org->id,
+            'username' => $request->github_username,
         ]);
 
         return redirect('join/'.$org->id)->withSuccess(trans('alerts.invite').$request->github_username.trans('alerts.inbox'), trans('alerts.sent'));
