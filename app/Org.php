@@ -8,6 +8,12 @@ class Org extends Model
 {
     public $timestamps = false;
 
+    public $incrementing = false;
+
+    protected $fillable = [
+      'id', 'name', 'url', 'description', 'avatar',
+    ];
+
     protected $hidden = [
         'password', 'role', 'userid',
     ];

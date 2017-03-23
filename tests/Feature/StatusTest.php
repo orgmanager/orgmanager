@@ -2,6 +2,7 @@
 
 namespace Tests\Feature;
 
+use App\Org;
 use App\User;
 use Tests\TestCase;
 
@@ -58,4 +59,59 @@ class StatusTest extends TestCase
         $response->assertStatus(200);
         $user->delete();
     }
+
+    /**
+     * Test the /o/{org} page redirects to the /join/{id} page.
+     *
+     * @return void
+     */
+    public function testJoinRedirect()
+    {
+        $org = factory(Org::class)->create();
+        $response = $this->get('o/'.$org->name);
+
+        $response->assertRedirect('join/'.$org->id);
+        $org->delete();
+    }
+
+    /**
+     * Test the join page returns a 200 status code (OK).
+     *
+     * @return void
+     */
+    public function testJoinPage()
+    {
+        $org = factory(Org::class)->create();
+        $response = $this->get('join/'.$org->id);
+
+        $response->assertStatus(200);
+        $org->delete();
+    }
+
+    /**
+     * Test the developers page returns a 200 status code (OK).
+     *
+     * @return void
+     */
+    public function testDevPage()
+    {
+        $response = $this->get('developer');
+
+        $response->assertStatus(200);
+    }
+
+     /**
+      * Test the token page returns a 200 status code (OK).
+      *
+      * @return void
+      */
+     public function testTokenPage()
+     {
+         $user = factory(User::class)->create();
+         $response = $this->actingAs($user)
+                          ->get('token');
+
+         $response->assertStatus(200);
+         $user->delete();
+     }
 }
