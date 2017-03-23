@@ -30,7 +30,7 @@ class OrgController extends Controller
         return redirect('org/'.$org->id)->withSuccess('The organization password was successfully updated.');
     }
 
-    public function update(Request $request, Org $org)
+    public function update(Org $org)
     {
         $this->authorize('update', $org);
         Artisan::call('orgmanager:updateorg', [
@@ -40,7 +40,7 @@ class OrgController extends Controller
         return redirect('org/'.$org->id)->withSuccess('The organization was successfully updated.');
     }
 
-    public function delete(Request $request, Org $org)
+    public function delete(Org $org)
     {
         $this->authorize('delete', $org);
         $org->delete();
