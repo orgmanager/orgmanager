@@ -52,14 +52,14 @@ class JoinController extends Controller
 
     protected function validateRequest(Request $request, Org $org)
     {
-        if (!$this->captchaCheck($request)) {
+        if (! $this->captchaCheck($request)) {
             return redirect('join/'.$org->id)->withErrors('You need to prove you are not a robot!');
         }
         if ($org->password && trim($org->password) != '') {
-            if (!$request->has('org_password')) {
+            if (! $request->has('org_password')) {
                 return redirect('join/'.$org->id)->withErrors(trans('alerts.passwd1'));
             }
-            if (!password_verify($request->org_password, $org->password)) {
+            if (! password_verify($request->org_password, $org->password)) {
                 return redirect('join/'.$org->id)->withErrors(trans('alerts.passwd2'));
             }
         }

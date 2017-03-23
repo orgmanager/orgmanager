@@ -9,10 +9,10 @@ use Illuminate\Foundation\Support\Providers\AuthServiceProvider as ServiceProvid
 class AuthServiceProvider extends ServiceProvider
 {
     /**
-     * The policy mappings for the application.
-     *
-     * @var array
-     */
+         * The policy mappings for the application.
+         *
+         * @var array
+         */
         protected $policies = [
             Org::class => OrgPolicy::class,
         ];
