@@ -46,7 +46,7 @@ class OrgController extends Controller
 
     public function join(Request $request, Org $org)
     {
-      // CONSIDER: Allow users to join other users organizations with their tokens?
+        // CONSIDER: Allow users to join other users organizations with their tokens?
       // (15/02/2017) Miguel Piedrafita
       $this->authorize('join', $org);
         if (! $request->has('username')) {
