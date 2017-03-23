@@ -34,6 +34,6 @@ class SetTeamRequest extends FormRequest
         'team_id.required' => 'You need to select a team.',
         'team_id.integer'  => 'The Team ID must be a number.',
         'team_id.exists'   => "The selected team doesn't exist.",
-      ];
+        ];
     }
 }

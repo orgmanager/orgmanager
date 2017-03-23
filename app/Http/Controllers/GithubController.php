@@ -25,7 +25,7 @@ class GithubController extends Controller
     public function syncOrg(Org $org)
     {
         Artisan::call('orgmanager:updateorg', [
-          'org' => $org->id,
+            'org' => $org->id,
         ]);
         $this->checkPerm();
         Toastr::success($org->name.trans('alerts.updated'), trans('alerts.sync'));
@@ -43,7 +43,7 @@ class GithubController extends Controller
     public function storeOrgs($orgs)
     {
         foreach ($orgs as $organization) {
-            if (! Org::where('id', '=', $organization['id'])->exists()) {
+            if (!Org::where('id', '=', $organization['id'])->exists()) {
                 if (Org::find($organization['id']) == null) {
                     $org = new Org();
                     $org->id = $organization['id'];

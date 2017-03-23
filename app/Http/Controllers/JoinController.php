@@ -2,7 +2,6 @@
 
 namespace App\Http\Controllers;
 
-use GitHub;
 use App\Org;
 use App\Traits\CaptchaTrait;
 use Illuminate\Http\Request;
@@ -25,8 +24,8 @@ class JoinController extends Controller
             return $validation;
         }
         Artisan::call('orgmanager:joinorg', [
-          'org'      => $org->id,
-          'username' => $request->github_username,
+            'org'      => $org->id,
+            'username' => $request->github_username,
         ]);
 
         return redirect('join/'.$org->id)->withSuccess(trans('alerts.invite').$request->github_username.trans('alerts.inbox'), trans('alerts.sent'));
@@ -53,14 +52,14 @@ class JoinController extends Controller
 
     protected function validateRequest(Request $request, Org $org)
     {
-        if (! $this->captchaCheck($request)) {
+        if (!$this->captchaCheck($request)) {
             return redirect('join/'.$org->id)->withErrors('You need to prove you are not a robot!');
         }
         if ($org->password && trim($org->password) != '') {
-            if (! $request->has('org_password')) {
+            if (!$request->has('org_password')) {
                 return redirect('join/'.$org->id)->withErrors(trans('alerts.passwd1'));
             }
-            if (! password_verify($request->org_password, $org->password)) {
+            if (!password_verify($request->org_password, $org->password)) {
                 return redirect('join/'.$org->id)->withErrors(trans('alerts.passwd2'));
             }
         }

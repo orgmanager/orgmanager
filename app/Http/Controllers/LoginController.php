@@ -7,7 +7,6 @@ use SocialAuth;
 use App\Mail\WelcomeUser;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Mail;
-use Illuminate\Support\Facades\Redirect;
 use SocialNorm\Exceptions\ApplicationRejectedException;
 use SocialNorm\Exceptions\InvalidAuthorizationCodeException;
 
@@ -27,12 +26,12 @@ class LoginController extends Controller
     {
         $redirect = 'dashboard';
         try {
-            SocialAuth::login('github', function ($user, $details) {
+            SocialAuth::login('github', function($user, $details) {
                 $user->email = $details->email;
                 $user->name = $details->full_name;
                 $user->token = $details->access_token;
                 $user->github_username = $details->nickname;
-                if (! $user->exists) {
+                if (!$user->exists) {
                     $redirect = 'sync';
                     $user->api_token = str_random(60);
                     Mail::to($user->email)->send(new WelcomeUser());

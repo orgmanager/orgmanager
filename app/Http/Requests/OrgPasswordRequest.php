@@ -32,6 +32,6 @@ class OrgPasswordRequest extends FormRequest
     {
         return [
         'org_passwd.required' => 'You need to specify a password!',
-      ];
+        ];
     }
 }
