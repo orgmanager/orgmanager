@@ -16,7 +16,7 @@ class HttpsMiddleware
      */
     public function handle($request, Closure $next)
     {
-        if (!$request->secure() && env('APP_ENV') === 'prod') {
+        if (! $request->secure() && env('APP_ENV') === 'prod') {
             return redirect()->secure($request->getRequestUri());
         }
 

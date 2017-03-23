@@ -17,7 +17,7 @@ class OrgController extends Controller
     public function password(Request $request, Org $org)
     {
         $this->authorize('update', $org);
-        if (!$request->has('password')) {
+        if (! $request->has('password')) {
             abort(400);
         }
         $org->password = $request->input('password');
