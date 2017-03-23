@@ -100,11 +100,11 @@ class StatusTest extends TestCase
         $response->assertStatus(200);
     }
 
-    /**
-     * Test the token page returns a 200 status code (OK).
-     *
-     * @return void
-     */
+     /**
+      * Test the token page returns a 200 status code (OK).
+      *
+      * @return void
+      */
      public function testTokenPage()
      {
          $user = factory(User::class)->create();
