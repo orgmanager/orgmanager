@@ -3,6 +3,7 @@
 namespace Tests\Feature;
 
 use App\User;
+use App\Org;
 use Tests\TestCase;
 
 class StatusTest extends TestCase
@@ -57,5 +58,19 @@ class StatusTest extends TestCase
 
         $response->assertStatus(200);
         $user->delete();
+    }
+
+    /**
+     * Test the /o/{org} page redirects to the /join/{id} page.
+     *
+     * @return void
+     */
+    public function testJoinRedirect()
+    {
+        $org = factory(Org::class)->create();
+        $response = $this->get('o/'.$org->name);
+
+        $response->assertRedirect('join/'.$org->id);
+        $org->delete();
     }
 }

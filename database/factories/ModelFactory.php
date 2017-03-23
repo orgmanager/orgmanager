@@ -25,12 +25,12 @@ $factory->define(App\User::class, function (Faker\Generator $faker) {
 
 $factory->define(App\Org::class, function (Faker\Generator $faker) {
     return [
-        'id'              => $faker->unique()->integer,
-        'name'            => $faker->name,
+        'id'              => $faker->unique()->randomNumber,
+        'name'            => $faker->userName,
         'url'             => $faker->url,
         'description'     => $faker->text,
         'avatar'          => url('https://orgmanager.miguelpiedrafita.com/img/orgmanagerIcon'),
-        'userid'          => $faker->unique()->integer,
+        'userid'          => $faker->unique()->randomDigitNotNull,
         'role'            => 'admin',
     ];
 });
