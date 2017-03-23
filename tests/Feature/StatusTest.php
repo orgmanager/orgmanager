@@ -73,4 +73,18 @@ class StatusTest extends TestCase
         $response->assertRedirect('join/'.$org->id);
         $org->delete();
     }
+
+    /**
+     * Test the join page returns a 200 status code (OK).
+     *
+     * @return void
+     */
+    public function testJoinPage()
+    {
+        $org = factory(Org::class)->create();
+        $response = $this->get('join/'.$org->id);
+
+        $response->assertStatus(200);
+        $org->delete();
+    }
 }
