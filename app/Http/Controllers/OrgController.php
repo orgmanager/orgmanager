@@ -3,7 +3,6 @@
 namespace App\Http\Controllers;
 
 use App\Org;
-use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Artisan;
 use App\Http\Requests\OrgPasswordRequest;
 
