@@ -87,4 +87,31 @@ class StatusTest extends TestCase
         $response->assertStatus(200);
         $org->delete();
     }
+
+    /**
+     * Test the developers page returns a 200 status code (OK).
+     *
+     * @return void
+     */
+    public function testDevPage()
+    {
+        $response = $this->get('developer');
+
+        $response->assertStatus(200);
+    }
+
+    /**
+     * Test the token page returns a 200 status code (OK).
+     *
+     * @return void
+     */
+     public function testTokenPage()
+     {
+         $user = factory(User::class)->create();
+         $response = $this->actingAs($user)
+                          ->get('token');
+
+         $response->assertStatus(200);
+         $user->delete();
+     }
 }
