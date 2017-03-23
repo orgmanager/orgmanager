@@ -13,12 +13,24 @@
 
 /** @var \Illuminate\Database\Eloquent\Factory $factory */
 $factory->define(App\User::class, function (Faker\Generator $faker) {
-    static $password;
-
     return [
-        'name'           => $faker->name,
-        'email'          => $faker->unique()->safeEmail,
-        'password'       => $password ?: $password = bcrypt('secret'),
-        'remember_token' => str_random(10),
+        'name'            => $faker->name,
+        'email'           => $faker->unique()->safeEmail,
+        'token'           => str_random(10),
+        'github_username' => $faker->userName,
+        'api_token'       => str_random(60),
+        'remember_token'  => str_random(10),
+    ];
+});
+
+$factory->define(App\Org::class, function (Faker\Generator $faker) {
+    return [
+        'id'              => $faker->unique()->integer,
+        'name'            => $faker->name,
+        'url'             => $faker->url,
+        'description'     => $faker->text,
+        'avatar'          => url('https://orgmanager.miguelpiedrafita.com/img/orgmanagerIcon'),
+        'userid'          => $faker->unique()->integer,
+        'role'            => 'admin',
     ];
 });
