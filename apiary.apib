@@ -132,9 +132,9 @@ To get your API token, go to the developers page of your orgmanager installation
 
 + Response 204 (text/html; charset=UTF-8)
 
-## Stats [/stats]
+## Token [/token/regenerate]
 
-### Get application stats [GET]
+### Regenerate Token [GET]
 
 + Request
     + Headers
@@ -144,8 +144,4 @@ To get your API token, go to the developers page of your orgmanager installation
 
 + Response 200 (application/json)
 
-        {
-            "users": 10,
-            "orgs": 4,
-            "invites": 445
-        }
+        "{newtoken}"
