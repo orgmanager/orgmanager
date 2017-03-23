@@ -2,8 +2,8 @@
 
 namespace Tests\Feature;
 
-use App\User;
 use App\Org;
+use App\User;
 use Tests\TestCase;
 
 class StatusTest extends TestCase
