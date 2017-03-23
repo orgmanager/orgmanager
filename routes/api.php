@@ -15,6 +15,7 @@
 Route::group(['middleware' => 'auth:api', 'namespace' => 'Api'], function () {
     Route::any('', 'HomeController@index');
     Route::get('user', 'UserController@index');
+    Route::get('token/regenerate', 'UserController@token');
     Route::get('user/orgs', 'UserController@orgs');
     Route::get('org', 'HomeController@org');
     Route::get('org/{org?}', 'OrgController@index');
