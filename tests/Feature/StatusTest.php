@@ -2,13 +2,13 @@
 
 namespace Tests\Feature;
 
-use Tests\TestCase;
 use App\User;
+use Tests\TestCase;
 
 class StatusTest extends TestCase
 {
     /**
-     * Test the home page returns a 200 status code (OK)
+     * Test the home page returns a 200 status code (OK).
      *
      * @return void
      */
@@ -20,7 +20,7 @@ class StatusTest extends TestCase
     }
 
     /**
-     * Test the login page redirects to GitHub
+     * Test the login page redirects to GitHub.
      *
      * @return void
      */
@@ -33,7 +33,7 @@ class StatusTest extends TestCase
     }
 
     /**
-     * Test the dashboard page redirects to login
+     * Test the dashboard page redirects to login.
      *
      * @return void
      */
@@ -45,7 +45,7 @@ class StatusTest extends TestCase
     }
 
     /**
-     * Test the dashboard returns a 200 status code when logged in (OK)
+     * Test the dashboard returns a 200 status code when logged in (OK).
      *
      * @return void
      */
