@@ -157,4 +157,24 @@ class ApiTest extends TestCase
         $this->assertNull(Org::find($org->id));
     }
 
+    /**
+     * Test the join endpoint.
+     *
+     * @return void
+     */
+    public function testJoin()
+    {
+        $user = factory(User::class)->create();
+        $org = factory(Org::class)->create([
+          'userid' => $user->id,
+        ]);
+        Artisan::shouldReceive('call')
+                    ->once()
+                    ->with('orgmanager:joinorg', ['org' => $org->id, 'username' => $user->github_username])
+                    ->andReturn(null);
+        $response = $this->actingAs($user, 'api')
+                         ->json('POST', 'api/join/'.$org->id, ['username' => $user->github_username]);
+        $response->assertStatus(204);
+    }
+
 }
