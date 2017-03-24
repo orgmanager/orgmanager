@@ -62,4 +62,21 @@ class DataTest extends TestCase
         $response->assertStatus(200)
                  ->assertViewHas('org');
     }
+
+    /**
+     * Test join page gets org.
+     *
+     * @return void
+     */
+    public function testJoin()
+    {
+        $user = factory(User::class)->create();
+        $org = factory(Org::class)->create([
+          'userid' => $user->id,
+        ]);
+        $response = $this->actingAs($user)
+                         ->get('join/'.$org->id);
+        $response->assertStatus(200)
+                 ->assertViewHas('org');
+    }
 }
