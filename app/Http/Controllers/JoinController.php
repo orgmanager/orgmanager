@@ -7,7 +7,7 @@ use App\Traits\CaptchaTrait;
 use Illuminate\Http\Request;
 use App\Http\Requests\JoinOrgRequest;
 use Illuminate\Support\Facades\Artisan;
-
+use GitHub;
 class JoinController extends Controller
 {
     use CaptchaTrait;
