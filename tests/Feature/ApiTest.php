@@ -2,9 +2,9 @@
 
 namespace Tests\Feature;
 
-use Tests\TestCase;
-use App\User;
 use App\Org;
+use App\User;
+use Tests\TestCase;
 use Illuminate\Foundation\Testing\DatabaseTransactions;
 
 class ApiTest extends TestCase
@@ -12,7 +12,7 @@ class ApiTest extends TestCase
     use DatabaseTransactions;
 
     /**
-     * Test the home endpoint
+     * Test the home endpoint.
      *
      * @return void
      */
