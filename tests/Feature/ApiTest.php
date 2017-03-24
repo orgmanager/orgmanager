@@ -5,8 +5,8 @@ namespace Tests\Feature;
 use App\Org;
 use App\User;
 use Tests\TestCase;
-use Illuminate\Foundation\Testing\DatabaseTransactions;
 use Illuminate\Support\Facades\Artisan;
+use Illuminate\Foundation\Testing\DatabaseTransactions;
 
 class ApiTest extends TestCase
 {
@@ -156,5 +156,4 @@ class ApiTest extends TestCase
         $response->assertStatus(204);
         $this->assertNull(Org::find($org->id));
     }
-
 }
