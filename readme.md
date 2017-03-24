@@ -62,13 +62,34 @@ php artisan orgmanager:install
 
 You have now the OrgManager beta version up an running in your server! (Note that OrgManager is not auto-updated, read the updating section for more info).
 
-## About the tests
+## Testing
 
-We don't have tests *yet*
+We use the Laravel testing functionalities and PHPUnit to add automated testing to OrgManager.
 
-> Why?
+### Setting up the testing enviroment
 
-Well, this project was created when I started learning Laravel. I am still learning, and I currently don't master the tests part. Anyway, a PR is welcome to add tests. We expect to have tests for everything on OrgManager v4.
+By default, the tests will run in an special database called `orgmanager_test` in `localhost` with username `root` and password `root`. If you need to change this, edit the `.env.testing` file. This is an example of a customized .env.testing file:
+
+``` php
+APP_ENV=testing
+APP_KEY=base64:GIkaQ57IIVtTeTQOIh7eAFo1FAcoWkfwYPkfcOyusW4=
+
+DB_CONNECTION=travis
+
+DB_TEST_HOST=database_host
+DB_TEST_DATABASE=database_name
+DB_TEST_USERNAME=database_username
+DB_TEST_PASSWORD=database_password
+
+CACHE_DRIVER=array
+SESSION_DRIVER=array
+QUEUE_DRIVER=sync
+```
+
+Once you've customized your .env.testing file, you have to migrate the database to your test database. You can do this by running `php artisan migrate --env=testing`.
+
+To run the tests, just run `composer test`.
+
 
 ## Deployment
 
