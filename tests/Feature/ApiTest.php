@@ -5,6 +5,7 @@ namespace Tests\Feature;
 use App\Org;
 use App\User;
 use Tests\TestCase;
+use Illuminate\Support\Facades\Artisan;
 use Illuminate\Foundation\Testing\DatabaseTransactions;
 
 class ApiTest extends TestCase
@@ -97,5 +98,97 @@ class ApiTest extends TestCase
                          ->get('api/stats');
         $response->assertStatus(200)
                  ->assertJson(['users' => User::count(), 'orgs' => Org::count(), 'invites' => Org::sum('invitecount'), 'version' => config('app.orgmanager.version')]);
+    }
+
+    /**
+     * Test the org password endpoint.
+     *
+     * @return void
+     */
+    public function testOrgPasswd()
+    {
+        $user = factory(User::class)->create();
+        $org = factory(Org::class)->create([
+          'userid' => $user->id,
+        ]);
+        $password = str_random(10);
+        $response = $this->actingAs($user, 'api')
+                         ->json('POST', 'api/org/'.$org->id, ['password' => $password]);
+        $expected = $org->toArray();
+        $expected['password'] = $password;
+        $response->assertStatus(200)
+                 ->assertJson($expected);
+    }
+
+    /**
+     * Test the org update endpoint.
+     *
+     * @return void
+     */
+    public function testOrgUpdate()
+    {
+        $user = factory(User::class)->create();
+        $org = factory(Org::class)->create([
+          'userid' => $user->id,
+        ]);
+        Artisan::shouldReceive('call')
+                    ->once()
+                    ->with('orgmanager:updateorg', ['org' => $org->id])
+                    ->andReturn(null);
+        $response = $this->actingAs($user, 'api')
+                         ->put('api/org/'.$org->id);
+        $response->assertStatus(204);
+    }
+
+    /**
+     * Test the delete org endpoint.
+     *
+     * @return void
+     */
+    public function testOrgDelete()
+    {
+        $user = factory(User::class)->create();
+        $org = factory(Org::class)->create([
+          'userid' => $user->id,
+        ]);
+        $response = $this->actingAs($user, 'api')
+                         ->delete('api/org/'.$org->id);
+        $response->assertStatus(204);
+        $this->assertNull(Org::find($org->id));
+    }
+
+    /**
+     * Test the join endpoint.
+     *
+     * @return void
+     */
+    public function testJoin()
+    {
+        $user = factory(User::class)->create();
+        $org = factory(Org::class)->create([
+          'userid' => $user->id,
+        ]);
+        Artisan::shouldReceive('call')
+                    ->once()
+                    ->with('orgmanager:joinorg', ['org' => $org->id, 'username' => $user->github_username])
+                    ->andReturn(null);
+        $response = $this->actingAs($user, 'api')
+                         ->json('POST', 'api/join/'.$org->id, ['username' => $user->github_username]);
+        $response->assertStatus(204);
+    }
+
+    /**
+     * Test the token regenerate endpoint.
+     *
+     * @return void
+     */
+    public function testTokenRegenerate()
+    {
+        $user = factory(User::class)->create();
+        $token = $user->api_token;
+        $response = $this->actingAs($user, 'api')
+                         ->get('api/token/regenerate');
+        $response->assertStatus(200);
+        $this->assertNotSame($user->api_token, $token);
     }
 }
