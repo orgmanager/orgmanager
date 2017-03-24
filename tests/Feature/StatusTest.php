@@ -5,9 +5,12 @@ namespace Tests\Feature;
 use App\Org;
 use App\User;
 use Tests\TestCase;
+use Illuminate\Foundation\Testing\DatabaseTransactions;
 
 class StatusTest extends TestCase
 {
+    use DatabaseTransactions;
+
     /**
      * Test the home page returns a 200 status code (OK).
      *
@@ -57,7 +60,6 @@ class StatusTest extends TestCase
                          ->get('dashboard');
 
         $response->assertStatus(200);
-        $user->delete();
     }
 
     /**
@@ -71,7 +73,6 @@ class StatusTest extends TestCase
         $response = $this->get('o/'.$org->name);
 
         $response->assertRedirect('join/'.$org->id);
-        $org->delete();
     }
 
     /**
@@ -85,7 +86,6 @@ class StatusTest extends TestCase
         $response = $this->get('join/'.$org->id);
 
         $response->assertStatus(200);
-        $org->delete();
     }
 
     /**
@@ -112,6 +112,37 @@ class StatusTest extends TestCase
                           ->get('token');
 
          $response->assertStatus(200);
-         $user->delete();
+     }
+
+     /**
+      * Test the organization settings page returns a 200 status code (OK).
+      *
+      * @return void
+      */
+     public function testOrgPage()
+     {
+         $user = factory(User::class)->create();
+         $org = factory(Org::class)->create([
+           'userid' => $user->id,
+         ]);
+         $response = $this->actingAs($user)
+                          ->get('org/'.$org->id);
+         $response->assertStatus(200);
+     }
+
+     /**
+      * Test the teams page returns a 200 status code (OK).
+      *
+      * @return void
+      */
+     public function testTeamsPage()
+     {
+         $user = factory(User::class)->create();
+         $org = factory(Org::class)->create([
+           'userid' => $user->id,
+         ]);
+         $response = $this->actingAs($user)
+                          ->get('org/'.$org->id.'/teams');
+         $response->assertStatus(200);
      }
 }
