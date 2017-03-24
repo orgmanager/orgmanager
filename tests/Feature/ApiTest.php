@@ -5,8 +5,8 @@ namespace Tests\Feature;
 use App\Org;
 use App\User;
 use Tests\TestCase;
-use Illuminate\Foundation\Testing\DatabaseTransactions;
 use Illuminate\Support\Facades\Artisan;
+use Illuminate\Foundation\Testing\DatabaseTransactions;
 
 class ApiTest extends TestCase
 {
@@ -176,5 +176,4 @@ class ApiTest extends TestCase
                          ->json('POST', 'api/join/'.$org->id, ['username' => $user->github_username]);
         $response->assertStatus(204);
     }
-
 }
