@@ -98,4 +98,24 @@ class ApiTest extends TestCase
         $response->assertStatus(200)
                  ->assertJson(['users' => User::count(), 'orgs' => Org::count(), 'invites' => Org::sum('invitecount'), 'version' => config('app.orgmanager.version')]);
     }
+
+    /**
+     * Test the org password endpoint.
+     *
+     * @return void
+     */
+    public function testOrgPasswd()
+    {
+        $user = factory(User::class)->create();
+        $org = factory(Org::class)->create([
+          'userid' => $user->id,
+        ]);
+        $password = str_random(10);
+        $response = $this->actingAs($user, 'api')
+                         ->json('POST', 'api/org/'.$org->id, ['password' => $password]);
+        $expected = $org->toArray();
+        $expected['password'] = $password;
+        $response->assertStatus(200)
+                 ->assertJson($expected);
+    }
 }
