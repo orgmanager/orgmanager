@@ -99,7 +99,7 @@ These instructions will get you the lastest stable version of the project up and
 
 To install OrgManager you'll need:
 
-- A web server of your choice - (We recommend Apache or Ngix for production, but any web server you have should work).
+- A web server of your choice - (We recommend Apache or Nginx for production, but any web server you have should work).
 - PHP - (At least v5.6.4, although v7.* is recommended. [Installing PHP](http://php.net/manual/en/install.php))
 - Some PHP libraries - (OpenSSL, PDO, Mbstring, Tokenizer, XML) (Google is your friend :smile:)
 - Composer - ([Install Composer](https://getcomposer.org/download/))
