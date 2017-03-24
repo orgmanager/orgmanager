@@ -28,4 +28,21 @@ class DataTest extends TestCase
         $response->assertStatus(200)
                  ->assertViewHas('orgs', Org::where('userid', '=', $user->id)->paginate(15));
     }
+
+    /**
+     * Test organization settings page gets orgs.
+     *
+     * @return void
+     */
+    public function testOrg()
+    {
+        $user = factory(User::class)->create();
+        $org = factory(Org::class)->create([
+          'userid' => $user->id,
+        ]);
+        $response = $this->actingAs($user)
+                         ->get('org/'.$org->id);
+        $response->assertStatus(200)
+                 ->assertViewHas('org');
+    }
 }
