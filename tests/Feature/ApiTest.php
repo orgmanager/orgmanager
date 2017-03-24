@@ -6,6 +6,7 @@ use App\Org;
 use App\User;
 use Tests\TestCase;
 use Illuminate\Foundation\Testing\DatabaseTransactions;
+use Illuminate\Support\Facades\Artisan;
 
 class ApiTest extends TestCase
 {
@@ -117,5 +118,25 @@ class ApiTest extends TestCase
         $expected['password'] = $password;
         $response->assertStatus(200)
                  ->assertJson($expected);
+    }
+
+    /**
+     * Test the org update endpoint.
+     *
+     * @return void
+     */
+    public function testOrgUpdate()
+    {
+        $user = factory(User::class)->create();
+        $org = factory(Org::class)->create([
+          'userid' => $user->id,
+        ]);
+        Artisan::shouldReceive('call')
+                    ->once()
+                    ->with('orgmanager:updateorg', ['org' => $org->id])
+                    ->andReturn(null);
+        $response = $this->actingAs($user, 'api')
+                         ->put('api/org/'.$org->id);
+        $response->assertStatus(204);
     }
 }
