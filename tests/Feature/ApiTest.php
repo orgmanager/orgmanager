@@ -139,4 +139,22 @@ class ApiTest extends TestCase
                          ->put('api/org/'.$org->id);
         $response->assertStatus(204);
     }
+
+    /**
+     * Test the delete org endpoint.
+     *
+     * @return void
+     */
+    public function testOrgDelete()
+    {
+        $user = factory(User::class)->create();
+        $org = factory(Org::class)->create([
+          'userid' => $user->id,
+        ]);
+        $response = $this->actingAs($user, 'api')
+                         ->delete('api/org/'.$org->id);
+        $response->assertStatus(204);
+        $this->assertNull(Org::find($org->id));
+    }
+
 }
