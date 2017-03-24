@@ -5,7 +5,6 @@ namespace Tests\Feature;
 use App\Org;
 use App\User;
 use Tests\TestCase;
-use GitHub;
 use Illuminate\Foundation\Testing\DatabaseTransactions;
 
 class StatusTest extends TestCase
