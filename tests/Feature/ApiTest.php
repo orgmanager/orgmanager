@@ -177,4 +177,19 @@ class ApiTest extends TestCase
         $response->assertStatus(204);
     }
 
+    /**
+     * Test the token regenerate endpoint.
+     *
+     * @return void
+     */
+    public function testTokenRegenerate()
+    {
+        $user = factory(User::class)->create();
+        $token = $user->api_token;
+        $response = $this->actingAs($user, 'api')
+                         ->get('api/token/regenerate');
+        $response->assertStatus(200);
+        $this->assertNotSame($user->api_token, $token);
+    }
+
 }
