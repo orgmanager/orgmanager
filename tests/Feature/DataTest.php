@@ -2,10 +2,10 @@
 
 namespace Tests\Feature;
 
-use Tests\TestCase;
-use Illuminate\Foundation\Testing\DatabaseTransactions;
 use App\Org;
 use App\User;
+use Tests\TestCase;
+use Illuminate\Foundation\Testing\DatabaseTransactions;
 
 class DataTest extends TestCase
 {
