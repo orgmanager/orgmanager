@@ -3,6 +3,7 @@
 namespace App\Console\Commands;
 
 use App\Org;
+use GitHub;
 use Illuminate\Console\Command;
 
 class JoinOrg extends Command
