@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers;
 
-use GitHub;
+use Github;
 use App\Org;
 use App\Traits\CaptchaTrait;
 use Illuminate\Http\Request;

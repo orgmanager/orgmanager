@@ -2,7 +2,7 @@
 
 namespace App\Console\Commands;
 
-use GitHub;
+use Github;
 use App\Org;
 use Illuminate\Console\Command;
 
@@ -41,7 +41,7 @@ class UpdateOrg extends Command
     {
         $org = Org::findOrFail($this->argument('org'));
         Github::authenticate($org->user->token, null, 'http_token');
-        $orgdata = GitHub::api('organization')->show($org->name);
+        $orgdata = Github::api('organization')->show($org->name);
         $org->name = $orgdata['login'];
         if (isset($orgdata['name'])) {
             $org->pretty_name = $orgdata['name'];

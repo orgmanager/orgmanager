@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use App\Org;
 use App\Team;
+use Github;
+
 use App\Http\Requests\SetTeamRequest;
 
 class TeamController extends Controller
