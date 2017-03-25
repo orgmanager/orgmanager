@@ -245,7 +245,7 @@ return [
         'Validator'    => Illuminate\Support\Facades\Validator::class,
         'View'         => Illuminate\Support\Facades\View::class,
         'SocialAuth'   => AdamWathan\EloquentOAuth\Facades\OAuth::class,
-        'GitHub'       => GrahamCampbell\GitHub\Facades\GitHub::class,
+        'Github'       => GrahamCampbell\GitHub\Facades\GitHub::class,
         'Input'        => Illuminate\Support\Facades\Input::class,
         'Bugsnag'      => Bugsnag\BugsnagLaravel\Facades\Bugsnag::class,
     ],

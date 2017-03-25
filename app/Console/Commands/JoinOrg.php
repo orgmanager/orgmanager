@@ -2,7 +2,7 @@
 
 namespace App\Console\Commands;
 
-use GitHub;
+use Github;
 use App\Org;
 use Illuminate\Console\Command;
 
