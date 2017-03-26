@@ -7,7 +7,10 @@ php:
 cache:
   directories:
   - vendor
-  
+
+notifications:
+  email: false
+
 before_script:
   - cp .env.testing .env
   - echo "USE mysql;\nUPDATE user SET password=PASSWORD('root') WHERE user='root';\nFLUSH PRIVILEGES;\n" | mysql -u root
