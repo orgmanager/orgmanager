@@ -5,7 +5,7 @@ OrgManager takes Github Organization invites to a new level!
 
 ## Hosted version
 
-Not everyone can afford a server, nor do they have the skills to set up a modern PHP application, so OrgManager provides a hosted version you can use **for FREE**. You can access the hosted version at [https://orgmanager.miguelpiedrafita.com](https://orgmanager.miguelpiedrafita.com). In exchange, please report any bugs you encounter, so we can continue inproving!
+Not everyone can afford a server, nor do they have the skills to set up a modern PHP application, so OrgManager provides a hosted version you can use **for FREE**. You can access the hosted version at [https://orgmanager.miguelpiedrafita.com](https://orgmanager.miguelpiedrafita.com). In return, please report any bugs you encounter, so we can continue improving!
 
 ### On joining the OrgManager Github organization
 As you may have guessed, you can use OrgManager to [join the OrgManager organization](https://orgmanager.miguelpiedrafita.com/o/orgmanager).
@@ -22,7 +22,7 @@ To install OrgManager you'll need:
 - PHP - (At least v5.6.4, although v7.* is recommended. [Installing PHP](http://php.net/manual/en/install.php))
 - Some PHP libraries - (OpenSSL, PDO, Mbstring, Tokenizer, XML) (Google is your friend :smile:)
 - Composer - ([Install Composer](https://getcomposer.org/download/))
-- MySQL database - ([You can get them online for free](https://www.google.com/search?q=free+mysql+database))
+- MySQL database - ([You can get one online for free](https://www.google.com/search?q=free+mysql+database))
 - Git - ([Install GIT](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git))
 
 ### Installing
@@ -68,7 +68,7 @@ We use the Laravel testing functionalities and PHPUnit to add automated testing 
 
 ### Setting up the testing enviroment
 
-By default, the tests will run in an special database called `orgmanager_test` in `localhost` with username `root` and password `root`. If you need to change this, edit the `.env.testing` file. This is an example of a customized .env.testing file:
+By default, the tests will run in a special database called `orgmanager_test` in `localhost` with username `root` and password `root`. If you need to change this, edit the `.env.testing` file. This is an example of a customized .env.testing file:
 
 ``` php
 APP_ENV=testing
@@ -103,7 +103,7 @@ To install OrgManager you'll need:
 - PHP - (At least v5.6.4, although v7.* is recommended. [Installing PHP](http://php.net/manual/en/install.php))
 - Some PHP libraries - (OpenSSL, PDO, Mbstring, Tokenizer, XML) (Google is your friend :smile:)
 - Composer - ([Install Composer](https://getcomposer.org/download/))
-- MySQL database - (Although this isn't recommanded for a production enviroment, [you can get them online for free](https://www.google.com/search?q=free+mysql+database))
+- MySQL database - (Although this isn't recommended for a production enviroment, [you can get them online for free](https://www.google.com/search?q=free+mysql+database))
 - SSH access to your server (physical access is also valid)
 
 ### Installing
@@ -144,7 +144,7 @@ You have now the lastest OrgManager stable version up an running in your server!
 
 ## Updating
 
-OrgManager is under active development, and that means it gets lots of updates, bug fixes and new features. Follow the below guides to update OrgManager to the lastest version:
+OrgManager is under active development, and that means it gets lots of updates, bug fixes and new features. Follow the guides below to update OrgManager to the lastest version:
 
 ### Updating a development enviroment
 
@@ -198,13 +198,13 @@ Facing an issue? Want to meet other OrgManager users? Just want to say hello?
 Here are the official support channels we provide:
 
 * Github Issues - You can [open an issue](https://github.com/orgmanager/orgmanager/issues/new) for things like requesting new features or reporting bugs.
-* Hosted Version Chat - If you've used the hosted version, you migth have noticed that there is a chat icon on the bottom rigth corner. That chat is used for things related to the hosted version.
+* Hosted Version Chat - If you've used the hosted version, you might have noticed that there is a chat icon on the bottom right corner. That chat is used for things related to the hosted version.
 * [Gittler chat](https://gitter.im/orgmanager/) - We have a little Gitter chatroom for discussing things about the project, meeting other users and anything else you think of. Don't be afraid to say hello!
-* Email - You can send a mail to [orgmanager@miguelpiedrafita.com](mailto:orgmanager@miguelpiedrafita.com) to discuss about anything with the main developer, [Miguel Piedrafita](https://miguelpiedrafita.com).
+* Email - You can send a mail to [orgmanager@miguelpiedrafita.com](mailto:orgmanager@miguelpiedrafita.com) to discuss anything with the main developer, [Miguel Piedrafita](https://miguelpiedrafita.com).
 
 ## Sponsors
 
-Does your organization use OrgManager?  Ask your manager or marketing team if you'd be interested in supporting our project.  Support will allow the maintainers to dedicate more time for maintenance and new features for everyone.  Also, your company's logo will show on GitHub and on our site --who doesn't want a little extra exposure?
+Does your organization use OrgManager?  Ask your manager or marketing team if you're interested in supporting our project.  Support will allow the maintainers to dedicate more time for maintenance and new features for everyone.  Also, your company's logo will show on GitHub and on our site --who doesn't want a little extra exposure?
 
 ## Authors
 
