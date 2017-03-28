@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 
 use Auth;
-use GitHub;
+use Github;
 use App\Org;
 use Illuminate\Support\Facades\Artisan;
 
@@ -36,7 +36,7 @@ class GithubController extends Controller
     public function listOrgs()
     {
         Github::authenticate(Auth::user()->token, null, 'http_token');
-        $orgs = GitHub::api('user')->orgs();
+        $orgs = Github::api('user')->orgs();
         $this->storeOrgs($orgs);
     }
 
