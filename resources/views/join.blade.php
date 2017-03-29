@@ -14,6 +14,25 @@
     <link href="{{ url('/css/flatty.min.css') }}" rel="stylesheet">
     <link href="{{ url('/css/sweetalert.css') }}" rel="stylesheet">
     @include('layouts.code')
+    <script>
+    function submitForm(token) {
+           document.getElementById("join-form").submit();
+    }
+
+  function validate(event) {
+    event.preventDefault();
+    if (!document.getElementById('github_username').value) {
+      sweetAlert("Oops...", "You need to specify an username.", "error");
+    } else {
+      grecaptcha.execute();
+    }
+  }
+
+  function onload() {
+    var element = document.getElementById('btnSubmit');
+    element.onclick = validate;
+  }
+</script>
     </head>
     <body>
         <div class="flex-center position-ref full-height">
@@ -35,21 +54,22 @@
                 </div>
                 <div class="join">
                   @lang('join.username') @if ($org->password != null && trim($org->password) != "")@lang('join.passwd') @endif @lang('join.tojoin') {{ $org->name }}:<br><br>
-                    <form id="join" method="POST" href="{{ url('join/'.$org->id) }}">
+                    <form id="join-form" method="POST" href="{{ url('join/'.$org->id) }}">
                       {{ csrf_field() }}
-                      <input type="text" name="github_username" class="textbox" placeholder="@lang('join.uplace')" value="{{ old('github_username') }}"><br><br>
+                      <input id="github_username" type="text" name="github_username" class="textbox" placeholder="@lang('join.uplace')" value="{{ old('github_username') }}"><br><br>
                       @if ($org->password != null && trim($org->password) != "")
                       <input type="password" name="org_password" class="textbox" placeholder="@lang('join.pplace')"><br><br>
                       @endif
-                      <center><div class="g-recaptcha" data-sitekey="{{ env('RECAPTCHA_PUBLIC_KEY') }}"></div></center><br><br>
-                      <button type="submit" class="submit-button" name="submit">@lang('join.join')!</button>
+                      <div id='recaptcha' class="g-recaptcha" data-sitekey="{{ env('RECAPTCHA_PUBLIC_KEY') }}" data-callback="submitForm" data-size="invisible"></div>
+                      <button class="submit-button" id="btnSubmit" name="btnSubmit">@lang('join.join')!</button>
                     </form>
                 </div>
             </div>
         </div>
         <script src="{{ url('js/jquery.min.js') }}"></script>
         <script src="{{ url('js/sweetalert.min.js') }}"></script>
-        <script src="https://www.google.com/recaptcha/api.js"></script>
+        <script src='https://www.google.com/recaptcha/api.js' async defer></script>
+        <script>onload();</script>
         @if (count($errors) > 0)
         <script>
         sweetAlert("Oops...", "{{ $errors->first() }}", "error");
