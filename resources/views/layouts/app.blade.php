@@ -22,7 +22,7 @@
     <link href="{{ url('/css/tooltips.css') }}" rel="stylesheet">
     <link href="{{ url('css/sweetalert.css') }}" rel="stylesheet">
     <link href="{{ url('css/custom.css') }}" rel="stylesheet">
-    @yield('css')
+    @yield('header')
     <script src="{{ url('js/jquery.min.js') }}"></script>
     <script src="{{ url('js/sweetalert.min.js') }}"></script>
     <!-- Scripts -->
@@ -109,6 +109,6 @@
     </script>
     @endif
     <script src="{{ url('/js/app.js') }}"></script>
-    @yield('scripts')
+    @yield('footer')
 </body>
 </html>
