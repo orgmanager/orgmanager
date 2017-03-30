@@ -16,7 +16,8 @@
         "laravel/tinker": "^1.0",
         "m1guelpf/deploying-mode": "^1.0",
         "orgmanager/orgmanager-logos": "^1.0",
-        "php-http/guzzle6-adapter": "^1.1"
+        "php-http/guzzle6-adapter": "^1.1",
+        "filp/whoops": "^2.1"
     },
     "require-dev": {
         "fzaninotto/faker": "~1.4",
