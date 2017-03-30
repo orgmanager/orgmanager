@@ -1,6 +1,6 @@
 @extends('layouts.app')
 
-@section('css')
+@section('header')
 <link type="text/css" rel="stylesheet" href="{{ url('css/materialize.min.css') }}"  media="screen,projection"/>
 @endsection
 
@@ -42,6 +42,6 @@
 </div>
 @endsection
 
-@section('scripts')
+@section('footer')
 <script src="{{ url('js/materialize.min.js') }}"></script>
 @endsection
