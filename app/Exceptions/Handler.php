@@ -65,8 +65,8 @@ class Handler extends ExceptionHandler
 
         return redirect()->guest('login');
     }
-    
- /**
+
+/**
  * Create a Symfony response for the given exception.
  *
  * @param  \Exception  $e
