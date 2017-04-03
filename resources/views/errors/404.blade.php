@@ -5,7 +5,7 @@
 <title>{{ config('app.name') }}</title>
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <link rel="stylesheet" href="{{ url('css/404.min.css') }}">
-@include('layouts.code')
+@include('layouts.code.head')
 </head>
 <body>
 <canvas id="dotty" width="1920" height="854"></canvas>
@@ -42,5 +42,6 @@
 </ul>
 </footer>
 <script src="{{ url('js/404.min.js') }}"></script>
+@include('layouts.code.footer')
 </body>
 </html>
