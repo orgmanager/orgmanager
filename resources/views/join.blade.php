@@ -13,7 +13,7 @@
     <link href="{{ url('/css/join.css') }}" rel="stylesheet">
     <link href="{{ url('/css/flatty.min.css') }}" rel="stylesheet">
     <link href="{{ url('/css/sweetalert.css') }}" rel="stylesheet">
-    @include('layouts.code')
+    @include('layouts.code.head')
     <script>
     function submitForm(token) {
            document.getElementById("join-form").submit();
@@ -80,5 +80,6 @@
         swal("Good job!", "{{ session('success') }}", "success")
         </script>
         @endif
+        @include('layouts.code.footer')
     </body>
 </html>
