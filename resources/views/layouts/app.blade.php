@@ -31,7 +31,7 @@
             'csrfToken' => csrf_token(),
         ]); ?>
     </script>
-    @include('layouts.code')
+    @include('layouts.code.head')
 </head>
 <body>
     <div id="app">
@@ -110,5 +110,6 @@
     @endif
     <script src="{{ url('/js/app.js') }}"></script>
     @yield('footer')
+    @include('layouts.code.footer')
 </body>
 </html>

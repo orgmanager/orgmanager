@@ -6,6 +6,7 @@
         <title>{{ config('app.name') }}</title>
         <link rel="shortcut icon" href="{{ url('favicon.ico') }}">
         <link rel="stylesheet" href="{{ url('css/503.min.css') }}" />
+	@include('layouts.code.head')
 	</head>
 	<body>
 		<div id="loading">
@@ -42,5 +43,6 @@
 	<script src="{{ url('https://cdnjs.cloudflare.com/ajax/libs/velocity/1.2.2/velocity.min.js') }}"></script>
 	<script src="{{ url('https://cdnjs.cloudflare.com/ajax/libs/velocity/1.2.2/velocity.ui.min.js') }}"></script>
 	<script src="{{ url('js/503.min.js') }}"></script>
+	@include('layouts.code.footer')
 	</body>
 </html>

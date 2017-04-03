@@ -16,7 +16,7 @@
         <link href="{{ url('/css/home.css') }}" rel="stylesheet">
         <link href="{{ url('/css/flatty.min.css') }}" rel="stylesheet">
         <link href="{{ url('/css/sweetalert.css') }}" rel="stylesheet">
-        @include('layouts.code')
+        @include('layouts.code.head')
     </head>
     <body>
         <div class="flex-center position-ref full-height">
@@ -62,5 +62,6 @@
       swal("Good job!", "{{ session('success') }}", "success")
       </script>
       @endif
+      @include('layouts.code.footer')
     </body>
 </html>
