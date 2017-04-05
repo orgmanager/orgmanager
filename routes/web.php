@@ -36,3 +36,6 @@ Route::delete('token', 'DeveloperController@deleteToken');
 Route::get('login', 'LoginController@authorizeUser');
 Route::get('callback', 'LoginController@loginUser');
 Route::post('logout', 'LoginController@logoutUser');
+
+// Autojoiner
+Route::post('autojoiner', 'AutoJoinerController@index');
