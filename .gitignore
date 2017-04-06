@@ -10,3 +10,4 @@ Homestead.yaml
 .env.*
 !.env.example
 composer.lock
+yarn.lock
