@@ -11,7 +11,7 @@
         <link href="https://fonts.googleapis.com/css?family=Raleway:100,600" rel="stylesheet" type="text/css">
         <!-- Styles -->
     <link href="{{ url('/css/join.css') }}" rel="stylesheet">
-    <link href="{{ url('/css/flatty.min.css') }}" rel="stylesheet">
+    <link href="{{ url('/css/app.css') }}" rel="stylesheet">
     <link href="{{ url('/css/sweetalert.css') }}" rel="stylesheet">
     @include('layouts.code.head')
     <script>
