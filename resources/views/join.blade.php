@@ -66,8 +66,7 @@
                 </div>
             </div>
         </div>
-        <script src="{{ url('js/jquery.min.js') }}"></script>
-        <script src="{{ url('js/sweetalert.min.js') }}"></script>
+        <script src="{{ url('js/app.js') }}"></script>
         <script src='https://www.google.com/recaptcha/api.js' async defer></script>
         <script>onload();</script>
         @if (count($errors) > 0)
