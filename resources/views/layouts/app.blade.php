@@ -11,7 +11,7 @@
     <title>{{ config('app.name', 'Laravel') }}</title>
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <!-- Styles -->
-    <link href="{{ url('/css/flatty.min.css') }}" rel="stylesheet">
+    <link href="{{ url('/css/app.css') }}" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/octicons/4.4.0/font/octicons.min.css" rel="stylesheet">
     <link href="{{ url('/css/bootstrap-responsive.min.css') }}" rel="stylesheet">
     <link href="{{ url('/css/bootstrap-social.css') }}" rel="stylesheet">
