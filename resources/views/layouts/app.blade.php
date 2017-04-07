@@ -23,13 +23,10 @@
     <link href="{{ url('css/sweetalert.css') }}" rel="stylesheet">
     <link href="{{ url('css/custom.css') }}" rel="stylesheet">
     @yield('header')
-    <script src="{{ url('js/jquery.min.js') }}"></script>
-    <script src="{{ url('js/sweetalert.min.js') }}"></script>
+    <script src="{{ url('/js/app.js') }}"></script>
     <!-- Scripts -->
     <script>
-        window.Laravel = <?php echo json_encode([
-            'csrfToken' => csrf_token(),
-        ]); ?>
+        window.Laravel = {!! json_encode(['csrfToken' => csrf_token()]) !!}
     </script>
     @include('layouts.code.head')
 </head>
@@ -108,7 +105,6 @@
     swal("Good job!", "{{ session('success') }}", "success")
     </script>
     @endif
-    <script src="{{ url('/js/app.js') }}"></script>
     @yield('footer')
     @include('layouts.code.footer')
 </body>

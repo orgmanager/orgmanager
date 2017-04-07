@@ -6,3 +6,5 @@
  */
 
 require('./bootstrap');
+
+require('sweetalert');

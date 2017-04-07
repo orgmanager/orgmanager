@@ -49,8 +49,7 @@
                 </div>
             </div>
         </div>
-      <script src="{{ url('js/jquery.min.js') }}"></script>
-      <script src="{{ url('js/sweetalert.min.js') }}"></script>
+      <script src="{{ url('js/app.js') }}"></script>
       <script async defer src="{{ url('https://buttons.github.io/buttons.js') }}"></script>
       @if (count($errors) > 0)
       <script>
