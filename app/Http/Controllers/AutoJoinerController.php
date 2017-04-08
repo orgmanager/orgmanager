@@ -10,7 +10,11 @@ class AutoJoinerController extends Controller
     {
         abort_unless($this->requestSignatureIsValid(), 403);
 
-        // Check X-Github-Event header equals to pull_request (CONSIDER checking against integration_installation for analytics)
+        // (CONSIDER checking against integration_installation for analytics)
+        if ($request->header('X-Github-Event') != 'pull_request')
+        {
+            return 'Not a Pull Request';
+        }
         // Get organization name (name: $json->pull_request->base->repo->owner->login id: pull_request->base->repo->owner->id)
         // Check organization is registered
         // Check the PR was merged ($json->action equals closed & $json->pull_request->merged_at != null)
