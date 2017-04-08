@@ -43,6 +43,7 @@ class JoinOrg extends Command
             Github::authenticate($org->user->token, null, 'http_token');
             if ($this->isMember($org, $this->argument('username')))
             {
+                $this->error($this->argument('username').' is already a member of '.$org->name);
                 return;
             }
             if (config('app.env') != 'testing') {
