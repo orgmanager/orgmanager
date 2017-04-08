@@ -13,7 +13,7 @@ class AutoJoinerController extends Controller
         // Check X-Github-Event header equals to pull_request (CONSIDER checking against integration_installation for analytics)
         // Get organization name (name: $json->pull_request->base->repo->owner->login id: pull_request->base->repo->owner->id)
         // Check organization is registered
-        // Check the PR was merged ($json->action equals merged)
+        // Check the PR was merged ($json->action equals closed & $json->pull_request->merged_at != null)
         // Get github username of the user to invite ($json->pull_request->user->login)
         // Invite user to organization
     }
