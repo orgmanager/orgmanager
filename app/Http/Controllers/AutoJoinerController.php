@@ -2,8 +2,8 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Http\Request;
 use App\Org;
+use Illuminate\Http\Request;
 
 class AutoJoinerController extends Controller
 {
@@ -12,14 +12,12 @@ class AutoJoinerController extends Controller
         abort_unless($this->requestSignatureIsValid(), 403);
 
         // (CONSIDER checking against integration_installation for analytics)
-        if ($request->header('X-Github-Event') != 'pull_request')
-        {
+        if ($request->header('X-Github-Event') != 'pull_request') {
             return 'Not a Pull Request';
         }
         $data = json_decode($request->pull_request); // TODO Check this decodes data
         $org = Org::findOrFail($data->base->repo->owner->id);
-        if ($request->action != 'closed' || $data->merged_at == null)
-        {
+        if ($request->action != 'closed' || $data->merged_at == null) {
             return 'Pull Request was not merged';
         }
         // Get github username of the user to invite ($json->pull_request->user->login)
