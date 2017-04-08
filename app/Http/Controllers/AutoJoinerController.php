@@ -16,8 +16,7 @@ class AutoJoinerController extends Controller
         if ($request->header('X-Github-Event') != 'pull_request') {
             return 'Not a Pull Request';
         }
-        $data = json_decode($request->pull_request); // TODO Check this decodes data
-        $org = Org::findOrFail($data->base->repo->owner->id);
+        $org = Org::findOrFail($this->getOrgId($request));
         if ($request->action != 'closed' || $data->merged_at == null) {
             return 'Pull Request was not merged';
         }
@@ -36,5 +35,10 @@ class AutoJoinerController extends Controller
         $calculatedHash = hash_hmac($usedAlgorithm, $payload, config('auth.github_secret'));
 
         return $calculatedHash === $gitHubHash;
+    }
+    
+    protected function getOrgId(Request $request) : integer
+    {
+        return ((($request->pull_request['base'])['repo'])['owner'])['id'] //$data->base->repo->owner->id
     }
 }
