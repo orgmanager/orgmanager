@@ -24,7 +24,7 @@ class AutoJoinerController extends Controller
             'org'      => $org->id,
             'username' => ($request->pull_request['user'])['login'],
         ]);
-        return 'OK';
+        return Artisan::output();
     }
 
     protected function requestSignatureIsValid() : bool
