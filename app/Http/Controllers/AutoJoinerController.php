@@ -17,7 +17,7 @@ class AutoJoinerController extends Controller
             return 'Not a Pull Request';
         }
         $org = Org::findOrFail($this->getOrgId($request));
-        if ($request->action != 'closed' || $data->merged_at == null) {
+        if ($request->action != 'closed' || $request->pull_request['merged_at'] == null) {
             return 'Pull Request was not merged';
         }
         Artisan::call('orgmanager:joinorg', [
