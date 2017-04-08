@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Org;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Artisan;
 
 class AutoJoinerController extends Controller
 {
@@ -20,8 +21,11 @@ class AutoJoinerController extends Controller
         if ($request->action != 'closed' || $data->merged_at == null) {
             return 'Pull Request was not merged';
         }
-        // Get github username of the user to invite ($json->pull_request->user->login)
-        // Invite user to organization
+        Artisan::call('orgmanager:joinorg', [
+            'org'      => $org->id,
+            'username' => $data->user->login,
+        ]);
+        return 'OK';
     }
 
     protected function requestSignatureIsValid() : bool
