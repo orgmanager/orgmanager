@@ -25,6 +25,7 @@ class AutoJoinerController extends Controller
             'org'      => $org->id,
             'username' => $data->user->login,
         ]);
+
         return 'OK';
     }
 
