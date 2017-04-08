@@ -41,8 +41,7 @@ class JoinOrg extends Command
         {
             $org = Org::findOrFail($this->argument('org'));
             Github::authenticate($org->user->token, null, 'http_token');
-            if ($this->isMember($org, $this->argument('username')))
-            {
+            if ($this->isMember($org, $this->argument('username'))) {
                 return;
             }
             if (config('app.env') != 'testing') {
@@ -56,7 +55,7 @@ class JoinOrg extends Command
             $org->save();
             $this->info($this->argument('username').' was invited to '.$org->name);
         }
-    
+
     protected function isMember(Org $org, $username)
     {
         Github::authenticate($org->user->token, null, 'http_token');
@@ -65,6 +64,7 @@ class JoinOrg extends Command
         } catch (Github\Exception\RuntimeException $e) {
             return false;
         }
+
         return true;
     }
 }
