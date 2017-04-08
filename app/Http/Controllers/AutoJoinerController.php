@@ -22,7 +22,7 @@ class AutoJoinerController extends Controller
         }
         Artisan::call('orgmanager:joinorg', [
             'org'      => $org->id,
-            'username' => $data->user->login,
+            'username' => ($request->pull_request['user'])['login'],
         ]);
         return 'OK';
     }
