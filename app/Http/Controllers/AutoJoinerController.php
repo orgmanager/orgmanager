@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Org;
 
 class AutoJoinerController extends Controller
 {
@@ -15,9 +16,12 @@ class AutoJoinerController extends Controller
         {
             return 'Not a Pull Request';
         }
-        // Get organization name (name: $json->pull_request->base->repo->owner->login id: pull_request->base->repo->owner->id)
-        // Check organization is registered
-        // Check the PR was merged ($json->action equals closed & $json->pull_request->merged_at != null)
+        $data = json_decode($request->pull_request); // TODO Check this decodes data
+        $org = Org::findOrFail($data->base->repo->owner->id);
+        if ($request->action != 'closed' || $data->merged_at == null)
+        {
+            return 'Pull Request was not merged';
+        }
         // Get github username of the user to invite ($json->pull_request->user->login)
         // Invite user to organization
     }
