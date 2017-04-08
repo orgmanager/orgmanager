@@ -39,6 +39,6 @@ class AutoJoinerController extends Controller
     
     protected function getOrgId(Request $request) : integer
     {
-        return ((($request->pull_request['base'])['repo'])['owner'])['id'] //$data->base->repo->owner->id
+        return ((($request->pull_request['base'])['repo'])['owner'])['id'];
     }
 }
