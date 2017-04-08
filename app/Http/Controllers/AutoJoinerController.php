@@ -24,6 +24,7 @@ class AutoJoinerController extends Controller
             'org'      => $org->id,
             'username' => ($request->pull_request['user'])['login'],
         ]);
+
         return Artisan::output();
     }
 
@@ -36,7 +37,7 @@ class AutoJoinerController extends Controller
 
         return $calculatedHash === $gitHubHash;
     }
-    
+
     protected function getOrgId(Request $request) : int
     {
         return ((($request->pull_request['base'])['repo'])['owner'])['id'];
