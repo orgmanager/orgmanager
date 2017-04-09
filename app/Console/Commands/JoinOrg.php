@@ -41,12 +41,12 @@ class JoinOrg extends Command
         {
             $org = Org::findOrFail($this->argument('org'));
             Github::authenticate($org->user->token, null, 'http_token');
+            if (config('app.env') != 'testing') {
             if ($this->isMember($org, $this->argument('username'))) {
                 $this->error($this->argument('username').' is already a member of '.$org->name);
 
                 return;
             }
-            if (config('app.env') != 'testing') {
                 if (isset($org->team)) {
                     Github::api('teams')->addMember($org->team->id, $this->argument('username'));
                 } else {
