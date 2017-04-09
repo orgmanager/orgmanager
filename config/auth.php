@@ -99,4 +99,16 @@ return [
         ],
     ],
 
+    /*
+    |--------------------------------------------------------------------------
+    | GitHub Secret
+    |--------------------------------------------------------------------------
+    |
+    | You may specify a secret so we can check the data comes from GitHub
+    | and prevent attacks.
+    |
+    */
+
+    'github_secret' => env('GITHUB_AUTOJOINER_SECRET'),
+
 ];
