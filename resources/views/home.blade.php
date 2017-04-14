@@ -1,54 +1,36 @@
 @inject('users', 'App\User')
 @inject('orgs', 'App\Org')
 <!DOCTYPE html>
-<html lang="{{ config('app.locale') }}">
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
+<html lang="">
+  <head>
+    <meta charset="utf-8">
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>OrgManager - Invite System for GitHub Organizations</title>
+    <link rel="shortcut icon" href="images/favicon.png">
+    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url('styles/main.css') }}">
 
-        <title>{{ config('app.name', 'OrgManager') }}</title>
+  </head>
+  <body>
+    <!--[if IE]>
+      <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+    <![endif]-->
 
-        <!-- Fonts -->
-        <link href="https://fonts.googleapis.com/css?family=Raleway:100,600" rel="stylesheet" type="text/css">
+    <div class="container">
+      <div class="header home">
+         <img class="logo" src="/images/logo@2x.png" alt="OrgManager">
+         <h2>OrgManager allows Github Organizations to share invite links for free!</h2>
 
-        <!-- Styles -->
-        <link href="{{ url('/css/home.css') }}" rel="stylesheet">
-        <link href="{{ url('/css/app.css') }}" rel="stylesheet">
-        <link href="{{ url('/css/sweetalert.css') }}" rel="stylesheet">
-        @include('layouts.code.head')
-    </head>
-    <body>
-        <div class="flex-center position-ref full-height">
-                <div class="top-right links">
-                    @if (Auth::check())
-                        <a href="{{ url('/dashboard') }}">Dashboard</a>
-                    @else
-                        <a href="{{ url('/login') }}">Login</a>
-                    @endif
-                </div>
-
-            <div class="content">
-                @orgmanagerVertical
-                <div class="links">
-                    <p>@lang('home.description')</p>
-                    @if (!Auth::check())
-                    <p>@lang('home.logintext')<a href="{{ url('login') }}">@lang('home.login')</a>.</p>
-                    <p>Used by {{ $users::count() }} users &amp; {{ $orgs::count() }} orgs, we have delivered {{ $orgs::sum('invitecount') }} invites</p>
-                    @elseif (Auth::user()->orgs->count() == 0)
-                    <p>It looks like you haven't got organizations on OrgManager!</p>
-                    <p>@lang('empty.sync1') <a href="{{ url('sync') }}">@lang('empty.sync2')</a> @lang('empty.sync3')
-                    <p>If your app isn't showing here after sync, <a href="https://github.com/settings/connections/applications/10b01d866046f040c9f1">check we've been given access to it</a>.</p>
-                    <p>@lang('empty.problems') <a href="https://github.com/orgmanager/orgmanager/issues/new?labels=bug" target="_blank">@lang('empty.issue')</a>.</p>
-                    @else
-                    <p>Looks like you have organizations on OrgManager!</p>
-                    <p>You can manage them on your <a href="{{ url('dashboard') }}">dashboard</a>.</p>
-                    <p>@lang('empty.problems') <a href="https://github.com/orgmanager/orgmanager/issues/new?labels=bug" target="_blank">@lang('empty.issue')</a>.</p>
-                    @endif
-                    <a class="github-button" href="https://github.com/orgmanager/orgmanager" data-icon="octicon-star" data-style="mega" data-count-href="/orgmanager/orgmanager/stargazers" data-count-api="/repos/orgmanager/orgmanager#stargazers_count" data-count-aria-label="# stargazers on GitHub" aria-label="Star orgmanager/orgmanager on GitHub">Star</a>
-                </div>
-            </div>
-        </div>
+        <p class="btn-header btn-toolbar">
+          <a class="btn navbar-btn btn-primary" href="login.html">Try it out!</a>
+          <a class="btn navbar-btn btn-default" target="blank" href="https://github.com/orgmanager/orgmanager">
+            <img src="images/github.png" alt=""><span>Github</span>
+          </a>
+        </p>
+        <p class="background-line"><span>Latest Release: {{ config('app.orgmanager.version') }} (Feb 19, 2017)</span></p>
+      </div>
+    </div>
       <script src="{{ url('js/app.js') }}"></script>
       <script async defer src="{{ url('https://buttons.github.io/buttons.js') }}"></script>
       @if (count($errors) > 0)
