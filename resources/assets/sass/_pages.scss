@@ -1,0 +1,56 @@
+// Homepage
+.header.home {
+  padding-top: 165px;
+  text-align: center;
+  .logo {
+    width: 373px;
+  }
+  h2 {
+    margin-top: 30px;
+    font-size: 1.25em;
+    color: #404040;
+  }
+  .btn {
+    margin: 0px 5px;
+  }
+  .btn-header {
+    display: block;
+    margin-top: 40px;
+  }
+  a {
+    color: #fff;
+  }
+  .btn-default {
+    position: relative;
+    img {
+      margin-right: 8px;
+      position: absolute;
+      top: 12px;
+      width: 22px;
+    }
+    span {
+      margin-left: 30px;
+    }
+  }
+  p.background-line {
+    position: relative;
+    z-index: 1;
+    color: #676767;
+    margin-top: 70px;
+    &:before {
+        border-top: 1px solid #D7D7D7;
+        content:"";
+        margin: 0 auto;
+        position: absolute;
+        top: 50%; left: 0; right: 0; bottom: 0;
+        width: 95%;
+        z-index: -1;
+    }
+
+    span {
+        background: #FAFAFA;
+        padding: 0 15px;
+    }
+  }
+
+}
