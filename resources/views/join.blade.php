@@ -56,7 +56,7 @@
                   @lang('join.username') @if ($org->password != null && trim($org->password) != "")@lang('join.passwd') @endif @lang('join.tojoin') {{ $org->name }}:<br><br>
                     <form id="join-form" method="POST" href="{{ url('join/'.$org->id) }}">
                       {{ csrf_field() }}
-                      <input id="github_username" type="text" name="github_username" class="textbox" placeholder="@lang('join.uplace')" value="{{ old('github_username') }}"><br><br>
+                      <input id="github_username" type="text" name="github_username" class="textbox {{ $errors->has('github_username') ? 'has-error' : '' }}" placeholder="@lang('join.uplace')" value="{{ old('github_username') }}"><br><br>
                       @if ($org->password != null && trim($org->password) != "")
                       <input type="password" name="org_password" class="textbox" placeholder="@lang('join.pplace')"><br><br>
                       @endif
