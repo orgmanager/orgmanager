@@ -1,4 +1,6 @@
 
+// Bootstrap
+@import "node_modules/bootstrap-sass/assets/stylesheets/bootstrap";
 // Fonts
 @import url(https://fonts.googleapis.com/css?family=Raleway:300,400,600);
 // Variables
@@ -7,5 +9,3 @@
 @import "base";
 // Pages
 @import "pages";
-// Bootstrap
-@import "node_modules/bootstrap-sass/assets/stylesheets/bootstrap";
