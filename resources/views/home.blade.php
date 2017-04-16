@@ -9,7 +9,7 @@
     <title>OrgManager - Invite System for GitHub Organizations</title>
     <link rel="shortcut icon" href="images/favicon.png">
     <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro" rel="stylesheet">
-    <link rel="stylesheet" href="{{ url('styles/main.css') }}">
+    <link rel="stylesheet" href="{{ url('css/app.css') }}">
 
   </head>
   <body>
