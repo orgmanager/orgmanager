@@ -65,7 +65,7 @@
                 ]
             }
         },
-        "/org/{id}": {
+        "/org/[id]": {
             "get": {
                 "responses": {
                     "200": {
@@ -154,7 +154,7 @@
                 ]
             }
         },
-        "/join/{id}": {
+        "/join/[id]": {
             "post": {
                 "responses": {
                     "204": {
