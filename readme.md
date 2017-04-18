@@ -55,7 +55,7 @@ Copy the `.env.example` file to a `.env` file. Open the .env file with your favo
 
 Open the OrgManager folder with the terminal/console and run
 ```php
-php artisan orgmanager:install
+php artisan key:generate && php artisan migrate
 ```
 
 5. Done!
@@ -135,7 +135,7 @@ composer install
 and
 
 ```sh
-php artisan orgmanager:install
+php artisan key:generate && php artisan migrate
 ```
 
 5. Done!
