@@ -185,6 +185,7 @@ return [
         Bugsnag\BugsnagLaravel\BugsnagServiceProvider::class,
         M1guelpf\DeployingMode\DeployingModeServiceProvider::class,
         OrgManager\Logos\OrgManagerLogosServiceProvider::class,
+        GrahamCampbell\Core\CoreServiceProvider::class,
         // OrgManager\OrgmanagerCustom\OrgmanagerCustomServiceProvider::class,
 
         /*
