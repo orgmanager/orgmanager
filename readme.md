@@ -1,4 +1,5 @@
 # OrgManager
+<p align="center"><img src="https://raw.githubusercontent.com/orgmanager/branding/master/PNG/orgmanager_Horizontal.png"></p>
 
 [![Build Status](https://travis-ci.org/orgmanager/orgmanager.svg?branch=master)](https://travis-ci.org/orgmanager/orgmanager)
 [![Code Coverage](https://scrutinizer-ci.com/g/orgmanager/orgmanager/badges/coverage.png?b=master)](https://scrutinizer-ci.com/g/orgmanager/orgmanager/?branch=master)
