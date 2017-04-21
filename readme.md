@@ -6,7 +6,6 @@
 [![license](https://img.shields.io/github/license/orgmanager/orgmanager.svg)](LICENSE.md)
 [![Codacy grade](https://img.shields.io/codacy/grade/e27821fb6289410b8f58338c7e0bc686.svg)](https://www.codacy.com/app/m1guelpiedrafita/orgmanager/dashboard)
 [![Packagist](https://img.shields.io/packagist/v/orgmanager/orgmanager.svg)](https://packagist.org/packages/orgmanager/orgmanager)
-[![standard-readme compliant](https://img.shields.io/badge/readme%20style-standard-brightgreen.svg?style=flat-square)](https://github.com/RichardLitt/standard-readme)
 
 > Invite System for GitHub Organizations
 
