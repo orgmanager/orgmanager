@@ -82,4 +82,4 @@ For information about all the people that have helped to make this possible, che
 
 ## License
 
-This project is licensed under the Mozilla Public License - see the [LICENSE.md](LICENSE.md) file for details.
+Licensed under the [Mozilla Public License](LICENSE.md) © 2017 by the OrgManager contributors.
