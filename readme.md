@@ -15,10 +15,9 @@ OrgManager takes Github Organization invites to a new level! [Read more on the O
 ## Table of Contents
 
 - [Install](#install)
-	- [Hosted Version](#hosted-version)
-- [Usage](#usage)
-	- [Testing](#testing)
-	- [Updating](#updating)
+- [Hosted Version](#hosted-version)
+- [Updating](#updating)
+- [Testing](#testing)
 - [Built With](#built-with)
 - [Support Channels](#support-channels)
 - [Contributing](#contributing)
@@ -26,31 +25,30 @@ OrgManager takes Github Organization invites to a new level! [Read more on the O
 	- [People](#people)
 - [License](#license)
 
-
 ## Install
 
-To install the OrgManager **Stable Version**, [check out these docs](https://orgmanager.readme.io/docs/prod-requirements). For production environments, you'll need [these requirements](https://orgmanager.readme.io/docs/prod-requirements).
+To install the OrgManager **Stable Version**, [check out these docs](https://orgmanager.readme.io/docs/prod-requirements).
+
 To learn how to setup the OrgManager **Developer Version** up and running on your local machine for development and testing purposes see the [OrgManager Developer Version](https://orgmanager.readme.io/docs/dev-requirements) section in the OrgManager Documentation.
 
-### Hosted Version
+## Hosted Version
 
 Not everyone can afford a server, nor do they have the skills to set up a modern PHP application, so OrgManager provides a hosted version you can use **for FREE**. You can access the hosted version [here](https://orgmanager.miguelpiedrafita.com). In return, please report any bugs you encounter, so we can continue improving!
 
-## Usage
-
-### Testing
-
-We use the Laravel testing functionalities and PHPUnit to add automated testing to OrgManager.
-
-You can read about [how to configure the testing environment and how to run the tests](https://orgmanager.readme.io/docs/testing) in the OrgManager Documentation.
-
-### Updating
+## Updating
 
 OrgManager is under active development, and that means it gets lots of updates, bug fixes and new features. Read the guides below to learn how to update to the latest OrgManager version.
 
 For updating a development environment, read the [Updating the OrgManager Developer Version](https://orgmanager.readme.io/docs/dev-updating) section in the OrgManager Documentation. For updating a production environment, read the [Updating the OrgManager Stable Version](https://orgmanager.readme.io/docs/prod-updating) section in the OrgManager Documentation.
 
 We (try to) follow [SemVer](http://semver.org/). For the versions available, see the [releases page](https://github.com/orgmanager/orgmanager/releases).
+
+## Testing
+
+We use the Laravel testing functionalities and PHPUnit to add automated testing to OrgManager.
+
+You can read about [how to configure the testing environment and how to run the tests](https://orgmanager.readme.io/docs/testing) in the OrgManager Documentation.
+
 
 ## Built With
 
