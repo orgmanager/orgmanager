@@ -2,6 +2,7 @@
 
 namespace Tests\Feature;
 
+use GitHub;
 use App\Org;
 use App\User;
 use Tests\TestCase;
