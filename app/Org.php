@@ -11,7 +11,7 @@ class Org extends Model
     public $incrementing = false;
 
     protected $fillable = [
-      'id', 'name', 'url', 'description', 'avatar',
+      'id', 'name', 'url', 'description', 'avatar', 'custom_message',
     ];
 
     protected $hidden = [
