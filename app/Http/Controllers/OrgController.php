@@ -50,12 +50,12 @@ class OrgController extends Controller
 
     public function message(CustomMessageRequest $request, Org $org)
     {
-      $this->authorize('update', $org);
+        $this->authorize('update', $org);
 
-      $org->custom_message = $request->input('message');
+        $org->custom_message = $request->input('message');
 
-      $org->save();
+        $org->save();
 
-      return redirect('org/'.$org->id)->withSuccess('The message was successfully updated.');
+        return redirect('org/'.$org->id)->withSuccess('The message was successfully updated.');
     }
 }
