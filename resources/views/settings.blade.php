@@ -45,10 +45,20 @@
                   </div>
                   </div>
                   <div class="row">
-                    <div class="col-md-12 text-center">
+                    <div class="col-md-6 text-center">
                       <p>Want to add users to a team?</p>
                       <form action="{{ url('org/'.$org->id.'/teams') }}" method="GET">
                         <button type="submit" class="btn btn-primary"><i class="octicon octicon-organization"></i> Team settings</button>
+                      </form>
+                    </div>
+                    <div class="col-md-6 text-center">
+                      <p>Custom message</p>
+                      <form action="{{ url('org/'.$org->id.'/message') }}" method="POST">
+                        <textarea name="message" class="form-control" required="required">{{ old('message') }}</textarea>
+                        <small><a class="pull-left text-muted" href="https://guides.github.com/features/mastering-markdown/" target="_blank"><i class="octicon octicon-markdown"></i>Styling with Markdown is supported</a></small>
+                        <br>
+                        <br>
+                        <button type="submit" class="btn btn-primary">Save message</button>
                       </form>
                     </div>
                   </div>
