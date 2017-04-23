@@ -18,3 +18,4 @@ if (! function_exists('markdown')) {
         }
         return new HtmlString($parsedown->text($input));
     }
+}
