@@ -2,14 +2,14 @@
 
 namespace Tests\Unit;
 
-use Tests\TestCase;
 use Parsedown;
+use Tests\TestCase;
 use Illuminate\Support\HtmlString;
 
 class HelpersTest extends TestCase
 {
     /**
-     * Test the Markdown helper
+     * Test the Markdown helper.
      *
      * @return void
      */
