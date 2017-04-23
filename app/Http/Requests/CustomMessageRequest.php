@@ -24,6 +24,7 @@ class CustomMessageRequest extends FormRequest
     public function rules()
     {
         $this->sanitize();
+
         return [
             'message' => 'required',
         ];
@@ -33,7 +34,7 @@ class CustomMessageRequest extends FormRequest
     {
         $input = $this->all();
         $message = $input['message'];
-        if (!empty($message)) {
+        if (! empty($message)) {
             $message = preg_replace('#<script(.*?)>(.*?)</script>#is', '', $message);
             $message = htmlspecialchars(strip_tags($message));
             $message = str_replace('\'', '"', $message);
