@@ -13,9 +13,9 @@ class AddCustomMessageToOrgsTable extends Migration
      */
     public function up()
     {
-      Schema::table('orgs', function (Blueprint $table) {
-          $table->string('custom_message')->after('description')->nullable();
-      });
+        Schema::table('orgs', function (Blueprint $table) {
+            $table->string('custom_message')->after('description')->nullable();
+        });
     }
 
     /**
@@ -25,8 +25,8 @@ class AddCustomMessageToOrgsTable extends Migration
      */
     public function down()
     {
-      Schema::table('orgs', function (Blueprint $table) {
-          $table->dropColumn('custom_message');
-      });
+        Schema::table('orgs', function (Blueprint $table) {
+            $table->dropColumn('custom_message');
+        });
     }
 }
