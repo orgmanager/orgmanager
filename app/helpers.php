@@ -1,7 +1,7 @@
 <?php
 
-use Illuminate\Support\HtmlString;
 use Parsedown as Parser;
+use Illuminate\Support\HtmlString;
 
 if (! function_exists('markdown')) {
     /**
@@ -16,6 +16,7 @@ if (! function_exists('markdown')) {
         if (func_num_args() == 0) {
             return $parsedown;
         }
+
         return new HtmlString($parsedown->text($input));
     }
 }
