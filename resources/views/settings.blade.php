@@ -54,6 +54,7 @@
                     <div class="col-md-6 text-center">
                       <p>Custom message</p>
                       <form action="{{ url('org/'.$org->id.'/message') }}" method="POST">
+                        {{ csrf_field() }}
                         <textarea name="message" class="form-control" required="required">{{ old('message') }}</textarea>
                         <small><a class="pull-left text-muted" href="https://guides.github.com/features/mastering-markdown/" target="_blank"><i class="octicon octicon-markdown"></i>Styling with Markdown is supported</a></small>
                         <br>

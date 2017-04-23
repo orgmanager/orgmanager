@@ -19,6 +19,7 @@ Route::get('org/{org}', 'OrgController@index');
 Route::post('org/{org}', 'OrgController@changePassword');
 Route::put('org/{org}', 'OrgController@update');
 Route::delete('org/{org}', 'OrgController@delete');
+Route::post('org/{org}/message', 'OrgController@message');
 Route::get('org/{org}/teams', 'TeamController@index');
 Route::post('org/{org}/teams', 'TeamController@syncTeams');
 Route::put('org/{org}/teams', 'TeamController@setTeam');
