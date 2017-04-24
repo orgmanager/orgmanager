@@ -8,6 +8,7 @@
         "php": ">=5.6.4",
         "adamwathan/eloquent-oauth-l5": "^0.5.1",
         "bugsnag/bugsnag-laravel": "^2.0",
+        "erusev/parsedown": "^1.6",
         "filp/whoops": "^2.1",
         "google/recaptcha": "~1.1",
         "graham-campbell/core": "^5.3",
@@ -29,6 +30,9 @@
     "autoload": {
         "classmap": [
             "database"
+        ],
+        "files": [
+            "app/helpers.php"
         ],
         "psr-4": {
             "App\\": "app/"

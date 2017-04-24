@@ -29,7 +29,7 @@ class JoinController extends Controller
             'username' => $request->github_username,
         ]);
 
-        return redirect('join/'.$org->id)->withSuccess(trans('alerts.invite').$request->github_username.trans('alerts.inbox'), trans('alerts.sent'));
+        return redirect('join/'.$org->id)->withSuccess($this->successMessage($org, $request->github_username));
     }
 
     public function redirect($name)
@@ -49,6 +49,15 @@ class JoinController extends Controller
         }
 
         return true;
+    }
+
+    protected function successMessage(Org $org, $username)
+    {
+        if ($org->custom_message) {
+            return markdown($org->custom_message);
+        }
+
+        return trans('alerts.invite').$username.trans('alerts.inbox');
     }
 
     protected function validateRequest(Request $request, Org $org)

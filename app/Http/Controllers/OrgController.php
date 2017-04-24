@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Org;
 use Illuminate\Support\Facades\Artisan;
 use App\Http\Requests\OrgPasswordRequest;
+use App\Http\Requests\CustomMessageRequest;
 
 class OrgController extends Controller
 {
@@ -45,5 +46,16 @@ class OrgController extends Controller
         $org->delete();
 
         return redirect('dashboard')->withSuccess('The organization was successfully deleted.');
+    }
+
+    public function message(CustomMessageRequest $request, Org $org)
+    {
+        $this->authorize('update', $org);
+
+        $org->custom_message = $request->input('message');
+
+        $org->save();
+
+        return redirect('org/'.$org->id)->withSuccess('The message was successfully updated.');
     }
 }
