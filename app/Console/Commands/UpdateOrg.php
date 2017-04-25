@@ -47,6 +47,7 @@ class UpdateOrg extends Command
             $org->pretty_name = $orgdata['name'];
         }
         $org->description = $orgdata['description'];
+        $org->avatar = 'https://avatars.githubusercontent.com/'.$orgdata['login'];
         $org->save();
         $this->info($org->name.' updated successfully');
     }
