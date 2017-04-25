@@ -50,7 +50,7 @@ class GithubController extends Controller
                     $org->name = $organization['login'];
                     $org->url = $organization['url'];
                     $org->description = $organization['description'];
-                    $org->avatar = 'https://avatars.githubusercontent.com/u/'.$organization['id'];
+                    $org->avatar = 'https://avatars.githubusercontent.com/'.$organization['login'];
                     $org->userid = Auth::id();
                     $org->save();
                 }
