@@ -84,6 +84,9 @@ class JoinController extends Controller
                 return redirect('join/'.$org->id)->withErrors(trans('alerts.passwd2'));
             }
         }
+        if (!$this->exists($request->github_username)) {
+            return redirect('join/'.$org->id)->withErrors($request->github_username.' is not a valid GitHub user');
+        }
         if ($this->isMember($org, $request->github_username)) {
             return redirect('join/'.$org->id)->withErrors('You are already a member of '.$org->name);
         }
