@@ -39,7 +39,7 @@ class JoinController extends Controller
         return redirect('join/'.$org->id);
     }
 
-    protected function exists($username): bool
+    protected function exists(Org $org, $username): bool
     {
         Github::authenticate($org->user->token, null, 'http_token');
         try {
@@ -85,7 +85,7 @@ class JoinController extends Controller
                 return redirect('join/'.$org->id)->withErrors(trans('alerts.passwd2'));
             }
         }
-        if (! $this->exists($request->github_username)) {
+        if (! $this->exists($org, $request->github_username)) {
             return redirect('join/'.$org->id)->withErrors($request->github_username.' is not a valid GitHub user');
         }
         if ($this->isMember($org, $request->github_username)) {
