@@ -42,14 +42,15 @@ class JoinController extends Controller
     protected function exists($username): bool
     {
         Github::authenticate($org->user->token, null, 'http_token');
-        try{
+        try {
             Github::api('user')->show($username);
+
             return true;
         } catch (Github\Exception\RuntimeException $e) {
             return false;
         }
     }
-    
+
     protected function isMember(Org $org, $username)
     {
         Github::authenticate($org->user->token, null, 'http_token');
@@ -84,7 +85,7 @@ class JoinController extends Controller
                 return redirect('join/'.$org->id)->withErrors(trans('alerts.passwd2'));
             }
         }
-        if (!$this->exists($request->github_username)) {
+        if (! $this->exists($request->github_username)) {
             return redirect('join/'.$org->id)->withErrors($request->github_username.' is not a valid GitHub user');
         }
         if ($this->isMember($org, $request->github_username)) {
