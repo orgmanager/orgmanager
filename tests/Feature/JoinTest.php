@@ -25,6 +25,6 @@ class JoinTest extends TestCase
 
         $response = $this->post('join/'.$org->id, ['github_username' => 'idonotexist9995964']);
 
-        $response->assertRedirect('join/'.$org->id);
+        $response->assertStatus(301);
     }
 }
