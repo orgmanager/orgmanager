@@ -42,14 +42,15 @@ class JoinController extends Controller
     protected function exists($username): bool
     {
         Github::authenticate($org->user->token, null, 'http_token');
-        try{
+        try {
             Github::api('user')->show($username);
+
             return true;
         } catch (Github\Exception\RuntimeException $e) {
             return false;
         }
     }
-    
+
     protected function isMember(Org $org, $username)
     {
         Github::authenticate($org->user->token, null, 'http_token');
