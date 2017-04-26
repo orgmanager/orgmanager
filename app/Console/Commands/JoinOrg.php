@@ -58,7 +58,7 @@ class JoinOrg extends Command
             $this->info($this->argument('username').' was invited to '.$org->name);
         }
 
-    protected function isMember(Org $org, $username)
+    protected function isMember(Org $org, $username): bool
     {
         Github::authenticate($org->user->token, null, 'http_token');
         try {
