@@ -2,14 +2,15 @@
 
 namespace Tests\Feature;
 
-use Tests\TestCase;
-use Illuminate\Foundation\Testing\DatabaseTransactions;
 use App\Org;
 use App\User;
+use Tests\TestCase;
+use Illuminate\Foundation\Testing\DatabaseTransactions;
 
 class JoinTest extends TestCase
 {
     use DatabaseTransactions;
+
     /**
      * Test the username checker works.
      *
@@ -21,7 +22,7 @@ class JoinTest extends TestCase
         $org = factory(Org::class)->create([
           'userid' => $user->id,
         ]);
-        
+
         $response = $this->post('join/'.$org->id, ['github_username' => 'idonotexist9995964']);
 
         $this->assertRedirect('join/'.$org->id);
