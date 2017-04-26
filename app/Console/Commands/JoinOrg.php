@@ -41,10 +41,6 @@ class JoinOrg extends Command
         {
             $org = Org::findOrFail($this->argument('org'));
             Github::authenticate($org->user->token, null, 'http_token');
-            if (!$this->exists($this->argument('username')))
-            {
-                $this->error('The provided username doesn\'t exist.')
-            }
             if (config('app.env') != 'testing') {
                 if ($this->isMember($org, $this->argument('username'))) {
                     $this->error($this->argument('username').' is already a member of '.$org->name);
@@ -61,17 +57,6 @@ class JoinOrg extends Command
             $org->save();
             $this->info($this->argument('username').' was invited to '.$org->name);
         }
-
-    protected function exists($username): bool
-    {
-        Github::authenticate($org->user->token, null, 'http_token');
-        try{
-            Github::api('user')->show($username);
-            return true;
-        } catch (Github\Exception\RuntimeException $e) {
-            return false;
-        }
-    }
     
     protected function isMember(Org $org, $username): bool
     {
