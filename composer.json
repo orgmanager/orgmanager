@@ -6,7 +6,6 @@
     "type": "project",
     "require": {
         "php": ">=5.6.4",
-        "adamwathan/eloquent-oauth-l5": "^0.5.1",
         "bugsnag/bugsnag-laravel": "^2.0",
         "erusev/parsedown": "^1.6",
         "filp/whoops": "^2.1",
@@ -16,6 +15,7 @@
         "guzzlehttp/guzzle": "^6.2",
         "knplabs/github-api": "^2.3",
         "laravel/framework": "5.4.*",
+        "laravel/socialite": "^3.0",
         "laravel/tinker": "^1.0",
         "m1guelpf/deploying-mode": "^1.0",
         "orgmanager/orgmanager-logos": "^1.0",
