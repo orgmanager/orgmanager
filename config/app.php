@@ -180,7 +180,7 @@ return [
          * Package Service Providers...
          */
 
-        AdamWathan\EloquentOAuthL5\EloquentOAuthServiceProvider::class,
+        Laravel\Socialite\SocialiteServiceProvider::class,
         GrahamCampbell\GitHub\GitHubServiceProvider::class,
         Bugsnag\BugsnagLaravel\BugsnagServiceProvider::class,
         M1guelpf\DeployingMode\DeployingModeServiceProvider::class,
@@ -245,7 +245,7 @@ return [
         'URL'          => Illuminate\Support\Facades\URL::class,
         'Validator'    => Illuminate\Support\Facades\Validator::class,
         'View'         => Illuminate\Support\Facades\View::class,
-        'SocialAuth'   => AdamWathan\EloquentOAuth\Facades\OAuth::class,
+        'Socialite'    => Laravel\Socialite\Facades\Socialite::class,
         'Github'       => GrahamCampbell\GitHub\Facades\GitHub::class,
         'Input'        => Illuminate\Support\Facades\Input::class,
         'Bugsnag'      => Bugsnag\BugsnagLaravel\Facades\Bugsnag::class,

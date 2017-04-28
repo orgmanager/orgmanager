@@ -33,7 +33,7 @@ class StatusTest extends TestCase
         $response = $this->get('login');
         parse_str(parse_url($response->headers->get('location'))['query'], $query);
 
-        $response->assertRedirect('https://github.com/login/oauth/authorize?client_id='.config('eloquent-oauth.providers.github.client_id').'&scope=user%3Aemail%2Cadmin%3Aorg&redirect_uri='.config('eloquent-oauth.providers.github.redirect_uri').'&response_type=code&state='.$query['state']);
+        $response->assertRedirect('https://github.com/login/oauth/authorize?scope=user%3Aemail%2Cadmin%3Aorg&response_type=code&state='.$query['state']);
     }
 
     /**
