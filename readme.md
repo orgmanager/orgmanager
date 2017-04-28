@@ -60,7 +60,7 @@ You can read about [how to configure the testing environment and how to run the 
 * [Laravel 5.4](https://laravel.com) - The web framework used.
 * [Composer](https://getcomposer.org) - The Dependency Management software used.
 * [Github](https://github.com) - Thank you for your awesome API, and to the awesome people at [Github Support](https://github.com/contact)!
-* [Eloquent OAuth (Laravel 5)](https://github.com/adamwathan/eloquent-oauth-l5) - The OAuth library used.
+* [Socialite](https://github.com/laravel/socialite) - The OAuth library used.
 * [PHP Github API](https://github.com/KnpLabs/php-github-api) & [Laravel Version](https://github.com/GrahamCampbell/Laravel-GitHub) - The API clients used
 * [PHP reCaptcha](https://github.com/google/recaptcha) - The reCaptcha Client
 * [PrimerCSS](http://primercss.io/), [Bootstrap](https://getbootstrap.com/) & [MaterializeCSS](http://materializecss.com/) - The frontend frameworks used
