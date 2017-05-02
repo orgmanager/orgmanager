@@ -6,7 +6,6 @@ use Auth;
 use App\User;
 use Socialite;
 use App\Mail\WelcomeUser;
-use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Mail;
 
 class LoginController extends Controller
