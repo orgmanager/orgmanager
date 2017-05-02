@@ -6,7 +6,6 @@ use Auth;
 use App\User;
 use Socialite;
 use App\Mail\WelcomeUser;
-use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Mail;
 
 class LoginController extends Controller
@@ -21,9 +20,8 @@ class LoginController extends Controller
         return Socialite::driver('github')->scopes(['admin:org'])->redirect();
     }
 
-    public function loginUser(Request $request)
+    public function loginUser()
     {
-        $redirect = 'dashboard';
         $github = Socialite::driver('github')->user();
         $user = User::where('email', '=', $github->getEmail())->first();
         if ($user === null) {
