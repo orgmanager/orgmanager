@@ -76,7 +76,7 @@
         @endif
         @if (session('success'))
         <script>
-        swal({title: "Good job!", text: '{{ session('success') }}', type: "success", html:true})
+        swal({title: "Good job!", text: '{!! session('success') !!}', type: "success", html:true})
         </script>
         @endif
         @include('layouts.code.footer')
