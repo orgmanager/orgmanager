@@ -6,6 +6,7 @@ use Github;
 use App\Org;
 use App\Traits\CaptchaTrait;
 use Illuminate\Http\Request;
+use App\Classes\Markdown as Parser;
 use App\Http\Requests\JoinOrgRequest;
 use Illuminate\Support\Facades\Artisan;
 
@@ -63,10 +64,10 @@ class JoinController extends Controller
         return true;
     }
 
-    protected function successMessage(Org $org, $username)
+    protected function successMessage(Org $org, $username, Parser $parser)
     {
         if ($org->custom_message) {
-            return markdown($org->custom_message);
+            return $parser->text($org->custom_message);
         }
 
         return trans('alerts.invite').$username.trans('alerts.inbox');
