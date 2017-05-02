@@ -6,9 +6,9 @@ use Github;
 use App\Org;
 use App\Traits\CaptchaTrait;
 use Illuminate\Http\Request;
+use App\Classes\Markdown as Parser;
 use App\Http\Requests\JoinOrgRequest;
 use Illuminate\Support\Facades\Artisan;
-use App\Classes\Markdown as Parser;
 
 class JoinController extends Controller
 {
