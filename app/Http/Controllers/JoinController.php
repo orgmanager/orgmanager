@@ -64,9 +64,10 @@ class JoinController extends Controller
         return true;
     }
 
-    protected function successMessage(Org $org, $username, Parser $parser)
+    protected function successMessage(Org $org, $username)
     {
         if ($org->custom_message) {
+            $parser = new Parser();
             return $parser->text($org->custom_message);
         }
 
