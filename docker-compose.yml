@@ -1,0 +1,54 @@
+version: '2'
+
+services:
+  nginx:
+    image: nginx:1.11-alpine
+    volumes:
+      - ".:/var/www/html:ro"
+      - "./nginx:/etc/nginx/conf.d:ro"
+    depends_on:
+      - php
+    ports:
+      - "8080:80"
+
+  php:
+    image: greut/laravel:latest
+    build: .
+    environment:
+      - DB_CONNECTION=mysql
+      - DB_HOST=mysql
+      - DB_DATABASE=orgmanager
+      - DB_USERNAME=root
+      - DB_PASSWORD=root
+    depends_on:
+      - mysql
+      - redis
+      - mail
+    volumes:
+      - ".:/var/www/html"
+
+  redis:
+    image: redis:3.2-alpine
+    volumes:
+      - redis:/data
+
+  mysql:
+    image: mysql:5.7
+    environment:
+      - MYSQL_ALLOW_EMPTY_PASSWORD=yes
+      - MYSQL_DATABASE=orgmanager
+      - MYSQL_USER=root
+      - MYSQL_PASSWORD=root
+    ports:
+      - "3306:3306"
+    volumes:
+      - mysql:/var/lib/mysql
+
+  mail:
+    image: mailhog/mailhog:latest
+    ports:
+      - "8025:8025"
+
+volumes:
+  mysql:
+  redis:
