@@ -68,6 +68,7 @@ class JoinController extends Controller
     {
         if ($org->custom_message) {
             $parser = new Parser();
+
             return $parser->text($org->custom_message);
         }
 
