@@ -5,14 +5,12 @@ services:
     image: nginx:1.11-alpine
     volumes:
       - ".:/var/www/html:ro"
-      - "./nginx:/etc/nginx/conf.d:ro"
     depends_on:
       - php
     ports:
       - "8080:80"
 
   php:
-    image: greut/laravel:latest
     build: .
     environment:
       - DB_CONNECTION=mysql
