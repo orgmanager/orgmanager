@@ -19,7 +19,7 @@ class DataTest extends TestCase
     public function testDashboard()
     {
         $user = factory(User::class)->create();
-        $orgs = factory(Org::class, 5)->create([
+        factory(Org::class, 5)->create([
           'userid' => $user->id,
         ]);
         $response = $this->actingAs($user)
