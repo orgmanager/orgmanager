@@ -13,7 +13,6 @@ notifications:
 
 before_script:
   - cp .env.testing .env
-  - echo "USE mysql;\nUPDATE user SET password=PASSWORD('root') WHERE user='root';\nFLUSH PRIVILEGES;\n" | mysql -u root
   - mysql -e 'create database orgmanager_test;'
   - travis_retry composer self-update
   - travis_retry composer update --no-interaction --prefer-source
