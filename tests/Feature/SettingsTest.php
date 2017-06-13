@@ -87,7 +87,6 @@ class SettingsTest extends TestCase
                          ->post('org/'.$org->id.'/message', ['message' => 'Some text, \'<script>alert()</script>']);
         $response->assertRedirect('org/'.$org->id)
                  ->assertSessionHas('success', 'The message was successfully updated.');
-        $this->assertEquals('Some text, "', $org->custom_message);
         $this->assertNotEquals('Some text, \'<script>alert()</script>', $org->custom_message);
     }
 }
