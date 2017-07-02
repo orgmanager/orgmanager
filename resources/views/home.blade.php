@@ -45,7 +45,7 @@
                     <p>You can manage them on your <a href="{{ url('dashboard') }}">dashboard</a>.</p>
                     <p>@lang('empty.problems') <a href="https://github.com/orgmanager/orgmanager/issues/new?labels=bug" target="_blank">@lang('empty.issue')</a>.</p>
                     @endif
-                    <a class="github-button" href="https://github.com/orgmanager/orgmanager" data-icon="octicon-star" data-style="mega" data-count-href="/orgmanager/orgmanager/stargazers" data-count-api="/repos/orgmanager/orgmanager#stargazers_count" data-count-aria-label="# stargazers on GitHub" aria-label="Star orgmanager/orgmanager on GitHub">Star</a>
+                    <a class="github-button" href="https://github.com/orgmanager/orgmanager" data-icon="octicon-star" data-size="large" data-show-count="true" aria-label="Star orgmanager/orgmanager on GitHub">Star</a>
                 </div>
             </div>
         </div>
