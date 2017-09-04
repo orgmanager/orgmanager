@@ -3,15 +3,16 @@
 namespace Tests\Unit;
 
 use Github;
+use Mockery\Mockery;
 use App\Org;
 use App\User;
 use Tests\TestCase;
 use Illuminate\Support\Facades\Artisan;
-use Illuminate\Foundation\Testing\DatabaseTransactions;
+use Illuminate\Foundation\Testing\RefreshDatabase;
 
 class JoinTest extends TestCase
 {
-    use DatabaseTransactions;
+    use RefreshDatabase;
 
     /**
      * A basic test example.

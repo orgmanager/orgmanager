@@ -5,16 +5,15 @@
     "license": "MPL-2.0",
     "type": "project",
     "require": {
-        "php": ">=5.6.4",
+        "php": ">=7.0.0",
+        "fideloper/proxy": "~3.3",
         "bugsnag/bugsnag-laravel": "^2.0",
         "erusev/parsedown": "^1.6",
-        "filp/whoops": "^2.1",
         "google/recaptcha": "~1.1",
-        "graham-campbell/core": "^5.3",
-        "graham-campbell/github": "^5.1",
+        "graham-campbell/github": "^6.0",
         "guzzlehttp/guzzle": "^6.2",
         "knplabs/github-api": "^2.3",
-        "laravel/framework": "5.4.*",
+        "laravel/framework": "5.5.*",
         "laravel/socialite": "^3.0",
         "laravel/tinker": "^1.0",
         "m1guelpf/deploying-mode": "^1.0",
@@ -23,13 +22,15 @@
         "php-http/guzzle6-adapter": "^1.1"
     },
     "require-dev": {
+        "filp/whoops": "~2.0",
         "fzaninotto/faker": "~1.4",
         "mockery/mockery": "0.9.*",
-        "phpunit/phpunit": "~5.7"
+        "phpunit/phpunit": "~6.0"
     },
     "autoload": {
         "classmap": [
-            "database"
+          "database/seeds",
+          "database/factories"
         ],
         "files": [
             "app/helpers.php"
@@ -43,32 +44,31 @@
             "Tests\\": "tests/"
       }
     },
+    "extra": {
+        "laravel": {
+            "dont-discover": [
+            ]
+        }
+    },
     "scripts": {
         "post-root-package-install": [
-            "php -r \"file_exists('.env') || copy('.env.example', '.env');\""
+            "@php -r \"file_exists('.env') || copy('.env.example', '.env');\""
         ],
         "post-create-project-cmd": [
-            "php artisan key:generate"
+            "@php artisan key:generate"
         ],
         "post-install-cmd": [
-            "Illuminate\\Foundation\\ComposerScripts::postInstall",
-            "php artisan optimize",
-            "php artisan migrate --force"
+            "@php artisan migrate --force"
         ],
-        "post-update-cmd": [
-            "Illuminate\\Foundation\\ComposerScripts::postUpdate",
-            "php artisan optimize",
-            "php artisan migrate --force"
+        "post-autoload-dump": [
+            "Illuminate\\Foundation\\ComposerScripts::postAutoloadDump",
+            "@php artisan package:discover",
+            "@php artisan migrate --force"
         ],
         "test": "vendor/bin/phpunit"
     },
     "config": {
         "preferred-install": "dist",
         "sort-packages": true
-    },
-    "composerci": {
-        "excluded": [
-            "phpunit/phpunit"
-        ]
     }
 }

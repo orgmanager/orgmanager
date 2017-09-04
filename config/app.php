@@ -10,6 +10,7 @@ return [
     | This value is the name of your application. This value is used when the
     | framework needs to place the application's name in a notification or
     | any other location as required by the application or its packages.
+    |
     */
 
     'name' => 'OrgManager',
@@ -180,12 +181,8 @@ return [
          * Package Service Providers...
          */
 
-        Laravel\Socialite\SocialiteServiceProvider::class,
-        GrahamCampbell\GitHub\GitHubServiceProvider::class,
         Bugsnag\BugsnagLaravel\BugsnagServiceProvider::class,
-        M1guelpf\DeployingMode\DeployingModeServiceProvider::class,
         OrgManager\Logos\OrgManagerLogosServiceProvider::class,
-        GrahamCampbell\Core\CoreServiceProvider::class,
         // OrgManager\OrgmanagerCustom\OrgmanagerCustomServiceProvider::class,
 
         /*
@@ -245,7 +242,6 @@ return [
         'URL'          => Illuminate\Support\Facades\URL::class,
         'Validator'    => Illuminate\Support\Facades\Validator::class,
         'View'         => Illuminate\Support\Facades\View::class,
-        'Socialite'    => Laravel\Socialite\Facades\Socialite::class,
         'Github'       => GrahamCampbell\GitHub\Facades\GitHub::class,
         'Input'        => Illuminate\Support\Facades\Input::class,
         'Bugsnag'      => Bugsnag\BugsnagLaravel\Facades\Bugsnag::class,
