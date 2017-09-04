@@ -100,49 +100,49 @@ class StatusTest extends TestCase
         $response->assertStatus(200);
     }
 
-     /**
-      * Test the token page returns a 200 status code (OK).
-      *
-      * @return void
-      */
-     public function testTokenPage()
-     {
-         $user = factory(User::class)->create();
-         $response = $this->actingAs($user)
+    /**
+     * Test the token page returns a 200 status code (OK).
+     *
+     * @return void
+     */
+    public function testTokenPage()
+    {
+        $user = factory(User::class)->create();
+        $response = $this->actingAs($user)
                           ->get('token');
 
-         $response->assertStatus(200);
-     }
+        $response->assertStatus(200);
+    }
 
-     /**
-      * Test the organization settings page returns a 200 status code (OK).
-      *
-      * @return void
-      */
-     public function testOrgPage()
-     {
-         $user = factory(User::class)->create();
-         $org = factory(Org::class)->create([
+    /**
+     * Test the organization settings page returns a 200 status code (OK).
+     *
+     * @return void
+     */
+    public function testOrgPage()
+    {
+        $user = factory(User::class)->create();
+        $org = factory(Org::class)->create([
            'userid' => $user->id,
          ]);
-         $response = $this->actingAs($user)
+        $response = $this->actingAs($user)
                           ->get('org/'.$org->id);
-         $response->assertStatus(200);
-     }
+        $response->assertStatus(200);
+    }
 
-     /**
-      * Test the teams page returns a 200 status code (OK).
-      *
-      * @return void
-      */
-     public function testTeamsPage()
-     {
-         $user = factory(User::class)->create();
-         $org = factory(Org::class)->create([
+    /**
+     * Test the teams page returns a 200 status code (OK).
+     *
+     * @return void
+     */
+    public function testTeamsPage()
+    {
+        $user = factory(User::class)->create();
+        $org = factory(Org::class)->create([
            'userid' => $user->id,
          ]);
-         $response = $this->actingAs($user)
+        $response = $this->actingAs($user)
                           ->get('org/'.$org->id.'/teams');
-         $response->assertStatus(200);
-     }
+        $response->assertStatus(200);
+    }
 }
