@@ -3,7 +3,6 @@
 namespace Tests\Unit;
 
 use Github;
-use Mockery\Mockery;
 use App\Org;
 use App\User;
 use Tests\TestCase;
