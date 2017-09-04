@@ -27,13 +27,13 @@ class InstallAppCommand extends Command
      */
     public function handle()
     {
-      $this->call('key:generate');
-      $this->call('config:cache');
-      $this->call('route:cache');
-      $this->call('vendor:publish');
-      $this->call('migrate', ['--force' => true]);
-      $this->call('db:seed', ['--force' => true]);
-      $this->call('cache:clear');
-      $this->call('storage:link');
+        $this->call('key:generate');
+        $this->call('config:cache');
+        $this->call('route:cache');
+        $this->call('vendor:publish');
+        $this->call('migrate', ['--force' => true]);
+        $this->call('db:seed', ['--force' => true]);
+        $this->call('cache:clear');
+        $this->call('storage:link');
     }
 }
