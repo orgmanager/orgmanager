@@ -2,7 +2,7 @@
 
 namespace Tests\Unit;
 
-use Parsedown;
+use League\CommonMark\Converter as Parser;
 use Tests\TestCase;
 use Illuminate\Support\HtmlString;
 
@@ -15,9 +15,6 @@ class HelpersTest extends TestCase
      */
     public function testMarkdownHelper()
     {
-        $this->assertInstanceOf(Parsedown::class, markdown());
-
-        $this->assertInstanceOf(HtmlString::class, markdown('example'));
-        $this->assertEquals('<h1>Test</h1>', markdown('# Test'));
+        $this->assertEquals('<h1>Test</h1>'."\n", markdown('# Test'));
     }
 }

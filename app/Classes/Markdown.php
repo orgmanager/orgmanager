@@ -2,11 +2,22 @@
 
 namespace App\Classes;
 
-use Parsedown;
+use League\CommonMark\CommonMarkConverter;
+use League\CommonMark\Environment;
+use League\CommonMark\Inline\Element\Image;
 
-class Markdown extends Parsedown
+class Markdown
 {
-    public function inlineImage($data = null)
-    {
-    }
+  public static function render(string $markdown)
+  {
+    $environment = Environment::createCommonMarkEnvironment();
+
+    $environment->addInlineRenderer(Image::class, new ImageRenderer());
+
+    $config = ['html_input' => 'escape'];
+
+    $converter = new CommonMarkConverter($config, $environment);
+
+    return $converter->convertToHtml($markdown);
+  }
 }
