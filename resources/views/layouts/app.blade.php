@@ -1,5 +1,5 @@
-<!DOCTYPE html>
-<html lang="en">
+<!doctype html>
+<html lang="{{ app()->getLocale() }}">
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -25,9 +25,6 @@
     @yield('header')
     <script src="{{ url('/js/app.js') }}"></script>
     <!-- Scripts -->
-    <script>
-        window.Laravel = {!! json_encode(['csrfToken' => csrf_token()]) !!}
-    </script>
     @include('layouts.code.head')
 </head>
 <body>
@@ -59,7 +56,7 @@
                     <!-- Right Side Of Navbar -->
                     <ul class="nav navbar-nav navbar-right">
                         <!-- Authentication Links -->
-                        @if (Auth::guest())
+                        @guest
                             <li><a href="{{ url('/login') }}">Login</a></li>
                         @else
                             <li class="dropdown">
@@ -86,7 +83,7 @@
                                     </li>
                                 </ul>
                             </li>
-                        @endif
+                        @endguest
                     </ul>
                 </div>
             </div>
