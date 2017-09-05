@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "7d25277464b7393f76f3c7d2520a6e14",
+    "content-hash": "6e9b1052ff96ef226a574defc5fdfa1d",
     "packages": [
         {
             "name": "bugsnag/bugsnag",
@@ -1518,56 +1518,6 @@
                 "twitter"
             ],
             "time": "2016-08-17T00:36:58+00:00"
-        },
-        {
-            "name": "m1guelpf/deploying-mode",
-            "version": "v1.0.2",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/m1guelpf/deploying-mode.git",
-                "reference": "6e369567ab8c1b3e0f2c0498eb330c0c92351393"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/m1guelpf/deploying-mode/zipball/6e369567ab8c1b3e0f2c0498eb330c0c92351393",
-                "reference": "6e369567ab8c1b3e0f2c0498eb330c0c92351393",
-                "shasum": ""
-            },
-            "require": {
-                "php": ">=5.6.4"
-            },
-            "type": "library",
-            "extra": {
-                "laravel": {
-                    "providers": [
-                        "M1guelpf\\DeployingMode\\DeployingModeServiceProvider"
-                    ]
-                }
-            },
-            "autoload": {
-                "psr-4": {
-                    "M1guelpf\\DeployingMode\\": "src"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Miguel Piedrafita",
-                    "email": "soy@miguelpiedrafita.com",
-                    "homepage": "https://miguelpiedrafita.com",
-                    "role": "Developer"
-                }
-            ],
-            "description": "Clone of Laravel's manteniance mode, but for deploying",
-            "homepage": "https://github.com/m1guelpf/deploying-mode",
-            "keywords": [
-                "deploying-mode",
-                "m1guelpf"
-            ],
-            "time": "2017-08-31T12:54:19+00:00"
         },
         {
             "name": "monolog/monolog",

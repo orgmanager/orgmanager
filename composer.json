@@ -16,7 +16,6 @@
         "laravel/framework": "5.5.*",
         "laravel/socialite": "^3.0",
         "laravel/tinker": "^1.0",
-        "m1guelpf/deploying-mode": "^1.0",
         "orgmanager/orgmanager-logos": "^1.0",
         "php-http/cache-plugin": "^1.4",
         "php-http/guzzle6-adapter": "^1.1"
