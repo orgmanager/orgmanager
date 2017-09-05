@@ -2,20 +2,19 @@
 
 namespace App\Classes;
 
+use League\CommonMark\Util\Configuration;
+use League\CommonMark\Inline\Element\Image;
 use League\CommonMark\ElementRendererInterface;
 use League\CommonMark\Inline\Element\AbstractInline;
-use League\CommonMark\Inline\Element\Image;
-use League\CommonMark\Util\Configuration;
 use League\CommonMark\Util\ConfigurationAwareInterface;
 use League\CommonMark\Inline\Renderer\InlineRendererInterface;
 
 class ImageRenderer implements InlineRendererInterface, ConfigurationAwareInterface
 {
     /**
-    * @var Configuration
-    */
+     * @var Configuration
+     */
     protected $config;
-
 
     /**
      * Render the given image into HTML.
@@ -27,11 +26,9 @@ class ImageRenderer implements InlineRendererInterface, ConfigurationAwareInterf
      */
     public function render(AbstractInline $inline, ElementRendererInterface $htmlRenderer)
     {
-      if (!($inline instanceof Image)) {
-          throw new \InvalidArgumentException('Incompatible inline type: ' . get_class($inline));
-      }
-
-      return;
+        if (! ($inline instanceof Image)) {
+            throw new \InvalidArgumentException('Incompatible inline type: '.get_class($inline));
+        }
     }
 
     /**
