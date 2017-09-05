@@ -1,6 +1,5 @@
-@inject('deployutils', 'M1guelpf\DeployingMode\Utils')
-<!DOCTYPE html>
-<html lang="en-us" class="no-js">
+<!doctype html>
+<html lang="{{ app()->getLocale() }}" class="no-js">
 	<head>
 		<meta charset="utf-8">
         <title>{{ config('app.name') }}</title>
@@ -20,13 +19,8 @@
 			<img src="{{ url('img/orgmanagerIcon.png') }}" alt="OrgManager" class="brand-logo" />
 			<div class="content">
 				<h1 class="text-intro opacity-0">Hey Guys!<br>
-					@if($deployutils->isDeploying())
-						We're currently under deployment</h1>
-					<h2 class="text-intro opacity-0">We enabled deployment mode {{ $exception->wentDownAgo }} for deploying <a href="{{ url('https://github.com/orgmanager/orgmanager/commit/'.$exception->commit) }}" target="_blank">{{ $exception->prettyCommit }}</a>.</h2>
-					@else
 					We're currently under manteniance</h1>
-					<h2 class="text-intro opacity-0">We enabled manteniance mode {{ $exception->wentDownAt }} for {{ $exception->getMessage() }}</h2>
-					@endif
+					<h2 class="text-intro opacity-0">We enabled manteniance mode {{ $exception->wentDownAt }} for {{ $exception->getMessage() != null ? $exception->getMessage():'executing manteniance tasks' }}.</h2>
 					<nav>
 					<ul>
 						<li>

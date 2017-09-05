@@ -13,11 +13,6 @@ class Kernel extends ConsoleKernel
      * @var array
      */
     protected $commands = [
-        \App\Console\Commands\AddToken::class,
-        \App\Console\Commands\UpdateOrg::class,
-        \App\Console\Commands\JoinOrg::class,
-        \App\Console\Commands\EncryptOrgPasswords::class,
-        \App\Console\Commands\RemindUsers::class,
         \Bugsnag\BugsnagLaravel\Commands\DeployCommand::class,
     ];
 
