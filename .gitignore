@@ -10,6 +10,5 @@ Homestead.yaml
 .env.testing
 .env.*
 !.env.example
-composer.lock
 npm-debug.log
 yarn-error.log
