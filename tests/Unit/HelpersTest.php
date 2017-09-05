@@ -2,9 +2,7 @@
 
 namespace Tests\Unit;
 
-use League\CommonMark\Converter as Parser;
 use Tests\TestCase;
-use Illuminate\Support\HtmlString;
 
 class HelpersTest extends TestCase
 {
