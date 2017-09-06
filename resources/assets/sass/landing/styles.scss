@@ -37,14 +37,19 @@ html, body {
 
 a {
     color: #18bc9c;
-    // padding: 0 25px;
-    // font-size: 12px;
     font-weight: 500;
-    // letter-spacing: .1rem;
     text-decoration: none;
-    // text-transform: uppercase;
 }
 
 .m-b-md {
     margin-bottom: 30px;
+}
+.btn-link {
+  background: none !important;
+  color: #18bc9c;
+  border: none;
+  padding: 0 !important;
+  font: inherit;
+  cursor: pointer;
+  font-weight: 500;
 }
