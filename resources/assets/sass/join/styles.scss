@@ -1,0 +1,117 @@
+html, body {
+      background-color: #fff;
+      color: #636b6f;
+      font-family: 'Raleway', sans-serif;
+      font-weight: 100;
+      height: 100vh;
+      margin: 0;
+    }
+
+    .full-height {
+        height: 100vh;
+    }
+
+    .flex-center {
+        align-items: center;
+        display: flex;
+        justify-content: center;
+    }
+
+    .position-ref {
+        position: relative;
+    }
+
+    .content {
+        text-align: center;
+    }
+
+    .title {
+        font-size: 84px;
+    }
+
+    .join > a {
+        color: #636b6f;
+        padding: 0 25px;
+        font-size: 12px;
+        font-weight: 600;
+        letter-spacing: .1rem;
+        text-decoration: none;
+        text-transform: uppercase;
+    }
+
+    .m-b-md {
+        margin-bottom: 30px;
+    }
+    .submit-button {
+-webkit-box-sizing: content-box;
+-moz-box-sizing: content-box;
+box-sizing: content-box;
+width: 250px;
+height: 70px;
+cursor: pointer;
+margin: 0 auto;
+border: 2px solid rgb(30,205,151);
+-webkit-border-radius: 40px;
+border-radius: 40px;
+font: normal 37px/70px "Advent Pro", Helvetica, sans-serif;
+color: rgb(30, 205, 151);
+text-align: center;
+-o-text-overflow: clip;
+text-overflow: clip;
+letter-spacing: 1px;
+background: rgba(0,0,0,0);
+-webkit-transition: background-color 0.3s cubic-bezier(0, 0, 0, 0), color 0.3s cubic-bezier(0, 0, 0, 0), width 0.3s cubic-bezier(0, 0, 0, 0), border-width 0.3s cubic-bezier(0, 0, 0, 0), border-color 0.3s cubic-bezier(0, 0, 0, 0);
+-moz-transition: background-color 0.3s cubic-bezier(0, 0, 0, 0), color 0.3s cubic-bezier(0, 0, 0, 0), width 0.3s cubic-bezier(0, 0, 0, 0), border-width 0.3s cubic-bezier(0, 0, 0, 0), border-color 0.3s cubic-bezier(0, 0, 0, 0);
+-o-transition: background-color 0.3s cubic-bezier(0, 0, 0, 0), color 0.3s cubic-bezier(0, 0, 0, 0), width 0.3s cubic-bezier(0, 0, 0, 0), border-width 0.3s cubic-bezier(0, 0, 0, 0), border-color 0.3s cubic-bezier(0, 0, 0, 0);
+transition: background-color 0.3s cubic-bezier(0, 0, 0, 0), color 0.3s cubic-bezier(0, 0, 0, 0), width 0.3s cubic-bezier(0, 0, 0, 0), border-width 0.3s cubic-bezier(0, 0, 0, 0), border-color 0.3s cubic-bezier(0, 0, 0, 0);
+}
+.submit-button:hover {
+color: rgba(255,255,255,1);
+background: rgb(30, 205, 151);
+}
+
+.submit-button:active {
+border: 2px solid rgba(33,224,163,1);
+background: rgba(33,224,163,1);
+-webkit-transition: none;
+-moz-transition: none;
+-o-transition: none;
+transition: none;
+}
+.textbox {
+display: inline-block;
+-webkit-box-sizing: content-box;
+-moz-box-sizing: content-box;
+box-sizing: content-box;
+padding: 6px 20px;
+border: none;
+-webkit-border-radius: 32px / 54px;
+border-radius: 32px / 54px;
+font: normal 18px/normal "Coda", Helvetica, sans-serif;
+color: rgba(0,142,198,1);
+-o-text-overflow: ellipsis;
+text-overflow: ellipsis;
+background: rgba(232,252,252,1);
+-webkit-box-shadow: 0 1px 2px 0 rgba(0,0,0,0.2) inset;
+box-shadow: 0 1px 2px 0 rgba(0,0,0,0.2) inset;
+text-shadow: 1px 1px 0 rgba(255,255,255,0.66) ;
+-webkit-transition: all 200ms cubic-bezier(0.42, 0, 0.58, 1);
+-moz-transition: all 200ms cubic-bezier(0.42, 0, 0.58, 1);
+-o-transition: all 200ms cubic-bezier(0.42, 0, 0.58, 1);
+transition: all 200ms cubic-bezier(0.42, 0, 0.58, 1);
+}
+
+.textbox:hover {
+background: rgba(232,249,255,1);
+-webkit-box-shadow: 0 2px 2px 0 rgba(90,90,90,0.2) inset;
+box-shadow: 0 2px 2px 0 rgba(90,90,90,0.2) inset;
+}
+
+.textbox:focus {
+background: rgba(255,253,232,1);
+}
+.logo{
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+}

@@ -1,32 +1,28 @@
 @extends('layouts.app')
 
-@section('header')
-<link type="text/css" rel="stylesheet" href="{{ url('css/materialize.min.css') }}"  media="screen,projection"/>
-@endsection
-
 @section('content')
 <div class="container">
     <div class="row">
         <div class="col-md-8 col-md-offset-2">
             <div class="panel panel-default">
                 <div class="panel-heading">@lang('organizations.heading')</div>
-                <div class="panel-body">
-                      <table id="paths" class="highlight centered responsive-table">
+                <div class="text-center">
+                      <table id="paths" class="table table-hover table-responsive text-center">
                         <thead>
                             <tr>
-                              <th data-field="icon"></th>
-                              <th data-field="id">@lang('organizations.name')</th>
-                              <th data-field="id">@lang('organizations.link')</th>
-                              <th data-field="name">@lang('organizations.options')</th>
+                              <th></th>
+                              <th class="text-center">@lang('organizations.name')</th>
+                              <th class="text-center">@lang('organizations.link')</th>
+                              <th class="text-center">@lang('organizations.options')</th>
                             </tr>
                         </thead>
                         <tbody>
                       @foreach ($orgs as $org)
                       <tr>
-                      <td><span class="octicon octicon-organization"></span></td>
-                      <td>{{ $org->name }}</td>
-                      <td><a href="{{ url('join/'.$org->id) }}" target="_blank">{{ url('join/'.$org->id) }}</td>
-                      <td><a class="btn waves-effect waves-light" role="button" name="options" href="{{ url('org/'.$org->id)}}"><span class="octicon octicon-settings"></span></a></td>
+                      <td class="text-center"><span class="octicon octicon-organization"></span></td>
+                      <td class="text-center">{{ $org->name }}</td>
+                      <td class="text-center"><a href="{{ url('join/'.$org->id) }}" target="_blank">{{ url('join/'.$org->id) }}</td>
+                      <td class="text-center"><a class="btn btn-primary text-center" role="button" name="options" href="{{ url('org/'.$org->id)}}"><span class="octicon octicon-settings"></span></a></td>
                       </tr>
                       @endforeach
                       </tbody>
@@ -40,8 +36,4 @@
         </div>
     </div>
 </div>
-@endsection
-
-@section('footer')
-<script src="{{ url('js/materialize.min.js') }}"></script>
 @endsection

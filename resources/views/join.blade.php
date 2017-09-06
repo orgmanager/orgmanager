@@ -6,13 +6,8 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
         <title>@lang('join.join') {{ $org->name }}</title>
-
-        <!-- Fonts -->
-        <link href="https://fonts.googleapis.com/css?family=Raleway:100,600" rel="stylesheet" type="text/css">
         <!-- Styles -->
     <link href="{{ url('/css/join.css') }}" rel="stylesheet">
-    <link href="{{ url('/css/app.css') }}" rel="stylesheet">
-    <link href="{{ url('/css/sweetalert.css') }}" rel="stylesheet">
     @include('layouts.code.head')
     <script>
     function submitForm(token) {
@@ -40,7 +35,7 @@
             <div class="content">
                 <div class="title m-b-md">
                   <img src="{{ $org->avatar }}" class="logo"><br>
-                    @lang('join.join') <a href="https://github.com/{{ $org->name }}" target="_blank">{{ $org->pretty_name or $org->name }}</a>
+                    @lang('join.join') <a href="{{ "https://github.com/$org->name" }}" target="_blank">{{ $org->pretty_name or $org->name }}</a>
                     @if (isset($org->team))
                     @if($org->team->privacy == 'closed')
                     <h6>You'll also join the <a href="{{ url('https://github.com/orgs/'.$org->name.'/teams/'.str_slug($org->team->name)) }}" target="_blank">{{ $org->team->name }}</a> team</h6>
@@ -66,7 +61,7 @@
                 </div>
             </div>
         </div>
-        <script src="{{ url('js/app.js') }}"></script>
+        <script src="{{ url('js/landing.js') }}"></script>
         <script src='https://www.google.com/recaptcha/api.js' async defer></script>
         <script>onload();</script>
         @if (count($errors) > 0)

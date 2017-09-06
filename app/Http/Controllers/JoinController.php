@@ -67,9 +67,7 @@ class JoinController extends Controller
     protected function successMessage(Org $org, $username)
     {
         if ($org->custom_message) {
-            $parser = new Parser();
-
-            return $parser->text($org->custom_message);
+            return str_replace("\n", "<br>", markdown($org->custom_message));
         }
 
         return trans('alerts.invite').$username.trans('alerts.inbox');

@@ -8,3 +8,9 @@
 require('./bootstrap');
 
 require('sweetalert');
+
+require('primer-alerts');
+require('primer-avatars');
+require('primer-blankslate');
+require('primer-states');
+require('primer-tooltips');

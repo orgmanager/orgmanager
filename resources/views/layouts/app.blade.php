@@ -13,15 +13,6 @@
     <!-- Styles -->
     <link href="{{ url('/css/app.css') }}" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/octicons/4.4.0/font/octicons.min.css" rel="stylesheet">
-    <link href="{{ url('/css/bootstrap-responsive.min.css') }}" rel="stylesheet">
-    <link href="{{ url('/css/bootstrap-social.css') }}" rel="stylesheet">
-    <link href="{{ url('/css/alerts.css') }}" rel="stylesheet">
-    <link href="{{ url('/css/avatars.css') }}" rel="stylesheet">
-    <link href="{{ url('/css/blankstate.css') }}" rel="stylesheet">
-    <link href="{{ url('/css/states.css') }}" rel="stylesheet">
-    <link href="{{ url('/css/tooltips.css') }}" rel="stylesheet">
-    <link href="{{ url('css/sweetalert.css') }}" rel="stylesheet">
-    <link href="{{ url('css/custom.css') }}" rel="stylesheet">
     @yield('header')
     <script src="{{ url('/js/app.js') }}"></script>
     <!-- Scripts -->

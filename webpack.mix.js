@@ -12,8 +12,7 @@ let mix = require('laravel-mix');
  */
 
 mix.js('resources/assets/js/app.js', 'public/js')
+   .js('resources/assets/js/landing.js', 'public/js')
    .sass('resources/assets/sass/app.scss', 'public/css')
-   .styles([
-	'public/css/app.css',
-	'resources/assets/css/flatly.css',
-   ], 'public/css/app.css');
+   .sass('resources/assets/sass/landing.scss', 'public/css')
+   .sass('resources/assets/sass/join.scss', 'public/css')
