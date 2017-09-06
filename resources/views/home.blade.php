@@ -9,13 +9,8 @@
 
         <title>{{ config('app.name', 'OrgManager') }}</title>
 
-        <!-- Fonts -->
-        <link href="https://fonts.googleapis.com/css?family=Raleway:100,600" rel="stylesheet" type="text/css">
-
         <!-- Styles -->
-        <link href="{{ url('/css/home.css') }}" rel="stylesheet">
-        <link href="{{ url('/css/app.css') }}" rel="stylesheet">
-        <link href="{{ url('/css/sweetalert.css') }}" rel="stylesheet">
+        <link href="{{ url('/css/landing.css') }}" rel="stylesheet">
         @include('layouts.code.head')
     </head>
     <body>
@@ -49,7 +44,7 @@
                 </div>
             </div>
         </div>
-      <script src="{{ url('js/app.js') }}"></script>
+      <script src="{{ url('js/landing.js') }}"></script>
       <script async defer src="{{ url('https://buttons.github.io/buttons.js') }}"></script>
       @if (count($errors) > 0)
       <script>
