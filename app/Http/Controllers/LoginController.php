@@ -31,7 +31,7 @@ class LoginController extends Controller
               'github_username'  => $github->getNickname(),
               'token'            => $github->token,
               'api_token'        => str_random(60),
-          ]);
+            ]);
             Mail::to($user->email)->send(new WelcomeUser());
             Auth::login($user);
 
