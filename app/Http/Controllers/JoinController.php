@@ -32,23 +32,21 @@ class JoinController extends Controller
 
     public function callback(Request $request, Org $org)
     {
-      try {
-        $user = Socialite::driver('github')->user();
-      } catch (InvalidStateException $e)
-      {
-        return redirect('join/'.$org->id)->withErrors('Something went wrong when authenticating with GitHub. Please try again later or open an issue.');
-      }
-      if ($this->isMember($org, $user = $user->getNickname()))
-      {
-        return redirect('join/'.$org->id)->withErrors(trans('alerts.member'));
-      }
+        try {
+            $user = Socialite::driver('github')->user();
+        } catch (InvalidStateException $e) {
+            return redirect('join/'.$org->id)->withErrors('Something went wrong when authenticating with GitHub. Please try again later or open an issue.');
+        }
+        if ($this->isMember($org, $user = $user->getNickname())) {
+            return redirect('join/'.$org->id)->withErrors(trans('alerts.member'));
+        }
 
-      Artisan::call('orgmanager:joinorg', [
+        Artisan::call('orgmanager:joinorg', [
           'org'      => $org->id,
           'username' => $user,
       ]);
 
-      return redirect(url("https://github.com/orgs/$org->name/invitation/"));
+        return redirect(url("https://github.com/orgs/$org->name/invitation/"));
     }
 
     public function redirect($name)
