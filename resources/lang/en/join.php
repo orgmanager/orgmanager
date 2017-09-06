@@ -13,9 +13,9 @@ return [
     */
 
     'join'          => 'Join',
-    'username'      => 'Enter your GitHub username',
-    'passwd'        => 'and the password',
-    'tojoin'        => 'to join',
+    'button'        => 'Join with GitHub',
+    'passwd'        => 'Enter the organization password to join',
+    'nopasswd'      => 'Login with your GitHub account to join',
     'uplace'        => 'Your GitHub username',
     'pplace'        => 'Password',
     'by'            => 'Added by',
