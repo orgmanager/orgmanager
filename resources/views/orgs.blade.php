@@ -29,7 +29,10 @@
                       </table>
                       <center>{{ $orgs->links() }}</center>
                       <div class="flash">
-                      <p class="text-center">TIP: Don't see the organization you want? Double check <a href="{{ url('https://github.com/settings/connections/applications/10b01d866046f040c9f1') }}" target="_blank">we have access to it</a> and then <a href="{{ url('sync') }}">sync</a> again!</p>
+                        <form action="{{ url('sync') }}" method="POST">
+                          {{ csrf_field() }}
+                          <p class="text-center">TIP: Don't see the organization you want? Double check <a href="{{ url('https://github.com/settings/connections/applications/10b01d866046f040c9f1') }}" target="_blank">we have access to it</a> and then <button type="submit" class="btn-link">sync</button> again!</p>
+                        </form>
                       </div>
                 </div>
             </div>

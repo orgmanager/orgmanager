@@ -35,7 +35,7 @@ class LoginController extends Controller
             Mail::to($user->email)->send(new WelcomeUser());
             Auth::login($user);
 
-            return redirect()->intended('sync')->withSuccess(trans('alerts.loggedin'));
+            return redirect()->intended('dashboard')->withSuccess(trans('alerts.loggedin'));
         }
         $user->update([
             'name'             => $github->getName(),

@@ -24,7 +24,7 @@ Route::get('org/{org}/teams', 'TeamController@index')->name('org.teams');
 Route::post('org/{org}/teams', 'TeamController@syncTeams')->name('org.teams.sync');
 Route::put('org/{org}/teams', 'TeamController@setTeam')->name('org.teams.set');
 Route::delete('org/{org}/teams', 'TeamController@deleteTeams')->name('org.teams.delete');
-Route::get('sync', 'GithubController@syncOrgs')->name('sync');
+Route::post('sync', 'GithubController@syncOrgs')->name('sync');
 Route::post('sync/{org}', 'GithubController@syncOrg')->name('sync.org');
 Route::get('join/{org}', 'JoinController@index')->name('join');
 Route::post('join/{org}', 'JoinController@inviteUser')->name('join.post');
