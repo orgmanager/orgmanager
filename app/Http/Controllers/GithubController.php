@@ -63,14 +63,15 @@ class GithubController extends Controller
         Github::authenticate(Auth::user()->token, null, 'http_token');
         $orgs = Org::where('userid', '=', Auth::id())->get();
         foreach ($orgs as $organization) {
-            if ($organization->role != 'admin') {
-                $membership = GitHub::api('organizations')->members()->member($organization->name, $organization->user->github_username);
-                $organization->role = $membership['role'];
-                if ($membership['role'] == 'admin') {
-                    $organization->save();
-                } else {
-                    $organization->delete();
-                }
+            if ($organization->role == 'admin') {
+                continue; // we do nothing if the role is admin
+            }
+            $membership = GitHub::api('organizations')->members()->member($organization->name, $organization->user->github_username);
+            $organization->role = $membership['role'];
+            if ($membership['role'] == 'admin') {
+                $organization->save();
+            } else {
+                $organization->delete();
             }
         }
     }
