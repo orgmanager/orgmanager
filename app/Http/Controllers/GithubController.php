@@ -43,17 +43,18 @@ class GithubController extends Controller
     public function storeOrgs($orgs)
     {
         foreach ($orgs as $organization) {
-            if (! Org::where('id', '=', $organization['id'])->exists()) {
-                if (Org::find($organization['id']) == null) {
-                    $org = new Org();
-                    $org->id = $organization['id'];
-                    $org->name = $organization['login'];
-                    $org->url = $organization['url'];
-                    $org->description = $organization['description'];
-                    $org->avatar = 'https://avatars.githubusercontent.com/'.$organization['login'];
-                    $org->userid = Auth::id();
-                    $org->save();
-                }
+            if (Org::where('id', '=', $organization['id'])->exists()) {
+                continue;
+            }
+            if (Org::find($organization['id']) == null) {
+                $org = new Org();
+                $org->id = $organization['id'];
+                $org->name = $organization['login'];
+                $org->url = $organization['url'];
+                $org->description = $organization['description'];
+                $org->avatar = 'https://avatars.githubusercontent.com/'.$organization['login'];
+                $org->userid = Auth::id();
+                $org->save();
             }
         }
     }
@@ -63,14 +64,15 @@ class GithubController extends Controller
         Github::authenticate(Auth::user()->token, null, 'http_token');
         $orgs = Org::where('userid', '=', Auth::id())->get();
         foreach ($orgs as $organization) {
-            if ($organization->role != 'admin') {
-                $membership = GitHub::api('organizations')->members()->member($organization->name, $organization->user->github_username);
-                $organization->role = $membership['role'];
-                if ($membership['role'] == 'admin') {
-                    $organization->save();
-                } else {
-                    $organization->delete();
-                }
+            if ($organization->role == 'admin') {
+                continue;
+            }
+            $membership = GitHub::api('organizations')->members()->member($organization->name, $organization->user->github_username);
+            $organization->role = $membership['role'];
+            if ($membership['role'] == 'admin') {
+                $organization->save();
+            } else {
+                $organization->delete();
             }
         }
     }
