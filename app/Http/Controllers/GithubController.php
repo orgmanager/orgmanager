@@ -43,17 +43,18 @@ class GithubController extends Controller
     public function storeOrgs($orgs)
     {
         foreach ($orgs as $organization) {
-            if (! Org::where('id', '=', $organization['id'])->exists()) {
-                if (Org::find($organization['id']) == null) {
-                    $org = new Org();
-                    $org->id = $organization['id'];
-                    $org->name = $organization['login'];
-                    $org->url = $organization['url'];
-                    $org->description = $organization['description'];
-                    $org->avatar = 'https://avatars.githubusercontent.com/'.$organization['login'];
-                    $org->userid = Auth::id();
-                    $org->save();
-                }
+            if (Org::where('id', '=', $organization['id'])->exists()) {
+                continue; // we do nothing if the org exists.
+            }
+            if (Org::find($organization['id']) == null) {
+                $org = new Org();
+                $org->id = $organization['id'];
+                $org->name = $organization['login'];
+                $org->url = $organization['url'];
+                $org->description = $organization['description'];
+                $org->avatar = 'https://avatars.githubusercontent.com/'.$organization['login'];
+                $org->userid = Auth::id();
+                $org->save();
             }
         }
     }
