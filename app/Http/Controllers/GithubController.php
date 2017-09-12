@@ -44,7 +44,7 @@ class GithubController extends Controller
     {
         foreach ($orgs as $organization) {
             if (Org::where('id', '=', $organization['id'])->exists()) {
-                continue; // we do nothing if the org exists.
+                continue;
             }
             if (Org::find($organization['id']) == null) {
                 $org = new Org();
@@ -65,7 +65,7 @@ class GithubController extends Controller
         $orgs = Org::where('userid', '=', Auth::id())->get();
         foreach ($orgs as $organization) {
             if ($organization->role == 'admin') {
-                continue; // we do nothing if the role is admin
+                continue;
             }
             $membership = GitHub::api('organizations')->members()->member($organization->name, $organization->user->github_username);
             $organization->role = $membership['role'];
