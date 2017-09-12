@@ -47,14 +47,7 @@ class GithubController extends Controller
                 continue;
             }
             if (Org::find($organization['id']) == null) {
-                $org = new Org();
-                $org->id = $organization['id'];
-                $org->name = $organization['login'];
-                $org->url = $organization['url'];
-                $org->description = $organization['description'];
-                $org->avatar = 'https://avatars.githubusercontent.com/'.$organization['login'];
-                $org->userid = Auth::id();
-                $org->save();
+                $this->saveNewOrg($organization);
             }
         }
     }
@@ -75,5 +68,20 @@ class GithubController extends Controller
                 $organization->delete();
             }
         }
+    }
+
+    /**
+     * @param $organization
+     */
+    private function saveNewOrg($organization)
+    {
+        $org = new Org();
+        $org->id = $organization['id'];
+        $org->name = $organization['login'];
+        $org->url = $organization['url'];
+        $org->description = $organization['description'];
+        $org->avatar = 'https://avatars.githubusercontent.com/'.$organization['login'];
+        $org->userid = Auth::id();
+        $org->save();
     }
 }
