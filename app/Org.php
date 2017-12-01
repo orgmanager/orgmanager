@@ -32,4 +32,9 @@ class Org extends Model
     {
         return $this->belongsTo('App\Team');
     }
+
+    public function hasPassword()
+    {
+        return $this->password != null && trim($this->password) != "";
+    }
 }
