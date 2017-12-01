@@ -35,6 +35,6 @@ class Org extends Model
 
     public function hasPassword()
     {
-        return $this->password != null && trim($this->password) != "";
+        return $this->password != null && trim($this->password) != '';
     }
 }
