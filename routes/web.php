@@ -13,7 +13,7 @@
 */
 
 // Pages
-Route::get('/', 'HomeController@index')->name('landing');
+Route::view('/', 'landing')->middleware('guest')->name('landing');
 Route::get('dashboard', 'DashboardController@index')->name('dashboard');
 Route::get('org/{org}', 'OrgController@index')->name('org');
 Route::post('org/{org}', 'OrgController@changePassword')->name('org.password');
