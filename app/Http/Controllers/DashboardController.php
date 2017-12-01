@@ -15,10 +15,7 @@ class DashboardController extends Controller
     public function index()
     {
         $orgs = Org::where('userid', '=', Auth::id())->paginate(15);
-        if (count($orgs) == 0) {
-            return view('empty');
-        }
 
-        return view('orgs')->with('orgs', $orgs);
+        return count($orgs) == 0 ? view('empty') : view('orgs')->withOrgs($orgs);
     }
 }
