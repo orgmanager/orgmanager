@@ -180,8 +180,6 @@ return [
         /*
          * Package Service Providers...
          */
-
-        Bugsnag\BugsnagLaravel\BugsnagServiceProvider::class,
         OrgManager\Logos\OrgManagerLogosServiceProvider::class,
         // OrgManager\OrgmanagerCustom\OrgmanagerCustomServiceProvider::class,
 
@@ -244,7 +242,6 @@ return [
         'View'         => Illuminate\Support\Facades\View::class,
         'Github'       => GrahamCampbell\GitHub\Facades\GitHub::class,
         'Input'        => Illuminate\Support\Facades\Input::class,
-        'Bugsnag'      => Bugsnag\BugsnagLaravel\Facades\Bugsnag::class,
     ],
 
 ];
