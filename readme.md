@@ -1,8 +1,6 @@
 # OrgManager
 <p align="center"><img src="https://raw.githubusercontent.com/orgmanager/branding/master/PNG/orgmanager_Horizontal.png"></p>
 
-<a href="https://app.codesponsor.io/link/SZg7S3pmBM9qjYsat2jPym2f/orgmanager/orgmanager" rel="nofollow"><img src="https://app.codesponsor.io/embed/SZg7S3pmBM9qjYsat2jPym2f/orgmanager/orgmanager.svg" style="width: 888px; height: 68px;" alt="Sponsor" /></a>
-
 [![Build Status](https://travis-ci.org/orgmanager/orgmanager.svg?branch=master)](https://travis-ci.org/orgmanager/orgmanager)
 [![Code Coverage](https://scrutinizer-ci.com/g/orgmanager/orgmanager/badges/coverage.png?b=master)](https://scrutinizer-ci.com/g/orgmanager/orgmanager/?branch=master)
 [![CodeCov](https://codecov.io/gh/orgmanager/orgmanager/branch/master/graph/badge.svg)](https://codecov.io/gh/orgmanager/orgmanager)
