@@ -1,1 +1,1 @@
-require('sweetalert2');
+require('sweetalert');

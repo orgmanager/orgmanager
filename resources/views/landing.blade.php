@@ -75,7 +75,7 @@
     @include('layouts.code.footer')
     @if (count($errors) > 0)
     <script>
-        swal("Oops...", "{{ $errors->first() }}", "error");
+        sweetAlert("Oops...", "{{ $errors->first() }}", "error");
     </script>
 @endif
 @if (session('success'))
