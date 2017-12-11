@@ -88,7 +88,7 @@
 <!-- Scripts -->
 @if (count($errors) > 0)
     <script>
-        sweetAlert("Oops...", "{{ $errors->first() }}", "error");
+        swal("Oops...", "{{ $errors->first() }}", "error");
     </script>
 @endif
 @if (session('success'))

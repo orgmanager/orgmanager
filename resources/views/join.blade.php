@@ -66,7 +66,7 @@
     <script src="https://unpkg.com/sweetalert2@7.0.6/dist/sweetalert2.all.js"></script>
     @if (count($errors) > 0)
         <script>
-            sweetAlert("Oops...", "{{ $errors->first() }}", "error");
+            swal("Oops...", "{{ $errors->first() }}", "error");
         </script>
     @endif
     @if (session('success'))

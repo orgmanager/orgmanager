@@ -1,1 +1,1 @@
-require('sweetalert');
+window.swal = require('sweetalert2');
