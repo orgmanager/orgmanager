@@ -7,7 +7,7 @@
 
 require('./bootstrap');
 
-require('sweetalert');
+require('sweetalert2');
 
 require('primer-alerts');
 require('primer-avatars');
