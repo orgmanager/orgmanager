@@ -63,7 +63,7 @@
             </form>
         </div>
     </div>
-    <script src="https://unpkg.com/sweetalert2@7.0.6/dist/sweetalert2.all.js"></script>
+    <script src="{{ mix('js/landing.js') }}"></script>
     @if (count($errors) > 0)
         <script>
             swal("Oops...", "{{ $errors->first() }}", "error");
