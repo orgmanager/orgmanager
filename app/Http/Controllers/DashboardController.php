@@ -16,6 +16,6 @@ class DashboardController extends Controller
     {
         $orgs = Org::where('userid', '=', Auth::id())->get();
 
-        return count($orgs) == 0 ? view('empty') : view('new-orgs')->withOrgs($orgs);
+        return count($orgs) == 0 ? view('empty') : view('orgs')->withOrgs($orgs);
     }
 }
