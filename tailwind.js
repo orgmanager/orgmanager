@@ -115,6 +115,7 @@ var colors = {
 
   'brand': '#00acc6',
   'brand-dark': '#009bb3',
+  'brand-darker': '#0c879c',
 
   'indigo-darkest': '#191e38',
   'indigo-darker': '#2f365f',
@@ -671,7 +672,8 @@ module.exports = {
     '8': '2rem',
     '12': '3rem',
     '14': '3.5rem',
-    '15': '3.75rem'
+    '15': '3.75rem',
+    '46': '11.5rem'
   },
 
 
