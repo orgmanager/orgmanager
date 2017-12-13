@@ -14,8 +14,8 @@ class DashboardController extends Controller
 
     public function index()
     {
-        $orgs = Org::where('userid', '=', Auth::id())->paginate(15);
+        $orgs = Org::where('userid', '=', Auth::id())->get();
 
-        return count($orgs) == 0 ? view('empty') : view('orgs')->withOrgs($orgs);
+        return count($orgs) == 0 ? view('empty') : view('new-orgs')->withOrgs($orgs);
     }
 }
