@@ -10,7 +10,7 @@
     @include('layouts.code.head')
 </head>
 <body class="">
-    <div class="absolute pin flex justify-center items-center text-center bg-grey-lightest -mb-24">
+    <div class="absolute pin flex justify-center items-center text-center bg-grey-lightest -mb-24 border-t-2 border-brand">
         <div>
             <svg class="w-104 h-24 mb-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 344.5 83.2">
                 <path fill="#0FAEC9" d="M45.3 1.6c-2-2-5.5-2-7.6 0l-36 36c-2.2 2.2-2.2 5.6 0 7.7l36.2 36.3c2 2 5.4 2 7.5 0l36-36c2.2-2.2 2.2-5.6 0-7.7L45.4 1.5zm22.3 48.7L59 41.6l2-2.2-6.4-6.5-8.7 8.6 6.4 6.5 2.2-2 8.7 8.6-8.7 8.7-8.7-8.7 2-2.2-6.4-6.5-8.7 8.6 6.4 6.5 2.2-2 8.7 8.6-8.7 8.7-8.7-8.7 2-2.2-10.8-10.8 13-13-6.5-6.5-2.2 2.3-8.7-8.7 8.7-8.7 8.7 8.6-2.2 2.2 6.5 6.5 13-13L65.3 35l2.2-2 8.7 8.6-8.6 8.7z"/>
