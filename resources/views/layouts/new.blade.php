@@ -17,7 +17,7 @@
         @yield('header')
         @include('layouts.code.head')
     </head>
-<body class="bg-grey-lightest font-sans border-t-2 border-brand overflow-hidden">
+<body class="bg-grey-lightest font-sans border-t-2 border-brand overflow-hidden @yield('body-classes')">
     <div class="fixed pin-x pin-t w-screen border-t-2 border-brand z-50"></div>
     <div id="app">
         <nav class="w-screen h-12 fixed">
@@ -31,7 +31,7 @@
                             </svg>
                         </a>
                         <div class="w-1/2 flex justify-center">
-                            <a href="{{ route('dashboard') }}" class="no-underline text-inherit mt-1 border-b-2 {{ Route::is('dashboard') ? 'border-brand':'border-transparent hover:border-brand' }}">Dashboard</a>
+                            <a href="{{ route('dashboard') }}" class="no-underline text-inherit mt-1 border-b-2 {{ Route::is('dashboard') ? 'border-brand hover:border-purple':'border-transparent hover:border-purple' }}">Dashboard</a>
                         </div>
                         <div class="w-1/4 text-right flex justify-center mt-1">
                             <a href="{{ route('logout') }}" class="no-underline mt-1 flex justify-center text-grey" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
