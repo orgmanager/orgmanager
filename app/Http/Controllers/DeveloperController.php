@@ -8,17 +8,7 @@ class DeveloperController extends Controller
 {
     public function __construct()
     {
-        $this->middleware('auth', ['except' => 'index']);
-    }
-
-    public function index()
-    {
-        return view('developer');
-    }
-
-    public function token()
-    {
-        return view('token');
+        $this->middleware('auth');
     }
 
     public function deleteToken()
