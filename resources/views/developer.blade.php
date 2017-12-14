@@ -1,26 +1,18 @@
-@extends('layouts.app')
+@extends('layouts.new')
 
 @section('content')
-    <div class="container">
-        <div class="row">
-            <div class="col-md-8 col-md-offset-2">
-                <div class="panel panel-default">
-                    <div class="panel-heading">Developer zone</div>
-                    <div class="panel-body text-center">
-                        <p>Want to integrate your application with Orgmanager? Now you can!</p>
-                        <p>Introducing the Orgmanager API, that allows you to retrieve details about organizations, your
-                            orgmanager installation or even invite users!</p>
-                        @if (Auth::check())
-                            <p>To start, <a href="{{ url('token') }}">grab your API token</a>.</p>
-                        @else
-                            <p>You need a Orgmanager account, so <a href="{{ url('login') }}">register</a> or <a
-                                        href="{{ url('login') }}">login</a> and come back!</p>
-                        @endif
-                        <p>Also, you may want to <a href="{{ url('http://docs.orgmanager.miguelpiedrafita.com') }}"
-                                                    target="_blank">access the API documentation</a>!</p>
-                        <p>Good luck!</p>
-                    </div>
-                </div>
+    <div>
+        <div class="max-w-sm rounded overflow-hidden shadow-lg">
+            <div class="px-6 py-4">
+                <div class="font-bold text-xl mb-2 text-center">Want to integrate your application with OrgManager? Now you can!</div>
+                <p class="text-grey-darker text-base leading-tight">Introducing the Orgmanager API, that allows you to retrieve details about organizations, your OrgManager installation or even invite users!</p>
+            </div>
+            <div class="px-6 py-4 text-center">
+                @auth
+                    <a href="{{ route('token') }}" class="no-underline bg-brand hover:bg-brand-dark text-white font-bold py-2 px-4 rounded">Get your API token</a>
+                @else
+                    <a href="{{ route('login') }}" class="no-underline bg-brand hover:bg-brand-dark text-white font-bold py-2 px-4 rounded">Login and get your API token</a>
+                @endif
             </div>
         </div>
     </div>
