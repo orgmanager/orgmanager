@@ -33,7 +33,7 @@
                         <div class="w-1/2 flex justify-center">
                             <a href="{{ route('dashboard') }}" class="no-underline text-inherit mt-1 border-b-2 {{ Route::is('dashboard') ? 'border-brand hover:border-purple':'border-transparent hover:border-purple' }}">Dashboard</a>
                         </div>
-                        <div class="w-1/4 text-right flex justify-center mt-1">
+                        <div class="w-1/4 text-right flex justify-center">
                             <a href="{{ route('logout') }}" class="no-underline mt-1 flex justify-center text-grey" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
                                 <svg class="h-4 w-4 mr-3" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M266.264 330.704c-6.256 6.248-6.256 16.376 0 22.624 3.128 3.128 7.216 4.688 11.312 4.688s8.184-1.56 11.312-4.688l94.504-97-94.504-97.008c-6.248-6.248-16.376-6.248-22.624 0-6.256 6.248-6.256 16.376 0 22.624l57.872 57.88H15.92c-8.84 0-16 7.168-16 16s7.16 16 16 16h309.224l-58.88 58.88zM480.08 0h-288c-17.68 0-32.008 14.328-32.008 32v144h32.216V51.512c0-10.688 8.672-19.36 19.36-19.36H460c10.704 0 19.36 8.672 19.36 19.36l.504 409.144c0 10.688-8.656 19.36-19.36 19.36H211.656c-10.688 0-19.36-8.672-19.36-19.36V335.472l-32.216.04V480c0 17.672 14.328 32 32.008 32h288c17.672 0 32-14.328 32-32V32c-.008-17.672-14.336-32-32.008-32z"/></svg>
                                 <span>Logout</span>
