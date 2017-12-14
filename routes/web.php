@@ -31,7 +31,7 @@ Route::post('join/{org}', 'JoinController@inviteUser')->name('join.post');
 Route::get('join/{org}/callback', 'JoinController@callback')->name('join.callback');
 Route::get('o/{name}', 'JoinController@redirect')->name('redirect');
 Route::view('developer', 'developer')->name('developer');
-Route::view('token', 'new-token')->middleware('auth')->name('token');
+Route::view('token', 'token')->middleware('auth')->name('token');
 Route::delete('token', 'DeveloperController@deleteToken')->name('token.delete');
 
 // Auth routes
