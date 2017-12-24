@@ -26,7 +26,7 @@ class DataTest extends TestCase
                          ->get('dashboard');
 
         $response->assertStatus(200)
-                 ->assertViewHas('orgs', Org::where('userid', '=', $user->id)->paginate(15));
+                 ->assertViewHas('orgs', Org::where('userid', '=', $user->id)->get());
     }
 
     /**
