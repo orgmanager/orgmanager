@@ -11,9 +11,9 @@
  *
  * See: https://github.com/tailwindcss/tailwindcss/issues/53#issuecomment-341413622
  */
- @tailwind preflight;
- 
- /**
+@tailwind preflight;
+
+/**
   * Here you would add any of your custom component classes; stuff that you'd
   * want loaded *before* the utilities so that the utilities could still
   * override them.
@@ -28,8 +28,8 @@
   * @import "components/buttons";
   * @import "components/forms";
   */
- 
- /**
+
+/**
   * This injects all of Tailwind's utility classes, generated based on your
   * config file.
   *
@@ -39,9 +39,9 @@
   *
   * See: https://github.com/tailwindcss/tailwindcss/issues/53#issuecomment-341413622
   */
- @tailwind utilities;
- 
- /**
+@tailwind utilities;
+
+/**
   * Here you would add any custom utilities you need that don't come out of the
   * box with Tailwind.
   *
@@ -67,21 +67,21 @@
 }
 
 .link-shadow {
-  -webkit-box-shadow: 0 -5px 0 0 config('colors.green-lighter') inset;
-          box-shadow: 0 -5px 0 0 config('colors.green-lighter') inset;
+  -webkit-box-shadow: 0 -5px 0 0 config("colors.green-lighter") inset;
+  box-shadow: 0 -5px 0 0 config("colors.green-lighter") inset;
 
   &:hover {
-      -webkit-box-shadow: inset 0 -50px 0 0 config('colors.green-lighter');
-              box-shadow: inset 0 -50px 0 0 config('colors.green-lighter');
+    -webkit-box-shadow: inset 0 -50px 0 0 config("colors.green-lighter");
+    box-shadow: inset 0 -50px 0 0 config("colors.green-lighter");
   }
 }
 
 .link-transition {
-  -webkit-transition: -webkit-box-shadow .30s;
-  transition: -webkit-box-shadow .30s;
-  -o-transition: box-shadow .30s;
-  transition: box-shadow .30s;
-  transition: box-shadow .30s, -webkit-box-shadow .30s;
+  -webkit-transition: -webkit-box-shadow 0.3s;
+  transition: -webkit-box-shadow 0.3s;
+  -o-transition: box-shadow 0.3s;
+  transition: box-shadow 0.3s;
+  transition: box-shadow 0.3s, -webkit-box-shadow 0.3s;
 }
 
 .transition {
@@ -93,28 +93,48 @@
 }
 
 @keyframes fadein {
-  from { opacity: 0; }
-  to   { opacity: 1; }
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
 
 @-moz-keyframes fadein {
-  from { opacity: 0; }
-  to   { opacity: 1; }
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
 
 @-webkit-keyframes fadein {
-  from { opacity: 0; }
-  to   { opacity: 1; }
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
 
 @-ms-keyframes fadein {
-  from { opacity: 0; }
-  to   { opacity: 1; }
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
 
 @-o-keyframes fadein {
-  from { opacity: 0; }
-  to   { opacity: 1; }
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
 
 @import (less) "../../../node_modules/sweetalert2/dist/sweetalert2.css";
