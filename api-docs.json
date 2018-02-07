@@ -1,205 +1,188 @@
 {
-    "swagger": "2.0",
-    "info": {
-        "title": "Orgmanager API",
-        "version": "",
-        "description": "The Orgmanager API allows you to integrate Orgmanager with other applications and projects.\n\n## Getting your token\n\nTo get your API token, go to the developers page of your orgmanager installation (http://orgmanager-installation.com/developers)"
+  "swagger": "2.0",
+  "info": {
+    "title": "Orgmanager API",
+    "version": "",
+    "description":
+      "The Orgmanager API allows you to integrate Orgmanager with other applications and projects.\n\n## Getting your token\n\nTo get your API token, go to the developers page of your orgmanager installation (http://orgmanager-installation.com/developers)"
+  },
+  "host": "orgmanager.miguelpiedrafita.com",
+  "basePath": "/api",
+  "schemes": ["https"],
+  "paths": {
+    "/user": {
+      "get": {
+        "responses": {
+          "200": {
+            "description": "OK",
+            "headers": {},
+            "examples": {
+              "application/json": {
+                "id": 1,
+                "name": "Miguel Piedrafita",
+                "email": "soy@miguelpiedrafita.com",
+                "github_username": "m1guelpf",
+                "created_at": "2017-01-25 18:44:32",
+                "updated_at": "2017-02-16 19:40:50"
+              }
+            }
+          }
+        },
+        "summary": "Get user info",
+        "description": "",
+        "tags": [],
+        "parameters": [],
+        "produces": ["application/json"]
+      }
     },
-    "host": "orgmanager.miguelpiedrafita.com",
-    "basePath": "/api",
-    "schemes": [
-        "https"
-    ],
-    "paths": {
-        "/user": {
-            "get": {
-                "responses": {
-                    "200": {
-                        "description": "OK",
-                        "headers": {},
-                        "examples": {
-                            "application/json": {
-                                "id": 1,
-                                "name": "Miguel Piedrafita",
-                                "email": "soy@miguelpiedrafita.com",
-                                "github_username": "m1guelpf",
-                                "created_at": "2017-01-25 18:44:32",
-                                "updated_at": "2017-02-16 19:40:50"
-                            }
-                        }
-                    }
-                },
-                "summary": "Get user info",
-                "description": "",
-                "tags": [],
-                "parameters": [],
-                "produces": [
-                    "application/json"
-                ]
+    "/user/orgs": {
+      "get": {
+        "responses": {
+          "200": {
+            "description": "OK",
+            "headers": {},
+            "examples": {
+              "application/json": {
+                "id": 1,
+                "name": "Test Organization",
+                "url": "https://api.github.com/orgs/test-org",
+                "description": null,
+                "avatar": "https://miguelpiedrafita.com/logo.png",
+                "invitecount": 100
+              }
             }
+          }
         },
-        "/user/orgs": {
-            "get": {
-                "responses": {
-                    "200": {
-                        "description": "OK",
-                        "headers": {},
-                        "examples": {
-                            "application/json": {
-                                "id": 1,
-                                "name": "Test Organization",
-                                "url": "https://api.github.com/orgs/test-org",
-                                "description": null,
-                                "avatar": "https://miguelpiedrafita.com/logo.png",
-                                "invitecount": 100
-                            }
-                        }
-                    }
-                },
-                "summary": "Get user organizations",
-                "description": "",
-                "tags": [],
-                "parameters": [],
-                "produces": [
-                    "application/json"
-                ]
-            }
-        },
-        "/org/[id]": {
-            "get": {
-                "responses": {
-                    "200": {
-                        "description": "OK",
-                        "headers": {},
-                        "examples": {
-                            "application/json": {
-                                "id": 1,
-                                "name": "Test Org",
-                                "url": "https://api.github.com/orgs/test-org",
-                                "description": null,
-                                "avatar": "https://avatars.githubusercontent.com/1",
-                                "invitecount": 0
-                            }
-                        }
-                    }
-                },
-                "summary": "Get organization info",
-                "description": "",
-                "tags": [],
-                "parameters": [],
-                "produces": [
-                    "application/json"
-                ]
-            },
-            "post": {
-                "responses": {
-                    "200": {
-                        "description": "OK",
-                        "headers": {},
-                        "examples": {
-                            "application/json": {
-                                "id": 1,
-                                "name": "Test Org",
-                                "url": "https://api.github.com/orgs/test-org",
-                                "description": null,
-                                "avatar": "https://avatars.githubusercontent.com/1",
-                                "invitecount": 0,
-                                "password": "{newpassword}"
-                            }
-                        }
-                    }
-                },
-                "summary": "Change organization password",
-                "description": "",
-                "tags": [],
-                "parameters": [],
-                "produces": [
-                    "application/json"
-                ]
-            },
-            "put": {
-                "responses": {
-                    "204": {
-                        "description": "No Content",
-                        "headers": {},
-                        "examples": {
-                            "text/html; charset=UTF-8": ""
-                        }
-                    }
-                },
-                "summary": "Update organization",
-                "description": "",
-                "tags": [],
-                "parameters": [],
-                "produces": [
-                    "text/html; charset=UTF-8"
-                ]
-            },
-            "delete": {
-                "responses": {
-                    "204": {
-                        "description": "No Content",
-                        "headers": {},
-                        "examples": {
-                            "text/html; charset=UTF-8": ""
-                        }
-                    }
-                },
-                "summary": "Delete organization",
-                "description": "",
-                "tags": [],
-                "parameters": [],
-                "produces": [
-                    "text/html; charset=UTF-8"
-                ]
-            }
-        },
-        "/join/[id]": {
-            "post": {
-                "responses": {
-                    "204": {
-                        "description": "No Content",
-                        "headers": {},
-                        "examples": {
-                            "text/html; charset=UTF-8": ""
-                        }
-                    }
-                },
-                "summary": "Join organization",
-                "description": "",
-                "tags": [],
-                "parameters": [],
-                "produces": [
-                    "text/html; charset=UTF-8"
-                ]
-            }
-        },
-        "/token/regenerate": {
-            "get": {
-                "responses": {
-                    "200": {
-                        "description": "OK",
-                        "headers": {},
-                        "examples": {
-                            "application/json": "{newtoken}"
-                        }
-                    }
-                },
-                "summary": "Regenerate Token",
-                "description": "",
-                "tags": [],
-                "parameters": [],
-                "produces": [
-                    "application/json"
-                ]
-            }
-        }
+        "summary": "Get user organizations",
+        "description": "",
+        "tags": [],
+        "parameters": [],
+        "produces": ["application/json"]
+      }
     },
-    "definitions": {
-        "User Data": {},
-        "User Organizations": {},
-        "Organizations": {},
-        "Join": {},
-        "Token": {}
+    "/org/[id]": {
+      "get": {
+        "responses": {
+          "200": {
+            "description": "OK",
+            "headers": {},
+            "examples": {
+              "application/json": {
+                "id": 1,
+                "name": "Test Org",
+                "url": "https://api.github.com/orgs/test-org",
+                "description": null,
+                "avatar": "https://avatars.githubusercontent.com/1",
+                "invitecount": 0
+              }
+            }
+          }
+        },
+        "summary": "Get organization info",
+        "description": "",
+        "tags": [],
+        "parameters": [],
+        "produces": ["application/json"]
+      },
+      "post": {
+        "responses": {
+          "200": {
+            "description": "OK",
+            "headers": {},
+            "examples": {
+              "application/json": {
+                "id": 1,
+                "name": "Test Org",
+                "url": "https://api.github.com/orgs/test-org",
+                "description": null,
+                "avatar": "https://avatars.githubusercontent.com/1",
+                "invitecount": 0,
+                "password": "{newpassword}"
+              }
+            }
+          }
+        },
+        "summary": "Change organization password",
+        "description": "",
+        "tags": [],
+        "parameters": [],
+        "produces": ["application/json"]
+      },
+      "put": {
+        "responses": {
+          "204": {
+            "description": "No Content",
+            "headers": {},
+            "examples": {
+              "text/html; charset=UTF-8": ""
+            }
+          }
+        },
+        "summary": "Update organization",
+        "description": "",
+        "tags": [],
+        "parameters": [],
+        "produces": ["text/html; charset=UTF-8"]
+      },
+      "delete": {
+        "responses": {
+          "204": {
+            "description": "No Content",
+            "headers": {},
+            "examples": {
+              "text/html; charset=UTF-8": ""
+            }
+          }
+        },
+        "summary": "Delete organization",
+        "description": "",
+        "tags": [],
+        "parameters": [],
+        "produces": ["text/html; charset=UTF-8"]
+      }
+    },
+    "/join/[id]": {
+      "post": {
+        "responses": {
+          "204": {
+            "description": "No Content",
+            "headers": {},
+            "examples": {
+              "text/html; charset=UTF-8": ""
+            }
+          }
+        },
+        "summary": "Join organization",
+        "description": "",
+        "tags": [],
+        "parameters": [],
+        "produces": ["text/html; charset=UTF-8"]
+      }
+    },
+    "/token/regenerate": {
+      "get": {
+        "responses": {
+          "200": {
+            "description": "OK",
+            "headers": {},
+            "examples": {
+              "application/json": "{newtoken}"
+            }
+          }
+        },
+        "summary": "Regenerate Token",
+        "description": "",
+        "tags": [],
+        "parameters": [],
+        "produces": ["application/json"]
+      }
     }
+  },
+  "definitions": {
+    "User Data": {},
+    "User Organizations": {},
+    "Organizations": {},
+    "Join": {},
+    "Token": {}
+  }
 }
