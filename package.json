@@ -28,7 +28,7 @@
     "less-loader": "4.0.6",
     "primer-alerts": "1.4.0",
     "primer-avatars": "1.3.0",
-    "primer-blankslate": "1.3.0",
+    "primer-blankslate": "1.4.5",
     "primer-states": "0.4.4",
     "primer-tooltips": "1.3.0",
     "sweetalert2": "7.15.0"
