@@ -5706,11 +5706,11 @@ primer-support@4.5.2:
   version "4.5.2"
   resolved "https://registry.yarnpkg.com/primer-support/-/primer-support-4.5.2.tgz#daab9a48881b6953e8e6ca01865a2f415bf777c5"
 
-primer-tooltips@1.3.0:
-  version "1.3.0"
-  resolved "https://registry.yarnpkg.com/primer-tooltips/-/primer-tooltips-1.3.0.tgz#ea3b4955c6b3d6de5a26d30379e7a58b93331ea3"
+primer-tooltips@1.5.2:
+  version "1.5.2"
+  resolved "https://registry.yarnpkg.com/primer-tooltips/-/primer-tooltips-1.5.2.tgz#3799ce757c1e29953c924aefb849265f617554e7"
   dependencies:
-    primer-support "4.3.0"
+    primer-support "4.5.2"
 
 private@^0.1.6, private@^0.1.7, private@~0.1.5:
   version "0.1.7"
