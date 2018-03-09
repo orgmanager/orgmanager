@@ -25,7 +25,7 @@
     "bootswatch": "4.0.0",
     "jquery": "3.3.1",
     "less": "3.0.1",
-    "less-loader": "4.0.6",
+    "less-loader": "4.1.0",
     "primer-alerts": "1.5.5",
     "primer-avatars": "1.5.2",
     "primer-blankslate": "1.4.5",
