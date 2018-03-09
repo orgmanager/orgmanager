@@ -4197,9 +4197,9 @@ lcid@^1.0.0:
   dependencies:
     invert-kv "^1.0.0"
 
-less-loader@4.0.6:
-  version "4.0.6"
-  resolved "https://registry.yarnpkg.com/less-loader/-/less-loader-4.0.6.tgz#7bcfbb9053181c18d57e213e87346958e02b2769"
+less-loader@4.1.0:
+  version "4.1.0"
+  resolved "https://registry.yarnpkg.com/less-loader/-/less-loader-4.1.0.tgz#2c1352c5b09a4f84101490274fd51674de41363e"
   dependencies:
     clone "^2.1.1"
     loader-utils "^1.1.0"
@@ -5698,7 +5698,7 @@ primer-states@0.4.4:
   dependencies:
     primer-support "*"
 
-primer-support@*, primer-support@4.3.0:
+primer-support@*:
   version "4.3.0"
   resolved "https://registry.yarnpkg.com/primer-support/-/primer-support-4.3.0.tgz#c470fef8c0bff2ec8a771a0749783c2b388118fe"
 
