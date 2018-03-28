@@ -30,9 +30,9 @@ OrgManager takes Github Organization invites to a new level! [Read more on the O
 
 ## Install
 
-To install the OrgManager **Stable Version**, [check out these docs](https://orgmanager.readme.io/docs/prod-requirements).
+To install the OrgManager **Stable Version**, [check out these docs](https://orgmanager.unmarkdocs.co/stable-version/requirements).
 
-To learn how to setup the OrgManager **Developer Version** up and running on your local machine for development and testing purposes see the [OrgManager Developer Version](https://orgmanager.readme.io/docs/dev-requirements) section in the OrgManager Documentation.
+To learn how to setup the OrgManager **Developer Version** up and running on your local machine for development and testing purposes see the [OrgManager Developer Version](https://orgmanager.unmarkdocs.co/development-version/requirements) section in the OrgManager Documentation.
 
 ## Hosted Version
 
@@ -42,7 +42,7 @@ Not everyone can afford a server, nor do they have the skills to set up a modern
 
 OrgManager is under active development, and that means it gets lots of updates, bug fixes and new features. Read the guides below to learn how to update to the latest OrgManager version.
 
-For updating a development environment, read the [Updating the OrgManager Developer Version](https://orgmanager.readme.io/docs/dev-updating) section in the OrgManager Documentation. For updating a production environment, read the [Updating the OrgManager Stable Version](https://orgmanager.readme.io/docs/prod-updating) section in the OrgManager Documentation.
+For updating a development environment, read the [Updating the OrgManager Developer Version](https://orgmanager.unmarkdocs.co/development-version/updating) section in the OrgManager Documentation. For updating a production environment, read the [Updating the OrgManager Stable Version](https://orgmanager.unmarkdocs.co/stable-version/updating) section in the OrgManager Documentation.
 
 We (try to) follow [SemVer](http://semver.org/). For the versions available, see the [releases page](https://github.com/orgmanager/orgmanager/releases).
 
@@ -50,7 +50,7 @@ We (try to) follow [SemVer](http://semver.org/). For the versions available, see
 
 We use the Laravel testing functionalities and PHPUnit to add automated testing to OrgManager.
 
-You can read about [how to configure the testing environment and how to run the tests](https://orgmanager.readme.io/docs/testing) in the OrgManager Documentation.
+You can read about [how to configure the testing environment and how to run the tests](https://orgmanager.unmarkdocs.co/development-version/testing) in the OrgManager Documentation.
 
 
 ## Built With
@@ -70,11 +70,11 @@ You can read about [how to configure the testing environment and how to run the 
 
 Facing an issue? Want to meet other OrgManager users? Just want to say hello?
 
-Read the [OrgManager Support Channels](https://orgmanager.readme.io/docs/orgmanager-support-channels) section in the OrgManager Documentation.
+Read the [OrgManager Support Channels](https://orgmanager.unmarkdocs.co/support) section in the OrgManager Documentation.
 
 ## Contributing
 
-Please read the [Contributing to OrgManager](https://orgmanager.readme.io/docs/contributing-to-orgmanager) section on the OrgManager Documentation for ideas on how to help, and the [CONTRIBUTING.md](https://github.com/orgmanager/orgmanager/blob/master/.github/CONTRIBUTING.md) file for details on our code of conduct, and the process for submitting pull requests.
+Please read the [Contributing to OrgManager](https://orgmanager.unmarkdocs.co/contributing) section on the OrgManager Documentation for ideas on how to help, and the [CONTRIBUTING.md](https://github.com/orgmanager/orgmanager/blob/master/.github/CONTRIBUTING.md) file for details on our code of conduct, and the process for submitting pull requests.
 
 ### Sponsors
 
@@ -150,7 +150,7 @@ Support us with a monthly donation and help us continue our activities. [[Become
 
 ### People
 
-For information about all the people that have helped to make this possible, check the [People](https://orgmanager.readme.io/docs/people) section in the OrgManager Documentation.
+For information about all the people that have helped to make this possible, check the [People](https://orgmanager.unmarkdocs.co/thanks) section in the OrgManager Documentation.
 
 ## License
 
