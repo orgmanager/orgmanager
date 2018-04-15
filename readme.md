@@ -57,7 +57,7 @@ You can read about [how to configure the testing environment and how to run the 
 
 * [PHP](https://php.net) - The programming language used.
 * [MySQL](https://mysql.com) - Database software used.
-* [Laravel 5.5](https://laravel.com) - The web framework used.
+* [Laravel 5.6](https://laravel.com) - The web framework used.
 * [Composer](https://getcomposer.org) - The Dependency Management software used.
 * [Github](https://github.com) - Thank you for your awesome API, and to the awesome people at [Github Support](https://github.com/contact)!
 * [Socialite](https://github.com/laravel/socialite) - The OAuth library used.
