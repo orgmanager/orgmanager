@@ -25,11 +25,11 @@
         <nav>
             <ul>
                 <li>
-                    <a href="https://status.miguelpiedrafita.com/components/58c0fca18c48eb4923fc46bf" target="_blank"
+                    <a href="https://status.miguelpiedrafita.com/components/58c0fca18c48eb4923fc46bf" target="_blank" rel="noopener noreferrer"
                        id="status-page" class="light-btn text-intro opacity-0">OrgManager Status Page</a>
                 </li>
                 <li>
-                    <a href="https://github.com/orgmanager/orgmanager" target="_blank"
+                    <a href="https://github.com/orgmanager/orgmanager" target="_blank" rel="noopener noreferrer"
                        class="action-btn trigger text-intro opacity-0">GitHub</a>
                 </li>
             </ul>
