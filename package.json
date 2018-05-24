@@ -22,7 +22,7 @@
   "dependencies": {
     "bootstrap-sass": "3.3.7",
     "bootstrap-social": "5.1.1",
-    "bootswatch": "4.0.0",
+    "bootswatch": "4.1.1",
     "jquery": "3.3.1",
     "less": "3.0.2",
     "less-loader": "4.1.0",
