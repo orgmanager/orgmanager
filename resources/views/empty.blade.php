@@ -10,7 +10,7 @@
         <div class="mt-15">
             <p class="text-black-light text-2xl m-4 text-center">Looks like there's nothing here</p>
             <p class="text-base text-black-darker mb-2 text-center">Try to  sync the from your Github account, using the sync button below.</p>
-            <p class="text-base text-black-darker text-center">If your  organizations aren't showing here after sync, check <a class="no-underline text-inherit link-shadow link-transition" href="https://github.com/settings/connections/applications/{{ config('services.github.client_id') }}" target="_blank">we’ve been given access to them</a>.</p>
+            <p class="text-base text-black-darker text-center">If your  organizations aren't showing here after sync, check <a class="no-underline text-inherit link-shadow link-transition" href="https://github.com/settings/connections/applications/{{ config('services.github.client_id') }}" target="_blank" rel="noopener noreferrer">we’ve been given access to them</a>.</p>
         </div>
         <div class="mt-8 text-center">
             <form action="{{ route('sync') }}" method="POST">
