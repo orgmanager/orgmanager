@@ -37,7 +37,7 @@
                         </td>
                         <td class="flex items-center justify-center">
                             <p class="text-base text-grey mr-3">Invite Link</p>
-                            <a class="text-base text-brand-darker mr-6" href="{{ route('join', $org) }}" target="_blank">{{ route('join', $org) }}</a>
+                            <a class="text-base text-brand-darker mr-6" href="{{ route('join', $org) }}" target="_blank" rel="noopener noreferrer">{{ route('join', $org) }}</a>
                             <a href="{{ route('org', $org) }}" class="no-underline bg-brand hover:bg-brand-dark text-white font-bold py-3 px-4 rounded-full focus:outline-none">
                                 <div class="inline-block">
                                     <div class="flex items-center justify-center">
