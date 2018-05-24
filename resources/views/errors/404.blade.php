@@ -39,8 +39,8 @@
     <ul>
         <li><a href="{{ url('/') }}">Home</a></li>
         <li><a href="{{ url('https://status.miguelpiedrafita.com/components/58c0fca18c48eb4923fc46bf') }}"
-               target="_blank">Status Page</a></li>
-        <li><a href="{{ url('https://github.com/orgmanager/orgmanager') }}" target="_blank">GitHub</a></li>
+               target="_blank" rel="noopener noreferrer">Status Page</a></li>
+        <li><a href="{{ url('https://github.com/orgmanager/orgmanager') }}" target="_blank" rel="noopener noreferrer">GitHub</a></li>
     </ul>
 </footer>
 <script src="{{ url('js/404.min.js') }}"></script>
