@@ -67,7 +67,7 @@
                                               required="required">{{ old('message') }}</textarea>
                                     <small><a class="pull-left text-muted"
                                               href="https://guides.github.com/features/mastering-markdown/"
-                                              target="_blank"><i class="octicon octicon-markdown"></i>Styling with
+                                              target="_blank" rel="noopener noreferrer"><i class="octicon octicon-markdown"></i>Styling with
                                             Markdown is supported</a></small>
                                     <br>
                                     <br>
@@ -78,7 +78,7 @@
                         <br>
                         <div class="flash">
                             <p class="text-center">TIP: Want a pretty URL for your users? Share <a
-                                        href="{{ url('o/'.$org->name) }}" target="_blank">{{ url('o/'.$org->name) }}</a>
+                                        href="{{ url('o/'.$org->name) }}" target="_blank" rel="noopener noreferrer">{{ url('o/'.$org->name) }}</a>
                                 !</p>
                         </div>
                     </div>

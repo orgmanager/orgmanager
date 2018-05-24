@@ -84,7 +84,7 @@
                         <br>
                         <div class="flash">
                             <p class="text-center">TIP: Want a pretty URL for your users? Share <a
-                                        href="{{ url('o/'.$org->name) }}" target="_blank">{{ url('o/'.$org->name) }}</a>
+                                        href="{{ url('o/'.$org->name) }}" target="_blank" rel="noopener noreferrer">{{ url('o/'.$org->name) }}</a>
                                 !</p>
                         </div>
                     </div>

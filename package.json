@@ -24,7 +24,7 @@
     "bootstrap-social": "5.1.1",
     "bootswatch": "4.0.0",
     "jquery": "3.3.1",
-    "less": "3.0.1",
+    "less": "3.0.2",
     "less-loader": "4.1.0",
     "primer-alerts": "1.5.5",
     "primer-avatars": "1.5.2",
