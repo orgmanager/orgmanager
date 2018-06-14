@@ -5759,11 +5759,11 @@ prettier@^1.7.0:
   version "1.11.1"
   resolved "https://registry.yarnpkg.com/prettier/-/prettier-1.11.1.tgz#61e43fc4cd44e68f2b0dfc2c38cd4bb0fccdcc75"
 
-primer-alerts@1.5.5:
-  version "1.5.5"
-  resolved "https://registry.yarnpkg.com/primer-alerts/-/primer-alerts-1.5.5.tgz#0bd2bdd0aae92a0525a9af3d2e716a2eabb48a60"
+primer-alerts@1.5.7:
+  version "1.5.7"
+  resolved "https://registry.yarnpkg.com/primer-alerts/-/primer-alerts-1.5.7.tgz#bdec7c2f16a9dc4d73b999ffe53fc34ae67eaede"
   dependencies:
-    primer-support "4.5.2"
+    primer-support "4.5.4"
 
 primer-avatars@1.5.2:
   version "1.5.2"
@@ -5790,6 +5790,10 @@ primer-support@*:
 primer-support@4.5.2:
   version "4.5.2"
   resolved "https://registry.yarnpkg.com/primer-support/-/primer-support-4.5.2.tgz#daab9a48881b6953e8e6ca01865a2f415bf777c5"
+
+primer-support@4.5.4:
+  version "4.5.4"
+  resolved "https://registry.yarnpkg.com/primer-support/-/primer-support-4.5.4.tgz#05f35afaee2773264c489fab6330b931573b6047"
 
 primer-tooltips@1.5.2:
   version "1.5.2"
