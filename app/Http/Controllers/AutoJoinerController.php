@@ -31,6 +31,9 @@ class AutoJoinerController extends Controller
     {
         $gitHubSignature = request()->header('X-Hub-Signature');
         list($usedAlgorithm, $gitHubHash) = explode('=', $gitHubSignature, 2);
+        if ($usedAlgorithm !== config('auth.github_hmac', 'sha1')) {
+            return 'Wrong HMAC algorithm';
+        }
         $payload = file_get_contents('php://input');
         $calculatedHash = hash_hmac($usedAlgorithm, $payload, config('auth.github_secret'));
 
