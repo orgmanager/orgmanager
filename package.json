@@ -26,7 +26,7 @@
     "jquery": "3.3.1",
     "less": "3.0.2",
     "less-loader": "4.1.0",
-    "primer-alerts": "1.5.5",
+    "primer-alerts": "1.5.8",
     "primer-avatars": "1.5.2",
     "primer-blankslate": "1.4.5",
     "primer-states": "0.4.4",
