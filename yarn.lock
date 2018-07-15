@@ -5765,11 +5765,11 @@ primer-alerts@1.5.5:
   dependencies:
     primer-support "4.5.2"
 
-primer-avatars@1.5.2:
-  version "1.5.2"
-  resolved "https://registry.yarnpkg.com/primer-avatars/-/primer-avatars-1.5.2.tgz#9c72821768555a5aacf5666d7b71475a80da1115"
+primer-avatars@1.5.5:
+  version "1.5.5"
+  resolved "https://registry.yarnpkg.com/primer-avatars/-/primer-avatars-1.5.5.tgz#d724d3b52724ec29647eb83d43aeeb2ef6cf5adb"
   dependencies:
-    primer-support "4.5.2"
+    primer-support "4.5.5"
 
 primer-blankslate@1.4.5:
   version "1.4.5"
@@ -5790,6 +5790,10 @@ primer-support@*:
 primer-support@4.5.2:
   version "4.5.2"
   resolved "https://registry.yarnpkg.com/primer-support/-/primer-support-4.5.2.tgz#daab9a48881b6953e8e6ca01865a2f415bf777c5"
+
+primer-support@4.5.5:
+  version "4.5.5"
+  resolved "https://registry.yarnpkg.com/primer-support/-/primer-support-4.5.5.tgz#60d292e10937d44de7f3f1582256fb6ce60ae780"
 
 primer-tooltips@1.5.2:
   version "1.5.2"
