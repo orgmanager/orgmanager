@@ -1,14 +1,14 @@
 @extends('layouts.app')
 
 @section('content')
-    <div class="container">
+    <div class="" style="background-color: red">
         <div class="row">
             <div class="col-md-8 col-md-offset-2">
                 <div class="panel panel-default">
-                    <div class="panel-heading">{{ $org->name }}</div>
+                    <div class="panel-heading">Elias</div>
 
                     <div class="panel-body">
-                        <h4 class="text-center">{{ $org->name}} settings</h4>
+                        <h4 class="text-center">Elias settings</h4>
                         <div class="row">
                             <div name="password" class="col-md-4 text-center">
                                 <form id="password" method="POST">
@@ -53,7 +53,7 @@
                         <div class="row">
                             <div class="col-md-6 text-center">
                                 <p>Want to add users to a team?</p>
-                                <form action="{{ url('org/'.$org->id.'/teams') }}" method="GET">
+                                <form action="" method="GET">
                                     <button type="submit" class="btn btn-primary"><i
                                                 class="octicon octicon-organization"></i> Team settings
                                     </button>
@@ -61,7 +61,7 @@
                             </div>
                             <div class="col-md-6 text-center">
                                 <p>Custom message</p>
-                                <form action="{{ url('org/'.$org->id.'/message') }}" method="POST">
+                                <form action="" method="POST">
                                     {{ csrf_field() }}
                                     <textarea name="message" class="form-control"
                                               required="required">{{ old('message') }}</textarea>
@@ -78,7 +78,7 @@
                         <br>
                         <div class="flash">
                             <p class="text-center">TIP: Want a pretty URL for your users? Share <a
-                                        href="{{ url('o/'.$org->name) }}" target="_blank" rel="noopener noreferrer">{{ url('o/'.$org->name) }}</a>
+                                        href="" target="_blank" rel="noopener noreferrer">{{ url('o/') }}</a>
                                 !</p>
                         </div>
                     </div>
