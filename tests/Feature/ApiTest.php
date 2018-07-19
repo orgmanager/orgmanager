@@ -36,7 +36,7 @@ class ApiTest extends TestCase
         $user = factory(User::class)->create();
         $response = $this->actingAs($user, 'api')
                          ->get('api/user');
-        $response->assertStatus(200)
+        $response->assertSuccessful()
                  ->assertJson($user->toArray());
     }
 
