@@ -21,7 +21,7 @@
                     <a href="{{ route('login') }}" class="flex items-center text-center no-underline bg-brand border-2 border-brand hover:bg-white text-white hover:text-brand font-bold py-3 px-6 self-stretch rounded-full">
                         Try it out!
                     </a>
-                    <a href="https://github.com/orgmanager/orgmanager" target="_blank" rel="noopener noreferrer" class="no-underline bg-black-light border-2 border-black-light hover:bg-white text-white hover:text-black-light font-bold py-3 px-6 self-stretch rounded-full">
+                    <a href="https://github.com/Joseeli54/orgmanager" target="_blank" rel="noopener noreferrer" class="no-underline bg-black-light border-2 border-black-light hover:bg-white text-white hover:text-black-light font-bold py-3 px-6 self-stretch rounded-full">
                         <div class="flex items-center">
                             <svg class="w-6 h-6" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                                 <path d="M12 .3C5.4.3 0 5.7 0 12.3c0 5.3 3.4 9.8 8.2 11.4.6 0 .8-.3.8-.6v-2c-3.3.8-4-1.5-4-1.5-.6-1.4-1.4-1.8-1.4-1.8-1-.7 0-.7 0-.7 1.3 0 2 1.2 2 1.2 1 1.8 2.8 1.3 3.5 1 .2-.8.5-1.3.8-1.6-2.7-.3-5.5-1.3-5.5-6 0-1.2.5-2.3 1.3-3-.2-.5-.6-1.7 0-3.3 0 0 1-.3 3.4 1.2 1-.3 2-.4 3-.4s2 .2 3 .5c2.3-1.5 3.3-1.2 3.3-1.2.6 1.6.2 2.8 0 3.2 1 .8 1.3 2 1.3 3.2 0 4.6-2.8 5.6-5.5 6 .6.3 1 1 1 2v3.4c0 .4 0 .8.8.7 4.8-1.6 8.2-6 8.2-11.4 0-6.6-5.4-12-12-12"/>
@@ -63,7 +63,7 @@
                 <p class="text-black-darker">Used by <span class="text-grey-darkest">{{ \App\User::count() }} users &amp; {{ \App\Org::count() }} orgs</span>, we have delivered <span class="text-grey-darkest">{{ \App\Org::sum('invitecount') }}</span> invites</p>
             </div>
             <div>
-                <a class="text-black-light no-underline" href="https://github.com/orgmanager/orgmanager" target="_blank" rel="noopener noreferrer">
+                <a class="text-black-light no-underline" href="https://github.com/Joseeli54/orgmanager" target="_blank" rel="noopener noreferrer">
                     <svg class="w-6 h-6" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                         <path d="M12 .3C5.4.3 0 5.7 0 12.3c0 5.3 3.4 9.8 8.2 11.4.6 0 .8-.3.8-.6v-2c-3.3.8-4-1.5-4-1.5-.6-1.4-1.4-1.8-1.4-1.8-1-.7 0-.7 0-.7 1.3 0 2 1.2 2 1.2 1 1.8 2.8 1.3 3.5 1 .2-.8.5-1.3.8-1.6-2.7-.3-5.5-1.3-5.5-6 0-1.2.5-2.3 1.3-3-.2-.5-.6-1.7 0-3.3 0 0 1-.3 3.4 1.2 1-.3 2-.4 3-.4s2 .2 3 .5c2.3-1.5 3.3-1.2 3.3-1.2.6 1.6.2 2.8 0 3.2 1 .8 1.3 2 1.3 3.2 0 4.6-2.8 5.6-5.5 6 .6.3 1 1 1 2v3.4c0 .4 0 .8.8.7 4.8-1.6 8.2-6 8.2-11.4 0-6.6-5.4-12-12-12"/>
                     </svg>
