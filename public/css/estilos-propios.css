@@ -1,0 +1,500 @@
+body {
+	font-family: 'Tajawal', sans-serif;
+	font-size: 19px;
+	box-sizing: border-box;
+}
+
+.logo {
+	width: 150px;
+	max-width: 180px;
+	z-index: 1;
+	position: relative;
+}
+
+.background-principal {
+	position: relative;
+	top: -100px;
+	z-index: 0;
+	background-image: url('../imgs/assets/bg2.jpg');
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+	min-height: 70vh;
+}
+
+.ajuste-100 {
+	position: relative;
+	top: -70px;
+}
+
+.login {
+	position: relative;
+	z-index: 10;
+}
+
+.limite-img {
+	max-width: 150px;
+}
+
+.separacion-top {
+	margin-top: 20px;
+}
+
+.margen-top {
+	margin-top: 65px;
+}
+
+.contenedor-menu {
+	position: relative;
+	top: -50px;
+}
+
+.item-menu {
+	position: relative;
+	top: -15px;
+}
+
+.productos-principal {
+	width: 180px;
+	border-radius: 50%!important;
+	border: solid 8px transparent;
+	transition: ease 0.3s;
+}
+
+img.productos-principal  {
+	border-radius: 50%!important;
+}
+
+.productos-principal:hover {
+	border-color: #cbfffd;
+	transition: ease 0.3s;
+	width: 165px;
+}
+
+
+h1, h2, h3, h4 {
+	font-family: 'Pacifico', cursive;
+	color: #4b4342;
+}
+
+.menu-principal a.item-menu {
+	font-family: 'Pacifico', cursive;
+	color: #5ec3c0;
+	font-size: 21px;
+	padding-bottom: 4px;
+	border-bottom: 2px dotted transparent;
+	transition: ease 0.6s;
+}
+
+.menu-principal a.item-menu:hover {
+	text-decoration: none;
+	border-bottom: 2px dotted #ff91a4;
+	transition: ease 0.6s;
+}
+
+.titulos-principales {
+	font-size: 38px;
+	display: inline-block;
+	width: 100%;
+	padding: 10px 0 20px 0;
+}
+
+.titulos-principales::after {
+	content: '';
+	background-image: url('../imgs/assets/divider_9.png');
+	position: relative;
+	background-position: center;
+	background-repeat: no-repeat;
+	width: 100%;
+	height: 61px;
+	display: block;
+	top: 7px;
+}
+
+.seccion-a {
+	background-color: #f4f4f4;
+	padding-bottom: 35px;
+	margin-bottom: 40px;
+}
+
+.seccion-b {
+	 background: rgba(84,70,191,1);
+background: -moz-linear-gradient(top, rgba(84,70,191,1) 0%, rgba(252,252,252,1) 4%, rgba(214,203,210,1) 96%, rgba(0,14,166,1) 100%);
+background: -webkit-linear-gradient(top, rgba(84,70,191,1) 0%, rgba(252,252,252,1) 4%, rgba(214,203,210,1) 96%, rgba(0,14,166,1) 100%);
+background: -o-linear-gradient(top, rgba(84,70,191,1) 0%, rgba(252,252,252,1) 4%, rgba(214,203,210,1) 96%, rgba(0,14,166,1) 100%);
+background: -ms-linear-gradient(top, rgba(84,70,191,1) 0%, rgba(252,252,252,1) 4%, rgba(214,203,210,1) 96%, rgba(0,14,166,1) 100%);
+background: linear-gradient(to bottom, rgba(84,70,191,1) 0%, rgba(252,252,252,1) 4%, rgba(214,203,210,1) 96%, rgba(0,14,166,1) 100%);
+	padding-bottom: 10px;
+	padding-top: 10px;
+}
+
+.texto-personalizado {
+	font-family: 'Pacifico', cursive;
+
+}
+
+.txt1 {
+	color: #ff91a4;
+	margin-top: 25px;
+	font-size: 22px;
+}
+
+.txt2 {
+	color: #5ec3c0;
+	margin-top: 5px;
+	font-size: 24px;
+}
+
+.contenedor-banner {
+	padding-top: 45px;
+}
+
+.tu-vida {
+	font-size: 48px;
+	color: #fff;
+	text-shadow: 2px 2px 10px rgba(0,0,0,0.5);
+}
+
+footer {
+	background-color: #5ec3c0;
+	padding-top: 11px;
+	color: #fff;
+}
+
+.contenedor-producto {
+	width: 27%;
+	display: inline-block;
+	position: relative; /* Revisar bien esto */
+	margin-top: 30px;
+}
+
+.contenedor-producto img {
+	width: 80%;
+	border-radius: 7px;
+	max-width: 90%;
+}
+
+.contenedor-productos {
+	display: flex;
+	justify-content: space-around;
+	flex-wrap: wrap;
+	margin-bottom: 35px;
+}
+
+.contenedor-productos-carrito {
+	display: flex;
+	flex-direction: column;
+	margin-bottom:200px;
+	margin-top: 30px;
+}
+
+.contenedor-producto-carrito {
+	display: flex;
+	justify-content: space-between;
+	margin-bottom: 40px;
+}
+
+.imagen-producto {
+	max-width: 35%;
+	width: 35%!important;
+	text-align: center;
+}
+
+.imagen-producto img {
+	max-width: 50%;
+	border-radius: 50%;
+}
+
+.datos-producto {
+	width: 65%;
+	display: flex;
+	justify-content: space-between;
+}
+
+@media screen and (max-width: 520px) {
+	.contenedor-producto {
+		width: 90%;
+		margin-top: 30px;
+		text-align: center;
+	}
+
+	.carrito {
+		min-width: 85%;
+		text-align: center;
+		margin: 0 auto;
+	}
+}
+
+.descripcion-producto {
+	display: flex;
+	justify-content: space-between;
+	width: 80%;
+	align-items: center;
+}
+
+.carrito h4 {
+	text-align: center;
+}
+
+.botoncito {
+	margin-left: 25%;
+}
+
+.carrito {
+	padding-top: 20px;
+	padding-bottom: 20px;
+	background-color: #f4f4f4;
+	min-height: 200px;
+	max-width: 300px;
+	text-align: justify;
+}
+
+a[href="https://twitter.com/"],
+a[href="https://www.facebook.com/"],
+a[href="https://www.youtube.com/"] {
+	text-decoration: none;
+}
+
+.iconos-sociales {
+	font-size: 39px;
+	width: 50px;
+	margin-right: 15px;
+}
+
+.twitter {
+	color: #1da1f2;
+}
+.facebook {
+	color: #4267b2;
+}
+.youtube {
+	color: #ff3f3f;
+}
+
+/* Estilo de OFERTAS */
+
+.descripcion-producto {
+	flex-direction: column;
+}
+.descripcion-producto span {
+	position: relative;
+	top: -10px;
+}
+
+.porcentaje {
+	width: 80%;
+	font-size: 38px;
+	text-align: center;
+}
+
+.descuento {
+	background-color: #d9534f;
+	padding: 5px 10px;
+	color: #fff;
+	margin-bottom: 10px;
+	position: absolute;
+	top: 50px;
+	right: 41px;
+	font-size: 13px;
+}
+
+.alerta-descuentos {
+	background-color: #f2dede;
+	color: #b27979;
+	text-align: center;
+	padding: 10px;
+	border-radius: 7px;
+	width: 60%;
+	margin: 0 auto
+}
+
+.banner-oferta {
+	width: 83%;
+}
+
+/* Estilo de TIENDAS */
+
+.contenedor-tienda {
+	width: 75%;
+
+	margin: 15px auto
+}
+
+.contenedor-tienda img {
+	border-radius: 50%;
+	width: 80%;
+	margin: 0 12.5%;
+}
+
+.texto-tienda {
+	text-align: justify;
+	margin-top: 20px;
+}
+
+.separador {
+	margin-top: 20px;
+	margin-bottom: 45px;
+}
+
+.separador-amelia {
+	margin-top: 25px;
+	margin-bottom: 20px;
+}
+
+/* GOOGLE MAPS */
+
+  #map {
+    height: 420px;
+
+  }
+
+.contenedor-mapa {
+ 	margin: 20px 0 60px 0;
+}
+
+.contenedor-mapa h2 {
+	margin: 20px 0 35px 0;
+}
+
+/* Estilos de NOSOTROS */
+
+.seccion-a img {
+	width: 100%;
+	border-radius: 7px;
+	margin-top: 30px;
+}
+/* Estilos CONTACTO */
+
+.contenedor-tienda p {
+	font-size: 18px;
+}
+
+/* Estilo de carrito de compra */
+
+.total-a-pagar {
+	font-size: 25px;
+	font-family: 'Pacifico';
+	margin-left: 30px;
+}
+.monto-bs {
+	margin-left: 120px;
+	font-size: 25px;
+	font-weight: bold;
+}
+
+.estilo-metodo-pago {
+	width: 70%;
+	margin-left: 15%;
+	margin-bottom: 25px;
+	margin-top: 15px;
+}
+
+.logo-responsive {
+	font-family: 'Pacifico';
+}
+
+/* Menú responsivo */
+
+.navbar-default {
+	display: none;
+}
+
+@media screen and (max-width: 992px) {
+	.registro-login {
+		display: block;
+		text-align: right;
+	}
+
+	.contenedor-login {
+		margin-top: 0;
+		max-width: 50%!important;
+		margin-left: auto;
+		margin-right: auto;
+	}
+}
+
+@media screen and (min-width: 725px){
+	.contenedor-login {
+		margin-bottom: 120px;
+	}
+}
+
+@media screen and (max-width: 725px) {
+	.menu-principal {
+		display: none;
+		visibility: hidden;
+	}
+	.navbar-default {
+		display: block;
+		margin-bottom: 42px;
+	}
+	.registro-login {
+		visibility: hidden;
+	}
+
+	.menusillo {
+		display: none;
+	}
+
+	.contenedor-login {
+		margin-top: 0;
+		margin-bottom: 125px;
+		max-width: 60%!important;
+		margin-left: auto;
+		margin-right: auto;
+	}
+
+}
+
+.contenedor-fomulario {
+	display: flex;
+	justify-content: center;
+	flex-wrap: wrap;
+}
+
+.contenedor-fomulario .form-group {
+	margin-right: 25px;
+}
+
+.estilo-escabezado-registro {
+	margin-bottom: 50px;
+	margin-top: -35px;
+}
+
+.contenedor-tipo-usuario {
+	display: flex;
+	justify-content: center;
+	margin-bottom: 45px;
+	flex-wrap: wrap;
+}
+
+.contenedor-usuario {
+	width: 35%;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	font-size: 50px;
+	margin-bottom: 25px;
+}
+
+.contenedor-usuario i {
+	font-size: 150px;
+}
+
+.contenedor-usuario a {
+	color: #5ec3c0;
+	text-decoration: none;
+	transition: ease 0.3s;
+}
+
+.contenedor-usuario a:hover {
+	color: #ff91a4;
+	transition: ease 0.3s;
+}
+
+@media screen and (max-width: 600px) {
+	.contenedor-usuario {
+		width: 51%;
+	}
+}

@@ -1,0 +1,75 @@
+
+.clase-body{
+    border: 0 solid #DAD2D1;
+    border-radius:.25rem;
+}
+
+.presentacion-empresa{
+    width: 100%; 
+    border: 0 solid #DAD2D1; 
+    margin-top:-20px; 
+    background: rgba(84,70,191,1);
+background: -moz-linear-gradient(top, rgba(84,70,191,1) 0%, rgba(252,252,252,1) 4%, rgba(214,203,210,1) 96%, rgba(0,14,166,1) 100%);
+background: -webkit-linear-gradient(top, rgba(84,70,191,1) 0%, rgba(252,252,252,1) 4%, rgba(214,203,210,1) 96%, rgba(0,14,166,1) 100%);
+background: -o-linear-gradient(top, rgba(84,70,191,1) 0%, rgba(252,252,252,1) 4%, rgba(214,203,210,1) 96%, rgba(0,14,166,1) 100%);
+background: -ms-linear-gradient(top, rgba(84,70,191,1) 0%, rgba(252,252,252,1) 4%, rgba(214,203,210,1) 96%, rgba(0,14,166,1) 100%);
+background: linear-gradient(to bottom, rgba(84,70,191,1) 0%, rgba(252,252,252,1) 4%, rgba(214,203,210,1) 96%, rgba(0,14,166,1) 100%);
+    border-radius:.25rem;
+}
+
+.padding-palabras{
+    padding-top:5px;
+    padding-bottom: 5px;
+}
+
+.border-arriba{
+    border: 0 solid #DAD2D1; 
+    border-radius:.25rem;
+}
+
+.border-abajo{
+   margin-bottom: 20px
+}
+
+.espacio-palabra-abajo{
+   margin-bottom: 20px
+}
+
+#contenedor-boton{
+    background-color: #626262
+}
+
+#box1{
+    margin-top: 2%
+}
+
+#box2{
+    margin-top: -1%; 
+    margin-bottom: 2%
+}
+
+#bordecito{
+    padding-top: 1rem; 
+    background-color: #626262; 
+    margin-bottom: 0px
+}
+
+#boton-git{
+    background-color: #3B91C1
+}
+
+#separador{
+    height: 20px
+}
+
+#nombre-org{
+    margin-top: 10px; 
+    margin-bottom: 10px
+}
+
+.formulario{
+    background-color: #626262; 
+    margin-bottom: 0px;
+    padding-bottom: 1em
+}
+

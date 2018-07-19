@@ -13,6 +13,14 @@
 */
 
 // Pages
+Route::get('join', function() {
+        return view('join');
+    });
+
+Route::get('settings', function() {
+        return view('settings-new');
+    });
+
 Route::view('/', 'landing')->middleware('guest')->name('landing');
 Route::get('dashboard', 'DashboardController@index')->name('dashboard');
 Route::get('org/{org}', 'OrgController@index')->name('org');
