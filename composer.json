@@ -27,7 +27,7 @@
     "orgmanager/orgmanager-logos": "^1.0",
     "php-http/cache-plugin": "^1.4",
     "php-http/guzzle6-adapter": "^1.1",
-    "sentry/sentry-laravel": "^0.8.0"
+    "sentry/sentry-laravel": "^0.10.0"
   },
   "require-dev": {
     "filp/whoops": "~2.0",
