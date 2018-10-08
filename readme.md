@@ -24,7 +24,7 @@ OrgManager takes Github Organization invites to a new level! [Read more on the O
 - [Built With](#built-with)
 - [Support Channels](#support-channels)
 - [Contributing](#contributing)
-	- [Sponsors](#sponsors)
+	- [Support OrgManager](#support-orgmanager)
 	- [People](#people)
 - [License](#license)
 
@@ -36,7 +36,7 @@ To learn how to setup the OrgManager **Developer Version** up and running on you
 
 ## Hosted Version
 
-Not everyone can afford a server, nor do they have the skills to set up a modern PHP application, so OrgManager provides a hosted version you can use **for FREE**. You can access the hosted version [here](https://orgmanager.miguelpiedrafita.com). In return, please report any bugs you encounter, so we can continue improving!
+Not everyone can afford a server, nor do they have the skills to set up a modern PHP application, so OrgManager provides a hosted version you can use **for FREE** (see how you can help this service continue free [below](#support-orgmanager)). You can access the hosted version [here](https://orgmanager.miguelpiedrafita.com). In return, please report any bugs you encounter, so we can continue improving!
 
 ## Updating
 
@@ -63,7 +63,7 @@ You can read about [how to configure the testing environment and how to run the 
 * [Socialite](https://github.com/laravel/socialite) - The OAuth library used.
 * [PHP Github API](https://github.com/KnpLabs/php-github-api) & [Laravel Version](https://github.com/GrahamCampbell/Laravel-GitHub) - The API clients used
 * [PHP reCaptcha](https://github.com/google/recaptcha) - The reCaptcha Client
-* [PrimerCSS](http://primercss.io/), [Bootstrap](https://getbootstrap.com/) & [MaterializeCSS](http://materializecss.com/) - The frontend frameworks used
+* [Tailwind CSS](https://tailwindcss.com/) - The frontend framework used
 * [Octicons](https://octicons.github.com/) - The icons used
 
 ## Support Channels
@@ -76,77 +76,9 @@ Read the [OrgManager Support Channels](https://orgmanager.unmarkdocs.co/support)
 
 Please read the [Contributing to OrgManager](https://orgmanager.unmarkdocs.co/contributing) section on the OrgManager Documentation for ideas on how to help, and the [CONTRIBUTING.md](https://github.com/orgmanager/orgmanager/blob/master/.github/CONTRIBUTING.md) file for details on our code of conduct, and the process for submitting pull requests.
 
-### Sponsors
+### Support OrgManager
 
-Does your organization use OrgManager?  Ask your manager or marketing team if you're interested in supporting our project.  Support will allow the maintainers to dedicate more time for maintenance and new features for everyone.  Also, your company's logo will show on GitHub and on our site -- who doesn't want a little extra exposure?
-
-Become a sponsor and get your logo on our README on Github with a link to your site. [[Become a sponsor](https://opencollective.com/orgmanager#sponsor)]
-
-<a href="https://opencollective.com/orgmanager/sponsor/0/website" target="_blank"><img src="https://opencollective.com/orgmanager/sponsor/0/avatar.svg"></a>
-<a href="https://opencollective.com/orgmanager/sponsor/1/website" target="_blank"><img src="https://opencollective.com/orgmanager/sponsor/1/avatar.svg"></a>
-<a href="https://opencollective.com/orgmanager/sponsor/2/website" target="_blank"><img src="https://opencollective.com/orgmanager/sponsor/2/avatar.svg"></a>
-<a href="https://opencollective.com/orgmanager/sponsor/3/website" target="_blank"><img src="https://opencollective.com/orgmanager/sponsor/3/avatar.svg"></a>
-<a href="https://opencollective.com/orgmanager/sponsor/4/website" target="_blank"><img src="https://opencollective.com/orgmanager/sponsor/4/avatar.svg"></a>
-<a href="https://opencollective.com/orgmanager/sponsor/5/website" target="_blank"><img src="https://opencollective.com/orgmanager/sponsor/5/avatar.svg"></a>
-<a href="https://opencollective.com/orgmanager/sponsor/6/website" target="_blank"><img src="https://opencollective.com/orgmanager/sponsor/6/avatar.svg"></a>
-<a href="https://opencollective.com/orgmanager/sponsor/7/website" target="_blank"><img src="https://opencollective.com/orgmanager/sponsor/7/avatar.svg"></a>
-<a href="https://opencollective.com/orgmanager/sponsor/8/website" target="_blank"><img src="https://opencollective.com/orgmanager/sponsor/8/avatar.svg"></a>
-<a href="https://opencollective.com/orgmanager/sponsor/9/website" target="_blank"><img src="https://opencollective.com/orgmanager/sponsor/9/avatar.svg"></a>
-<a href="https://opencollective.com/orgmanager/sponsor/10/website" target="_blank"><img src="https://opencollective.com/orgmanager/sponsor/10/avatar.svg"></a>
-<a href="https://opencollective.com/orgmanager/sponsor/11/website" target="_blank"><img src="https://opencollective.com/orgmanager/sponsor/11/avatar.svg"></a>
-<a href="https://opencollective.com/orgmanager/sponsor/12/website" target="_blank"><img src="https://opencollective.com/orgmanager/sponsor/12/avatar.svg"></a>
-<a href="https://opencollective.com/orgmanager/sponsor/13/website" target="_blank"><img src="https://opencollective.com/orgmanager/sponsor/13/avatar.svg"></a>
-<a href="https://opencollective.com/orgmanager/sponsor/14/website" target="_blank"><img src="https://opencollective.com/orgmanager/sponsor/14/avatar.svg"></a>
-<a href="https://opencollective.com/orgmanager/sponsor/15/website" target="_blank"><img src="https://opencollective.com/orgmanager/sponsor/15/avatar.svg"></a>
-<a href="https://opencollective.com/orgmanager/sponsor/16/website" target="_blank"><img src="https://opencollective.com/orgmanager/sponsor/16/avatar.svg"></a>
-<a href="https://opencollective.com/orgmanager/sponsor/17/website" target="_blank"><img src="https://opencollective.com/orgmanager/sponsor/17/avatar.svg"></a>
-<a href="https://opencollective.com/orgmanager/sponsor/18/website" target="_blank"><img src="https://opencollective.com/orgmanager/sponsor/18/avatar.svg"></a>
-<a href="https://opencollective.com/orgmanager/sponsor/19/website" target="_blank"><img src="https://opencollective.com/orgmanager/sponsor/19/avatar.svg"></a>
-<a href="https://opencollective.com/orgmanager/sponsor/20/website" target="_blank"><img src="https://opencollective.com/orgmanager/sponsor/20/avatar.svg"></a>
-<a href="https://opencollective.com/orgmanager/sponsor/21/website" target="_blank"><img src="https://opencollective.com/orgmanager/sponsor/21/avatar.svg"></a>
-<a href="https://opencollective.com/orgmanager/sponsor/22/website" target="_blank"><img src="https://opencollective.com/orgmanager/sponsor/22/avatar.svg"></a>
-<a href="https://opencollective.com/orgmanager/sponsor/23/website" target="_blank"><img src="https://opencollective.com/orgmanager/sponsor/23/avatar.svg"></a>
-<a href="https://opencollective.com/orgmanager/sponsor/24/website" target="_blank"><img src="https://opencollective.com/orgmanager/sponsor/24/avatar.svg"></a>
-<a href="https://opencollective.com/orgmanager/sponsor/25/website" target="_blank"><img src="https://opencollective.com/orgmanager/sponsor/25/avatar.svg"></a>
-<a href="https://opencollective.com/orgmanager/sponsor/26/website" target="_blank"><img src="https://opencollective.com/orgmanager/sponsor/26/avatar.svg"></a>
-<a href="https://opencollective.com/orgmanager/sponsor/27/website" target="_blank"><img src="https://opencollective.com/orgmanager/sponsor/27/avatar.svg"></a>
-<a href="https://opencollective.com/orgmanager/sponsor/28/website" target="_blank"><img src="https://opencollective.com/orgmanager/sponsor/28/avatar.svg"></a>
-<a href="https://opencollective.com/orgmanager/sponsor/29/website" target="_blank"><img src="https://opencollective.com/orgmanager/sponsor/29/avatar.svg"></a>
-
-### Backers
-
-Support us with a monthly donation and help us continue our activities. [[Become a backer](https://opencollective.com/orgmanager#backer)]
-
-<a href="https://opencollective.com/orgmanager/backer/0/website" target="_blank"><img src="https://opencollective.com/orgmanager/backer/0/avatar.svg"></a>
-<a href="https://opencollective.com/orgmanager/backer/1/website" target="_blank"><img src="https://opencollective.com/orgmanager/backer/1/avatar.svg"></a>
-<a href="https://opencollective.com/orgmanager/backer/2/website" target="_blank"><img src="https://opencollective.com/orgmanager/backer/2/avatar.svg"></a>
-<a href="https://opencollective.com/orgmanager/backer/3/website" target="_blank"><img src="https://opencollective.com/orgmanager/backer/3/avatar.svg"></a>
-<a href="https://opencollective.com/orgmanager/backer/4/website" target="_blank"><img src="https://opencollective.com/orgmanager/backer/4/avatar.svg"></a>
-<a href="https://opencollective.com/orgmanager/backer/5/website" target="_blank"><img src="https://opencollective.com/orgmanager/backer/5/avatar.svg"></a>
-<a href="https://opencollective.com/orgmanager/backer/6/website" target="_blank"><img src="https://opencollective.com/orgmanager/backer/6/avatar.svg"></a>
-<a href="https://opencollective.com/orgmanager/backer/7/website" target="_blank"><img src="https://opencollective.com/orgmanager/backer/7/avatar.svg"></a>
-<a href="https://opencollective.com/orgmanager/backer/8/website" target="_blank"><img src="https://opencollective.com/orgmanager/backer/8/avatar.svg"></a>
-<a href="https://opencollective.com/orgmanager/backer/9/website" target="_blank"><img src="https://opencollective.com/orgmanager/backer/9/avatar.svg"></a>
-<a href="https://opencollective.com/orgmanager/backer/10/website" target="_blank"><img src="https://opencollective.com/orgmanager/backer/10/avatar.svg"></a>
-<a href="https://opencollective.com/orgmanager/backer/11/website" target="_blank"><img src="https://opencollective.com/orgmanager/backer/11/avatar.svg"></a>
-<a href="https://opencollective.com/orgmanager/backer/12/website" target="_blank"><img src="https://opencollective.com/orgmanager/backer/12/avatar.svg"></a>
-<a href="https://opencollective.com/orgmanager/backer/13/website" target="_blank"><img src="https://opencollective.com/orgmanager/backer/13/avatar.svg"></a>
-<a href="https://opencollective.com/orgmanager/backer/14/website" target="_blank"><img src="https://opencollective.com/orgmanager/backer/14/avatar.svg"></a>
-<a href="https://opencollective.com/orgmanager/backer/15/website" target="_blank"><img src="https://opencollective.com/orgmanager/backer/15/avatar.svg"></a>
-<a href="https://opencollective.com/orgmanager/backer/16/website" target="_blank"><img src="https://opencollective.com/orgmanager/backer/16/avatar.svg"></a>
-<a href="https://opencollective.com/orgmanager/backer/17/website" target="_blank"><img src="https://opencollective.com/orgmanager/backer/17/avatar.svg"></a>
-<a href="https://opencollective.com/orgmanager/backer/18/website" target="_blank"><img src="https://opencollective.com/orgmanager/backer/18/avatar.svg"></a>
-<a href="https://opencollective.com/orgmanager/backer/19/website" target="_blank"><img src="https://opencollective.com/orgmanager/backer/19/avatar.svg"></a>
-<a href="https://opencollective.com/orgmanager/backer/20/website" target="_blank"><img src="https://opencollective.com/orgmanager/backer/20/avatar.svg"></a>
-<a href="https://opencollective.com/orgmanager/backer/21/website" target="_blank"><img src="https://opencollective.com/orgmanager/backer/21/avatar.svg"></a>
-<a href="https://opencollective.com/orgmanager/backer/22/website" target="_blank"><img src="https://opencollective.com/orgmanager/backer/22/avatar.svg"></a>
-<a href="https://opencollective.com/orgmanager/backer/23/website" target="_blank"><img src="https://opencollective.com/orgmanager/backer/23/avatar.svg"></a>
-<a href="https://opencollective.com/orgmanager/backer/24/website" target="_blank"><img src="https://opencollective.com/orgmanager/backer/24/avatar.svg"></a>
-<a href="https://opencollective.com/orgmanager/backer/25/website" target="_blank"><img src="https://opencollective.com/orgmanager/backer/25/avatar.svg"></a>
-<a href="https://opencollective.com/orgmanager/backer/26/website" target="_blank"><img src="https://opencollective.com/orgmanager/backer/26/avatar.svg"></a>
-<a href="https://opencollective.com/orgmanager/backer/27/website" target="_blank"><img src="https://opencollective.com/orgmanager/backer/27/avatar.svg"></a>
-<a href="https://opencollective.com/orgmanager/backer/28/website" target="_blank"><img src="https://opencollective.com/orgmanager/backer/28/avatar.svg"></a>
-<a href="https://opencollective.com/orgmanager/backer/29/website" target="_blank"><img src="https://opencollective.com/orgmanager/backer/29/avatar.svg"></a>
+Whether you are an individual or an organization, you can pledge as low as $1/month to support the development of OrgManager & other non-profit and open-source projects. **[Support me on Patreon](https://www.patreon.com/m1guelpiedrafita)**.
 
 ### People
 
