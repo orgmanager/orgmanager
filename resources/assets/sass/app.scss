@@ -1,8 +1,7 @@
-@import "~bootswatch/flatly/variables";
-@import "~bootstrap-sass/assets/stylesheets/bootstrap";
-@import "~bootswatch/flatly/bootswatch";
+@import "~bootswatch/dist/flatly/variables";
+@import "~bootstrap/scss/bootstrap";
+@import "~bootswatch/dist/flatly/bootswatch";
 @import "~sweetalert2/dist/sweetalert2.min.css";
-@import "~bootstrap-social/bootstrap-social";
 @import "~primer-alerts/build/build.css";
 @import "~primer-avatars/build/build.css";
 @import "~primer-blankslate/build/build.css";
