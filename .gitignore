@@ -12,3 +12,4 @@ Homestead.yaml
 !.env.example
 npm-debug.log
 yarn-error.log
+.DS_Store
