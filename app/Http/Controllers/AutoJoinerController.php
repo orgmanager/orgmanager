@@ -37,7 +37,7 @@ class AutoJoinerController extends Controller
         $payload = file_get_contents('php://input');
         $calculatedHash = hash_hmac($usedAlgorithm, $payload, config('auth.github_secret'));
 
-        return $calculatedHash === $gitHubHash;
+        return hash_equals($calculatedHash, $gitHubHash);
     }
 
     protected function getOrgId(Request $request) : int
