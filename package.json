@@ -21,7 +21,7 @@
     "jquery": "3.3.1",
     "less": "3.8.1",
     "less-loader": "4.1.0",
-    "popper.js": "^1.14.4",
+    "popper.js": "1.14.4",
     "primer-alerts": "1.5.5",
     "primer-avatars": "1.5.2",
     "primer-blankslate": "1.4.5",
