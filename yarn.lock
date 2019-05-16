@@ -8070,10 +8070,10 @@ svgo@^1.0.0:
     unquote "~1.1.1"
     util.promisify "~1.0.0"
 
-sweetalert2@7.15.1:
-  version "7.15.1"
-  resolved "https://registry.yarnpkg.com/sweetalert2/-/sweetalert2-7.15.1.tgz#edd9bd4d5501b22e18755686a343c7afe3e9adb2"
-  integrity sha512-0D0W7l63ki1lJoG67RaE7eos6xNVs+v7qu9o1D21hV8ghvaJZ78oBJ0Plk3Ev4xZ8thWqNHjHGjBk2Y+eZQCmw==
+sweetalert2@8.11.0:
+  version "8.11.0"
+  resolved "https://registry.yarnpkg.com/sweetalert2/-/sweetalert2-8.11.0.tgz#af7bf991f3066e010d551550bac23c4bfbde5661"
+  integrity sha512-9C13Ljs7ikR3AmNLmoWQmCCVWoQO7JaqA+6Ox8qGH0fDsF1Mlek5LNg3tLvqiZhqR4qT4GFaErotWCBxUkF2sQ==
 
 tailwindcss@0.4.3:
   version "0.4.3"
