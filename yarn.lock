@@ -6718,12 +6718,12 @@ primer-avatars@1.5.2:
   dependencies:
     primer-support "4.5.2"
 
-primer-blankslate@1.4.5:
-  version "1.4.5"
-  resolved "https://registry.yarnpkg.com/primer-blankslate/-/primer-blankslate-1.4.5.tgz#6c658392c6d00303e14a135f177b54c212ff2227"
-  integrity sha1-bGWDksbQAwPhShNfF3tUwhL/Iic=
+primer-blankslate@1.5.2:
+  version "1.5.2"
+  resolved "https://registry.yarnpkg.com/primer-blankslate/-/primer-blankslate-1.5.2.tgz#7357854a653b1d5784cf43c8193580e9c3bca116"
+  integrity sha512-7raUk+G/FSvU3S7TmJchLw7zkepLOh3F523eWRdMwR5N1DAhCm4VqgehXO1kDCbMj5tuBGfZ6FQ2OzFF0LPOIw==
   dependencies:
-    primer-support "4.5.2"
+    primer-support "4.7.2"
 
 primer-states@0.4.4:
   version "0.4.4"
@@ -6741,6 +6741,11 @@ primer-support@4.5.2:
   version "4.5.2"
   resolved "https://registry.yarnpkg.com/primer-support/-/primer-support-4.5.2.tgz#daab9a48881b6953e8e6ca01865a2f415bf777c5"
   integrity sha1-2quaSIgbaVPo5soBhlovQVv3d8U=
+
+primer-support@4.7.2:
+  version "4.7.2"
+  resolved "https://registry.yarnpkg.com/primer-support/-/primer-support-4.7.2.tgz#7c0e19361144ace2ecf2640793c8746855390185"
+  integrity sha512-WbfjjITtGV6iXQeaVPL+AzHj1Jv9RHJRp7kIu5ebFXwolWmCqTBpA/8VmWmssyeTfv8zR7iuCoT0UoBF+uGHww==
 
 primer-tooltips@1.5.2:
   version "1.5.2"
