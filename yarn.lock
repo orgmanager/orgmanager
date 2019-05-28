@@ -6742,12 +6742,17 @@ primer-support@4.5.2:
   resolved "https://registry.yarnpkg.com/primer-support/-/primer-support-4.5.2.tgz#daab9a48881b6953e8e6ca01865a2f415bf777c5"
   integrity sha1-2quaSIgbaVPo5soBhlovQVv3d8U=
 
-primer-tooltips@1.5.2:
-  version "1.5.2"
-  resolved "https://registry.yarnpkg.com/primer-tooltips/-/primer-tooltips-1.5.2.tgz#3799ce757c1e29953c924aefb849265f617554e7"
-  integrity sha1-N5nOdXweKZU8kkrvuEkmX2F1VOc=
+primer-support@5.0.0:
+  version "5.0.0"
+  resolved "https://registry.yarnpkg.com/primer-support/-/primer-support-5.0.0.tgz#d19c7cea59e8783400b9391943c8a2bb2ebddc5e"
+  integrity sha512-inUxVSsGirn5IkPxBhFsMBgm8ZHyfOUmOWyDCN8cBXtbaLiCIAjHsPI46yS1zrWxnn0J2kvq8haomkrlHGF08g==
+
+primer-tooltips@2.0.0:
+  version "2.0.0"
+  resolved "https://registry.yarnpkg.com/primer-tooltips/-/primer-tooltips-2.0.0.tgz#953f271f411db2e7665282500bb75650ac82e9d8"
+  integrity sha512-cNF3r3hG6sXLr71GbYyJw3BXCBhspW4FjzJ0Hx/BO+lP3XCrNAX/wqd57+vvnWSuaLif2O8s3/Prs3VBF50hVQ==
   dependencies:
-    primer-support "4.5.2"
+    primer-support "5.0.0"
 
 private@^0.1.6, private@^0.1.8, private@~0.1.5:
   version "0.1.8"
