@@ -6704,12 +6704,12 @@ prettier@^1.7.0:
   resolved "https://registry.yarnpkg.com/prettier/-/prettier-1.14.3.tgz#90238dd4c0684b7edce5f83b0fb7328e48bd0895"
   integrity sha512-qZDVnCrnpsRJJq5nSsiHCE3BYMED2OtsI+cmzIzF1QIfqm5ALf8tEJcO27zV1gKNKRPdhjO0dNWnrzssDQ1tFg==
 
-primer-alerts@1.5.5:
-  version "1.5.5"
-  resolved "https://registry.yarnpkg.com/primer-alerts/-/primer-alerts-1.5.5.tgz#0bd2bdd0aae92a0525a9af3d2e716a2eabb48a60"
-  integrity sha1-C9K90KrpKgUlqa89LnFqLqu0imA=
+primer-alerts@1.5.13:
+  version "1.5.13"
+  resolved "https://registry.yarnpkg.com/primer-alerts/-/primer-alerts-1.5.13.tgz#59678486296d733f88f94e8998868f43847f60a6"
+  integrity sha512-RmpYBKhpclKD9doGnH0ehLKZOS25amEkgC3Cwtq8Utxq2BJieeSuVbDcTTPL3ktFA9wez1mxR2vk2CCF3Rl9oQ==
   dependencies:
-    primer-support "4.5.2"
+    primer-support "4.7.2"
 
 primer-avatars@1.5.2:
   version "1.5.2"
@@ -6741,6 +6741,11 @@ primer-support@4.5.2:
   version "4.5.2"
   resolved "https://registry.yarnpkg.com/primer-support/-/primer-support-4.5.2.tgz#daab9a48881b6953e8e6ca01865a2f415bf777c5"
   integrity sha1-2quaSIgbaVPo5soBhlovQVv3d8U=
+
+primer-support@4.7.2:
+  version "4.7.2"
+  resolved "https://registry.yarnpkg.com/primer-support/-/primer-support-4.7.2.tgz#7c0e19361144ace2ecf2640793c8746855390185"
+  integrity sha512-WbfjjITtGV6iXQeaVPL+AzHj1Jv9RHJRp7kIu5ebFXwolWmCqTBpA/8VmWmssyeTfv8zR7iuCoT0UoBF+uGHww==
 
 primer-tooltips@1.5.2:
   version "1.5.2"

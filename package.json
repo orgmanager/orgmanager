@@ -22,7 +22,7 @@
     "less": "3.8.1",
     "less-loader": "5.0.0",
     "popper.js": "^1.14.4",
-    "primer-alerts": "1.5.5",
+    "primer-alerts": "1.5.13",
     "primer-avatars": "1.5.2",
     "primer-blankslate": "1.4.5",
     "primer-states": "0.4.4",
