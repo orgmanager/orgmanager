@@ -12,7 +12,7 @@
   "devDependencies": {
     "cross-env": "5.1.4",
     "laravel-mix": "2.0.0",
-    "lodash": "4.17.11",
+    "lodash": "4.17.14",
     "tailwindcss": "0.4.3"
   },
   "dependencies": {
