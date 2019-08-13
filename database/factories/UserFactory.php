@@ -1,5 +1,6 @@
 <?php
 
+use Illuminate\Support\Str;
 use Faker\Generator as Faker;
 
 /*
@@ -18,10 +19,10 @@ $factory->define(App\User::class, function (Faker $faker) {
     return [
         'name'            => $faker->name,
         'email'           => $faker->unique()->safeEmail,
-        'token'           => str_random(10),
+        'token'           => Str::random(10),
         'github_username' => $faker->userName,
-        'api_token'       => str_random(60),
-        'remember_token'  => str_random(10),
+        'api_token'       => Str::random(60),
+        'remember_token' => Str::random(10),
     ];
 });
 

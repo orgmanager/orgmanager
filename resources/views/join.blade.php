@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>Join {{ $org->pretty_name or $org->name }}</title>
+    <title>Join {{ $org->pretty_name ?? $org->name }}</title>
 
     <link href="{{ mix('css/new.css') }}" rel="stylesheet">
 
@@ -27,7 +27,7 @@
                     <img src="{{ $org->avatar }}" class="w-24 h-24 rounded-full mb-4">
                 </div>
 
-                <h1 class="font-bold text-2xl mb-2 text-center text-grey-darkest">Join <a class="no-underline text-inherit link-shadow link-transition" href="https://github.com/{{ $org->name }}" target="_blank" rel="noopener noreferrer">{{ $org->pretty_name or $org->name }}</a></h1>
+                <h1 class="font-bold text-2xl mb-2 text-center text-grey-darkest">Join <a class="no-underline text-inherit link-shadow link-transition" href="https://github.com/{{ $org->name }}" target="_blank" rel="noopener noreferrer">{{ $org->pretty_name ?? $org->name }}</a></h1>
 
 
                 @if (optional($org->team)->exists)
@@ -39,7 +39,7 @@
                 @endif
 
                 @if ($org->description)
-                    <p class="text-grey-darker text-base">{{ $org->description or '' }}</p>
+                    <p class="text-grey-darker text-base">{{ $org->description ?? '' }}</p>
                 @endif
             </div>
             <div class="border-b mb-4"></div>
@@ -47,7 +47,7 @@
                 {{ csrf_field() }}
                 @if ($org->hasPassword())
                     <div class="px-6 pb-4">
-                        <p class="text-grey-darker text-base mb-2">Enter the organization password to join {{ $org->pretty_name or $org->name }}:</p>
+                        <p class="text-grey-darker text-base mb-2">Enter the organization password to join {{ $org->pretty_name ?? $org->name }}:</p>
                         <input class="shadow appearance-none border rounded w-full py-2 px-3 text-grey-darker" name="org_password" type="password" placeholder="&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;">
                     </div>
                 @endif
