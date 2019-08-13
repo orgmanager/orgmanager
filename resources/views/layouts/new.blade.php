@@ -17,7 +17,7 @@
         @yield('header')
         @include('layouts.code.head')
     </head>
-<body class="bg-grey-lightest font-sans border-t-2 border-brand antialiased min-h-screen flex flex-col">
+<body class="bg-grey-lightest font-sans border-t-4 border-brand antialiased min-h-screen flex flex-col">
     <nav class="w-full bg-white p-4 mx-auto @hasSection('skip-nav-border')@else border-b @endif">
         <div class="flex items-center justify-between">
             <a class="no-underline flex items-center ml-4 -mt-1" href="{{ route('landing') }}">
