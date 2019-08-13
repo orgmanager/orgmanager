@@ -18,7 +18,7 @@
         @include('layouts.code.head')
     </head>
 <body class="bg-grey-lightest font-sans border-t-2 border-brand antialiased min-h-screen flex flex-col">
-    <nav class="w-full bg-white p-4 mx-auto border-b">
+    <nav class="w-full bg-white p-4 mx-auto @hasSection('skip-nav-border')@else border-b @endif">
         <div class="flex items-center justify-between">
             <a class="no-underline flex items-center ml-4 -mt-1" href="{{ route('landing') }}">
                 <svg class="h-8" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 344.5 83.2">
@@ -38,7 +38,7 @@
         </div>
     </nav>
 
-    <div class="w-full px-2 flex-1 flex flex-col">
+    <div class="w-full flex-1 flex flex-col">
         @yield('content')
     </div>
     <!-- Scripts -->
