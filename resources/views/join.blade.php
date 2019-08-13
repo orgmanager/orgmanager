@@ -53,12 +53,10 @@
                 @endif
                 <div class="text-center mb-4">
                     <button type="submit" data-sitekey="{{ config('recaptcha.key') }}" class="bg-grey-darkest hover:bg-black-github text-white font-bold py-2 px-4 rounded g-recaptcha" data-callback="onSubmit">
-                    <div class="flex items-center justify-center">
-                        <svg class="w-4 h-4 mr-1" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M12 .3C5.4.3 0 5.7 0 12.3c0 5.3 3.4 9.8 8.2 11.4.6 0 .8-.3.8-.6v-2c-3.3.8-4-1.5-4-1.5-.6-1.4-1.4-1.8-1.4-1.8-1-.7 0-.7 0-.7 1.3 0 2 1.2 2 1.2 1 1.8 2.8 1.3 3.5 1 .2-.8.5-1.3.8-1.6-2.7-.3-5.5-1.3-5.5-6 0-1.2.5-2.3 1.3-3-.2-.5-.6-1.7 0-3.3 0 0 1-.3 3.4 1.2 1-.3 2-.4 3-.4s2 .2 3 .5c2.3-1.5 3.3-1.2 3.3-1.2.6 1.6.2 2.8 0 3.2 1 .8 1.3 2 1.3 3.2 0 4.6-2.8 5.6-5.5 6 .6.3 1 1 1 2v3.4c0 .4 0 .8.8.7 4.8-1.6 8.2-6 8.2-11.4 0-6.6-5.4-12-12-12"></path>
-                        </svg>
-                        <span>Join with GitHub</span>
-                    </div>
+                        <div class="flex items-center items-stretch justify-between">
+                            <svg class="w-4 h-4" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fill="currentColor"><path d="M12 .3C5.4.3 0 5.7 0 12.3c0 5.3 3.4 9.8 8.2 11.4.6 0 .8-.3.8-.6v-2c-3.3.8-4-1.5-4-1.5-.6-1.4-1.4-1.8-1.4-1.8-1-.7 0-.7 0-.7 1.3 0 2 1.2 2 1.2 1 1.8 2.8 1.3 3.5 1 .2-.8.5-1.3.8-1.6-2.7-.3-5.5-1.3-5.5-6 0-1.2.5-2.3 1.3-3-.2-.5-.6-1.7 0-3.3 0 0 1-.3 3.4 1.2 1-.3 2-.4 3-.4s2 .2 3 .5c2.3-1.5 3.3-1.2 3.3-1.2.6 1.6.2 2.8 0 3.2 1 .8 1.3 2 1.3 3.2 0 4.6-2.8 5.6-5.5 6 .6.3 1 1 1 2v3.4c0 .4 0 .8.8.7 4.8-1.6 8.2-6 8.2-11.4 0-6.6-5.4-12-12-12"></path></svg>
+                            <span class="inline-flex items-center">Join with GitHub</span>
+                        </div>
                     </button>
                 </div>
             </form>
