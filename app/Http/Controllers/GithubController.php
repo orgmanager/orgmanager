@@ -28,9 +28,8 @@ class GithubController extends Controller
             'org' => $org->id,
         ]);
         $this->checkPerm();
-        Toastr::success($org->name.trans('alerts.updated'), trans('alerts.sync'));
 
-        return redirect('dashboard');
+        return redirect()->route('org', $org)->withSuccess(trans('alerts.sync'));
     }
 
     public function listOrgs()
