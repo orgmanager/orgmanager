@@ -7,7 +7,6 @@
 /.tmp
 Homestead.json
 Homestead.yaml
-.env.testing
 .env.*
 !.env.example
 npm-debug.log
