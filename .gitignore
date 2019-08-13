@@ -2,11 +2,11 @@
 /public/storage
 /storage/*.key
 /vendor
-/.idea
+.env
+.phpunit.result.cache
 /.tmp
 Homestead.json
 Homestead.yaml
-.env
 .env.testing
 .env.*
 !.env.example

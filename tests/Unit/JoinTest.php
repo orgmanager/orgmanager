@@ -28,10 +28,7 @@ class JoinTest extends TestCase
                   ->once()
                   ->with($org->user->token, null, 'http_token')
                   ->andReturn();
-        Artisan::call('orgmanager:joinorg', [
-          'org'      => $org->id,
-          'username' => $user->github_username,
-        ]);
-        $this->assertEquals($user->github_username.' was invited to '.$org->name."\n", Artisan::output());
+        $this->artisan('orgmanager:joinorg', ['org' => $org->id, 'username' => $user->github_username])
+             ->expectsOutput("$user->github_username was invited to $org->name");
     }
 }

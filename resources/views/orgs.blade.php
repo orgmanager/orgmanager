@@ -27,7 +27,7 @@
                     <div class="flex items-center justify-around w-full mb-4">
                         <div class="flex flex-col items-center">
                                 <img src="{{ $org->avatar }}" alt="{{ $org->name }}" class="w-10 h-10 mb-2">
-                                <p class="block text-base text-black-light">{{ $org->pretty_name or $org->name }}</p>
+                                <p class="block text-base text-black-light">{{ $org->pretty_name ?? $org->name }}</p>
                         </div>
                         <a href="{{ route('org', $org) }}" class="no-underline bg-brand hover:bg-brand-dark text-white font-bold py-3 px-4 rounded-full focus:outline-none">
                             <div class="inline-block">
