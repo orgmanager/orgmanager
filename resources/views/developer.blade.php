@@ -1,7 +1,7 @@
 @extends('layouts.new')
 
 @section('content')
-    <div>
+    <div class="flex-1 flex items-center justify-center h-full w-full">
         <div class="max-w-sm rounded overflow-hidden shadow-lg">
             <div class="px-6 py-4">
                 <div class="font-bold text-xl mb-2 text-center">Want to integrate your application with OrgManager? Now you can!</div>
