@@ -72,17 +72,15 @@
         </div>
     </div>
     
-    <script src="{{ url('js/landing.js') }}"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@8"></script>
+
     @include('layouts.code.footer')
+
     @if (count($errors) > 0)
-    <script>
-        swal("Oops...", "{{ $errors->first() }}", "error");
-    </script>
-@endif
-@if (session('success'))
-    <script>
-        swal("Good job!", "{{ session('success') }}", "success")
-    </script>
-@endif
+        <script>swal("Oops...", "{{ $errors->first() }}", "error")</script>
+    @endif
+    @if (session('success'))
+        <script>swal("Good job!", "{{ session('success') }}", "success")</script>
+    @endif
 </body>
 </html>

@@ -16,7 +16,7 @@
 </div>
 <canvas id="dotty"></canvas>
 <section id="left-side">
-    <img src="{{ url('img/orgmanagerIcon.png') }}" alt="OrgManager" class="brand-logo"/>
+    @orgmanagerIcon
     <div class="content">
         <h1 class="text-intro opacity-0">Hey Guys!<br>
             We're currently under manteniance</h1>

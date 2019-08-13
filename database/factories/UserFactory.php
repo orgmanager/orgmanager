@@ -32,7 +32,7 @@ $factory->define(App\Org::class, function (Faker $faker) {
         'name'            => $faker->userName,
         'url'             => $faker->url,
         'description'     => $faker->text,
-        'avatar'          => url('https://orgmanager.miguelpiedrafita.com/img/orgmanagerIcon'),
+        'avatar'          => 'https://github.com/orgmanager.png',
         'userid'          => $faker->unique()->randomDigitNotNull,
         'role'            => 'admin',
     ];

@@ -4,12 +4,4 @@
  * building robust, powerful web applications using Vue and Laravel.
  */
 
-require("./bootstrap");
-
-window.swal = require("sweetalert2");
-
-require("primer-alerts");
-require("primer-avatars");
-require("primer-blankslate");
-require("primer-states");
-require("primer-tooltips");
+window.swal = require("sweetalert2")
