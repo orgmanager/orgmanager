@@ -17,6 +17,12 @@ mix
   .less("resources/less/new.less", "public/css")
   .options({
     postCss: [tailwindcss("./tailwind.js")]
+  })
+  .webpackConfig({
+    output: {
+      publicPath: '/',
+      chunkFilename: 'js/chunks/[name].js?[chunkhash]',
+    }
   });
 
 if (mix.inProduction()) {
