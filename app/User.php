@@ -20,6 +20,6 @@ class User extends Authenticatable
 
     public function orgs()
     {
-        return $this->hasMany('App\Org', 'userid');
+        return $this->hasMany(Org::class, 'userid');
     }
 }

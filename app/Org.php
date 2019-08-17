@@ -16,17 +16,17 @@ class Org extends Model
 
     public function user()
     {
-        return $this->belongsTo('App\User', 'userid', 'id');
+        return $this->belongsTo(User::class, 'userid', 'id');
     }
 
     public function teams()
     {
-        return $this->hasMany('App\Team');
+        return $this->hasMany(Team::class);
     }
 
     public function team()
     {
-        return $this->belongsTo('App\Team');
+        return $this->belongsTo(Team::class);
     }
 
     public function hasPassword()

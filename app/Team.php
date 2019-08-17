@@ -10,6 +10,6 @@ class Team extends Model
 
     public function org()
     {
-        return $this->belongsTo('App\Org');
+        return $this->belongsTo(Org::class);
     }
 }
