@@ -38,9 +38,10 @@
         </div>
     </nav>
 
-    <div class="w-full flex-1 flex flex-col">
+    <div id="app" v-cloak class="w-full flex-1 flex flex-col">
         @yield('content')
     </div>
+    <script src="{{ mix('js/app.js') }}"></script>
     <!-- Scripts -->
     @if (count($errors) > 0)
         <script>
