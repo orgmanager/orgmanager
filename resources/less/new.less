@@ -1,16 +1,3 @@
-/**
- * This injects Tailwind's base styles, which is a combination of
- * Normalize.css and some additional base styles.
- *
- * You can see the styles here:
- * https://github.com/tailwindcss/tailwindcss/blob/master/css/preflight.css
- *
- * If using `postcss-import`, you should import this line from it's own file:
- * 
- * @import "./tailwind-preflight.css";
- *
- * See: https://github.com/tailwindcss/tailwindcss/issues/53#issuecomment-341413622
- */
 @tailwind preflight;
 @import "resets";
 
@@ -137,5 +124,3 @@
     opacity: 1;
   }
 }
-
-@import (less) "../../node_modules/sweetalert2/dist/sweetalert2.css";
