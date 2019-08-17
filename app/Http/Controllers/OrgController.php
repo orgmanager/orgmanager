@@ -35,12 +35,14 @@ class OrgController extends Controller
             $org->update(['password' => Hash::make(request('password'))]);
         });
     }
+
+    public function removePassword(Org $org)
     {
         $this->authorize('update', $org);
-        $org->password = bcrypt($request->input('org_passwd'));
-        $org->save();
 
-        return redirect('org/'.$org->id)->withSuccess('The organization password was successfully updated.');
+        return tap($org, function($org) {
+            $org->update(['password' => null]);
+        });
     }
 
     public function update(Org $org)
