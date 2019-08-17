@@ -23,21 +23,7 @@
                 </form>
             </div>
         </div>
-        <div class="bg-white shadow-md rounded-lg p-4">
-            <div class="flex items-center justify-between mb-4">
-                <p class="text-xl text-grey-darkest">Organization Password</p>
-                <p class="text-sm text-grey-darker">This is some helper text to explain what this thing right below does. It's long & stuff.</p>
-            </div>
-            <form method="POST" action="{{ route('org.password', $org) }}">
-                @csrf
-                <input class="shadow appearance-none border rounded w-full py-2 px-3 text-grey-darker leading-tight focus:outline-none focus:shadow-outline" id="password" type="password" placeholder="hunter2">
-                <div class="flex justify-end mt-2">
-                    <button type="submit" class="bg-grey hover:bg-grey-dark text-white font-bold py-2 px-3 rounded-full focus:outline-none">
-                        <span>Set Password</span>
-                    </button>
-                </div>
-            </form>
-        </div>
+        <password-panel password-route="{{ route('org.password', $org) }}" :has-password="{{ $org->hasPassword() ? 'true':'false' }}"></password-panel>
         <div class="bg-white shadow-md rounded-lg p-4 mt-6">
             <div class="mb-4">
                 <p class="text-xl text-grey-darkest text-center mb-2">Team settings</p>
