@@ -15,7 +15,7 @@
 Route::view('/', 'landing')->middleware('guest')->name('landing');
 Route::get('dashboard', 'DashboardController@index')->name('dashboard');
 Route::get('org/{org}', 'OrgController@index')->name('org');
-Route::post('org/{org}', 'OrgController@changePassword')->name('org.password');
+Route::post('org/{org}/password', 'OrgController@password')->name('org.password');
 Route::put('org/{org}', 'OrgController@update')->name('org.update');
 Route::delete('org/{org}', 'OrgController@delete')->name('org.delete');
 Route::post('org/{org}/message', 'OrgController@message')->name('org.message');
