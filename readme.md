@@ -33,10 +33,6 @@ To install the OrgManager **Stable Version**, [check out these docs](https://org
 
 To learn how to setup the OrgManager **Developer Version** up and running on your local machine for development and testing purposes see the [OrgManager Developer Version](https://orgmanager.unmarkdocs.co/development-version/requirements) section in the OrgManager Documentation.
 
-## Hosted Version
-
-Not everyone can afford a server, nor do they have the skills to set up a modern PHP application, so OrgManager provides a hosted version you can use **for FREE** (see how you can help this service continue free [below](#support-orgmanager)). You can access the hosted version [here](https://orgmanager.miguelpiedrafita.com). In return, please report any bugs you encounter, so we can continue improving!
-
 ## Updating
 
 OrgManager is under active development, and that means it gets lots of updates, bug fixes and new features. Read the guides below to learn how to update to the latest OrgManager version.
