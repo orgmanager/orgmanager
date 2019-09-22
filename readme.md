@@ -17,7 +17,6 @@ OrgManager takes Github Organization invites to a new level! [Read more on the O
 ## Table of Contents
 
 - [Install](#install)
-- [Hosted Version](#hosted-version)
 - [Updating](#updating)
 - [Testing](#testing)
 - [Built With](#built-with)
@@ -39,7 +38,7 @@ OrgManager is under active development, and that means it gets lots of updates, 
 
 For updating a development environment, read the [Updating the OrgManager Developer Version](https://orgmanager.unmarkdocs.co/development-version/updating) section in the OrgManager Documentation. For updating a production environment, read the [Updating the OrgManager Stable Version](https://orgmanager.unmarkdocs.co/stable-version/updating) section in the OrgManager Documentation.
 
-We (try to) follow [SemVer](http://semver.org/). For the versions available, see the [releases page](https://github.com/orgmanager/orgmanager/releases).
+For the versions available, see the [releases page](https://github.com/orgmanager/orgmanager/releases).
 
 ## Testing
 
@@ -52,7 +51,7 @@ You can read about [how to configure the testing environment and how to run the 
 
 * [PHP](https://php.net) - The programming language used.
 * [MySQL](https://mysql.com) - Database software used.
-* [Laravel 5.6](https://laravel.com) - The web framework used.
+* [Laravel](https://laravel.com) - The web framework used.
 * [Composer](https://getcomposer.org) - The Dependency Management software used.
 * [Github](https://github.com) - Thank you for your awesome API, and to the awesome people at [Github Support](https://github.com/contact)!
 * [Socialite](https://github.com/laravel/socialite) - The OAuth library used.
@@ -81,4 +80,4 @@ For information about all the people that have helped to make this possible, che
 
 ## License
 
-Licensed under the [Mozilla Public License](LICENSE.md) © 2017 by the OrgManager contributors.
+Licensed under the Mozilla Public License (MPL). For more information, checkout the [LICENSE](LICENSE.md).
