@@ -2,11 +2,11 @@
 
 namespace Tests\Unit;
 
-use Github;
 use App\Org;
 use App\User;
-use Tests\TestCase;
+use Github;
 use Illuminate\Foundation\Testing\RefreshDatabase;
+use Tests\TestCase;
 
 class JoinTest extends TestCase
 {

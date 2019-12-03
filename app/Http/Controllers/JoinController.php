@@ -2,14 +2,14 @@
 
 namespace App\Http\Controllers;
 
-use Github;
-use App\Org;
-use Socialite;
-use App\Traits\CaptchaTrait;
-use Illuminate\Http\Request;
 use App\Http\Requests\JoinOrgRequest;
+use App\Org;
+use App\Traits\CaptchaTrait;
+use Github;
+use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Artisan;
 use Laravel\Socialite\Two\InvalidStateException;
+use Socialite;
 
 class JoinController extends Controller
 {
