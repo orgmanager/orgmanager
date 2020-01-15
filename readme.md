@@ -1,6 +1,6 @@
 <p align="center"><img alt="OrgManager" src="https://raw.githubusercontent.com/orgmanager/branding/master/PNG/orgmanager_Horizontal.png"></p>
 
-[![Build Status](https://travis-ci.org/orgmanager/orgmanager.svg?branch=master)](https://travis-ci.org/orgmanager/orgmanager)
+[![Build Status](https://travis-ci.org/fossasia/orgmanager.svg?branch=master)](https://travis-ci.org/fossasia/orgmanager)
 [![Code Coverage](https://scrutinizer-ci.com/g/orgmanager/orgmanager/badges/coverage.png?b=master)](https://scrutinizer-ci.com/g/orgmanager/orgmanager/?branch=master)
 [![CodeCov](https://codecov.io/gh/orgmanager/orgmanager/branch/master/graph/badge.svg)](https://codecov.io/gh/orgmanager/orgmanager)
 [![GitHub release](https://api.releasepage.co/v1/pages/0af37d75-ff86-4381-8f0d-5590fa8027a1/badge.svg?apiKey=live.QzuQeWHAAvXWoO5h)](http://releases.orgmanager.miguelpiedrafita.com)
