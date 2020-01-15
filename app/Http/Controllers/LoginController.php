@@ -7,6 +7,7 @@ use App\User;
 use Socialite;
 use App\Mail\WelcomeUser;
 use Illuminate\Support\Facades\Mail;
+use Laravel\Socialite\Two;
 
 class LoginController extends Controller
 {
@@ -23,23 +24,23 @@ class LoginController extends Controller
     public function loginUser()
     {
         $github = Socialite::driver('github')->user();
-        $user = User::where('email', '=', $github->getEmail())->first();
+        $user = User::where('github_username', '=', $github->getNickname())->first();
         if ($user === null) {
             $user = User::create([
-              'name'             => $github->getName(),
-              'email'            => $github->getEmail(),
+              'name'             => " ",
+              'email'            => " ",
               'github_username'  => $github->getNickname(),
               'token'            => $github->token,
               'api_token'        => str_random(60),
             ]);
-            Mail::to($user->email)->send(new WelcomeUser());
+            // Mail::to($user->email)->send(new WelcomeUser());
             Auth::login($user);
 
             return redirect()->intended('dashboard')->withSuccess(trans('alerts.loggedin'));
         }
         $user->update([
-            'name'             => $github->getName(),
-            'email'            => $github->getEmail(),
+            'name'             => " ",
+            'email'            => " ",
             'github_username'  => $github->getNickname(),
             'token'            => $github->token,
         ]);

@@ -63,7 +63,7 @@
             <div id="codefund_ad"></div>
         </div>
     </div>
-    <script src="{{ mix('js/landing.js') }}"></script>
+    <script src="{{ mix('js/app.js') }}"></script>
     <script src="https://codefund.io/scripts/e9d802da-6c58-4907-b8a2-079a78adfc64/embed.js"></script>
     @if (count($errors) > 0)
         <script>
