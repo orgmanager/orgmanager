@@ -16,6 +16,8 @@ OrgManager takes Github Organization invites to a new level! [Read more on the O
 
 ## Table of Contents
 
+- [Table of Contents](#table-of-contents)
+- [Usage](#usage)
 - [Install](#install)
 - [Updating](#updating)
 - [Testing](#testing)
@@ -25,6 +27,9 @@ OrgManager takes Github Organization invites to a new level! [Read more on the O
 	- [Support OrgManager](#support-orgmanager)
 	- [People](#people)
 - [License](#license)
+
+## Usage
+There is an active automatically deployed implementation of Orgmanager for fossasia available at https://orgmanager.herokuapp.com/. Anyone can use it to invite others to their organization.
 
 ## Install
 
