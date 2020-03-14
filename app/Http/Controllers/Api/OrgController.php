@@ -2,9 +2,9 @@
 
 namespace App\Http\Controllers\Api;
 
+use App\Http\Controllers\Controller;
 use App\Org;
 use Illuminate\Http\Request;
-use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Artisan;
 
 class OrgController extends Controller
@@ -30,7 +30,7 @@ class OrgController extends Controller
     {
         $this->authorize('update', $org);
         Artisan::call('orgmanager:updateorg', [
-        'org' => $org->id,
+            'org' => $org->id,
         ]);
 
         return response(null, 204);
@@ -53,8 +53,8 @@ class OrgController extends Controller
             abort(400);
         }
         Artisan::call('orgmanager:joinorg', [
-        'org'      => $org->id,
-        'username' => $request->input('username'),
+            'org'      => $org->id,
+            'username' => $request->input('username'),
         ]);
 
         return response(null, 204);
