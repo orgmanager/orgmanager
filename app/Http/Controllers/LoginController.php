@@ -2,11 +2,11 @@
 
 namespace App\Http\Controllers;
 
-use Auth;
-use App\User;
-use Socialite;
 use App\Mail\WelcomeUser;
+use App\User;
+use Auth;
 use Illuminate\Support\Facades\Mail;
+use Socialite;
 
 class LoginController extends Controller
 {
@@ -26,11 +26,11 @@ class LoginController extends Controller
         $user = User::where('email', '=', $github->getEmail())->first();
         if ($user === null) {
             $user = User::create([
-              'name'             => $github->getName(),
-              'email'            => $github->getEmail(),
-              'github_username'  => $github->getNickname(),
-              'token'            => $github->token,
-              'api_token'        => str_random(60),
+                'name'             => $github->getName(),
+                'email'            => $github->getEmail(),
+                'github_username'  => $github->getNickname(),
+                'token'            => $github->token,
+                'api_token'        => str_random(60),
             ]);
             Mail::to($user->email)->send(new WelcomeUser());
             Auth::login($user);
