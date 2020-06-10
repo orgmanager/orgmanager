@@ -2,7 +2,7 @@
 
 [![Build Status](https://travis-ci.org/fossasia/orgmanager.svg?branch=master)](https://travis-ci.org/fossasia/orgmanager)
 [![Code Coverage](https://scrutinizer-ci.com/g/orgmanager/orgmanager/badges/coverage.png?b=master)](https://scrutinizer-ci.com/g/orgmanager/orgmanager/?branch=master)
-[![CodeCov](https://codecov.io/gh/orgmanager/orgmanager/branch/master/graph/badge.svg)](https://codecov.io/gh/orgmanager/orgmanager)
+[![CodeCov](https://codecov.io/gh/fossasia/orgmanager/branch/master/graph/badge.svg)](https://codecov.io/gh/fossasia/orgmanager)
 [![GitHub release](https://api.releasepage.co/v1/pages/0af37d75-ff86-4381-8f0d-5590fa8027a1/badge.svg?apiKey=live.QzuQeWHAAvXWoO5h)](http://releases.orgmanager.miguelpiedrafita.com)
 [![license](https://img.shields.io/github/license/orgmanager/orgmanager.svg)](LICENSE.md)
 [![Codacy grade](https://img.shields.io/codacy/grade/e27821fb6289410b8f58338c7e0bc686.svg)](https://www.codacy.com/app/m1guelpiedrafita/orgmanager/dashboard)

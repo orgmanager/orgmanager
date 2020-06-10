@@ -30,6 +30,7 @@
                 <p class="text-grey-darker max-w-xl mx-auto text-center">OrgManager v3 introduces Teams, a new function that allows you to specify a team your invited users will go into. Please note that this feature is still in a beta version, so use the report widget if you find any bugs.</p>
             </div>
             <form method="POST" action="{{ route('org.teams.sync', $org) }}" class="text-center">
+                {{ csrf_field() }}
                 <button type="submit" class="bg-grey hover:bg-grey-dark text-white font-bold py-3 px-4 rounded-full focus:outline-none">
                     <div class="flex items-center justify-center">
                         <svg class="w-4 h-4 mr-1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">

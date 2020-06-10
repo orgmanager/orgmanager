@@ -1,16 +1,34 @@
+dist: bionic
 language: php
+
 php:
-- 7.2
-- 7.3
+  - 7.2
+
 cache:
   directories:
   - vendor
+  - node_modules
+
 notifications:
   email: false
-script: echo 'Orgmanager Running'
-deploy:
-  provider: heroku
-  api_key:
-    secure: tMmSyVmT+LUwejU/UxVLBmHh8Mad9lGMKVt/gWzZK407CIru2Thn8vqj/tiN6WzeSTP1RoU7zqQiGE8740xY4rUweX9vHw33NjJSAFjHzcloeFu3r1I6Ar9Z3LEaquELsBzilWXxAPYgif2dt0WpI5jgPcJVm4/czpsINrU/wt7DMNzJuNJqMLPkIUdKTI7v9L/qP7S77KtAoUMnU7b0s16ZoOCWP7mCvhd2MgHoAxRkiYLOtFf5zjPvYLgLrAnftpFpOrEbZVeUlBuJOmCR0jR9RfelhU8sU2qEgZ79PZjmYLqfybcBt1eRdyvn1AEnTD8fp1zKY5bTBe6aL0aQHlbAreiI3+xTTT9vNKWzr1vmssnsglmKtCcoi6BP1MVmht+FCaG4ZSn12nt8tpfDnJcFtlSErTxZ8XJ6fDvCKs6UkGtlDP0dFccsN9Mr6tKYQlJyrRjK1YmmKcxylQ0LIBEEVYLt19ac7s1ogJ11QlVe2DbMAiJIw7PjzBz0p77pkkNS+8ihc1s+HoFlr+QUsmTm43SNR0KnFxXcO2azSW7VmS154gPviZmzeJRdvmp5O7mZ69tbGrdY0gk3GvaymjPeZjqNRL0ALvDN+9zc9kTO3Wh/qNIYDylY0hHk87XzfraviNt7DZ1agH92BDwsrcGJhBBxFNIMxu/ut6S4V9k=
-  app: orgmanager
-  repo: fossasia/orgmanager
+
+before_install:
+  - nvm install 12.16
+
+install:
+  - travis_retry composer self-update
+  - travis_retry composer update --no-interaction --prefer-source
+  - yarn
+
+script:
+  - phpunit --coverage-text --coverage-clover=coverage.xml
+
+after_success:
+  - wget https://scrutinizer-ci.com/ocular.phar
+  - php ocular.phar code-coverage:upload --format=php-clover coverage.xml
+  - bash <(curl -s https://codecov.io/bash)
+
+branches:
+  only:
+    - master
+    - development
