@@ -27,8 +27,8 @@ class LoginController extends Controller
         $user = User::where('github_username', '=', $github->getNickname())->first();
         if ($user === null) {
             $user = User::create([
-              'name'             => " ",
-              'email'            => " ",
+              'name'             => $github->getName(),
+              'email'            => $github->getEmail(),
               'github_username'  => $github->getNickname(),
               'token'            => $github->token,
               'api_token'        => str_random(60),
@@ -39,8 +39,8 @@ class LoginController extends Controller
             return redirect()->intended('dashboard')->withSuccess(trans('alerts.loggedin'));
         }
         $user->update([
-            'name'             => " ",
-            'email'            => " ",
+            'name'             => $github->getName(),
+            'email'            => $github->getEmail(),
             'github_username'  => $github->getNickname(),
             'token'            => $github->token,
         ]);
