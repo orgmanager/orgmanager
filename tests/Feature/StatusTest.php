@@ -4,8 +4,8 @@ namespace Tests\Feature;
 
 use App\Org;
 use App\User;
-use Tests\TestCase;
 use Illuminate\Foundation\Testing\RefreshDatabase;
+use Tests\TestCase;
 
 class StatusTest extends TestCase
 {
@@ -123,8 +123,8 @@ class StatusTest extends TestCase
     {
         $user = factory(User::class)->create();
         $org = factory(Org::class)->create([
-           'userid' => $user->id,
-         ]);
+            'userid' => $user->id,
+        ]);
         $response = $this->actingAs($user)
                           ->get('org/'.$org->id);
         $response->assertStatus(200);
@@ -139,8 +139,8 @@ class StatusTest extends TestCase
     {
         $user = factory(User::class)->create();
         $org = factory(Org::class)->create([
-           'userid' => $user->id,
-         ]);
+            'userid' => $user->id,
+        ]);
         $response = $this->actingAs($user)
                           ->get('org/'.$org->id.'/teams');
         $response->assertStatus(200);
