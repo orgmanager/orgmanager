@@ -1,4 +1,4 @@
-<p align="center"><img alt="OrgManager" src="/docs/images/orgmanager.png"></p>
+<img alt="OrgManager" src="/docs/images/orgmanager.png">
 
 [![Build Status](https://travis-ci.org/fossasia/orgmanager.svg?branch=master)](https://travis-ci.org/fossasia/orgmanager)
 [![Code Coverage](https://scrutinizer-ci.com/g/fossasia/orgmanager/badges/coverage.png?b=master)](https://scrutinizer-ci.com/g/fossasia/orgmanager/?branch=master)
@@ -24,11 +24,22 @@ Orgmanager is an invite system for GitHub organizations created by [Miguel Piedr
 
 ## Installation
 
-### Installing OrgManager Developer Version
+To install OrgManager, ensure you fulfill the minimum version requirements and then follow the steps below.
 
-To install the OrgManager Development Version, follow these steps:
+## Requirements
 
-#### 1. Download beta version
+To install and run the OrgManager you need need:
+
+- A web server of your choice - (We recommend [hotel](https://github.com/typicode/hotel) for development, as it is easy to setup and doesn't require any configuration.)
+- PHP - (At least v5.6.4, although v7.* is recommended. [Installing PHP](http://php.net/manual/en/install.php))
+- Some PHP libraries - (OpenSSL, PDO, Mbstring, Tokenizer, XML)
+- Composer - ([Install Composer](https://getcomposer.org/download/))
+- MySQL database - ([You can get one online for free](https://www.google.com/search?q=free+mysql+database)
+- Git - ([Install GIT](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git))
+
+## Installation Steps
+
+### 1. Download
 
 Open your terminal and run
 
@@ -36,14 +47,11 @@ Open your terminal and run
 git clone https://github.com/orgmanager/orgmanager
 ```
 
-#### 2. Add OrgManager to your server
+### 2. Add OrgManager to your server
 
-!!! warning
-# This step depends on your server
-This step is different depending on the server you use. Normally you can get the process by searching "How to setup Laravel with X" and skipping the laravel install part. Instructions for hotel are provided, as it is the recommended server for development.
-!!!
+Note: The following steps are outlined for typical server setups, but they can differ greatly depending on your specific setup. Normally you can get the process by searching "How to setup Laravel with X" and skipping the laravel install part. Instructions for hotel are provided, as it is the recommended server for development.
 
-##### Setup instructions for [hotel](https://github.com/typicode/hotel):
+#### Setup instructions for [hotel](https://github.com/typicode/hotel):
 
 Open the OrgManager folder with the terminal/console and run
 
@@ -53,11 +61,11 @@ hotel add 'php artisan serve --port $PORT'
 
 Now, if you configured custom domains, you can now access `orgmanager.{yourtld}`. If you didn't, access `localhost:2000` and click OrgManager. Yeah, it should be showing that error page, don't worry :smile:
 
-#### 3. Setup .env
+### 3. Setup .env
 
 Copy the `.env.example` file to an `.env` file. Open the .env file with your favourite text editor/IDE and fill the database, reCaptcha and GitHub settings (you can leave the rest empty).
 
-#### 4. Finish the setup
+### 4. Finish the setup
 Open the orgmanager folder with the terminal/console and run
 
 ``` bash
@@ -69,19 +77,8 @@ and
 php artisan app:install
 ```
 
-#### 5. Done!
+### 5. Done!
 You have now the OrgManager beta version up an running in your server! (Note that OrgManager is not auto-updated, read the updating section for more info).
-
-### OrgManager Developer Version Requirements
-
-To install and run the OrgManager Development Version, you will need:
-
-- A web server of your choice - (We recommend [hotel](https://github.com/typicode/hotel) for development, as it is easy to setup and doesn't require any configuration.)
-- PHP - (At least v5.6.4, although v7.* is recommended. [Installing PHP](http://php.net/manual/en/install.php))
-- Some PHP libraries - (OpenSSL, PDO, Mbstring, Tokenizer, XML) (Google is your friend :smile:)
-- Composer - ([Install Composer](https://getcomposer.org/download/))
-- MySQL database - ([You can get one online for free](https://www.google.com/search?q=free+mysql+database), although it's always better to work locally :smile:)
-- Git - ([Install GIT](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git))
 
 ## Testing
 
@@ -89,10 +86,6 @@ To install and run the OrgManager Development Version, you will need:
 For automated testing we use 
 * the Laravel testing functionalities
 * PHPUnit
-
-### Testing the OrgManager Development Version
-
-We use the Laravel testing functionalities and PHPUnit to add automated testing to OrgManager.
 
 ### Setting up the testing enviroment
 By default, the tests will run in a special database called `orgmanager_test` in `localhost` with username `root` and password `root`. If you need to change this, edit the `.env.testing` file. This is an example of a customized `.env.testing` file:
