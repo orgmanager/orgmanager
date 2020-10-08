@@ -98,7 +98,7 @@ For automated testing we use
 
 We use the Laravel testing functionalities and PHPUnit to add automated testing to OrgManager.
 
-## Setting up the testing enviroment
+### Setting up the testing enviroment
 By default, the tests will run in a special database called `orgmanager_test` in `localhost` with username `root` and password `root`. If you need to change this, edit the `.env.testing` file. This is an example of a customized `.env.testing` file:
 
 ``` env
@@ -119,7 +119,7 @@ Once you've customized your .env.testing file, you have to migrate the database 
 php artisan migrate --env=testing
 ```
 
-# Running the tests
+### Running the tests
 To run the tests, run
 
 ``` bash
