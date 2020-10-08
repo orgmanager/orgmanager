@@ -7,11 +7,7 @@
 [![license](https://img.shields.io/github/license/fossasia/orgmanager.svg)](LICENSE.md)
 [![Packagist](https://img.shields.io/packagist/v/fossasia/orgmanager.svg)](https://packagist.org/packages/fossasia/orgmanager)
 
-Orgmanager is an invite system for GitHub organizations created by [Miguel Piedrafita](https://github.com/m1guelpf). Orgmanager is no longer actively be maintained and as FOSSASIA is using the system we decided to fork it and update it to keep it running. We also encourage the community to continue the development.
-
-## Usage
-
-An automatically deployed version of Orgmanager from the repository at FOSSASIA is available at https://orgmanager.herokuapp.com. Anyone can use it to invite others to their organization.
+Orgmanager is an invite system for GitHub organizations created by [Miguel Piedrafita](https://github.com/m1guelpf). FOSSASIA is using the system and we decided to fork it and update it to keep it running. We also encourage the community to continue the development. An automatically deployed version of Orgmanager from the repository at FOSSASIA is available at https://orgmanager.herokuapp.com. Anyone can use it to invite others to their organization.
 
 ## Dependencies
 
