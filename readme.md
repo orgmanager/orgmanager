@@ -1,58 +1,19 @@
-<p align="center"><img alt="OrgManager" src="https://raw.githubusercontent.com/orgmanager/branding/master/PNG/orgmanager_Horizontal.png"></p>
+<p align="center"><img alt="OrgManager" src="/docs/images/orgmanager.png"></p>
 
 [![Build Status](https://travis-ci.org/fossasia/orgmanager.svg?branch=master)](https://travis-ci.org/fossasia/orgmanager)
-[![Code Coverage](https://scrutinizer-ci.com/g/orgmanager/orgmanager/badges/coverage.png?b=master)](https://scrutinizer-ci.com/g/orgmanager/orgmanager/?branch=master)
+[![Code Coverage](https://scrutinizer-ci.com/g/fossasia/orgmanager/badges/coverage.png?b=master)](https://scrutinizer-ci.com/g/fossasia/orgmanager/?branch=master)
 [![CodeCov](https://codecov.io/gh/fossasia/orgmanager/branch/master/graph/badge.svg)](https://codecov.io/gh/fossasia/orgmanager)
 [![GitHub release](https://api.releasepage.co/v1/pages/0af37d75-ff86-4381-8f0d-5590fa8027a1/badge.svg?apiKey=live.QzuQeWHAAvXWoO5h)](http://releases.orgmanager.miguelpiedrafita.com)
-[![license](https://img.shields.io/github/license/orgmanager/orgmanager.svg)](LICENSE.md)
-[![Codacy grade](https://img.shields.io/codacy/grade/e27821fb6289410b8f58338c7e0bc686.svg)](https://www.codacy.com/app/m1guelpiedrafita/orgmanager/dashboard)
-[![Packagist](https://img.shields.io/packagist/v/orgmanager/orgmanager.svg)](https://packagist.org/packages/orgmanager/orgmanager)
-[![OpenCollective](https://opencollective.com/orgmanager/backers/badge.svg)](#backers) 
-[![OpenCollective](https://opencollective.com/orgmanager/sponsors/badge.svg)](#sponsors)
+[![license](https://img.shields.io/github/license/fossasia/orgmanager.svg)](LICENSE.md)
+[![Packagist](https://img.shields.io/packagist/v/fossasia/orgmanager.svg)](https://packagist.org/packages/fossasia/orgmanager)
 
-> Invite System for GitHub Organizations
-
-OrgManager takes Github Organization invites to a new level! [Read more on the OrgManager documentation](https://orgmanager.readme.io/docs/about-orgmanager).
-
-## Table of Contents
-
-- [Table of Contents](#table-of-contents)
-- [Usage](#usage)
-- [Install](#install)
-- [Updating](#updating)
-- [Testing](#testing)
-- [Built With](#built-with)
-- [Support Channels](#support-channels)
-- [Contributing](#contributing)
-	- [Support OrgManager](#support-orgmanager)
-	- [People](#people)
-- [License](#license)
+Orgmanager is an invite system for GitHub organizations created by [Miguel Piedrafita](https://github.com/m1guelpf). Orgmanager is no longer actively be maintained and as FOSSASIA is using the system we decided to fork it and update it to keep it running. We also encourage the community to continue the development.
 
 ## Usage
-There is an active automatically deployed implementation of Orgmanager for fossasia available at https://orgmanager.herokuapp.com/. Anyone can use it to invite others to their organization.
 
-## Install
+An automatically deployed version of Orgmanager from the repository at FOSSASIA is available at https://orgmanager.herokuapp.com. Anyone can use it to invite others to their organization.
 
-To install the OrgManager **Stable Version**, [check out these docs](https://orgmanager.unmarkdocs.co/stable-version/requirements).
-
-To learn how to setup the OrgManager **Developer Version** up and running on your local machine for development and testing purposes see the [OrgManager Developer Version](https://orgmanager.unmarkdocs.co/development-version/requirements) section in the OrgManager Documentation.
-
-## Updating
-
-OrgManager is under active development, and that means it gets lots of updates, bug fixes and new features. Read the guides below to learn how to update to the latest OrgManager version.
-
-For updating a development environment, read the [Updating the OrgManager Developer Version](https://orgmanager.unmarkdocs.co/development-version/updating) section in the OrgManager Documentation. For updating a production environment, read the [Updating the OrgManager Stable Version](https://orgmanager.unmarkdocs.co/stable-version/updating) section in the OrgManager Documentation.
-
-For the versions available, see the [releases page](https://github.com/orgmanager/orgmanager/releases).
-
-## Testing
-
-We use the Laravel testing functionalities and PHPUnit to add automated testing to OrgManager.
-
-You can read about [how to configure the testing environment and how to run the tests](https://orgmanager.unmarkdocs.co/development-version/testing) in the OrgManager Documentation.
-
-
-## Built With
+## Dependencies
 
 * [PHP](https://php.net) - The programming language used.
 * [MySQL](https://mysql.com) - Database software used.
@@ -65,23 +26,123 @@ You can read about [how to configure the testing environment and how to run the 
 * [Tailwind CSS](https://tailwindcss.com/) - The frontend framework used
 * [Octicons](https://octicons.github.com/) - The icons used
 
-## Support Channels
+## Installation
 
-Facing an issue? Want to meet other OrgManager users? Just want to say hello?
+### Installing OrgManager Developer Version
 
-Read the [OrgManager Support Channels](https://orgmanager.unmarkdocs.co/support) section in the OrgManager Documentation.
+To install the OrgManager Development Version, follow these steps:
 
-## Contributing
+#### 1. Download beta version
 
-Please read the [Contributing to OrgManager](https://orgmanager.unmarkdocs.co/contributing) section on the OrgManager Documentation for ideas on how to help, and the [CONTRIBUTING.md](https://github.com/orgmanager/orgmanager/blob/master/.github/CONTRIBUTING.md) file for details on our code of conduct, and the process for submitting pull requests.
+Open your terminal and run
 
-### Support OrgManager
+``` bash
+git clone https://github.com/orgmanager/orgmanager
+```
 
-Whether you are an individual or an organization, you can pledge as low as $1/month to support the development of OrgManager & other non-profit and open-source projects. **[Support me on Patreon](https://www.patreon.com/m1guelpiedrafita)**.
+#### 2. Add OrgManager to your server
 
-### People
+!!! warning
+# This step depends on your server
+This step is different depending on the server you use. Normally you can get the process by searching "How to setup Laravel with X" and skipping the laravel install part. Instructions for hotel are provided, as it is the recommended server for development.
+!!!
 
-For information about all the people that have helped to make this possible, check the [People](https://orgmanager.unmarkdocs.co/thanks) section in the OrgManager Documentation.
+##### Setup instructions for [hotel](https://github.com/typicode/hotel):
+
+Open the OrgManager folder with the terminal/console and run
+
+``` bash
+hotel add 'php artisan serve --port $PORT'
+```
+
+Now, if you configured custom domains, you can now access `orgmanager.{yourtld}`. If you didn't, access `localhost:2000` and click OrgManager. Yeah, it should be showing that error page, don't worry :smile:
+
+#### 3. Setup .env
+
+Copy the `.env.example` file to an `.env` file. Open the .env file with your favourite text editor/IDE and fill the database, reCaptcha and GitHub settings (you can leave the rest empty).
+
+#### 4. Finish the setup
+Open the orgmanager folder with the terminal/console and run
+
+``` bash
+composer update
+```
+and
+
+``` bash
+php artisan app:install
+```
+
+#### 5. Done!
+You have now the OrgManager beta version up an running in your server! (Note that OrgManager is not auto-updated, read the updating section for more info).
+
+### OrgManager Developer Version Requirements
+
+To install and run the OrgManager Development Version, you will need:
+
+- A web server of your choice - (We recommend [hotel](https://github.com/typicode/hotel) for development, as it is easy to setup and doesn't require any configuration.)
+- PHP - (At least v5.6.4, although v7.* is recommended. [Installing PHP](http://php.net/manual/en/install.php))
+- Some PHP libraries - (OpenSSL, PDO, Mbstring, Tokenizer, XML) (Google is your friend :smile:)
+- Composer - ([Install Composer](https://getcomposer.org/download/))
+- MySQL database - ([You can get one online for free](https://www.google.com/search?q=free+mysql+database), although it's always better to work locally :smile:)
+- Git - ([Install GIT](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git))
+
+## Testing
+
+### Automated Tests
+For automated testing we use 
+* the Laravel testing functionalities
+* PHPUnit
+
+### Testing the OrgManager Development Version
+
+We use the Laravel testing functionalities and PHPUnit to add automated testing to OrgManager.
+
+## Setting up the testing enviroment
+By default, the tests will run in a special database called `orgmanager_test` in `localhost` with username `root` and password `root`. If you need to change this, edit the `.env.testing` file. This is an example of a customized `.env.testing` file:
+
+``` env
+APP_ENV=testing # don't change this!
+APP_KEY=base64:GIkaQ57IIVtTeTQOIh7eAFo1FAcoWkfwYPkfcOyusW4= # this is autogenerated
+
+DB_CONNECTION=sqlite
+DB_DATABASE=:memory:
+
+CACHE_DRIVER=array # you shouldn't need to change this
+SESSION_DRIVER=array # you shouldn't need to change this
+QUEUE_DRIVER=sync # you shouldn't need to change this
+```
+
+Once you've customized your .env.testing file, you have to migrate the database to your test database. You can do this by running 
+
+``` bash
+php artisan migrate --env=testing
+```
+
+# Running the tests
+To run the tests, run
+
+``` bash
+composer test
+```
+
+## Contributions Best Practices
+
+### Commits
+
+-   Write clear meaningful git commit messages (Do read [https://chris.beams.io/posts/git-commit/](https://chris.beams.io/posts/git-commit/))
+-   Make sure your PR's description contains GitHub's special keyword references that automatically close the related issue when the PR is merged. (More info at [https://github.com/blog/1506-closing-issues-via-pull-requests](https://github.com/blog/1506-closing-issues-via-pull-requests) )
+-   When you make very minor changes to a PR of yours (like for example fixing a failing Travis build or some small style corrections or minor changes requested by reviewers) make sure you squash your commits afterward so that you don't have an absurd number of commits for a very small fix. (Learn how to squash at [https://davidwalsh.name/squash-commits-git](https://davidwalsh.name/squash-commits-git) )
+-   When you're submitting a PR for a UI-related issue, it would be really awesome if you add a screenshot of your change or a link to a deployment where it can be tested out along with your PR. It makes it very easy for the reviewers and you'll also get reviews quicker.
+
+### Feature Requests and Bug Reports
+
+When you file a feature request or when you are submitting a bug report to the issue tracker, make sure you add steps to reproduce it. Especially if that bug is some weird/rare one.
+
+### Join the development
+
+-   Before you join development, please set up the project on your local machine, run it and go through the application completely. Press on any button you can find and see where it leads to. Explore. (Don't worry ... Nothing will happen to the app or to you due to the exploring :wink: Only thing that will happen is, you'll be more familiar with what is where and might even get some cool ideas on how to improve various aspects of the app.)
+-   If you would like to work on an issue, drop in a comment at the issue. If it is already assigned to someone, but there is no sign of any work being done, please feel free to drop in a comment so that the issue can be assigned to you if the previous assignee has dropped it entirely.
 
 ## License
 
