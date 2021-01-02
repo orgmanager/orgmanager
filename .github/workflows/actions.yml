@@ -1,0 +1,42 @@
+name: Orgmanager Test
+
+on: 
+  pull_request:
+  push:
+    branches:
+      - master
+      - development
+
+jobs:
+  run_php
+    build:
+      runs-on: ubuntu-latest
+      steps:
+      - uses: actions/checkout@v2
+
+      - name: Cache node modules
+        uses: actions/cache@v2
+        env:
+          cache-name: cache-node-modules
+      
+      - name: Cache vendor directory
+        uses: actions/cache@v2
+        env:
+          cache-name: cache-vendor
+
+        with:
+          php-version: '7.3'
+
+      - name: Installing Node and NPM
+      - run: nvm install 12.16
+
+      - name: Installing Dependencies
+      - run: yarn
+
+      - name: Installing Scripts
+      - run:  phpunit --coverage-text --coverage-clover=coverage.xml
+
+      - name: Running Scripts
+      - run: wget https://scrutinizer-ci.com/ocular.phar
+      - run: php ocular.phar code-coverage:upload --format=php-clover coverage.xml
+      - run: bash <(curl -s https://codecov.io/bash)
