@@ -1,13 +1,12 @@
 <img alt="OrgManager" src="/docs/images/orgmanager.png">
 
-![Build Status](https://github.com//fossasia/orgmanager/workflows/actions%20CIbadge.svg?branch=master)
+[![Build Status](https://github.com/fossasia/orgmanager/workflows/actions%20CIbadge.svg?branch=master)](https://github.com/fossasia/orgmanager/actions?query=workflow%3Aci)
 [![Code Coverage](https://scrutinizer-ci.com/g/fossasia/orgmanager/badges/coverage.png?b=master)](https://scrutinizer-ci.com/g/fossasia/orgmanager/?branch=master)
 [![CodeCov](https://codecov.io/gh/fossasia/orgmanager/branch/master/graph/badge.svg)](https://codecov.io/gh/fossasia/orgmanager)
-[![GitHub release](https://api.releasepage.co/v1/pages/0af37d75-ff86-4381-8f0d-5590fa8027a1/badge.svg?apiKey=live.QzuQeWHAAvXWoO5h)](http://releases.orgmanager.miguelpiedrafita.com)
 [![license](https://img.shields.io/github/license/fossasia/orgmanager.svg)](LICENSE.md)
 [![Packagist](https://img.shields.io/packagist/v/fossasia/orgmanager.svg)](https://packagist.org/packages/fossasia/orgmanager)
 
-Orgmanager is an invite system for GitHub organizations created by [Miguel Piedrafita](https://github.com/m1guelpf). FOSSASIA is using the system and we decided to fork it and update it to keep it running. We also encourage the community to continue the development. An automatically deployed version of Orgmanager from the repository at FOSSASIA is available at https://orgmanager.herokuapp.com. Anyone can use it to invite others to their organization.
+Orgmanager is an invite system for GitHub organizations created by [Miguel Piedrafita](https://github.com/m1guelpf). FOSSASIA is using the system and we decided to fork it and update it to keep it running. We also encourage the community to continue the development. An automatically deployed version of Orgmanager from the repository at FOSSASIA is available at [orgmanager.herokuapp.com](https://orgmanager.herokuapp.com). Anyone can use it to invite others to their organization.
 
 ## Dependencies
 
