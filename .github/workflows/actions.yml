@@ -1,42 +1,56 @@
-name: Orgmanager Test
+name: CI
 
-on: 
-  pull_request:
+on:
   push:
-    branches:
-      - master
-      - development
+    branches: [ development, master ]
+  pull_request:
+    branches: [ development, master ]
 
 jobs:
-  run_php
-    build:
-      runs-on: ubuntu-latest
-      steps:
-      - uses: actions/checkout@v2
+  test:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v2
+      with:
+        fetch-depth: 2 # For codecov commit SHA detector
 
-      - name: Cache node modules
-        uses: actions/cache@v2
-        env:
-          cache-name: cache-node-modules
-      
-      - name: Cache vendor directory
-        uses: actions/cache@v2
-        env:
-          cache-name: cache-vendor
+    - name: Cache node modules
+      uses: actions/cache@v2
+      id: cache-node
+      with:
+        path: node_modules
+        key: ${{ runner.os }}-yarn-${{ hashFiles('**/yarn.lock') }}
+        restore-keys: |
+          ${{ runner.os }}-yarn
 
-        with:
-          php-version: '7.3'
+    - name: Cache vendor directory
+      uses: actions/cache@v2
+      id: cache-php
+      with:
+        path: vendor
+        key: ${{ runner.os }}-composer-${{ hashFiles('**/composer.lock') }}
+        restore-keys: |
+          ${{ runner.os }}-composer
 
-      - name: Installing Node and NPM
-      - run: nvm install 12.16
+    - name: Setup PHP
+      uses: shivammathur/setup-php@v2
+      with:
+        php-version: '7.3'
 
-      - name: Installing Dependencies
-      - run: yarn
+    - name: Setup Node.js
+      uses: actions/setup-node@v1
+      with:
+        node-version: 12.x
+    
+    - name: Installing PHP dependencies
+      if: steps.cache-php.outputs.cache-hit != 'true'
+      run: |
+        composer install --no-interaction --no-scripts
 
-      - name: Installing Scripts
-      - run:  phpunit --coverage-text --coverage-clover=coverage.xml
+    - name: Installing Dependencies
+      run: yarn
 
-      - name: Running Scripts
-      - run: wget https://scrutinizer-ci.com/ocular.phar
-      - run: php ocular.phar code-coverage:upload --format=php-clover coverage.xml
-      - run: bash <(curl -s https://codecov.io/bash)
+    - name: Running Tests
+      run:  vendor/bin/phpunit --coverage-text --coverage-clover=coverage.xml
+
+    - run: bash <(curl -s https://codecov.io/bash)
