@@ -1,6 +1,6 @@
 <img alt="OrgManager" src="/docs/images/orgmanager.png">
 
-[![Build Status](https://github.com/fossasia/orgmanager/workflows/actions%20CIbadge.svg?branch=master)](https://github.com/fossasia/orgmanager/actions?query=workflow%3Aci)
+[![Build Status](https://github.com/fossasia/orgmanager/workflows/CI/badge.svg?branch=master)](https://github.com/fossasia/orgmanager/actions?query=workflow%3Aci)
 [![Code Coverage](https://scrutinizer-ci.com/g/fossasia/orgmanager/badges/coverage.png?b=master)](https://scrutinizer-ci.com/g/fossasia/orgmanager/?branch=master)
 [![CodeCov](https://codecov.io/gh/fossasia/orgmanager/branch/master/graph/badge.svg)](https://codecov.io/gh/fossasia/orgmanager)
 [![license](https://img.shields.io/github/license/fossasia/orgmanager.svg)](LICENSE.md)
