@@ -2,12 +2,12 @@
 
 namespace App\Classes;
 
-use League\CommonMark\Util\Configuration;
-use League\CommonMark\Inline\Element\Image;
 use League\CommonMark\ElementRendererInterface;
 use League\CommonMark\Inline\Element\AbstractInline;
-use League\CommonMark\Util\ConfigurationAwareInterface;
+use League\CommonMark\Inline\Element\Image;
 use League\CommonMark\Inline\Renderer\InlineRendererInterface;
+use League\CommonMark\Util\Configuration;
+use League\CommonMark\Util\ConfigurationAwareInterface;
 
 class ImageRenderer implements InlineRendererInterface, ConfigurationAwareInterface
 {
