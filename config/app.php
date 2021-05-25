@@ -24,7 +24,7 @@ return [
     */
 
     'orgmanager' => [
-      'version' => 'v4.0 alpha',
+        'version' => 'v4.0 alpha',
     ],
 
     /*
