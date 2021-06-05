@@ -2,11 +2,11 @@
 
 namespace Tests\Unit;
 
-use Github;
 use App\Org;
 use App\User;
-use Tests\TestCase;
+use Github;
 use Illuminate\Foundation\Testing\RefreshDatabase;
+use Tests\TestCase;
 
 class JoinTest extends TestCase
 {
@@ -21,7 +21,7 @@ class JoinTest extends TestCase
     {
         $user = factory(User::class)->create();
         $org = factory(Org::class)->create([
-        'userid' => $user->id,
+            'userid' => $user->id,
         ]);
         Github::shouldReceive('authenticate')
                   ->once()
