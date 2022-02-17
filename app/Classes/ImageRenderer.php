@@ -2,12 +2,12 @@
 
 namespace App\Classes;
 
-use League\CommonMark\Util\Configuration;
-use League\CommonMark\Inline\Element\Image;
 use League\CommonMark\ElementRendererInterface;
 use League\CommonMark\Inline\Element\AbstractInline;
-use League\CommonMark\Util\ConfigurationAwareInterface;
+use League\CommonMark\Inline\Element\Image;
 use League\CommonMark\Inline\Renderer\InlineRendererInterface;
+use League\CommonMark\Util\Configuration;
+use League\CommonMark\Util\ConfigurationAwareInterface;
 
 class ImageRenderer implements InlineRendererInterface, ConfigurationAwareInterface
 {
@@ -19,9 +19,8 @@ class ImageRenderer implements InlineRendererInterface, ConfigurationAwareInterf
     /**
      * Render the given image into HTML.
      *
-     * @param AbstractInline           $inline
-     * @param ElementRendererInterface $htmlRenderer
-     *
+     * @param  AbstractInline  $inline
+     * @param  ElementRendererInterface  $htmlRenderer
      * @return HtmlElement
      */
     public function render(AbstractInline $inline, ElementRendererInterface $htmlRenderer)
@@ -32,7 +31,7 @@ class ImageRenderer implements InlineRendererInterface, ConfigurationAwareInterf
     }
 
     /**
-     * @param Configuration $configuration
+     * @param  Configuration  $configuration
      */
     public function setConfiguration(Configuration $configuration)
     {
