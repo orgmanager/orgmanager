@@ -15,7 +15,7 @@
     "license": "MPL-2.0",
     "require": {
         "php": "~7.3.0",
-        "fideloper/proxy": "~4.0",
+        "fideloper/proxy": "~4.4",
         "google/recaptcha": "~1.1",
         "graham-campbell/github": "^8.9",
         "guzzlehttp/guzzle": "^6.2",
