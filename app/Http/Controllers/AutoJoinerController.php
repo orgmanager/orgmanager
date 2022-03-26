@@ -27,7 +27,7 @@ class AutoJoinerController extends Controller
         return Artisan::output();
     }
 
-    protected function requestSignatureIsValid() : bool
+    protected function requestSignatureIsValid(): bool
     {
         $gitHubSignature = request()->header('X-Hub-Signature');
         [$usedAlgorithm, $gitHubHash] = explode('=', $gitHubSignature, 2);
@@ -40,7 +40,7 @@ class AutoJoinerController extends Controller
         return hash_equals($calculatedHash, $gitHubHash);
     }
 
-    protected function getOrgId(Request $request) : int
+    protected function getOrgId(Request $request): int
     {
         return ((($request->pull_request['base'])['repo'])['owner'])['id'];
     }
