@@ -4,8 +4,8 @@ namespace Tests\Feature;
 
 use App\Org;
 use App\User;
-use Tests\TestCase;
 use Illuminate\Foundation\Testing\RefreshDatabase;
+use Tests\TestCase;
 
 class SettingsTest extends TestCase
 {
@@ -20,7 +20,7 @@ class SettingsTest extends TestCase
     {
         $user = factory(User::class)->create();
         $org = factory(Org::class)->create([
-          'userid' => $user->id,
+            'userid' => $user->id,
         ]);
         $response = $this->actingAs($user)
                          ->get('org/'.$org->id);
@@ -38,7 +38,7 @@ class SettingsTest extends TestCase
     {
         $user = factory(User::class)->create();
         $org = factory(Org::class)->create([
-          'userid' => $user->id,
+            'userid' => $user->id,
         ]);
         $response = $this->actingAs($user)
                          ->post('org/'.$org->id, ['org_passwd' => 'password']);
@@ -57,7 +57,7 @@ class SettingsTest extends TestCase
     {
         $user = factory(User::class)->create();
         $org = factory(Org::class)->create([
-          'userid' => $user->id,
+            'userid' => $user->id,
         ]);
         $response = $this->actingAs($user)
                          ->delete('org/'.$org->id);
@@ -75,7 +75,7 @@ class SettingsTest extends TestCase
     {
         $user = factory(User::class)->create();
         $org = factory(Org::class)->create([
-          'userid' => $user->id,
+            'userid' => $user->id,
         ]);
         $response = $this->actingAs($user)
                          ->post('org/'.$org->id.'/message', ['message' => '# Markdown test']);
