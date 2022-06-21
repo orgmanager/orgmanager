@@ -2,9 +2,9 @@
 
 namespace App\Http\Controllers;
 
+use App\Org;
 use Auth;
 use Github;
-use App\Org;
 use Illuminate\Support\Facades\Artisan;
 
 class GithubController extends Controller

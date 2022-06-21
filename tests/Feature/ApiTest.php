@@ -4,9 +4,9 @@ namespace Tests\Feature;
 
 use App\Org;
 use App\User;
-use Tests\TestCase;
-use Illuminate\Support\Facades\Artisan;
 use Illuminate\Foundation\Testing\RefreshDatabase;
+use Illuminate\Support\Facades\Artisan;
+use Tests\TestCase;
 
 class ApiTest extends TestCase
 {
@@ -49,7 +49,7 @@ class ApiTest extends TestCase
     {
         $user = factory(User::class)->create();
         $orgs = factory(Org::class, 5)->create([
-          'userid' => $user->id,
+            'userid' => $user->id,
         ]);
         $response = $this->actingAs($user, 'api')
                          ->get('api/user/orgs');
@@ -109,7 +109,7 @@ class ApiTest extends TestCase
     {
         $user = factory(User::class)->create();
         $org = factory(Org::class)->create([
-          'userid' => $user->id,
+            'userid' => $user->id,
         ]);
         $password = str_random(10);
         $response = $this->actingAs($user, 'api')
@@ -129,7 +129,7 @@ class ApiTest extends TestCase
     {
         $user = factory(User::class)->create();
         $org = factory(Org::class)->create([
-          'userid' => $user->id,
+            'userid' => $user->id,
         ]);
         Artisan::shouldReceive('call')
                     ->once()
@@ -149,7 +149,7 @@ class ApiTest extends TestCase
     {
         $user = factory(User::class)->create();
         $org = factory(Org::class)->create([
-          'userid' => $user->id,
+            'userid' => $user->id,
         ]);
         $response = $this->actingAs($user, 'api')
                          ->delete('api/org/'.$org->id);
@@ -166,7 +166,7 @@ class ApiTest extends TestCase
     {
         $user = factory(User::class)->create();
         $org = factory(Org::class)->create([
-          'userid' => $user->id,
+            'userid' => $user->id,
         ]);
         Artisan::shouldReceive('call')
                     ->once()
