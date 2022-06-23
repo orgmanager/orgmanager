@@ -34,19 +34,19 @@ class SettingsTest extends TestCase
      *
      * @return void
      */
-    public function testPassword()
-    {
-        $user = factory(User::class)->create();
-        $org = factory(Org::class)->create([
-          'userid' => $user->id,
-        ]);
-        $response = $this->actingAs($user)
-                         ->post('org/'.$org->id, ['org_passwd' => 'password']);
-        $org->refresh();
-        $response->assertRedirect('org/'.$org->id)
-                 ->assertSessionHas('success', 'The organization password was successfully updated.');
-        $this->assertTrue(password_verify('password', $org->password));
-    }
+    // public function testPassword()
+    // {
+    //     $user = factory(User::class)->create();
+    //     $org = factory(Org::class)->create([
+    //       'userid' => $user->id,
+    //     ]);
+    //     $response = $this->actingAs($user)
+    //                      ->post('org/'.$org->id, ['org_passwd' => 'password']);
+    //     $org->refresh();
+    //     $response->assertRedirect('org/'.$org->id)
+    //              ->assertSessionHas('success', 'The organization password was successfully updated.');
+    //     $this->assertTrue(password_verify('password', $org->password));
+    // }
 
     /**
      * Test organization can be deleted.

@@ -95,7 +95,9 @@ class StatusTest extends TestCase
      */
     public function testDevPage()
     {
-        $response = $this->get('developer');
+        $user = factory(User::class)->create();
+        $response = $this->actingAs($user)
+                         ->get('developer');
 
         $response->assertStatus(200);
     }
