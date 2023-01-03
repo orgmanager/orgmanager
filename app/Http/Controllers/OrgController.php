@@ -2,12 +2,10 @@
 
 namespace App\Http\Controllers;
 
-use App\Org;
-use Illuminate\Http\Request;
-use Illuminate\Support\Facades\Hash;
-use Illuminate\Support\Facades\Artisan;
-use App\Http\Requests\OrgPasswordRequest;
 use App\Http\Requests\CustomMessageRequest;
+use App\Org;
+use Illuminate\Support\Facades\Artisan;
+use Illuminate\Support\Facades\Hash;
 
 class OrgController extends Controller
 {
@@ -28,10 +26,10 @@ class OrgController extends Controller
         $this->authorize('update', $org);
 
         request()->validate([
-            'password' => 'required|string'
+            'password' => 'required|string',
         ]);
 
-        return tap($org, function($org) {
+        return tap($org, function ($org) {
             $org->update(['password' => Hash::make(request('password'))]);
         });
     }
@@ -40,7 +38,7 @@ class OrgController extends Controller
     {
         $this->authorize('update', $org);
 
-        return tap($org, function($org) {
+        return tap($org, function ($org) {
             $org->update(['password' => null]);
         });
     }
