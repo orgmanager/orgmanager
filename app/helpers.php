@@ -9,7 +9,7 @@ if (! function_exists('markdown')) {
      * @param  string  $input
      * @return string
      */
-    function markdown(string $markdown) : string
+    function markdown(string $markdown): string
     {
         return Markdown::render($markdown);
     }
