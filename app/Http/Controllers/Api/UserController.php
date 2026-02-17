@@ -2,8 +2,8 @@
 
 namespace App\Http\Controllers\Api;
 
-use Auth;
 use App\Http\Controllers\Controller;
+use Auth;
 
 class UserController extends Controller
 {

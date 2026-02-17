@@ -2,8 +2,8 @@
 
 namespace App\Traits;
 
-use ReCaptcha\ReCaptcha;
 use Illuminate\Http\Request;
+use ReCaptcha\ReCaptcha;
 
 trait CaptchaTrait
 {

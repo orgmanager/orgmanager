@@ -14,8 +14,8 @@ class AuthServiceProvider extends ServiceProvider
      * @var array
      */
     protected $policies = [
-            Org::class => OrgPolicy::class,
-        ];
+        Org::class => OrgPolicy::class,
+    ];
 
     /**
      * Register any authentication / authorization services.
