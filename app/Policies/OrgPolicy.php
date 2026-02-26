@@ -33,9 +33,8 @@ class OrgPolicy
     /**
      * Determine whether the user can update the org.
      *
-     * @param \App\User $user
-     * @param \App\Org  $org
-     *
+     * @param  \App\User  $user
+     * @param  \App\Org  $org
      * @return bool
      */
     public function update(User $user, Org $org)
@@ -46,9 +45,8 @@ class OrgPolicy
     /**
      * Determine whether the user can delete the org.
      *
-     * @param \App\User $user
-     * @param \App\Org  $org
-     *
+     * @param  \App\User  $user
+     * @param  \App\Org  $org
      * @return bool
      */
     public function delete(User $user, Org $org)
@@ -59,9 +57,8 @@ class OrgPolicy
     /**
      * Determine whether the user can join the org.
      *
-     * @param \App\User $user
-     * @param \App\Org  $org
-     *
+     * @param  \App\User  $user
+     * @param  \App\Org  $org
      * @return bool
      */
     public function join(User $user, Org $org)
