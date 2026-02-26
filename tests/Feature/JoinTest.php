@@ -4,8 +4,8 @@ namespace Tests\Feature;
 
 use App\Org;
 use App\User;
-use Tests\TestCase;
 use Illuminate\Foundation\Testing\RefreshDatabase;
+use Tests\TestCase;
 
 class JoinTest extends TestCase
 {
@@ -20,7 +20,7 @@ class JoinTest extends TestCase
     {
         $user = factory(User::class)->create();
         $org = factory(Org::class)->create([
-          'userid' => $user->id,
+            'userid' => $user->id,
         ]);
 
         $response = $this->post('join/'.$org->id, ['github_username' => 'idonotexist9995964']);

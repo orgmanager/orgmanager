@@ -2,8 +2,8 @@
 
 namespace Tests\Unit;
 
-use Tests\TestCase;
 use App\Classes\Markdown;
+use Tests\TestCase;
 
 class MarkdownTest extends TestCase
 {
