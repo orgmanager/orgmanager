@@ -12,11 +12,11 @@ return [
     |
     */
 
-    'heading'          => 'Organizations',
-    'name'             => 'Name',
-    'link'             => 'Link',
-    'options'          => 'Settings',
-    'passwdtext'       => 'Protect invites!',
-    'haspasswdtext'    => 'Change password',
-    'changepasswd'     => 'Change password',
+    'heading' => 'Organizations',
+    'name' => 'Name',
+    'link' => 'Link',
+    'options' => 'Settings',
+    'passwdtext' => 'Protect invites!',
+    'haspasswdtext' => 'Change password',
+    'changepasswd' => 'Change password',
 ];

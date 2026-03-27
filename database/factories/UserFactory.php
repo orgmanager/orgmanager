@@ -1,7 +1,7 @@
 <?php
 
-use Illuminate\Support\Str;
 use Faker\Generator as Faker;
+use Illuminate\Support\Str;
 
 /*
 |--------------------------------------------------------------------------
@@ -17,23 +17,23 @@ use Faker\Generator as Faker;
 /* @var \Illuminate\Database\Eloquent\Factory $factory */
 $factory->define(App\User::class, function (Faker $faker) {
     return [
-        'name'            => $faker->name,
-        'email'           => $faker->unique()->safeEmail,
-        'token'           => Str::random(10),
+        'name' => $faker->name,
+        'email' => $faker->unique()->safeEmail,
+        'token' => Str::random(10),
         'github_username' => $faker->userName,
-        'api_token'       => Str::random(60),
+        'api_token' => Str::random(60),
         'remember_token' => Str::random(10),
     ];
 });
 
 $factory->define(App\Org::class, function (Faker $faker) {
     return [
-        'id'              => $faker->unique()->randomNumber,
-        'name'            => $faker->userName,
-        'url'             => $faker->url,
-        'description'     => $faker->text,
-        'avatar'          => 'https://github.com/orgmanager.png',
-        'userid'          => $faker->unique()->randomDigitNotNull,
-        'role'            => 'admin',
+        'id' => $faker->unique()->randomNumber,
+        'name' => $faker->userName,
+        'url' => $faker->url,
+        'description' => $faker->text,
+        'avatar' => 'https://github.com/orgmanager.png',
+        'userid' => $faker->unique()->randomDigitNotNull,
+        'role' => 'admin',
     ];
 });

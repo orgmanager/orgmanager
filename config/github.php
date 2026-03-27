@@ -39,8 +39,8 @@ return [
     'connections' => [
 
         'main' => [
-            'token'      => 'your-token',
-            'method'     => 'token',
+            'token' => 'your-token',
+            'method' => 'token',
             // 'backoff'    => false,
             // 'cache'      => false,
             // 'version'    => 'v3',
@@ -48,9 +48,9 @@ return [
         ],
 
         'alternative' => [
-            'clientId'     => 'your-client-id',
+            'clientId' => 'your-client-id',
             'clientSecret' => 'your-client-secret',
-            'method'       => 'application',
+            'method' => 'application',
             // 'backoff'      => false,
             // 'cache'        => false,
             // 'version'      => 'v3',
@@ -58,9 +58,9 @@ return [
         ],
 
         'other' => [
-            'username'   => 'your-username',
-            'password'   => 'your-password',
-            'method'     => 'password',
+            'username' => 'your-username',
+            'password' => 'your-password',
+            'method' => 'password',
             // 'backoff'    => false,
             // 'cache'      => false,
             // 'version'    => 'v3',

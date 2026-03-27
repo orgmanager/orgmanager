@@ -35,16 +35,16 @@ return [
         ],
 
         'database' => [
-            'driver'      => 'database',
-            'table'       => 'jobs',
-            'queue'       => 'default',
+            'driver' => 'database',
+            'table' => 'jobs',
+            'queue' => 'default',
             'retry_after' => 90,
         ],
 
         'beanstalkd' => [
-            'driver'      => 'beanstalkd',
-            'host'        => 'localhost',
-            'queue'       => 'default',
+            'driver' => 'beanstalkd',
+            'host' => 'localhost',
+            'queue' => 'default',
             'retry_after' => 90,
             'block_for' => 0,
         ],
@@ -54,15 +54,15 @@ return [
             'key' => env('AWS_ACCESS_KEY_ID'),
             'secret' => env('AWS_SECRET_ACCESS_KEY'),
             'prefix' => 'https://sqs.us-east-1.amazonaws.com/your-account-id',
-            'queue'  => 'your-queue-name',
+            'queue' => 'your-queue-name',
             'region' => env('AWS_DEFAULT_REGION', 'us-east-1'),
         ],
 
         'redis' => [
-            'driver'      => 'redis',
+            'driver' => 'redis',
             'connection' => 'default',
             'queue' => env('REDIS_QUEUE', 'default'),
-            'queue'       => 'default',
+            'queue' => 'default',
             'retry_after' => 90,
         ],
 
@@ -81,7 +81,7 @@ return [
 
     'failed' => [
         'database' => env('DB_CONNECTION', 'mysql'),
-        'table'    => 'failed_jobs',
+        'table' => 'failed_jobs',
     ],
 
 ];
