@@ -2,8 +2,8 @@
 
 namespace App\Classes;
 
-use League\CommonMark\Environment;
 use League\CommonMark\CommonMarkConverter;
+use League\CommonMark\Environment;
 use League\CommonMark\Inline\Element\Image;
 
 class Markdown
