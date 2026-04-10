@@ -2,10 +2,10 @@
 
 namespace App\Http\Controllers;
 
-use Github;
+use App\Http\Requests\SetTeamRequest;
 use App\Org;
 use App\Team;
-use App\Http\Requests\SetTeamRequest;
+use Github;
 
 class TeamController extends Controller
 {

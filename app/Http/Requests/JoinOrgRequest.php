@@ -31,7 +31,7 @@ class JoinOrgRequest extends FormRequest
     public function messages()
     {
         return [
-        'g-recaptcha-response.required' => 'You need to prove you are not a robot.',
+            'g-recaptcha-response.required' => 'You need to prove you are not a robot.',
         ];
     }
 }
