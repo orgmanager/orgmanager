@@ -4,8 +4,8 @@ namespace Tests\Feature;
 
 use App\Org;
 use App\User;
-use Tests\TestCase;
 use Illuminate\Foundation\Testing\RefreshDatabase;
+use Tests\TestCase;
 
 class DataTest extends TestCase
 {
@@ -20,7 +20,7 @@ class DataTest extends TestCase
     {
         $user = factory(User::class)->create();
         factory(Org::class, 5)->create([
-          'userid' => $user->id,
+            'userid' => $user->id,
         ]);
         $response = $this->actingAs($user)
                          ->get('dashboard');
@@ -38,7 +38,7 @@ class DataTest extends TestCase
     {
         $user = factory(User::class)->create();
         $org = factory(Org::class)->create([
-          'userid' => $user->id,
+            'userid' => $user->id,
         ]);
         $response = $this->actingAs($user)
                          ->get('org/'.$org->id);
@@ -55,7 +55,7 @@ class DataTest extends TestCase
     {
         $user = factory(User::class)->create();
         $org = factory(Org::class)->create([
-          'userid' => $user->id,
+            'userid' => $user->id,
         ]);
         $response = $this->actingAs($user)
                          ->get('org/'.$org->id.'/teams');
@@ -72,7 +72,7 @@ class DataTest extends TestCase
     {
         $user = factory(User::class)->create();
         $org = factory(Org::class)->create([
-          'userid' => $user->id,
+            'userid' => $user->id,
         ]);
         $response = $this->actingAs($user)
                          ->get('join/'.$org->id);
